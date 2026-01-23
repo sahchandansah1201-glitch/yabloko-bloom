@@ -6,14 +6,29 @@ import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { DoctorsCarousel } from "@/components/home/DoctorsCarousel";
+import { TechnologySection } from "@/components/home/TechnologySection";
+import { BeforeAfterSlider } from "@/components/home/BeforeAfterSlider";
+import { PromoSection } from "@/components/home/PromoSection";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ChiefDoctorSection } from "@/components/home/ChiefDoctorSection";
 import { BookingWizard } from "@/components/booking/BookingWizard";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [preselectedDoctorId, setPreselectedDoctorId] = useState<string | null>(null);
 
-  const openBooking = () => setIsBookingOpen(true);
-  const closeBooking = () => setIsBookingOpen(false);
+  const openBooking = (doctorId?: string) => {
+    if (doctorId) {
+      setPreselectedDoctorId(doctorId);
+    }
+    setIsBookingOpen(true);
+  };
+  
+  const closeBooking = () => {
+    setIsBookingOpen(false);
+    setPreselectedDoctorId(null);
+  };
 
   return (
     <>
@@ -21,23 +36,32 @@ const Index = () => {
         <title>Клиника дерматологии и косметологии "Яблоко" | Краснодар</title>
         <meta 
           name="description" 
-          content="Клиника дерматологии и косметологии Яблоко в Краснодаре. Косметология, дерматология, трихология. Красота через здоровье. Запись онлайн." 
+          content="Клиника дерматологии и косметологии Яблоко в Краснодаре — центр медицины кожи, где красота достигается через здоровье. Косметология, дерматология, трихология. Запись онлайн." 
         />
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
-        <Header onBookingClick={openBooking} />
+        <Header onBookingClick={() => openBooking()} />
         
         <main className="flex-1 pb-20 md:pb-0">
-          <HeroSection onBookingClick={openBooking} />
+          <HeroSection onBookingClick={() => openBooking()} />
           <TrustBadges />
-          <ServicesGrid onBookingClick={openBooking} />
-          <ChiefDoctorSection onBookingClick={openBooking} />
+          <ServicesGrid onBookingClick={() => openBooking()} />
+          <DoctorsCarousel onBookingClick={openBooking} />
+          <TechnologySection />
+          <BeforeAfterSlider />
+          <PromoSection onBookingClick={() => openBooking()} />
+          <ReviewsSection />
+          <ChiefDoctorSection onBookingClick={() => openBooking()} />
         </main>
 
         <Footer />
-        <MobileBookingBar onBookingClick={openBooking} />
-        <BookingWizard isOpen={isBookingOpen} onClose={closeBooking} />
+        <MobileBookingBar onBookingClick={() => openBooking()} />
+        <BookingWizard 
+          isOpen={isBookingOpen} 
+          onClose={closeBooking}
+          preselectedDoctorId={preselectedDoctorId}
+        />
       </div>
     </>
   );

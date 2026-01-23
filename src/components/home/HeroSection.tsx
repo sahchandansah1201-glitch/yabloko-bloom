@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, MessageCircle } from "lucide-react";
 
 interface HeroSectionProps {
   onBookingClick: () => void;
@@ -7,67 +7,76 @@ interface HeroSectionProps {
 
 export function HeroSection({ onBookingClick }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-apple-green-light via-background to-background py-16 md:py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-apple-green-light via-background to-background py-20 md:py-28 lg:py-36">
       {/* Background decoration */}
-      <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-primary/3 blur-[100px]" />
       
       <div className="container relative">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           {/* Trust badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 shadow-md animate-fade-in">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-card px-5 py-2.5 shadow-lg animate-fade-in border border-border/50">
             <div className="flex gap-0.5">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star key={i} className="h-4 w-4 fill-primary text-primary" />
               ))}
             </div>
             <span className="text-sm font-medium text-muted-foreground">
-              5.0 на Яндекс Картах
+              5.0 на Яндекс Картах • Более 5000 пациентов
             </span>
           </div>
 
-          {/* Heading */}
+          {/* Main Heading */}
           <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl animate-slide-up">
-            <span className="text-primary">Вернём вам годы</span>
-            <br />
-            <span className="text-foreground">за один час</span>
+            <span className="text-foreground">Клиника «</span>
+            <span className="text-primary">Яблоко</span>
+            <span className="text-foreground">» — это центр медицины кожи,</span>
+            <br className="hidden md:block" />
+            <span className="text-foreground"> где </span>
+            <span className="bg-gradient-to-r from-primary to-apple-green-dark bg-clip-text text-transparent">
+              красота достигается через здоровье
+            </span>
+            <span className="text-foreground">.</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl animate-slide-up stagger-1">
-            <strong className="text-foreground">Красота через здоровье.</strong>
-            {" "}Интегративная дерматология и косметология в Краснодаре.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl animate-slide-up stagger-1">
+            Мы решаем все проблемы кожи — от заболеваний до эстетики.
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up stagger-2">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up stagger-2">
             <Button 
               variant="hero" 
               size="xl" 
               onClick={onBookingClick}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto shadow-primary"
             >
-              Записаться на приём
+              Записаться онлайн
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              Узнать о клинике
-            </Button>
+            <a href="https://wa.me/79184128585" target="_blank" rel="noopener noreferrer">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="w-full sm:w-auto border-2 bg-card/50 backdrop-blur-sm"
+              >
+                <MessageCircle className="mr-2 h-5 w-5 text-[#25D366]" />
+                Написать в WhatsApp
+              </Button>
+            </a>
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 animate-fade-in stagger-3">
+          <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4 animate-fade-in stagger-3">
             {[
-              { value: "10+", label: "лет опыта" },
+              { value: "15+", label: "лет опыта" },
               { value: "5000+", label: "пациентов" },
               { value: "50+", label: "процедур" },
               { value: "5.0", label: "рейтинг" },
             ].map((stat, i) => (
-              <div key={i} className="text-center">
+              <div key={i} className="text-center p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/30 shadow-sm">
                 <div className="font-heading text-2xl font-bold text-primary md:text-3xl">
                   {stat.value}
                 </div>
