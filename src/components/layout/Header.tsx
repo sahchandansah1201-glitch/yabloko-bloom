@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User, Phone } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
 
@@ -10,87 +10,102 @@ interface HeaderProps {
 
 export function Header({ onBookingClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { href: "/", label: "Главная" },
     { href: "/services", label: "Услуги" },
-    { href: "/specialists", label: "Специалисты" },
-    { href: "/about", label: "О клинике" },
+    { href: "/specialists", label: "Врачи" },
+    { href: "/prices", label: "Прайс" },
     { href: "/contacts", label: "Контакты" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
+    <header 
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled 
+          ? "bg-card/80 backdrop-blur-xl border-b border-border/40 shadow-sm" 
+          : "bg-transparent"
+      }`}
+    >
       <div className="container flex h-16 items-center justify-between md:h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
           <img 
             src={logo} 
             alt="Яблоко - клиника дерматологии и косметологии" 
-            className="h-12 w-auto md:h-14"
-            width={56}
-            height={56}
+            className="h-10 w-auto md:h-12"
+            width={48}
+            height={48}
           />
+          <span className="font-heading font-bold text-xl text-primary hidden sm:inline">
+            ЯБЛОКО
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        {/* Desktop Navigation - Center */}
+        <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className="font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="font-medium text-foreground/80 transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* Right side actions */}
-        <div className="flex items-center gap-3">
-          {/* Phone - visible on md+ */}
+        {/* Right side - Contact info & CTA */}
+        <div className="hidden lg:flex items-center gap-4">
+          {/* Address */}
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <MapPin className="h-4 w-4 text-primary shrink-0" />
+            <span className="hidden xl:inline">Краснодар, ул. 70-летия Октября, 1/2</span>
+            <span className="xl:hidden">Краснодар</span>
+          </div>
+
+          {/* Phone */}
           <a 
             href="tel:+79184128585" 
-            className="hidden items-center gap-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary md:flex"
+            className="flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4 text-primary" />
             +7 (918) 412-85-85
           </a>
-
-          {/* Account button */}
-          <Link to="/auth">
-            <Button variant="ghost" size="icon" className="hidden md:flex">
-              <User className="h-5 w-5" />
-              <span className="sr-only">Личный кабинет</span>
-            </Button>
-          </Link>
 
           {/* CTA Button */}
           <Button 
             variant="hero" 
-            size="lg" 
+            size="default" 
             onClick={onBookingClick}
-            className="hidden md:flex"
           >
-            Записаться
-          </Button>
-
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            <span className="sr-only">Меню</span>
+            Запись
           </Button>
         </div>
+
+        {/* Mobile menu button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="lg:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <span className="sr-only">Меню</span>
+        </Button>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="border-t border-border bg-card lg:hidden">
+        <div className="border-t border-border bg-card/95 backdrop-blur-xl lg:hidden animate-fade-in">
           <nav className="container flex flex-col gap-2 py-4">
             {navLinks.map((link) => (
               <Link
@@ -103,21 +118,30 @@ export function Header({ onBookingClick }: HeaderProps) {
               </Link>
             ))}
             <hr className="my-2 border-border" />
+            <div className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
+              <MapPin className="h-4 w-4 text-primary" />
+              <span>Краснодар, ул. 70-летия Октября, 1/2</span>
+            </div>
             <a 
               href="tel:+79184128585" 
               className="flex items-center gap-2 rounded-lg px-4 py-3 font-medium text-foreground/80 transition-colors hover:bg-secondary"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4 text-primary" />
               +7 (918) 412-85-85
             </a>
-            <Link
-              to="/auth"
-              className="flex items-center gap-2 rounded-lg px-4 py-3 font-medium text-foreground/80 transition-colors hover:bg-secondary"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <User className="h-4 w-4" />
-              Личный кабинет
-            </Link>
+            <div className="px-4 pt-2">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full"
+                onClick={() => {
+                  onBookingClick();
+                  setIsMenuOpen(false);
+                }}
+              >
+                Записаться онлайн
+              </Button>
+            </div>
           </nav>
         </div>
       )}

@@ -84,7 +84,15 @@ export function Footer() {
           </div>
         </div>
 
-        <hr className="my-8 border-border" />
+        {/* Medical Disclaimer */}
+        <div className="my-8 p-4 rounded-lg bg-secondary/50 border border-border/50">
+          <p className="text-sm text-muted-foreground text-center">
+            ⚠️ Имеются противопоказания, необходима консультация специалиста. 
+            Информация на сайте не является публичной офертой.
+          </p>
+        </div>
+
+        <hr className="my-6 border-border" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-center text-xs text-muted-foreground md:flex-row md:text-left">
           <p>© 2024 Клиника "Яблоко". Все права защищены.</p>
