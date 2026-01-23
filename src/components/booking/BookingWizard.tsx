@@ -41,6 +41,7 @@ import { toast } from "sonner";
 interface BookingWizardProps {
   isOpen: boolean;
   onClose: () => void;
+  preselectedDoctorId?: string | null;
 }
 
 interface Doctor {
@@ -82,7 +83,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export function BookingWizard({ isOpen, onClose }: BookingWizardProps) {
+export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingWizardProps) {
   const [step, setStep] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -119,6 +120,14 @@ export function BookingWizard({ isOpen, onClose }: BookingWizardProps) {
     }
     loadData();
   }, []);
+
+  // Handle preselected doctor
+  useEffect(() => {
+    if (preselectedDoctorId && isOpen) {
+      setSelectedDoctor(preselectedDoctorId);
+      // Skip to step 1 (category selection) but doctor is pre-filled
+    }
+  }, [preselectedDoctorId, isOpen]);
 
   // Filter services by category
   useEffect(() => {
