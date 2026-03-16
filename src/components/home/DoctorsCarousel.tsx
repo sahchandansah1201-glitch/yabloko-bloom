@@ -64,9 +64,18 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
                   <CardContent className="p-0">
                     {/* Doctor Photo */}
                     <div className="relative aspect-[3/4] bg-gradient-to-br from-apple-green-light to-secondary overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <User className="h-24 w-24 text-primary/30" />
-                      </div>
+                      {(doctor.image_url || doctorPhotos[doctor.name]) ? (
+                        <img
+                          src={doctor.image_url || doctorPhotos[doctor.name]}
+                          alt={doctor.name}
+                          className="absolute inset-0 h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <User className="h-24 w-24 text-primary/30" />
+                        </div>
+                      )}
                       
                       {/* Verified Badge */}
                       {doctor.is_top_specialist && (
