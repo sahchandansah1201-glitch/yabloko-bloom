@@ -9,6 +9,7 @@ export interface Doctor {
   image_url: string | null;
   is_top_specialist: boolean | null;
   created_at: string | null;
+  slug: string | null;
 }
 
 export function useDoctors() {
