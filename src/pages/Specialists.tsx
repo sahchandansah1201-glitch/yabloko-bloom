@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -11,6 +12,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Users, Award, Stethoscope } from "lucide-react";
 
 export default function Specialists() {
+  const navigate = useNavigate();
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -22,8 +24,12 @@ export default function Specialists() {
   const otherDoctors = doctors?.filter(d => !d.is_top_specialist) || [];
 
   const handleOpenProfile = (doctor: Doctor) => {
-    setSelectedDoctor(doctor);
-    setIsProfileOpen(true);
+    if (doctor.slug) {
+      navigate(`/doctor/${doctor.slug}`);
+    } else {
+      setSelectedDoctor(doctor);
+      setIsProfileOpen(true);
+    }
   };
 
   const handleBookWithDoctor = (doctorId: string) => {
