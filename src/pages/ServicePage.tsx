@@ -187,6 +187,104 @@ export default function ServicePage() {
           </div>
         </section>
 
+        {/* Description */}
+        {pageData?.description && pageData.description.length > 0 && (
+          <section className="py-12 md:py-16">
+            <div className="container max-w-3xl">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
+                О процедуре
+              </h2>
+              <div className="space-y-4">
+                {pageData.description.map((p, i) => (
+                  <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Indications & Benefits side-by-side */}
+        {(pageData?.indications || pageData?.benefits) && (
+          <section className="py-12 md:py-16 bg-secondary/30">
+            <div className="container max-w-4xl">
+              <div className="grid md:grid-cols-2 gap-8">
+                {pageData?.indications && pageData.indications.length > 0 && (
+                  <div>
+                    <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
+                      Показания
+                    </h2>
+                    <ul className="space-y-2">
+                      {pageData.indications.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {pageData?.benefits && pageData.benefits.length > 0 && (
+                  <div>
+                    <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
+                      Преимущества
+                    </h2>
+                    <ul className="space-y-2">
+                      {pageData.benefits.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <ShieldCheck className="mt-0.5 h-4 w-4 text-primary shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* How it works */}
+        {pageData?.howItWorks && pageData.howItWorks.length > 0 && (
+          <section className="py-12 md:py-16">
+            <div className="container max-w-3xl">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8">
+                Как проходит процедура
+              </h2>
+              <div className="space-y-4">
+                {pageData.howItWorks.map((step, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
+                      {i + 1}
+                    </span>
+                    <p className="text-muted-foreground pt-1">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Contraindications */}
+        {pageData?.contraindications && pageData.contraindications.length > 0 && (
+          <section className="py-12 md:py-16 bg-secondary/30">
+            <div className="container max-w-3xl">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Противопоказания
+              </h2>
+              <Card className="p-6">
+                <ul className="space-y-2">
+                  {pageData.contraindications.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-destructive shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </div>
+          </section>
+        )}
+
         {/* Doctors */}
         {relatedDoctors.length > 0 && (
           <section className="py-12 md:py-16 bg-secondary/30">
