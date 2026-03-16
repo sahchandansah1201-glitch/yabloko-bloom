@@ -9,7 +9,13 @@ import { DoctorCard } from "@/components/specialists/DoctorCard";
 import { DoctorProfile } from "@/components/specialists/DoctorProfile";
 import { useDoctors, Doctor } from "@/hooks/useDoctors";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Users, Award, Stethoscope } from "lucide-react";
+import { Users, Award, Stethoscope, HeartHandshake } from "lucide-react";
+import { adminPhotos } from "@/assets/admins";
+
+const administrators = [
+  { name: "Стефанова Виктория Геннадьевна", role: "Администратор" },
+  { name: "Трещикова Анастасия Игоревна", role: "Администратор" },
+];
 
 export default function Specialists() {
   const navigate = useNavigate();
@@ -162,6 +168,43 @@ export default function Specialists() {
                 ))}
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Administrators Section */}
+        <section className="py-12 md:py-16">
+          <div className="container">
+            <div className="flex items-center gap-2 mb-8">
+              <HeartHandshake className="h-6 w-6 text-primary" />
+              <h2 className="font-heading text-2xl font-bold">Администраторы</h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {administrators.map((admin) => (
+                <div
+                  key={admin.name}
+                  className="flex items-center gap-4 p-6 rounded-xl bg-card border transition-all hover:shadow-md"
+                >
+                  {adminPhotos[admin.name] ? (
+                    <img
+                      src={adminPhotos[admin.name]}
+                      alt={admin.name}
+                      className="h-20 w-20 rounded-full object-cover ring-2 ring-border"
+                      loading="lazy"
+                      width={80}
+                      height={80}
+                    />
+                  ) : (
+                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-secondary ring-2 ring-border">
+                      <Users className="h-10 w-10 text-muted-foreground" />
+                    </div>
+                  )}
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold text-foreground">{admin.name}</h3>
+                    <p className="text-sm text-muted-foreground">{admin.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
