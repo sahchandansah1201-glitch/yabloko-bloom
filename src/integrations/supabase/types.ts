@@ -86,6 +86,7 @@ export type Database = {
           image_url: string | null
           is_top_specialist: boolean | null
           name: string
+          slug: string | null
           specialty: string
         }
         Insert: {
@@ -95,6 +96,7 @@ export type Database = {
           image_url?: string | null
           is_top_specialist?: boolean | null
           name: string
+          slug?: string | null
           specialty: string
         }
         Update: {
@@ -104,6 +106,7 @@ export type Database = {
           image_url?: string | null
           is_top_specialist?: boolean | null
           name?: string
+          slug?: string | null
           specialty?: string
         }
         Relationships: []
