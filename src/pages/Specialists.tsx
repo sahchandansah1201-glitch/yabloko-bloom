@@ -115,7 +115,7 @@ export default function Specialists() {
                   ))}
                 </div>
               ) : (
-                <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                   {topSpecialists.map(doctor => (
                     <DoctorCard
                       key={doctor.id}
@@ -153,7 +153,7 @@ export default function Specialists() {
                 <p>Не удалось загрузить список специалистов.</p>
               </div>
             ) : (
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {otherDoctors.map(doctor => (
                   <DoctorCard
                     key={doctor.id}
@@ -178,29 +178,29 @@ export default function Specialists() {
               <HeartHandshake className="h-6 w-6 text-primary" />
               <h2 className="font-heading text-2xl font-bold">Администраторы</h2>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {administrators.map((admin) => (
                 <div
                   key={admin.name}
-                  className="flex items-center gap-4 p-6 rounded-xl bg-card border transition-all hover:shadow-md"
+                  className="overflow-hidden rounded-lg border bg-card transition-all hover:shadow-lg"
                 >
-                  {adminPhotos[admin.name] ? (
-                    <img
-                      src={adminPhotos[admin.name]}
-                      alt={admin.name}
-                      className="h-20 w-20 rounded-full object-cover ring-2 ring-border"
-                      loading="lazy"
-                      width={80}
-                      height={80}
-                    />
-                  ) : (
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-secondary ring-2 ring-border">
-                      <Users className="h-10 w-10 text-muted-foreground" />
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground">{admin.name}</h3>
-                    <p className="text-sm text-muted-foreground">{admin.role}</p>
+                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-secondary">
+                    {adminPhotos[admin.name] ? (
+                      <img
+                        src={adminPhotos[admin.name]}
+                        alt={admin.name}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center">
+                        <Users className="h-16 w-16 text-muted-foreground" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-heading text-base font-semibold text-foreground">{admin.name}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{admin.role}</p>
                   </div>
                 </div>
               ))}
