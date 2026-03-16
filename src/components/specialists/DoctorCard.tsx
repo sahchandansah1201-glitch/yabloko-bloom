@@ -1,5 +1,5 @@
-import { User, Star, Award, ChevronRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { User, Star, Award } from "lucide-react";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { doctorPhotos } from "@/assets/doctors";
@@ -22,66 +22,48 @@ export function DoctorCard({
   isTopSpecialist,
   onClick,
 }: DoctorCardProps) {
+  const photo = imageUrl || doctorPhotos[name];
+
   return (
     <Card
       className={cn(
-        "group cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-primary/50",
-        isTopSpecialist && "ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-background"
+        "group cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50",
+        isTopSpecialist && "ring-2 ring-primary/20"
       )}
       onClick={onClick}
     >
-      <CardContent className="p-6">
-        <div className="flex items-start gap-4">
-          {/* Avatar */}
-          <div className="relative">
-            {(imageUrl || doctorPhotos[name]) ? (
-              <img
-                src={imageUrl || doctorPhotos[name]}
-                alt={name}
-                className="h-20 w-20 rounded-full object-cover ring-2 ring-border"
-                loading="lazy"
-                width={80}
-                height={80}
-              />
-            ) : (
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-secondary ring-2 ring-border">
-                <User className="h-10 w-10 text-muted-foreground" />
-              </div>
-            )}
-            {isTopSpecialist && (
-              <div className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-primary">
-                <Star className="h-4 w-4 fill-primary-foreground text-primary-foreground" />
-              </div>
-            )}
+      {/* Large photo */}
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-secondary">
+        {photo ? (
+          <img
+            src={photo}
+            alt={name}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center">
+            <User className="h-16 w-16 text-muted-foreground" />
           </div>
+        )}
+        {isTopSpecialist && (
+          <Badge className="absolute top-3 left-3 gap-1 bg-primary text-primary-foreground shadow-md">
+            <Star className="h-3 w-3 fill-current" />
+            Ведущий специалист
+          </Badge>
+        )}
+      </div>
 
-          {/* Info */}
-          <div className="min-w-0 flex-1">
-            <div className="flex items-start justify-between gap-2">
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {name}
-                </h3>
-                <p className="text-sm text-muted-foreground">{specialty}</p>
-              </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
-            </div>
-
-            {isTopSpecialist && (
-              <Badge variant="secondary" className="mt-2 gap-1">
-                <Award className="h-3 w-3" />
-                Ведущий специалист
-              </Badge>
-            )}
-
-            {bio && (
-              <p className="mt-3 text-sm text-muted-foreground line-clamp-2">
-                {bio}
-              </p>
-            )}
-          </div>
-        </div>
-      </CardContent>
+      {/* Info */}
+      <div className="p-4">
+        <h3 className="font-heading text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1">
+          {name}
+        </h3>
+        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{specialty}</p>
+        {bio && (
+          <p className="mt-2 text-xs text-muted-foreground/80 line-clamp-2">{bio}</p>
+        )}
+      </div>
     </Card>
   );
 }
