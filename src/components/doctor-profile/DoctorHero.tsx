@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, Calendar, Shield, Award } from "lucide-react";
+import { pavlyukMaria } from "@/assets/doctors";
 
 interface DoctorHeroProps {
   onBookingClick: () => void;
