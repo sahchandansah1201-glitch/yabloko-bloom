@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Quote, ArrowRight, Award, Shield } from "lucide-react";
+import { pavlyukMaria } from "@/assets/doctors";
 
 interface ChiefDoctorSectionProps {
   onBookingClick: () => void;
