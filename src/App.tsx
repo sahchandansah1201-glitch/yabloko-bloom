@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Specialists from "./pages/Specialists";
 import DoctorPavlyuk from "./pages/DoctorPavlyuk";
+import DoctorPage from "./pages/DoctorPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
