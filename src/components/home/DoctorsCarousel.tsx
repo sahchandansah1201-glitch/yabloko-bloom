@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { BadgeCheck, ArrowRight, User } from "lucide-react";
 import { useDoctors } from "@/hooks/useDoctors";
+import { doctorPhotos } from "@/assets/doctors";
 
 interface DoctorsCarouselProps {
   onBookingClick: (doctorId?: string) => void;
