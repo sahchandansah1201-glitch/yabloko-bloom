@@ -9,7 +9,13 @@ import { DoctorCard } from "@/components/specialists/DoctorCard";
 import { DoctorProfile } from "@/components/specialists/DoctorProfile";
 import { useDoctors, Doctor } from "@/hooks/useDoctors";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Users, Award, Stethoscope } from "lucide-react";
+import { Users, Award, Stethoscope, HeartHandshake } from "lucide-react";
+import { adminPhotos } from "@/assets/admins";
+
+const administrators = [
+  { name: "Стефанова Виктория Геннадьевна", role: "Администратор" },
+  { name: "Трещикова Анастасия Игоревна", role: "Администратор" },
+];
 
 export default function Specialists() {
   const navigate = useNavigate();
