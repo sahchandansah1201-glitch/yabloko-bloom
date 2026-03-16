@@ -2,6 +2,7 @@ import { User, Star, Award, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { doctorPhotos } from "@/assets/doctors";
 
 interface DoctorCardProps {
   id: string;
@@ -33,9 +34,9 @@ export function DoctorCard({
         <div className="flex items-start gap-4">
           {/* Avatar */}
           <div className="relative">
-            {imageUrl ? (
+            {(imageUrl || doctorPhotos[name]) ? (
               <img
-                src={imageUrl}
+                src={imageUrl || doctorPhotos[name]}
                 alt={name}
                 className="h-20 w-20 rounded-full object-cover ring-2 ring-border"
                 loading="lazy"

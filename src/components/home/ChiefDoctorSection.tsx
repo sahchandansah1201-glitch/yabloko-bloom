@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Quote, ArrowRight, Award, Shield } from "lucide-react";
+import { pavlyukMaria } from "@/assets/doctors";
 
 interface ChiefDoctorSectionProps {
   onBookingClick: () => void;
@@ -13,18 +14,12 @@ export function ChiefDoctorSection({ onBookingClick }: ChiefDoctorSectionProps) 
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Image placeholder */}
           <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 lg:order-2">
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-              <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-                <Award className="h-10 w-10 text-primary" />
-              </div>
-              <p className="font-heading text-lg font-semibold">
-                Павлюк Мария Олеговна
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Главный врач клиники
-              </p>
-            </div>
-            
+            <img
+              src={pavlyukMaria}
+              alt="Павлюк Мария Олеговна — главный врач клиники Яблоко"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
             {/* Decorative elements */}
             <div className="absolute -bottom-6 -right-6 h-32 w-32 rounded-full bg-primary/20 blur-2xl" />
             <div className="absolute -left-6 -top-6 h-32 w-32 rounded-full bg-accent/20 blur-2xl" />

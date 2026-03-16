@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, Calendar, Shield, Award } from "lucide-react";
+import { pavlyukMaria } from "@/assets/doctors";
 
 interface DoctorHeroProps {
   onBookingClick: () => void;
@@ -20,13 +21,11 @@ export function DoctorHero({ onBookingClick }: DoctorHeroProps) {
             className="relative mx-auto w-full max-w-sm md:max-w-none"
           >
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-muted shadow-xl ring-4 ring-primary/10">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-primary/5 to-primary/15 p-8 text-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
-                  <Shield className="h-12 w-12 text-primary" />
-                </div>
-                <p className="font-heading text-lg font-semibold text-foreground">Фото врача</p>
-                <p className="text-sm text-muted-foreground">Павлюк Мария Олеговна</p>
-              </div>
+              <img
+                src={pavlyukMaria}
+                alt="Павлюк Мария Олеговна — главный врач клиники Яблоко"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
             </div>
             {/* Floating badge */}
             <motion.div
