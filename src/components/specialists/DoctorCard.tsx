@@ -2,6 +2,7 @@ import { User, Star, Award, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { doctorPhotos } from "@/assets/doctors";
 
 interface DoctorCardProps {
   id: string;
