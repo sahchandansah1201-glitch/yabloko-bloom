@@ -13,6 +13,7 @@ import ServicesHub from "./pages/ServicesHub";
 import ServicePage from "./pages/ServicePage";
 import AdviceHub from "./pages/AdviceHub";
 import ArticlePage from "./pages/ArticlePage";
+import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound";
 import PasswordGate from "./components/PasswordGate";
 
