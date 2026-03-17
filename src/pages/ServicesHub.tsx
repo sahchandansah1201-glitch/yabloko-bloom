@@ -136,7 +136,7 @@ export default function ServicesHub() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <Tabs value={activeTab} onValueChange={setActiveTab}>
+                  <Tabs value={activeTab} onValueChange={handleTabChange}>
                     <TabsList className="w-full justify-start gap-1 bg-transparent p-0 mb-8 flex-wrap">
                       {serviceCategories.map((cat) => (
                         <TabsTrigger
