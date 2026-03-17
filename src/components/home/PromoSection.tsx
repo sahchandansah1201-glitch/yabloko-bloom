@@ -154,10 +154,10 @@ export function PromoSection({ onBookingClick }: PromoSectionProps) {
 }
 
 function MobilePromoCarousel({
-  promos,
+  promos: promoItems,
   onBookingClick,
 }: {
-  promos: typeof promos;
+  promos: PromoItem[];
   onBookingClick: () => void;
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
