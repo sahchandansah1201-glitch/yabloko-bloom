@@ -9,7 +9,7 @@ export function TrustBadges() {
           <div className="flex items-center gap-2">
             <div className="flex gap-0.5">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
             <span className="text-sm font-medium">
@@ -22,7 +22,7 @@ export function TrustBadges() {
           <div className="flex items-center gap-2">
             <div className="flex gap-0.5">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className={`h-4 w-4 ${i <= 4 ? "fill-primary text-primary" : "fill-primary/50 text-primary/50"}`} />
+                <Star key={i} className={`h-4 w-4 ${i <= 4 ? "fill-amber-400 text-amber-400" : "fill-amber-400/50 text-amber-400/50"}`} />
               ))}
             </div>
             <span className="text-sm font-medium">
