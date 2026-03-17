@@ -188,7 +188,7 @@ function MobilePromoCarousel({
       </div>
       {/* Dots */}
       <div className="flex justify-center gap-1.5 mt-5">
-        {promos.map((_, i) => (
+        {promoItems.map((_, i) => (
           <button
             key={i}
             onClick={() => emblaApi?.scrollTo(i)}
