@@ -118,6 +118,8 @@ export default function ServicePage() {
         <ServiceCrossSell items={crossSell} />
 
         <ServiceFAQ faq={faq} />
+
+        <RecentInsights category={category?.id === "cosmetology" ? "cosmetology" : category?.id === "dermatology" ? "dermatology" : undefined} />
       </main>
 
       <Footer />

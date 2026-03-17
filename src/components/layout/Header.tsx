@@ -23,6 +23,7 @@ export function Header({ onBookingClick }: HeaderProps) {
   const navLinks = [
     { href: "/services", label: "Услуги" },
     { href: "/specialists", label: "Врачи" },
+    { href: "/advice", label: "Советы экспертов" },
     { href: "/prices", label: "Прайс" },
     { href: "/contacts", label: "Контакты" },
   ];
