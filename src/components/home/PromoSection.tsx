@@ -204,8 +204,16 @@ function MobilePromoCarousel({
   );
 }
 
+interface PromoItem {
+  title: string;
+  subtitle: string;
+  description: string;
+  badge: string;
+  color: string;
+}
+
 interface PromoCardProps {
-  promo: (typeof promos)[number];
+  promo: PromoItem;
   onBookingClick: () => void;
 }
 
