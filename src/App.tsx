@@ -10,6 +10,8 @@ import DoctorPavlyuk from "./pages/DoctorPavlyuk";
 import DoctorPage from "./pages/DoctorPage";
 import ServicesHub from "./pages/ServicesHub";
 import ServicePage from "./pages/ServicePage";
+import AdviceHub from "./pages/AdviceHub";
+import ArticlePage from "./pages/ArticlePage";
 import NotFound from "./pages/NotFound";
 import PasswordGate from "./components/PasswordGate";
 
