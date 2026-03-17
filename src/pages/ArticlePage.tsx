@@ -25,12 +25,11 @@ export default function ArticlePage() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const article = slug ? getArticleBySlug(slug) : undefined;
-  if (!article) return <NotFound />;
-
-  const photo = doctorPhotos[article.authorName];
 
   /* auto-related: use relatedSlugs if present, else same-category */
   const related = useMemo(() => {
+    if (!article) return [];
+    if (article.relatedSlugs?.length) {
     if (article.relatedSlugs?.length) {
       return article.relatedSlugs
         .map((s) => articles.find((a) => a.slug === s))
