@@ -15,6 +15,7 @@ import { ServicePatientStories } from "@/components/service-page/ServicePatientS
 import { ServiceCrossSell } from "@/components/service-page/ServiceCrossSell";
 import { ServiceFAQ } from "@/components/service-page/ServiceFAQ";
 import { ServiceMobileCTA } from "@/components/service-page/ServiceMobileCTA";
+import { RecentInsights } from "@/components/advice/RecentInsights";
 import { getServicePageData, getServiceBySlug, serviceCategories } from "@/data/servicesData";
 import { useDoctors } from "@/hooks/useDoctors";
 import NotFound from "./NotFound";
@@ -117,6 +118,8 @@ export default function ServicePage() {
         <ServiceCrossSell items={crossSell} />
 
         <ServiceFAQ faq={faq} />
+
+        <RecentInsights category={category?.id === "cosmetology" ? "cosmetology" : category?.id === "dermatology" ? "dermatology" : undefined} />
       </main>
 
       <Footer />
