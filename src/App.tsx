@@ -13,6 +13,7 @@ import ServicesHub from "./pages/ServicesHub";
 import ServicePage from "./pages/ServicePage";
 import AdviceHub from "./pages/AdviceHub";
 import ArticlePage from "./pages/ArticlePage";
+import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound";
 import PasswordGate from "./components/PasswordGate";
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/services/:slug" element={<ServicePage />} />
             <Route path="/advice" element={<AdviceHub />} />
             <Route path="/advice/:slug" element={<ArticlePage />} />
+            <Route path="/contacts" element={<Contacts />} />
             <Route path="/doctor/pavlyuk" element={<DoctorPavlyuk />} />
             <Route path="/doctor/:slug" element={<DoctorPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
