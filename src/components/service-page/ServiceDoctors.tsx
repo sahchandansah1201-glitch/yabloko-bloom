@@ -44,7 +44,7 @@ export function ServiceDoctors({ doctors, onBookDoctor }: ServiceDoctorsProps) {
                     </div>
                   )}
                   <Badge className="absolute top-3 left-3 gap-1 bg-card/90 text-foreground backdrop-blur-sm shadow-sm border-0">
-                    <Star className="h-3 w-3 fill-primary text-primary" />
+                    <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
                     5.0
                   </Badge>
                 </div>
