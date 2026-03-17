@@ -140,13 +140,14 @@ export default function ServicesHub() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.25 }}
-                            className="grid gap-3 sm:grid-cols-2"
+                            className="grid gap-4 sm:grid-cols-2"
                           >
                             {cat.services.map((s) => (
                               <ServiceCard
                                 key={s.slug}
                                 service={s}
-                                onClick={() => navigate(`/services/${s.slug}`)}
+                                onNavigate={() => navigate(`/services/${s.slug}`)}
+                                onBook={() => setIsBookingOpen(true)}
                               />
                             ))}
                           </motion.div>
