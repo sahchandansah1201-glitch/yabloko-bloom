@@ -12,8 +12,8 @@ const PHONE = "+79184128585";
 const PHONE_DISPLAY = "+7 (918) 412-85-85";
 const ADDRESS = "г. Краснодар, ул. 70-летия Октября, 1/2";
 const WHATSAPP_URL = "https://wa.me/79184128585";
-const YANDEX_MAP_URL = "https://yandex.ru/maps/?pt=39.0753,45.0354&z=17&l=map";
-const YANDEX_NAVI_URL = "https://yandex.ru/navi/?whatshere[point]=39.0753,45.0354&whatshere[zoom]=17";
+const YANDEX_MAP_URL = "https://yandex.ru/maps/?pt=38.904027,45.026234&z=17&l=map";
+const YANDEX_NAVI_URL = "https://yandex.ru/navi/?whatshere[point]=38.904027,45.026234&whatshere[zoom]=17";
 
 const SCHEDULE = [
   { day: "Понедельник", hours: "9:00 – 20:00" },
@@ -84,7 +84,7 @@ const Contacts = () => {
         closes: "20:00",
       },
     ],
-    geo: { "@type": "GeoCoordinates", latitude: 45.0354, longitude: 39.0753 },
+    geo: { "@type": "GeoCoordinates", latitude: 45.026234, longitude: 38.904027 },
     url: "https://yabloko-bloom.lovable.app/contacts",
   };
 
@@ -278,7 +278,7 @@ const Contacts = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-border">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=39.0753%2C45.0354&z=16&pt=39.0753%2C45.0354%2Cpm2rdl1&l=map"
+              src="https://yandex.ru/map-widget/v1/?ll=38.904027%2C45.026234&z=16&pt=38.904027%2C45.026234%2Cpm2rdl1&l=map"
               className="w-full h-[300px] md:h-[450px]"
               allowFullScreen
               title="Клиника Яблоко на карте — Краснодар, ул. 70-летия Октября, 1/2"
