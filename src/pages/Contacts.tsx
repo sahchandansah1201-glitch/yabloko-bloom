@@ -12,8 +12,8 @@ const PHONE = "+79184128585";
 const PHONE_DISPLAY = "+7 (918) 412-85-85";
 const ADDRESS = "г. Краснодар, ул. 70-летия Октября, 1/2";
 const WHATSAPP_URL = "https://wa.me/79184128585";
-const YANDEX_MAP_URL = "https://yandex.ru/maps/-/CHuBjU~v";
-const YANDEX_NAVI_URL = "https://yandex.ru/navi/?whatshere[point]=39.028,45.019&whatshere[zoom]=17";
+const YANDEX_MAP_URL = "https://yandex.ru/maps/?pt=39.0753,45.0354&z=17&l=map";
+const YANDEX_NAVI_URL = "https://yandex.ru/navi/?whatshere[point]=39.0753,45.0354&whatshere[zoom]=17";
 
 const SCHEDULE = [
   { day: "Понедельник", hours: "9:00 – 20:00" },
