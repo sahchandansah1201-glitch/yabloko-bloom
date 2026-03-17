@@ -77,7 +77,7 @@ export default function ServicesHub() {
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
 
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background scroll-mt-24">
         {/* Hero + Search */}
         <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
           <div className="container max-w-3xl text-center">
@@ -101,7 +101,7 @@ export default function ServicesHub() {
         </section>
 
         {/* Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-12 md:py-16 scroll-mt-24">
           <div className="container max-w-4xl">
             <AnimatePresence mode="wait">
               {isSearching ? (

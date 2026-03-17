@@ -29,10 +29,10 @@ export function Header({ onBookingClick }: HeaderProps) {
 
   return (
     <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 bg-background border-b ${
         isScrolled 
-          ? "bg-card/80 backdrop-blur-xl border-b border-border/40 shadow-sm" 
-          : "bg-transparent"
+          ? "border-border/40 shadow-sm backdrop-blur-xl" 
+          : "border-transparent"
       }`}
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
