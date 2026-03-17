@@ -76,6 +76,7 @@ export default function ServicesHub() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
+            <TrustBar />
           </div>
         </section>
 
