@@ -21,29 +21,6 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 const validTabs = serviceCategories.map((c) => c.id);
-
-function ServiceCard({ service, onClick }: { service: ServiceItem; onClick: () => void }) {
-  return (
-    <motion.button
-      layout
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -12 }}
-      transition={{ duration: 0.2 }}
-      onClick={onClick}
-      className="group flex items-center justify-between gap-4 rounded-xl border bg-card p-5 text-left transition-all duration-200 hover:shadow-lg hover:border-primary/40"
-    >
-      <div className="min-w-0">
-        <h3 className="font-heading text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-          {service.title}
-        </h3>
-        <p className="mt-1 text-sm font-medium text-primary">{service.priceFrom}</p>
-      </div>
-      <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-    </motion.button>
-  );
-}
-
 export default function ServicesHub() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
