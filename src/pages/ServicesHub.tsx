@@ -94,12 +94,13 @@ export default function ServicesHub() {
                   <p className="text-sm text-muted-foreground mb-6">
                     Найдено: {filteredServices?.length ?? 0}
                   </p>
-                  <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     {filteredServices?.map((s) => (
                       <ServiceCard
                         key={s.slug}
                         service={s}
-                        onClick={() => navigate(`/services/${s.slug}`)}
+                        onNavigate={() => navigate(`/services/${s.slug}`)}
+                        onBook={() => setIsBookingOpen(true)}
                       />
                     ))}
                   </div>
