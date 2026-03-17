@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ArrowRight, Sparkles, Stethoscope, Scissors, HeartPulse } from "lucide-react";
@@ -17,6 +17,8 @@ const categoryIcons: Record<string, React.ReactNode> = {
   trichology: <Scissors className="h-4 w-4" />,
   health: <HeartPulse className="h-4 w-4" />,
 };
+
+const validTabs = serviceCategories.map((c) => c.id);
 
 function ServiceCard({ service, onClick }: { service: ServiceItem; onClick: () => void }) {
   return (
@@ -42,9 +44,16 @@ function ServiceCard({ service, onClick }: { service: ServiceItem; onClick: () =
 
 export default function ServicesHub() {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("cosmetology");
+
+  const tabFromUrl = searchParams.get("tab");
+  const activeTab = validTabs.includes(tabFromUrl ?? "") ? tabFromUrl! : "cosmetology";
+
+  const handleTabChange = (value: string) => {
+    setSearchParams({ tab: value }, { replace: true });
+  };
 
   const allServices = useMemo(() => getAllServices(), []);
 
