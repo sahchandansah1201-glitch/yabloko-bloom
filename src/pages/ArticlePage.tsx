@@ -40,6 +40,10 @@ export default function ArticlePage() {
       .slice(0, 3);
   }, [article]);
 
+  if (!article) return <NotFound />;
+
+  const photo = doctorPhotos[article.authorName];
+
   const formattedDate = new Date(article.publishedAt).toLocaleDateString("ru-RU", {
     day: "numeric",
     month: "long",
