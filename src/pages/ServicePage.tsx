@@ -15,6 +15,7 @@ import { ServicePatientStories } from "@/components/service-page/ServicePatientS
 import { ServiceCrossSell } from "@/components/service-page/ServiceCrossSell";
 import { ServiceFAQ } from "@/components/service-page/ServiceFAQ";
 import { ServiceMobileCTA } from "@/components/service-page/ServiceMobileCTA";
+import { InlineContactBlock } from "@/components/messenger/InlineContactBlock";
 import { RecentInsights } from "@/components/advice/RecentInsights";
 import { getServicePageData, getServiceBySlug, serviceCategories } from "@/data/servicesData";
 import { useDoctors } from "@/hooks/useDoctors";
