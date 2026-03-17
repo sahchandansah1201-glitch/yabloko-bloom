@@ -75,7 +75,7 @@ export function ServicesGrid({ onBookingClick }: ServicesGridProps) {
               <Link
               key={service.id}
               to={`/services?tab=${service.id}`}
-              className="group relative overflow-hidden rounded-xl border border-border/30 bg-background p-7 transition-all duration-300 hover:border-primary hover:shadow-md md:p-8"
+              className="group relative overflow-hidden rounded-xl border border-border/40 bg-background p-7 shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.08)] transition-all duration-300 hover:border-primary hover:shadow-[0_6px_20px_-4px_hsl(var(--primary)/0.18)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_1px_4px_-1px_hsl(var(--foreground)/0.1)] md:p-8"
             >
               {/* Text content */}
               <div className="relative z-10 pr-28 md:pr-36">
