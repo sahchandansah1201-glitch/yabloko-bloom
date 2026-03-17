@@ -84,7 +84,7 @@ const Contacts = () => {
         closes: "20:00",
       },
     ],
-    geo: { "@type": "GeoCoordinates", latitude: 45.0354, longitude: 39.0753 },
+    geo: { "@type": "GeoCoordinates", latitude: 45.026234, longitude: 38.904027 },
     url: "https://yabloko-bloom.lovable.app/contacts",
   };
 
