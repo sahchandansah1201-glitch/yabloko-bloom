@@ -116,6 +116,8 @@ export default function ServicePage() {
 
         <ServicePricing pricing={pricingWithTags} />
 
+        <InlineContactBlock pageTitle={title} />
+
         <ServiceCrossSell items={crossSell} />
 
         <ServiceFAQ faq={faq} />
