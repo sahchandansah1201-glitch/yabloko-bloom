@@ -11,11 +11,13 @@ import DoctorPage from "./pages/DoctorPage";
 import ServicesHub from "./pages/ServicesHub";
 import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
+import PasswordGate from "./components/PasswordGate";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
+    <PasswordGate>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
