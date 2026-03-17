@@ -179,7 +179,7 @@ function MobilePromoCarousel({
     <div>
       <div className="overflow-hidden -mx-4 px-4" ref={emblaRef}>
         <div className="flex gap-3">
-          {promos.map((promo, index) => (
+          {promoItems.map((promo, index) => (
             <div key={index} className="flex-[0_0_85%] min-w-0">
               <PromoCard promo={promo} onBookingClick={onBookingClick} />
             </div>
