@@ -101,7 +101,7 @@ export default function ServicesHub() {
         </section>
 
         {/* Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-12 md:py-16 scroll-mt-24">
           <div className="container max-w-4xl">
             <AnimatePresence mode="wait">
               {isSearching ? (
