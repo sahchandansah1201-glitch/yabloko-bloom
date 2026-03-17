@@ -30,7 +30,6 @@ export default function ArticlePage() {
   const related = useMemo(() => {
     if (!article) return [];
     if (article.relatedSlugs?.length) {
-    if (article.relatedSlugs?.length) {
       return article.relatedSlugs
         .map((s) => articles.find((a) => a.slug === s))
         .filter(Boolean) as typeof articles;
