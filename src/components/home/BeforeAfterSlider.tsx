@@ -1,8 +1,10 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import useEmblaCarousel from "embla-carousel-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface BeforeAfterCase {
   id: number;
@@ -45,26 +47,30 @@ const cases: BeforeAfterCase[] = [
 ];
 
 export function BeforeAfterSlider() {
+  const isMobile = useIsMobile();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const goTo = (index: number) => {
-    setActiveIndex(index);
-  };
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setActiveIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
-  const goPrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? cases.length - 1 : prev - 1));
-  };
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi, onSelect]);
 
-  const goNext = () => {
-    setActiveIndex((prev) => (prev === cases.length - 1 ? 0 : prev + 1));
-  };
-
-  const activeCase = cases[activeIndex];
+  const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
     <section className="py-16 md:py-24 bg-secondary/30">
       <div className="container">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-10 md:mb-14">
           <Badge variant="outline" className="mb-4 border-primary text-primary">
             Результаты лечения
@@ -73,119 +79,116 @@ export function BeforeAfterSlider() {
             До и после
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Реальные результаты наших пациентов. Нажмите на карточку для просмотра.
+            Реальные результаты наших пациентов
           </p>
         </div>
 
-        {/* Featured Case — Large */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCase.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.35 }}
-              className="rounded-2xl border bg-card overflow-hidden shadow-lg"
-            >
-              <div className="grid grid-cols-2">
-                {/* Before */}
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-muted to-secondary/60">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center px-4">
-                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-muted-foreground/15 mx-auto mb-3" />
-                      <p className="text-muted-foreground text-sm md:text-base font-medium">
-                        До лечения
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <Badge className="bg-foreground/70 text-background text-xs">До</Badge>
-                  </div>
+        {/* Carousel */}
+        <div className="max-w-4xl mx-auto">
+          <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
+            <div className="flex">
+              {cases.map((c) => (
+                <div key={c.id} className="flex-[0_0_100%] min-w-0">
+                  <CaseCard caseData={c} />
                 </div>
-
-                {/* After */}
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/15">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center px-4">
-                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-primary/20 mx-auto mb-3" />
-                      <p className="text-primary text-sm md:text-base font-medium">
-                        После лечения
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute top-3 right-3">
-                    <Badge className="bg-primary text-primary-foreground text-xs">После</Badge>
-                  </div>
-                </div>
-              </div>
-
-              {/* Caption */}
-              <div className="p-4 md:p-6 text-center border-t">
-                <h3 className="font-heading font-semibold text-foreground text-lg md:text-xl mb-1">
-                  {activeCase.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">{activeCase.caption}</p>
-                <p className="text-xs text-muted-foreground/60 mt-1">
-                  Врач: {activeCase.doctor}
-                </p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Navigation Arrows */}
-          <div className="flex items-center justify-center gap-3 mt-5">
-            <Button
-              variant="outline"
-              size="icon"
-              className="rounded-full h-9 w-9"
-              onClick={goPrev}
-              aria-label="Предыдущий результат"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <span className="text-sm text-muted-foreground tabular-nums">
-              {activeIndex + 1} / {cases.length}
-            </span>
-            <Button
-              variant="outline"
-              size="icon"
-              className="rounded-full h-9 w-9"
-              onClick={goNext}
-              aria-label="Следующий результат"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Thumbnail Strip */}
-        <div className="flex justify-center gap-3 overflow-x-auto pb-2 px-4 -mx-4 scrollbar-hide">
-          {cases.map((c, i) => (
-            <button
-              key={c.id}
-              onClick={() => goTo(i)}
-              className={`flex-shrink-0 rounded-xl border-2 transition-all duration-200 overflow-hidden ${
-                i === activeIndex
-                  ? "border-primary shadow-md scale-[1.02]"
-                  : "border-transparent opacity-60 hover:opacity-90"
-              }`}
-            >
-              <div className="w-28 md:w-36">
-                <div className="grid grid-cols-2 aspect-[2/1]">
-                  <div className="bg-muted" />
-                  <div className="bg-primary/10" />
-                </div>
-                <div className="px-2 py-1.5 bg-card">
-                  <p className="text-[10px] md:text-xs font-medium text-foreground truncate">
-                    {c.title}
-                  </p>
-                </div>
-              </div>
-            </button>
-          ))}
+          {/* Navigation */}
+          <div className="flex items-center justify-center gap-3 mt-5">
+            {/* Arrows — desktop only */}
+            {!isMobile && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full h-9 w-9"
+                onClick={scrollPrev}
+                aria-label="Предыдущий результат"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+            )}
+
+            {/* Dot indicators */}
+            <div className="flex items-center gap-2">
+              {cases.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => scrollTo(i)}
+                  aria-label={`Результат ${i + 1}`}
+                  className={`rounded-full transition-all duration-300 ${
+                    i === activeIndex
+                      ? "w-6 h-2.5 bg-primary"
+                      : "w-2.5 h-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {!isMobile && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full h-9 w-9"
+                onClick={scrollNext}
+                aria-label="Следующий результат"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function CaseCard({ caseData }: { caseData: BeforeAfterCase }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0.8 }}
+      animate={{ opacity: 1 }}
+      className="border bg-card overflow-hidden shadow-lg rounded-2xl mx-1 md:mx-0"
+    >
+      <div className="grid grid-cols-2">
+        {/* Before */}
+        <div className="relative aspect-[4/3] bg-gradient-to-br from-muted to-secondary/60">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <div className="w-16 h-16 md:w-28 md:h-28 rounded-full bg-muted-foreground/15 mx-auto mb-3" />
+              <p className="text-muted-foreground text-xs md:text-base font-medium">До лечения</p>
+            </div>
+          </div>
+          <div className="absolute top-2 left-2 md:top-3 md:left-3">
+            <Badge className="bg-foreground/70 text-background text-[10px] md:text-xs">До</Badge>
+          </div>
+        </div>
+
+        {/* After */}
+        <div className="relative aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/15">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-4">
+              <div className="w-16 h-16 md:w-28 md:h-28 rounded-full bg-primary/20 mx-auto mb-3" />
+              <p className="text-primary text-xs md:text-base font-medium">После лечения</p>
+            </div>
+          </div>
+          <div className="absolute top-2 right-2 md:top-3 md:right-3">
+            <Badge className="bg-primary text-primary-foreground text-[10px] md:text-xs">После</Badge>
+          </div>
+        </div>
+      </div>
+
+      {/* Caption */}
+      <div className="p-3 md:p-6 text-center border-t">
+        <h3 className="font-heading font-semibold text-foreground text-base md:text-xl mb-1">
+          {caseData.title}
+        </h3>
+        <p className="text-muted-foreground text-xs md:text-sm">{caseData.caption}</p>
+        <p className="text-[10px] md:text-xs text-muted-foreground/60 mt-1">
+          Врач: {caseData.doctor}
+        </p>
+      </div>
+    </motion.div>
   );
 }
