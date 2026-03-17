@@ -2,11 +2,13 @@ import { useState, useMemo, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ArrowRight, Sparkles, Stethoscope, Scissors, HeartPulse } from "lucide-react";
+import { Search, Sparkles, Stethoscope, Scissors, HeartPulse } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { TrustBar } from "@/components/services/TrustBar";
+import { ServiceCard } from "@/components/services/ServiceCard";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { serviceCategories, getAllServices, type ServiceItem } from "@/data/servicesData";
@@ -19,29 +21,6 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 const validTabs = serviceCategories.map((c) => c.id);
-
-function ServiceCard({ service, onClick }: { service: ServiceItem; onClick: () => void }) {
-  return (
-    <motion.button
-      layout
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -12 }}
-      transition={{ duration: 0.2 }}
-      onClick={onClick}
-      className="group flex items-center justify-between gap-4 rounded-xl border bg-card p-5 text-left transition-all duration-200 hover:shadow-lg hover:border-primary/40"
-    >
-      <div className="min-w-0">
-        <h3 className="font-heading text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-          {service.title}
-        </h3>
-        <p className="mt-1 text-sm font-medium text-primary">{service.priceFrom}</p>
-      </div>
-      <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-    </motion.button>
-  );
-}
-
 export default function ServicesHub() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -97,6 +76,7 @@ export default function ServicesHub() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
+            <TrustBar />
           </div>
         </section>
 
@@ -114,12 +94,13 @@ export default function ServicesHub() {
                   <p className="text-sm text-muted-foreground mb-6">
                     Найдено: {filteredServices?.length ?? 0}
                   </p>
-                  <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     {filteredServices?.map((s) => (
                       <ServiceCard
                         key={s.slug}
                         service={s}
-                        onClick={() => navigate(`/services/${s.slug}`)}
+                        onNavigate={() => navigate(`/services/${s.slug}`)}
+                        onBook={() => setIsBookingOpen(true)}
                       />
                     ))}
                   </div>
@@ -159,13 +140,14 @@ export default function ServicesHub() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.25 }}
-                            className="grid gap-3 sm:grid-cols-2"
+                            className="grid gap-4 sm:grid-cols-2"
                           >
                             {cat.services.map((s) => (
                               <ServiceCard
                                 key={s.slug}
                                 service={s}
-                                onClick={() => navigate(`/services/${s.slug}`)}
+                                onNavigate={() => navigate(`/services/${s.slug}`)}
+                                onBook={() => setIsBookingOpen(true)}
                               />
                             ))}
                           </motion.div>
