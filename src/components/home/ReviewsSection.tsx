@@ -83,7 +83,7 @@ export function ReviewsSection() {
                 {/* Rating */}
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 

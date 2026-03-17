@@ -54,7 +54,7 @@ export function ServicePatientStories() {
                 {/* Stars */}
                 <div className="flex gap-0.5 mb-3">
                   {Array.from({ length: story.rating }).map((_, j) => (
-                    <Star key={j} className="h-3.5 w-3.5 fill-primary text-primary" />
+                    <Star key={j} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
                 {/* Text */}
