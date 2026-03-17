@@ -24,7 +24,6 @@ export function Header({ onBookingClick }: HeaderProps) {
     { href: "/services", label: "Услуги" },
     { href: "/specialists", label: "Врачи" },
     { href: "/advice", label: "Советы экспертов" },
-    { href: "/prices", label: "Прайс" },
     { href: "/contacts", label: "Контакты" },
   ];
 
