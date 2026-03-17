@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import { 
-  Sparkles, 
-  Stethoscope, 
-  Scissors, 
-  Heart,
-  ArrowRight
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+import cosmetologyImg from "@/assets/services/cosmetology-item.png";
+import dermatologyImg from "@/assets/services/dermatology-item.png";
+import trichologyImg from "@/assets/services/trichology-item.png";
+import healthImg from "@/assets/services/health-item.png";
 
 interface ServicesGridProps {
   onBookingClick: () => void;
@@ -15,35 +13,35 @@ interface ServicesGridProps {
 const services = [
   {
     id: "cosmetology",
-    icon: Sparkles,
     title: "Косметология",
-    description: "Ботулинотерапия, биоревитализация, контурная пластика, пилинги",
-    problems: ["Морщины?", "Усталый вид?", "Потеря объёма?"],
-    color: "from-primary/20 to-primary/5",
+    tags: "Омоложение, инъекции, эстетика",
+    image: cosmetologyImg,
+    bg: "bg-[hsl(152_40%_95%)]",
+    bgHover: "hover:bg-[hsl(152_40%_90%)]",
   },
   {
     id: "dermatology",
-    icon: Stethoscope,
     title: "Дерматология",
-    description: "Лечение акне, удаление новообразований, лечение кожных заболеваний",
-    problems: ["Акне?", "Пигментация?", "Высыпания?"],
-    color: "from-accent/20 to-accent/5",
+    tags: "Лечение акне, удаление новообразований, розацеа",
+    image: dermatologyImg,
+    bg: "bg-[hsl(35_40%_95%)]",
+    bgHover: "hover:bg-[hsl(35_40%_90%)]",
   },
   {
     id: "trichology",
-    icon: Scissors,
     title: "Трихология",
-    description: "Лечение выпадения волос, трихоскопия, мезотерапия кожи головы",
-    problems: ["Выпадают волосы?", "Перхоть?", "Тусклые волосы?"],
-    color: "from-primary/20 to-primary/5",
+    tags: "Выпадение волос, лечение кожи головы",
+    image: trichologyImg,
+    bg: "bg-[hsl(205_50%_95%)]",
+    bgHover: "hover:bg-[hsl(205_50%_90%)]",
   },
   {
     id: "health",
-    icon: Heart,
     title: "Здоровье",
-    description: "Остеопатия, консультация нутрициолога, интегративный подход",
-    problems: ["Боли в спине?", "Проблемы с питанием?", "Стресс?"],
-    color: "from-accent/20 to-accent/5",
+    tags: "Остеопатия, диетология, неврология",
+    image: healthImg,
+    bg: "bg-[hsl(230_30%_95%)]",
+    bgHover: "hover:bg-[hsl(230_30%_90%)]",
   },
 ];
 
@@ -52,63 +50,49 @@ export function ServicesGrid({ onBookingClick }: ServicesGridProps) {
     <section className="py-16 md:py-24">
       <div className="container">
         {/* Section header */}
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="font-heading text-2xl font-bold md:text-3xl lg:text-4xl">
+        <div className="mb-10 max-w-2xl md:mb-14">
+          <h2 className="font-heading text-2xl font-bold text-[hsl(210_24%_16%)] md:text-3xl lg:text-4xl">
             Решаем ваши проблемы
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Выберите направление, и мы подберём оптимальное решение
+          <p className="mt-3 text-muted-foreground">
+            Выберите направление для детального изучения услуг и цен.
           </p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid gap-6 md:grid-cols-2">
+        {/* Bento Grid */}
+        <div className="grid gap-6 md:grid-cols-2 md:gap-8">
           {services.map((service) => (
-            <div
+            <Link
               key={service.id}
-              className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${service.color} p-6 transition-all hover:shadow-lg md:p-8`}
+              to={`/services/${service.id}`}
+              className={`group relative flex min-h-[220px] overflow-hidden rounded-2xl ${service.bg} ${service.bgHover} p-7 transition-all duration-300 md:min-h-[260px] md:p-8 lg:p-10`}
             >
-              {/* Icon */}
-              <div className="mb-4 inline-flex rounded-xl bg-card p-3 shadow-sm">
-                <service.icon className="h-6 w-6 text-primary" />
+              {/* Text content — constrained to left 2/3 */}
+              <div className="relative z-10 flex w-2/3 flex-col justify-between">
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[hsl(210_24%_16%)] md:text-2xl lg:text-[1.75rem]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[hsl(210_10%_35%)] md:text-base">
+                    {service.tags}
+                  </p>
+                </div>
+
+                {/* CTA arrow */}
+                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-primary transition-colors group-hover:text-primary/80">
+                  <span>Подробнее</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </div>
               </div>
 
-              {/* Content */}
-              <h3 className="font-heading text-xl font-semibold md:text-2xl">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {service.description}
-              </p>
-
-              {/* Problem tags */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {service.problems.map((problem, i) => (
-                  <span
-                    key={i}
-                    className="rounded-full bg-card px-3 py-1 text-xs font-medium text-foreground shadow-sm"
-                  >
-                    {problem}
-                  </span>
-                ))}
-              </div>
-
-              {/* Action buttons */}
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button 
-                  size="sm" 
-                  onClick={onBookingClick}
-                >
-                  Записаться
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-                <Link to={`/services/${service.id}`}>
-                  <Button variant="ghost" size="sm">
-                    Подробнее
-                  </Button>
-                </Link>
-              </div>
-            </div>
+              {/* Decorative image — absolutely positioned bottom-right */}
+              <img
+                src={service.image}
+                alt=""
+                aria-hidden="true"
+                className="absolute bottom-0 right-2 h-36 w-36 object-contain opacity-90 transition-transform duration-500 group-hover:scale-105 md:right-4 md:h-44 md:w-44 lg:h-52 lg:w-52"
+              />
+            </Link>
           ))}
         </div>
       </div>
