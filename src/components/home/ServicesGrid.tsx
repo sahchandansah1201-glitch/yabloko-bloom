@@ -72,9 +72,9 @@ export function ServicesGrid({ onBookingClick }: ServicesGridProps) {
 
         <div className="grid gap-6 md:grid-cols-2">
           {services.map((service) => (
-            <Link
+              <Link
               key={service.id}
-              to={`/services/${service.id}`}
+              to={`/services?tab=${service.id}`}
               className="group relative overflow-hidden rounded-xl border border-border/30 bg-background p-7 transition-all duration-300 hover:border-primary hover:shadow-md md:p-8"
             >
               {/* Text content */}
