@@ -1,15 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { interiorPhotos } from "@/assets/interiors";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -21,6 +22,7 @@ const fadeUp = {
 };
 
 export function InteriorCarousel() {
+  const isMobile = useIsMobile();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -93,28 +95,50 @@ export function InteriorCarousel() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 hidden md:flex" />
-            <CarouselNext className="-right-4 hidden md:flex" />
           </Carousel>
 
-          {/* Dot indicators — visible on mobile */}
-          {count > 1 && (
-            <div className="mt-4 flex items-center justify-center gap-2 md:hidden">
-              {Array.from({ length: count }).map((_, i) => (
+          {/* Navigation: chevrons + dots — matching BeforeAfterSlider style */}
+          <div className="flex items-center justify-center gap-3 mt-4 md:mt-5">
+            {!isMobile && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full h-9 w-9"
+                onClick={() => api?.scrollPrev()}
+                aria-label="Предыдущее фото"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+            )}
+
+            <div className="flex items-center gap-2">
+              {count > 1 && Array.from({ length: count }).map((_, i) => (
                 <button
                   key={i}
                   onClick={() => api?.scrollTo(i)}
                   aria-label={`Перейти к фото ${i + 1}`}
                   className={cn(
-                    "h-2 rounded-full transition-all duration-300",
+                    "rounded-full transition-all duration-300",
                     current === i
-                      ? "w-6 bg-primary"
-                      : "w-2 bg-primary/30"
+                      ? "w-6 h-2.5 bg-primary"
+                      : "w-2.5 h-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                   )}
                 />
               ))}
             </div>
-          )}
+
+            {!isMobile && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full h-9 w-9"
+                onClick={() => api?.scrollNext()}
+                aria-label="Следующее фото"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
