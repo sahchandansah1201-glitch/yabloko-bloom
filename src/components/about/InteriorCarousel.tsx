@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
   Carousel,
@@ -5,8 +6,10 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { interiorPhotos } from "@/assets/interiors";
+import { cn } from "@/lib/utils";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -18,6 +21,25 @@ const fadeUp = {
 };
 
 export function InteriorCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
+
   return (
     <section className="py-16 md:py-24">
       <div className="container">
@@ -51,6 +73,7 @@ export function InteriorCarousel() {
           className="mt-10"
         >
           <Carousel
+            setApi={setApi}
             opts={{ align: "start", loop: true }}
             className="mx-auto w-full max-w-5xl"
           >
@@ -73,6 +96,25 @@ export function InteriorCarousel() {
             <CarouselPrevious className="-left-4 hidden md:flex" />
             <CarouselNext className="-right-4 hidden md:flex" />
           </Carousel>
+
+          {/* Dot indicators — visible on mobile */}
+          {count > 1 && (
+            <div className="mt-4 flex items-center justify-center gap-2 md:hidden">
+              {Array.from({ length: count }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => api?.scrollTo(i)}
+                  aria-label={`Перейти к фото ${i + 1}`}
+                  className={cn(
+                    "h-2 rounded-full transition-all duration-300",
+                    current === i
+                      ? "w-6 bg-primary"
+                      : "w-2 bg-primary/30"
+                  )}
+                />
+              ))}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
