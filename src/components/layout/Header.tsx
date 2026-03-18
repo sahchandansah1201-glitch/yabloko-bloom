@@ -21,7 +21,6 @@ export function Header({ onBookingClick }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { href: "/about", label: "О клинике" },
     { href: "/services", label: "Услуги" },
     { href: "/specialists", label: "Врачи" },
     { href: "/advice", label: "Советы экспертов" },
