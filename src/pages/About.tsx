@@ -139,6 +139,9 @@ const About = () => {
           </div>
         </section>
 
+        {/* ─── SECTION 1.5: Interior Carousel ─── */}
+        <InteriorCarousel />
+
         {/* ─── SECTION 2: Philosophy ─── */}
         <section className="py-16 md:py-24">
           <div className="container">
