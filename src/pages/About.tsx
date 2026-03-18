@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { InteriorCarousel } from "@/components/about/InteriorCarousel";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { BookingWizard } from "@/components/booking/BookingWizard";
 import { Button } from "@/components/ui/button";
@@ -137,6 +138,9 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* ─── SECTION 1.5: Interior Carousel ─── */}
+        <InteriorCarousel />
 
         {/* ─── SECTION 2: Philosophy ─── */}
         <section className="py-16 md:py-24">
