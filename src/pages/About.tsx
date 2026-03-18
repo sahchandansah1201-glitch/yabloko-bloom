@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { InteriorCarousel } from "@/components/about/InteriorCarousel";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { BookingWizard } from "@/components/booking/BookingWizard";
 import { Button } from "@/components/ui/button";
