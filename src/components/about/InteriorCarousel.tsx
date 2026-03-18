@@ -77,7 +77,7 @@ export function InteriorCarousel() {
           <Carousel
             setApi={setApi}
             opts={{ align: "start", loop: true }}
-            className="mx-auto w-full max-w-5xl"
+            className="mx-auto w-full"
           >
             <CarouselContent className="-ml-4">
               {interiorPhotos.map((photo, i) => (
