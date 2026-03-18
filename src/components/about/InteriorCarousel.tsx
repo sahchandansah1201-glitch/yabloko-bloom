@@ -81,7 +81,7 @@ export function InteriorCarousel() {
           >
             <CarouselContent className="-ml-4">
               {interiorPhotos.map((photo, i) => (
-                <CarouselItem key={i} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={i} className="pl-4 basis-full md:basis-1/2">
                   <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
                     <div className="aspect-[3/2]">
                       <img
