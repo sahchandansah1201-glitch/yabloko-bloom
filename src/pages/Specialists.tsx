@@ -75,7 +75,7 @@ export default function Specialists() {
               <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
                 Наши специалисты
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
                 Команда врачей клиники «Яблоко» — это профессионалы с многолетним опытом, 
                 которые постоянно совершенствуют свои навыки и следят за последними достижениями медицины.
               </p>
