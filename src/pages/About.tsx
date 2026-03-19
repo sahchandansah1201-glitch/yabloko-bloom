@@ -253,7 +253,7 @@ const About = () => {
                     безопасный, комфортный и предсказуемый результат на долгие годы.
                   </blockquote>
 
-                  <p className="mt-6 font-heading text-lg font-semibold">
+                  <p className="mt-6 font-heading text-fluid-lg font-semibold">
                     Павлюк Мария Олеговна
                   </p>
                   <p className="text-sm text-muted-foreground">Главный врач</p>
