@@ -122,7 +122,7 @@ const Contacts = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
+          <h1 className="font-heading text-fluid-3xl font-bold text-foreground mb-2">
             Ждём вас в клинике Яблоко
           </h1>
           <p className="text-muted-foreground text-lg mb-8 md:mb-12 max-w-xl">
