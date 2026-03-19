@@ -141,7 +141,7 @@ const Contacts = () => {
               </h2>
               <a
                 href={`tel:${PHONE}`}
-                className="inline-block text-2xl md:text-3xl font-bold text-foreground hover:text-primary transition-colors"
+                className="inline-block text-fluid-2xl font-bold text-foreground hover:text-primary transition-colors"
               >
                 {PHONE_DISPLAY}
               </a>
