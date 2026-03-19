@@ -136,7 +136,7 @@ const Contacts = () => {
           <div className="lg:col-span-3 space-y-8">
             {/* Phone */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary" /> Телефон
               </h2>
               <a
@@ -149,7 +149,7 @@ const Contacts = () => {
 
             {/* Messengers */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 text-primary" /> Мессенджеры
               </h2>
               <div className="flex flex-wrap gap-3">
@@ -170,7 +170,7 @@ const Contacts = () => {
 
             {/* Address */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" /> Адрес
               </h2>
               <div className="flex items-center gap-3">
@@ -187,7 +187,7 @@ const Contacts = () => {
 
             {/* Schedule */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" /> График работы
                 {isOpen ? (
                   <Badge className="bg-primary/15 text-primary border-0 ml-1">● Мы открыты</Badge>
@@ -216,7 +216,7 @@ const Contacts = () => {
 
             {/* Parking */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Car className="h-5 w-5 text-primary" /> Информация о парковке
               </h2>
               <p className="text-muted-foreground">
