@@ -21,6 +21,17 @@ export default {
         heading: ["Montserrat", "system-ui", "sans-serif"],
         body: ["Inter", "system-ui", "sans-serif"],
       },
+      fontSize: {
+        /* Fluid typography scale using clamp() */
+        "fluid-xs": ["clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)", { lineHeight: "1.5" }],
+        "fluid-sm": ["clamp(0.875rem, 0.8rem + 0.3vw, 1rem)", { lineHeight: "1.5" }],
+        "fluid-base": ["clamp(1rem, 0.958rem + 0.208vw, 1.125rem)", { lineHeight: "1.6" }],
+        "fluid-lg": ["clamp(1.125rem, 1rem + 0.5vw, 1.25rem)", { lineHeight: "1.6" }],
+        "fluid-xl": ["clamp(1.25rem, 1rem + 1vw, 1.5rem)", { lineHeight: "1.5" }],
+        "fluid-2xl": ["clamp(1.5rem, 0.75rem + 2.5vw, 2.25rem)", { lineHeight: "1.3" }],
+        "fluid-3xl": ["clamp(1.875rem, 1rem + 3vw, 2.75rem)", { lineHeight: "1.2" }],
+        "fluid-4xl": ["clamp(1.875rem, 1rem + 4vw, 3.5rem)", { lineHeight: "1.1" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

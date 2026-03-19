@@ -90,16 +90,44 @@
 
   html {
     scroll-behavior: smooth;
+    /* Fluid base: 16px @ 320px → 18px @ 1280px */
+    font-size: clamp(1rem, 0.958rem + 0.208vw, 1.125rem);
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', system-ui, sans-serif;
     @apply font-semibold tracking-tight;
+    line-height: 1.2;
+  }
+
+  h1 {
+    /* 30px @ 320 → 56px @ 1280 */
+    font-size: clamp(1.875rem, 1rem + 4vw, 3.5rem);
+  }
+
+  h2 {
+    /* 24px @ 320 → 36px @ 1280 */
+    font-size: clamp(1.5rem, 0.75rem + 2.5vw, 2.25rem);
+  }
+
+  h3 {
+    /* 20px @ 320 → 28px @ 1280 */
+    font-size: clamp(1.25rem, 0.75rem + 1.5vw, 1.75rem);
+  }
+
+  h4 {
+    /* 18px @ 320 → 22px @ 1280 */
+    font-size: clamp(1.125rem, 0.875rem + 0.75vw, 1.375rem);
+  }
+
+  p, li, dd, dt, blockquote {
+    line-height: 1.6;
   }
 }
 

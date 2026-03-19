@@ -28,7 +28,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl animate-slide-up">
+          <h1 className="font-heading text-fluid-4xl font-bold leading-tight tracking-tight animate-slide-up">
             <span className="text-foreground">Клиника «</span>
             <span className="text-primary">Яблоко</span>
             <span className="text-foreground">» — это центр медицины кожи,</span>
@@ -41,7 +41,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           </h1>
 
           {/* Subtitle */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl animate-slide-up stagger-1">
+          <p className="mx-auto mt-6 max-w-2xl text-fluid-lg text-muted-foreground animate-slide-up stagger-1">
             Мы решаем все проблемы кожи — от заболеваний до эстетики.
           </p>
 
@@ -77,7 +77,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
               { value: "5.0", label: "рейтинг" },
             ].map((stat, i) => (
               <div key={i} className="text-center p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/30 shadow-sm">
-                <div className="font-heading text-2xl font-bold text-primary md:text-3xl">
+                <div className="font-heading text-fluid-2xl font-bold text-primary">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
