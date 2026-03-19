@@ -187,7 +187,7 @@ const Contacts = () => {
 
             {/* Schedule */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" /> График работы
                 {isOpen ? (
                   <Badge className="bg-primary/15 text-primary border-0 ml-1">● Мы открыты</Badge>
