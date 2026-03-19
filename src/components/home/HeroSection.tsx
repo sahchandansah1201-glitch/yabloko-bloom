@@ -77,7 +77,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
               { value: "5.0", label: "рейтинг" },
             ].map((stat, i) => (
               <div key={i} className="text-center p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/30 shadow-sm">
-                <div className="font-heading text-2xl font-bold text-primary md:text-3xl">
+                <div className="font-heading text-fluid-2xl font-bold text-primary">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
