@@ -88,7 +88,7 @@ const About = () => {
                 <motion.h1
                   custom={0}
                   variants={fadeUp}
-                  className="font-heading text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
+                  className="font-heading text-fluid-4xl font-bold leading-tight"
                 >
                   Красота через здоровье
                 </motion.h1>
