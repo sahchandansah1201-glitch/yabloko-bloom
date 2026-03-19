@@ -72,7 +72,7 @@ export default function Specialists() {
                   <Users className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
                 Наши специалисты
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
