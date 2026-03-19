@@ -208,8 +208,8 @@ const About = () => {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
                     <eq.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold">{eq.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{eq.description}</p>
+                  <h3 className="font-heading text-fluid-lg font-semibold">{eq.name}</h3>
+                  <p className="mt-1 text-fluid-sm text-muted-foreground">{eq.description}</p>
                   <Link
                     to="/services"
                     className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
