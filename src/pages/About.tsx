@@ -189,7 +189,7 @@ const About = () => {
               custom={0}
               variants={fadeUp}
               viewport={{ once: true }}
-              className="text-center font-heading text-2xl font-bold md:text-3xl"
+              className="text-center font-heading text-fluid-2xl font-bold"
             >
               Оригинальное оборудование мирового уровня
             </motion.h2>
