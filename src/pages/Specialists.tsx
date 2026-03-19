@@ -105,7 +105,7 @@ export default function Specialists() {
             <div className="container">
               <div className="flex items-center gap-2 mb-8">
                 <Award className="h-6 w-6 text-primary" />
-                <h2 className="font-heading text-2xl font-bold">Ведущие специалисты</h2>
+                <h2 className="font-heading text-fluid-2xl font-bold">Ведущие специалисты</h2>
               </div>
 
               {isLoading ? (
