@@ -46,7 +46,7 @@ const App = () => (
         <FloatingActionButton />
       </TooltipProvider>
     </QueryClientProvider>
-    </PasswordGate>
+    
   </HelmetProvider>
 );
 
