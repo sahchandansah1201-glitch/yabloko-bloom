@@ -28,7 +28,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl animate-slide-up">
+          <h1 className="font-heading text-fluid-4xl font-bold leading-tight tracking-tight animate-slide-up">
             <span className="text-foreground">Клиника «</span>
             <span className="text-primary">Яблоко</span>
             <span className="text-foreground">» — это центр медицины кожи,</span>
