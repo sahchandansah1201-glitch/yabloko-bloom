@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Lock } from "lucide-react";
+import { Lock, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-const SITE_PASSWORD = "yabloko2026";
 const STORAGE_KEY = "site_authenticated";
 
 export const isAuthenticated = () => {
@@ -14,15 +14,31 @@ const PasswordGate = ({ children }: { children: React.ReactNode }) => {
   const [authenticated, setAuthenticated] = useState(isAuthenticated());
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === SITE_PASSWORD) {
-      sessionStorage.setItem(STORAGE_KEY, "true");
-      setAuthenticated(true);
-      setError(false);
-    } else {
+    setLoading(true);
+    setError(false);
+
+    try {
+      const { data, error: fnError } = await supabase.functions.invoke(
+        "verify-site-password",
+        { body: { password } }
+      );
+
+      if (fnError) throw fnError;
+
+      if (data?.valid) {
+        sessionStorage.setItem(STORAGE_KEY, "true");
+        setAuthenticated(true);
+      } else {
+        setError(true);
+      }
+    } catch {
       setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -55,11 +71,13 @@ const PasswordGate = ({ children }: { children: React.ReactNode }) => {
           }}
           className={error ? "border-destructive" : ""}
           autoFocus
+          disabled={loading}
         />
         {error && (
           <p className="text-destructive text-sm">Неверный пароль</p>
         )}
-        <Button type="submit" className="w-full">
+        <Button type="submit" className="w-full" disabled={loading}>
+          {loading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
           Войти
         </Button>
       </form>
