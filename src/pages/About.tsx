@@ -247,7 +247,7 @@ const About = () => {
                     <span className="text-sm font-medium">Главный врач</span>
                   </div>
 
-                  <blockquote className="mt-4 border-l-4 border-primary pl-5 text-lg italic text-muted-foreground md:text-xl">
+                  <blockquote className="mt-4 border-l-4 border-primary pl-5 text-fluid-lg italic text-muted-foreground">
                     «Все в наших руках, поэтому их нельзя опускать» — Коко Шанель.
                     Это наш девиз. Моя задача как главного врача — обеспечить вам
                     безопасный, комфортный и предсказуемый результат на долгие годы.
