@@ -216,7 +216,7 @@ const Contacts = () => {
 
             {/* Parking */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Car className="h-5 w-5 text-primary" /> Информация о парковке
               </h2>
               <p className="text-muted-foreground">
