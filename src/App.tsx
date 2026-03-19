@@ -22,7 +22,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
-    <PasswordGate>
+    
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
