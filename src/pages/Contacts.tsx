@@ -170,7 +170,7 @@ const Contacts = () => {
 
             {/* Address */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" /> Адрес
               </h2>
               <div className="flex items-center gap-3">
