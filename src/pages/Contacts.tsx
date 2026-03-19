@@ -266,7 +266,7 @@ const Contacts = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center justify-between">
-            <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground">
+            <h2 className="font-heading text-fluid-xl font-bold text-foreground">
               Мы на карте
             </h2>
             <Button asChild variant="outline" size="sm" className="gap-2">

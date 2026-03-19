@@ -328,7 +328,7 @@ const About = () => {
               <motion.h2
                 custom={0}
                 variants={fadeUp}
-                className="font-heading text-2xl font-bold md:text-3xl"
+                className="font-heading text-fluid-2xl font-bold"
               >
                 Доверьте свою красоту профессионалам
               </motion.h2>

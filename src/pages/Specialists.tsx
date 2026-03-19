@@ -211,7 +211,7 @@ export default function Specialists() {
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container text-center">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="font-heading text-fluid-2xl font-bold mb-4">
               Не знаете, к какому специалисту записаться?
             </h2>
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">

@@ -63,7 +63,7 @@ export default function ServicesHub() {
             <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
               Услуги и цены клиники Яблоко
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-fluid-lg text-muted-foreground mb-8">
               Найдите нужную процедуру или выберите направление
             </p>
             <div className="relative max-w-xl mx-auto">
