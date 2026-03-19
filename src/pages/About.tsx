@@ -88,14 +88,14 @@ const About = () => {
                 <motion.h1
                   custom={0}
                   variants={fadeUp}
-                  className="font-heading text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
+                  className="font-heading text-fluid-4xl font-bold leading-tight"
                 >
                   Красота через здоровье
                 </motion.h1>
                 <motion.p
                   custom={1}
                   variants={fadeUp}
-                  className="mt-4 max-w-lg text-lg text-muted-foreground md:text-xl"
+                  className="mt-4 max-w-lg text-fluid-lg text-muted-foreground"
                 >
                   Клиника «Яблоко» — это концептуальный центр эстетической и
                   интегративной медицины в Краснодаре, где мы лечим причины, а не
@@ -151,7 +151,7 @@ const About = () => {
               custom={0}
               variants={fadeUp}
               viewport={{ once: true }}
-              className="text-center font-heading text-2xl font-bold md:text-3xl"
+              className="text-center font-heading text-fluid-2xl font-bold"
             >
               Почему выбирают нас
             </motion.h2>
@@ -170,8 +170,8 @@ const About = () => {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary">
                     <card.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <h3 className="font-heading text-fluid-lg font-semibold">{card.title}</h3>
+                  <p className="mt-2 text-fluid-sm leading-relaxed text-muted-foreground">
                     {card.text}
                   </p>
                 </motion.div>
@@ -189,7 +189,7 @@ const About = () => {
               custom={0}
               variants={fadeUp}
               viewport={{ once: true }}
-              className="text-center font-heading text-2xl font-bold md:text-3xl"
+              className="text-center font-heading text-fluid-2xl font-bold"
             >
               Оригинальное оборудование мирового уровня
             </motion.h2>
@@ -208,8 +208,8 @@ const About = () => {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
                     <eq.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold">{eq.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{eq.description}</p>
+                  <h3 className="font-heading text-fluid-lg font-semibold">{eq.name}</h3>
+                  <p className="mt-1 text-fluid-sm text-muted-foreground">{eq.description}</p>
                   <Link
                     to="/services"
                     className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
@@ -247,13 +247,13 @@ const About = () => {
                     <span className="text-sm font-medium">Главный врач</span>
                   </div>
 
-                  <blockquote className="mt-4 border-l-4 border-primary pl-5 text-lg italic text-muted-foreground md:text-xl">
+                  <blockquote className="mt-4 border-l-4 border-primary pl-5 text-fluid-lg italic text-muted-foreground">
                     «Все в наших руках, поэтому их нельзя опускать» — Коко Шанель.
                     Это наш девиз. Моя задача как главного врача — обеспечить вам
                     безопасный, комфортный и предсказуемый результат на долгие годы.
                   </blockquote>
 
-                  <p className="mt-6 font-heading text-lg font-semibold">
+                  <p className="mt-6 font-heading text-fluid-lg font-semibold">
                     Павлюк Мария Олеговна
                   </p>
                   <p className="text-sm text-muted-foreground">Главный врач</p>
@@ -281,7 +281,7 @@ const About = () => {
               custom={0}
               variants={fadeUp}
               viewport={{ once: true }}
-              className="text-center font-heading text-2xl font-bold md:text-3xl"
+              className="text-center font-heading text-fluid-2xl font-bold"
             >
               Лицензии и документы
             </motion.h2>
@@ -328,7 +328,7 @@ const About = () => {
               <motion.h2
                 custom={0}
                 variants={fadeUp}
-                className="font-heading text-2xl font-bold md:text-3xl"
+                className="font-heading text-fluid-2xl font-bold"
               >
                 Доверьте свою красоту профессионалам
               </motion.h2>

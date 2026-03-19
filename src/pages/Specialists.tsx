@@ -72,10 +72,10 @@ export default function Specialists() {
                   <Users className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
                 Наши специалисты
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
                 Команда врачей клиники «Яблоко» — это профессионалы с многолетним опытом, 
                 которые постоянно совершенствуют свои навыки и следят за последними достижениями медицины.
               </p>
@@ -84,15 +84,15 @@ export default function Specialists() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-12 max-w-2xl mx-auto">
               <div className="text-center p-4 rounded-xl bg-card border">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-primary">5+</p>
+                <p className="font-heading text-fluid-2xl font-bold text-primary">5+</p>
                 <p className="text-sm text-muted-foreground mt-1">Врачей</p>
               </div>
               <div className="text-center p-4 rounded-xl bg-card border">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-primary">15+</p>
+                <p className="font-heading text-fluid-2xl font-bold text-primary">15+</p>
                 <p className="text-sm text-muted-foreground mt-1">Лет опыта</p>
               </div>
               <div className="text-center p-4 rounded-xl bg-card border">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-primary">5000+</p>
+                <p className="font-heading text-fluid-2xl font-bold text-primary">5000+</p>
                 <p className="text-sm text-muted-foreground mt-1">Пациентов</p>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function Specialists() {
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container text-center">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="font-heading text-fluid-2xl font-bold mb-4">
               Не знаете, к какому специалисту записаться?
             </h2>
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">

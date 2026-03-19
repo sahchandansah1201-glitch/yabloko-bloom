@@ -60,10 +60,10 @@ export default function ServicesHub() {
         {/* Hero + Search */}
         <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
           <div className="container max-w-3xl text-center">
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
               Услуги и цены клиники Яблоко
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-fluid-lg text-muted-foreground mb-8">
               Найдите нужную процедуру или выберите направление
             </p>
             <div className="relative max-w-xl mx-auto">
