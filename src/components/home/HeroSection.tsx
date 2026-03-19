@@ -41,7 +41,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           </h1>
 
           {/* Subtitle */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl animate-slide-up stagger-1">
+          <p className="mx-auto mt-6 max-w-2xl text-fluid-lg text-muted-foreground animate-slide-up stagger-1">
             Мы решаем все проблемы кожи — от заболеваний до эстетики.
           </p>
 
