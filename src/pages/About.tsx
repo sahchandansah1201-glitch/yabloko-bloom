@@ -170,8 +170,8 @@ const About = () => {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary">
                     <card.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <h3 className="font-heading text-fluid-lg font-semibold">{card.title}</h3>
+                  <p className="mt-2 text-fluid-sm leading-relaxed text-muted-foreground">
                     {card.text}
                   </p>
                 </motion.div>
