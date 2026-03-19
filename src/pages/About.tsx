@@ -95,7 +95,7 @@ const About = () => {
                 <motion.p
                   custom={1}
                   variants={fadeUp}
-                  className="mt-4 max-w-lg text-lg text-muted-foreground md:text-xl"
+                  className="mt-4 max-w-lg text-fluid-lg text-muted-foreground"
                 >
                   Клиника «Яблоко» — это концептуальный центр эстетической и
                   интегративной медицины в Краснодаре, где мы лечим причины, а не
