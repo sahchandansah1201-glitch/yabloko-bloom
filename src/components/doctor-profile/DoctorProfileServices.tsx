@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, Stethoscope, Scissors } from "lucide-react";
-import { getAllServices } from "@/data/servicesData";
 
 const iconMap: Record<string, typeof Sparkles> = {
   sparkles: Sparkles,
@@ -14,22 +13,74 @@ interface Props {
   services: { icon: string; title: string; items: string[] }[];
 }
 
-function findServiceSlug(itemName: string): string | null {
-  const allServices = getAllServices();
-  const lower = itemName.toLowerCase();
-  const match = allServices.find((s) => s.title.toLowerCase() === lower);
-  return match?.slug ?? null;
-}
+/**
+ * Maps doctor profile service item names to service page slugs.
+ * Handles cases where profile names differ from servicesData titles.
+ */
+const itemSlugMap: Record<string, string> = {
+  // Cosmetology
+  "ботулинотерапия": "botoks",
+  "контурная пластика": "konturnaya-plastika",
+  "anti-age": "anti-age",
+  "биоревитализация": "biorevitalizatsiya",
+  "пилинги": "pilingi",
+  "мезотерапия": "mezoterapiya-golovy",
+  "плазмотерапия": "plazmoterapiya",
+  "лазерная эпиляция": "lazernaya-epilyatsiya",
+  "чистки лица": "chistka-litsa",
+  "чистка лица": "chistka-litsa",
+  "уходовые процедуры": "chistka-litsa",
+  "массаж лица": "massazh-litsa",
+  "нитевой лифтинг": "nitevoy-lifting",
+  "фотоомоложение": "fotoомоlozhenie",
+  "rf-лифтинг": "rf-lifting",
+  "коррекция фигуры": "korrektsiya-figury",
+  "генетическое тестирование": "geneticheskoe-testirovanie",
+  // Dermatology
+  "лечение угревой болезни (акне)": "lechenie-akne",
+  "лечение акне": "lechenie-akne",
+  "дерматоскопия": "consult-derm",
+  "удаление новообразований": "udalenie-papillom",
+  "диагностика кожных заболеваний": "consult-derm",
+  "лечение дерматитов": "consult-derm",
+  "лечение пигментации": "pigmentatsiya",
+  "удаление папиллом": "udalenie-papillom",
+  "удаление родинок": "udalenie-rodinok",
+  // Trichology
+  "диагностика выпадения волос": "diagnostika-volos",
+  "лечение выпадения волос": "diagnostika-volos",
+  "трихоскопия": "diagnostika-volos",
+  "мезотерапия кожи головы": "mezoterapiya-golovy",
+  "лечение алопеции": "inyektsionnaya-trikhologiya",
+  // Health
+  "краниосакральная терапия": "osteopat",
+  "висцеральная остеопатия": "osteopat",
+  "структуральная остеопатия": "osteopat",
+  "лечебный массаж": "massazh",
+  "спортивный массаж": "massazh",
+  "лимфодренажный массаж": "massazh",
+  "персональные планы питания": "dietolog",
+  "коррекция веса": "dietolog",
+  "нутритивная поддержка": "dietolog",
+  "подбор витаминов и бадов": "dietolog",
+  "антивозрастная нутрициология": "dietolog",
+  "диагностика неврологических заболеваний": "nevrolog",
+  "лечение головных болей": "nevrolog",
+  "лечение болей в спине": "nevrolog",
+  "реабилитация": "nevrolog",
+  // Misc
+  "ассистирование при инъекционных процедурах": "consult-cosm",
+};
 
 export function DoctorProfileServices({ services }: Props) {
   const navigate = useNavigate();
 
   const handleItemClick = (itemName: string) => {
-    const slug = findServiceSlug(itemName);
+    const slug = itemSlugMap[itemName.toLowerCase()];
     if (slug) {
       navigate(`/services/${slug}`);
     } else {
-      navigate(`/services`);
+      navigate("/services");
     }
   };
 
