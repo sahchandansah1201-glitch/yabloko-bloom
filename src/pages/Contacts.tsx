@@ -136,7 +136,7 @@ const Contacts = () => {
           <div className="lg:col-span-3 space-y-8">
             {/* Phone */}
             <section className="space-y-3">
-              <h2 className="font-heading text-lg font-semibold text-foreground flex items-center gap-2">
+              <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary" /> Телефон
               </h2>
               <a
