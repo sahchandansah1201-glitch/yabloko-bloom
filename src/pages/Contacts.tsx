@@ -125,7 +125,7 @@ const Contacts = () => {
           <h1 className="font-heading text-fluid-3xl font-bold text-foreground mb-2">
             Ждём вас в клинике Яблоко
           </h1>
-          <p className="text-muted-foreground text-lg mb-8 md:mb-12 max-w-xl">
+          <p className="text-muted-foreground text-fluid-lg mb-8 md:mb-12 max-w-xl">
             Красота через здоровье — запишитесь на приём или свяжитесь с нами удобным способом.
           </p>
         </motion.div>
