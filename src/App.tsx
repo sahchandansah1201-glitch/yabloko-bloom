@@ -16,13 +16,13 @@ import ArticlePage from "./pages/ArticlePage";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import PasswordGate from "./components/PasswordGate";
+
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
-    <PasswordGate>
+    
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -46,7 +46,7 @@ const App = () => (
         <FloatingActionButton />
       </TooltipProvider>
     </QueryClientProvider>
-    </PasswordGate>
+    
   </HelmetProvider>
 );
 
