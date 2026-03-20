@@ -342,7 +342,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                   return (
                     <button
                       key={doctor.id}
-                      onClick={() => setSelectedDoctor(doctor.id)}
+                      onClick={() => isMobile ? selectAndAdvance(setSelectedDoctor, doctor.id) : setSelectedDoctor(doctor.id)}
+                      onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedDoctor, doctor.id)}
                       className={cn(
                         "flex w-full items-center gap-4 rounded-lg border-2 p-3 text-left transition-all hover:border-primary hover:bg-secondary",
                         selectedDoctor === doctor.id 
