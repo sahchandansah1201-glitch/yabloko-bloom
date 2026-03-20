@@ -309,7 +309,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                 {filteredServices.map((service) => (
                   <button
                     key={service.id}
-                    onClick={() => setSelectedService(service.id)}
+                    onClick={() => isMobile ? selectAndAdvance(setSelectedService, service.id) : setSelectedService(service.id)}
+                    onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedService, service.id)}
                     className={cn(
                       "flex w-full items-center justify-between rounded-lg border-2 p-4 text-left transition-all hover:border-primary hover:bg-secondary",
                       selectedService === service.id 
