@@ -388,41 +388,21 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
               <div className="space-y-4">
                 <div>
                   <Label className="mb-2 block">Выберите дату</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant="outline"
-                        className={cn(
-                          "w-full justify-start text-left font-normal",
-                          !selectedDate && "text-muted-foreground"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {selectedDate 
-                          ? format(selectedDate, "d MMMM yyyy", { locale: ru })
-                          : "Выберите дату"
-                        }
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-                        mode="single"
-                        selected={selectedDate}
-                        onSelect={setSelectedDate}
-                        disabled={(date) => 
-                          date < new Date() || 
-                          date.getDay() === 0 // Sunday
-                        }
-                        initialFocus
-                        className="pointer-events-auto"
-                      />
-                    </PopoverContent>
-                  </Popover>
+                  <Calendar
+                    mode="single"
+                    selected={selectedDate}
+                    onSelect={setSelectedDate}
+                    disabled={(date) =>
+                      date < new Date() ||
+                      date.getDay() === 0
+                    }
+                    className="pointer-events-auto rounded-lg border border-border p-3 mx-auto"
+                  />
                 </div>
 
-                {selectedDate && (
-                  <div>
-                    <Label className="mb-2 block">Выберите время</Label>
+                <div>
+                  <Label className="mb-2 block">Выберите время</Label>
+                  {selectedDate ? (
                     <div className="grid grid-cols-4 gap-2">
                       {timeSlots.map((time) => (
                         <button
@@ -441,8 +421,10 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                         </button>
                       ))}
                     </div>
-                  </div>
-                )}
+                  ) : (
+                    <p className="text-sm text-muted-foreground">Сначала выберите дату</p>
+                  )}
+                </div>
               </div>
             )}
 
