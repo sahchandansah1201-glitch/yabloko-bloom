@@ -13,6 +13,8 @@ import { PromoSection } from "@/components/home/PromoSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ChiefDoctorSection } from "@/components/home/ChiefDoctorSection";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
+import { getClinicSchema } from "@/lib/schema";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -38,6 +40,8 @@ const Index = () => {
           name="description" 
           content="Клиника дерматологии и косметологии Яблоко в Краснодаре — центр медицины кожи, где красота достигается через здоровье. Косметология, дерматология, трихология. Запись онлайн." 
         />
+        <link rel="canonical" href="https://yabloko-clinic.ru/" />
+        <script type="application/ld+json">{JSON.stringify(getClinicSchema())}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
@@ -56,6 +60,7 @@ const Index = () => {
         </main>
 
         <Footer />
+        <DesktopConversionBar onBookingClick={() => openBooking()} />
         <MobileBookingBar onBookingClick={() => openBooking()} />
         <BookingWizard 
           isOpen={isBookingOpen} 
