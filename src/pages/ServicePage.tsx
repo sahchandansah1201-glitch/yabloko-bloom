@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { ServiceBreadcrumbs } from "@/components/service-page/ServiceBreadcrumbs";
 import { ServiceHero } from "@/components/service-page/ServiceHero";
 import { ServiceContent } from "@/components/service-page/ServiceContent";
@@ -25,6 +26,7 @@ import NotFound from "./NotFound";
 export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [isQuickBookOpen, setIsQuickBookOpen] = useState(false);
   const [preselectedDoctorId, setPreselectedDoctorId] = useState<string | null>(null);
 
   const pageData = slug ? getServicePageData(slug) : undefined;
@@ -92,7 +94,7 @@ export default function ServicePage() {
         ]))}</script>
       </Helmet>
 
-      <Header onBookingClick={() => setIsBookingOpen(true)} />
+      <Header onBookingClick={() => setIsQuickBookOpen(true)} />
 
       <main className="min-h-screen bg-background pt-28 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
@@ -104,7 +106,7 @@ export default function ServicePage() {
           subtitle={subtitle}
           duration={duration}
           recovery={recovery}
-          onBook={() => setIsBookingOpen(true)}
+          onBook={() => setIsQuickBookOpen(true)}
         />
 
         <ServiceContent
@@ -138,7 +140,13 @@ export default function ServicePage() {
 
       <Footer />
 
-      <ServiceMobileCTA price={displayPrice} onBook={() => setIsBookingOpen(true)} />
+      <ServiceMobileCTA price={displayPrice} onBook={() => setIsQuickBookOpen(true)} />
+
+      <QuickBookingModal
+        isOpen={isQuickBookOpen}
+        onClose={() => setIsQuickBookOpen(false)}
+        serviceName={title}
+      />
 
       <BookingWizard
         isOpen={isBookingOpen}
