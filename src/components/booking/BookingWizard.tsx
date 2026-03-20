@@ -424,6 +424,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                   ) : (
                     <p className="text-sm text-muted-foreground">Сначала выберите дату</p>
                   )}
+                </div>
               </div>
             )}
 
