@@ -418,7 +418,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                       {timeSlots.map((time) => (
                         <button
                           key={time}
-                          onClick={() => setSelectedTime(time)}
+                          onClick={() => isMobile ? selectAndAdvance(setSelectedTime, time) : setSelectedTime(time)}
+                          onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedTime, time)}
                           className={cn(
                             "flex items-center justify-center gap-1 rounded-md border py-2 text-sm transition-all hover:border-primary",
                             selectedTime === time
