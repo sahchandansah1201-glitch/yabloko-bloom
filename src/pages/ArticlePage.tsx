@@ -11,6 +11,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArticleCard } from "@/components/advice/ArticleCard";
 import { getArticleBySlug, articles } from "@/data/articlesData";
 import { doctorPhotos } from "@/assets/doctors";
+import { getArticleSchema } from "@/lib/schema";
 import NotFound from "./NotFound";
 
 /* ── inline markdown helpers ── */
