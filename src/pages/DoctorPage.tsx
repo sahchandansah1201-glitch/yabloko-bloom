@@ -75,6 +75,11 @@ export default function DoctorPage() {
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Специалисты", url: "/specialists" },
+          { name: doctor.name },
+        ]))}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
