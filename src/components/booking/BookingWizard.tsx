@@ -213,7 +213,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
+      <DialogContent className="max-h-[90vh] flex flex-col overflow-hidden sm:max-w-lg">
         <DialogHeader>
           <DialogTitle className="font-heading text-xl">
             {isSuccess ? "Заявка отправлена!" : "Запись на приём"}
@@ -266,8 +266,9 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
             </Button>
           </div>
         ) : (
-          <>
+          <div className="flex flex-col overflow-hidden">
             {/* Step 1: Category */}
+          <div className="overflow-y-auto flex-1 min-h-0 pr-1">
             {step === 1 && (
               <div className="grid gap-3 sm:grid-cols-2">
                 {categories.map((cat) => (
@@ -496,8 +497,10 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
               </form>
             )}
 
+          </div>
+
             {/* Navigation */}
-            <div className="mt-6 flex gap-3">
+            <div className="mt-4 flex gap-3 shrink-0 border-t pt-4 border-border">
               {step > 1 && (
                 <Button variant="outline" onClick={goBack} className="flex-1">
                   <ArrowLeft className="mr-2 h-4 w-4" />
@@ -531,7 +534,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                 </Button>
               )}
             </div>
-          </>
+          </div>
         )}
       </DialogContent>
     </Dialog>
