@@ -60,6 +60,7 @@ const Index = () => {
         </main>
 
         <Footer />
+        <DesktopConversionBar onBookingClick={() => openBooking()} />
         <MobileBookingBar onBookingClick={() => openBooking()} />
         <BookingWizard 
           isOpen={isBookingOpen} 
