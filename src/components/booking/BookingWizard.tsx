@@ -497,8 +497,10 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
               </form>
             )}
 
+          </div>
+
             {/* Navigation */}
-            <div className="mt-6 flex gap-3">
+            <div className="mt-4 flex gap-3 shrink-0 border-t pt-4 border-border">
               {step > 1 && (
                 <Button variant="outline" onClick={goBack} className="flex-1">
                   <ArrowLeft className="mr-2 h-4 w-4" />
