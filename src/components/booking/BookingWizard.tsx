@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { doctorPhotos } from "@/assets/doctors";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
