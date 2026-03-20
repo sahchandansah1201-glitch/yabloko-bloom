@@ -14,7 +14,7 @@ import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ChiefDoctorSection } from "@/components/home/ChiefDoctorSection";
 import { BookingWizard } from "@/components/booking/BookingWizard";
 import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
-import { getClinicSchema } from "@/lib/schema";
+import { getClinicSchema, getOrganizationSchema } from "@/lib/schema";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -42,6 +42,7 @@ const Index = () => {
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/" />
         <script type="application/ld+json">{JSON.stringify(getClinicSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify(getOrganizationSchema())}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
