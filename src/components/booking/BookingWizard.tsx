@@ -495,8 +495,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                       {form.formState.errors.email.message}
                     </p>
                   )}
+                  <p className="mt-1 text-xs text-muted-foreground">Пришлём подтверждение и ответим на вопросы по почте</p>
                 </div>
-                <p className="text-xs text-muted-foreground -mt-2.5">Пришлём подтверждение и ответим на вопросы по почте</p>
 
                 <div className="flex items-start gap-3 rounded-lg bg-secondary p-4">
                   <Checkbox
