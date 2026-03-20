@@ -266,7 +266,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
             </Button>
           </div>
         ) : (
-          <>
+          <div className="flex flex-col overflow-hidden">
             {/* Step 1: Category */}
             {step === 1 && (
               <div className="grid gap-3 sm:grid-cols-2">
