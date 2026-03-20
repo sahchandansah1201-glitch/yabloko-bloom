@@ -154,6 +154,11 @@ export default function ArticlePage() {
         <meta name="description" content={article.excerpt} />
         <link rel="canonical" href={`https://yabloko-clinic.ru/advice/${article.slug}`} />
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Советы экспертов", url: "/advice" },
+          { name: article.title },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />

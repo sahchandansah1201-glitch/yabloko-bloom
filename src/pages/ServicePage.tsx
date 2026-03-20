@@ -84,6 +84,12 @@ export default function ServicePage() {
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Услуги", url: "/services" },
+          ...(category ? [{ name: category.label }] : []),
+          { name: title },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
