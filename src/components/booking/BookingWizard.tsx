@@ -268,6 +268,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
         ) : (
           <div className="flex flex-col overflow-hidden">
             {/* Step 1: Category */}
+          <div className="overflow-y-auto flex-1 min-h-0 pr-1">
             {step === 1 && (
               <div className="grid gap-3 sm:grid-cols-2">
                 {categories.map((cat) => (
