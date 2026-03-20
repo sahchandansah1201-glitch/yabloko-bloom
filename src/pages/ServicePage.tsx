@@ -60,15 +60,17 @@ export default function ServicePage() {
     setIsBookingOpen(true);
   };
 
-  const faqSchema = faq.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faq.map((f) => ({
-      "@type": "Question",
-      name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
-    })),
-  } : null;
+  const therapyJsonLd = getTherapySchema({
+    slug: slug || "",
+    title,
+    subtitle,
+    priceFrom: serviceItem?.priceFrom,
+    indications: pageData?.indications,
+    doctorSlugs: pageData?.doctorSlugs,
+    faq,
+  });
+
+  const faqJsonLd = getServiceFAQSchema(faq);
 
   const displayPrice = pricing[0]?.price ?? serviceItem?.priceFrom ?? "";
 
@@ -77,8 +79,10 @@ export default function ServicePage() {
       <Helmet>
         <title>{title} | Клиника Яблоко Краснодар</title>
         <meta name="description" content={`${title} в клинике Яблоко. ${subtitle} Запишитесь онлайн.`} />
-        {faqSchema && (
-          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <link rel="canonical" href={`https://yabloko-clinic.ru/services/${slug}`} />
+        <script type="application/ld+json">{JSON.stringify(therapyJsonLd)}</script>
+        {faqJsonLd && (
+          <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
       </Helmet>
 
