@@ -237,16 +237,25 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
 
         {/* Progress bar */}
         {!isSuccess && (
-          <div className="mb-4 flex gap-1">
-            {[1, 2, 3, 4, 5].map((s) => (
-              <div
-                key={s}
-                className={cn(
-                  "h-1 flex-1 rounded-full transition-colors",
-                  s <= step ? "bg-primary" : "bg-muted"
-                )}
-              />
-            ))}
+          <div className="mb-4 space-y-2">
+            <div className="flex gap-1">
+              {[1, 2, 3, 4, 5].map((s) => (
+                <div
+                  key={s}
+                  className={cn(
+                    "h-1 flex-1 rounded-full transition-colors",
+                    s <= step ? "bg-primary" : "bg-muted"
+                  )}
+                />
+              ))}
+            </div>
+            {step <= 4 && (
+              <p className="text-[11px] text-muted-foreground/70 text-center">
+                {isMobile
+                  ? "Нажмите на пункт для выбора и перехода"
+                  : "Двойной клик — выбор и переход к следующему шагу"}
+              </p>
+            )}
           </div>
         )}
 
