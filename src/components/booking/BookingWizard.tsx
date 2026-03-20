@@ -86,6 +86,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingWizardProps) {
+  const isMobile = useIsMobile();
   const [step, setStep] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
