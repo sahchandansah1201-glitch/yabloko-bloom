@@ -213,7 +213,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
+      <DialogContent className="max-h-[90vh] flex flex-col overflow-hidden sm:max-w-lg">
         <DialogHeader>
           <DialogTitle className="font-heading text-xl">
             {isSuccess ? "Заявка отправлена!" : "Запись на приём"}
