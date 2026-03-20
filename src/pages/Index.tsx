@@ -40,6 +40,8 @@ const Index = () => {
           name="description" 
           content="Клиника дерматологии и косметологии Яблоко в Краснодаре — центр медицины кожи, где красота достигается через здоровье. Косметология, дерматология, трихология. Запись онлайн." 
         />
+        <link rel="canonical" href="https://yabloko-clinic.ru/" />
+        <script type="application/ld+json">{JSON.stringify(getClinicSchema())}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
