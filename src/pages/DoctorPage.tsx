@@ -47,24 +47,18 @@ export default function DoctorPage() {
   const photo = getDoctorPhoto(doctor.name) || doctor.image_url;
   const openBooking = () => setIsBookingOpen(true);
 
-  const physicianJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
+  const physicianJsonLd = getPhysicianSchema({
+    slug: slug || "",
     name: doctor.name,
-    jobTitle: doctor.specialty,
-    worksFor: {
-      "@type": "MedicalClinic",
-      name: "Клиника «Яблоко»",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "ул. 70-летия Октября, 1/2",
-        addressLocality: "Краснодар",
-        addressCountry: "RU",
-      },
-      telephone: "+7 (918) 412-85-85",
-    },
-    description: `${doctor.name} — ${doctor.specialty}. ${doctor.bio || ""}`,
-  };
+    specialty: doctor.specialty,
+    bio: doctor.bio,
+    experience: profileData.experience,
+    education: profileData.timeline,
+    knowsAbout: profileData.services?.flatMap((s) => s.items),
+    faq: profileData.faq,
+  });
+
+  const faqJsonLd = getPhysicianFAQSchema(profileData.faq || []);
 
   const shortName = doctor.name.split(" ").slice(0, 2).join(" ");
 
@@ -78,16 +72,8 @@ export default function DoctorPage() {
         />
         <link rel="canonical" href={`https://yabloko-clinic.ru/doctor/${slug}`} />
         <script type="application/ld+json">{JSON.stringify(physicianJsonLd)}</script>
-        {profileData.faq && profileData.faq.length > 0 && (
-          <script type="application/ld+json">{JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: profileData.faq.map(f => ({
-              "@type": "Question",
-              name: f.question,
-              acceptedAnswer: { "@type": "Answer", text: f.answer },
-            })),
-          })}</script>
+        {faqJsonLd && (
+          <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
       </Helmet>
 
