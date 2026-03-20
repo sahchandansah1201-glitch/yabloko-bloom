@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { doctorPhotos } from "@/assets/doctors";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { format } from "date-fns";
