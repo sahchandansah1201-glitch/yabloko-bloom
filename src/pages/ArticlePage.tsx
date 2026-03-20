@@ -136,23 +136,24 @@ export default function ArticlePage() {
     return elements;
   };
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.excerpt,
-    image: article.coverImage,
-    author: { "@type": "Person", name: article.authorName, jobTitle: article.authorTitle },
-    datePublished: article.publishedAt,
-    publisher: { "@type": "Organization", name: "Клиника Яблоко" },
-  };
+  const articleJsonLd = getArticleSchema({
+    slug: article.slug,
+    title: article.title,
+    excerpt: article.excerpt,
+    publishedAt: article.publishedAt,
+    authorName: article.authorName,
+    authorSlug: article.authorSlug,
+    reviewedByName: article.authorName,
+    reviewedBySlug: article.authorSlug,
+  });
 
   return (
     <>
       <Helmet>
         <title>{article.title} | Клиника Яблоко</title>
         <meta name="description" content={article.excerpt} />
-        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <link rel="canonical" href={`https://yabloko-clinic.ru/advice/${article.slug}`} />
+        <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
