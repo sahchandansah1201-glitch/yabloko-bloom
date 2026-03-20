@@ -325,26 +325,39 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
             {/* Step 3: Doctor */}
             {step === 3 && (
               <div className="space-y-2">
-                {doctors.map((doctor) => (
-                  <button
-                    key={doctor.id}
-                    onClick={() => setSelectedDoctor(doctor.id)}
-                    className={cn(
-                      "flex w-full items-center gap-4 rounded-lg border-2 p-4 text-left transition-all hover:border-primary hover:bg-secondary",
-                      selectedDoctor === doctor.id 
-                        ? "border-primary bg-secondary" 
-                        : "border-border"
-                    )}
-                  >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted">
-                      <User className="h-6 w-6 text-muted-foreground" />
-                    </div>
-                    <div>
-                      <p className="font-medium">{doctor.name}</p>
-                      <p className="text-sm text-muted-foreground">{doctor.specialty}</p>
-                    </div>
-                  </button>
-                ))}
+                {doctors.map((doctor) => {
+                  const photo = doctor.image_url || doctorPhotos[doctor.name];
+                  return (
+                    <button
+                      key={doctor.id}
+                      onClick={() => setSelectedDoctor(doctor.id)}
+                      className={cn(
+                        "flex w-full items-center gap-4 rounded-lg border-2 p-3 text-left transition-all hover:border-primary hover:bg-secondary",
+                        selectedDoctor === doctor.id 
+                          ? "border-primary bg-secondary" 
+                          : "border-border"
+                      )}
+                    >
+                      <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full bg-muted">
+                        {photo ? (
+                          <img
+                            src={photo}
+                            alt={doctor.name}
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center">
+                            <User className="h-6 w-6 text-muted-foreground" />
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <p className="font-medium">{doctor.name}</p>
+                        <p className="text-sm text-muted-foreground">{doctor.specialty}</p>
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             )}
 
