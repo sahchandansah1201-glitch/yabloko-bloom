@@ -42,6 +42,7 @@ const Index = () => {
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/" />
         <script type="application/ld+json">{JSON.stringify(getClinicSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify(getOrganizationSchema())}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
