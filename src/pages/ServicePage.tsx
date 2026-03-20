@@ -19,7 +19,7 @@ import { InlineContactBlock } from "@/components/messenger/InlineContactBlock";
 import { RecentInsights } from "@/components/advice/RecentInsights";
 import { getServicePageData, getServiceBySlug, serviceCategories } from "@/data/servicesData";
 import { useDoctors } from "@/hooks/useDoctors";
-import { getTherapySchema, getServiceFAQSchema } from "@/lib/schema";
+import { getTherapySchema, getServiceFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import NotFound from "./NotFound";
 
 export default function ServicePage() {
