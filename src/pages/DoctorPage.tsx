@@ -14,6 +14,7 @@ import { DoctorProfileFAQ } from "@/components/doctor-profile/DoctorProfileFAQ";
 import { DoctorProfileBookingForm } from "@/components/doctor-profile/DoctorProfileBookingForm";
 import { DoctorStickyBar } from "@/components/doctor-profile/DoctorStickyBar";
 import { Skeleton } from "@/components/ui/skeleton";
+import { getPhysicianSchema, getPhysicianFAQSchema } from "@/lib/schema";
 
 export default function DoctorPage() {
   const { slug } = useParams<{ slug: string }>();
