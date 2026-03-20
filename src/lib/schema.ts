@@ -7,6 +7,40 @@ const SITE_URL = "https://yabloko-clinic.ru";
 const CLINIC_ID = `${SITE_URL}/#clinic`;
 const LOGO_URL = `${SITE_URL}/logo.png`;
 
+/* ── Organization Entity (Knowledge Graph root) ── */
+
+const ORG_ID = `${SITE_URL}/#organization`;
+
+export function getOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": ORG_ID,
+    name: "Клиника «Яблоко»",
+    alternateName: "Яблоко — клиника дерматологии и косметологии",
+    url: SITE_URL,
+    logo: LOGO_URL,
+    image: LOGO_URL,
+    description:
+      "Клиника дерматологии и косметологии в Краснодаре. Красота через здоровье.",
+    telephone: "+7-918-412-85-85",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "ул. 70-летия Октября, 1/2",
+      addressLocality: "Краснодар",
+      addressRegion: "Краснодарский край",
+      postalCode: "350000",
+      addressCountry: "RU",
+    },
+    sameAs: [
+      "https://www.instagram.com/yabloko_clinic_krd/",
+      "https://wa.me/79184128585",
+      "https://t.me/yabloko_clinic",
+      "https://vk.com/yabloko_clinic",
+    ],
+  };
+}
+
 /* ── Base Clinic Entity ─────────────────────────── */
 
 export function getClinicSchema() {
@@ -25,6 +59,7 @@ export function getClinicSchema() {
     priceRange: "₽₽",
     currenciesAccepted: "RUB",
     paymentAccepted: "Cash, Credit Card",
+    parentOrganization: { "@id": ORG_ID },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
