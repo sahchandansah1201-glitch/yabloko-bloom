@@ -13,6 +13,8 @@ import { PromoSection } from "@/components/home/PromoSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ChiefDoctorSection } from "@/components/home/ChiefDoctorSection";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
+import { getClinicSchema } from "@/lib/schema";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
