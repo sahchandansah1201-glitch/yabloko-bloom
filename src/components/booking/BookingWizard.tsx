@@ -163,6 +163,13 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
     if (step < 5) setStep(step + 1);
   };
 
+  // Auto-advance: on mobile single tap selects & advances; on desktop double-click advances
+  const selectAndAdvance = useCallback((setter: (id: string) => void, id: string) => {
+    setter(id);
+    // Small delay so user sees the selection highlight before advancing
+    setTimeout(() => setStep(prev => Math.min(prev + 1, 5)), 200);
+  }, []);
+
   const canProceed = () => {
     switch (step) {
       case 1: return !!selectedCategory;
