@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { doctorPhotos } from "@/assets/doctors";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -85,6 +86,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingWizardProps) {
+  const isMobile = useIsMobile();
   const [step, setStep] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -160,6 +162,13 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
   const goNext = () => {
     if (step < 5) setStep(step + 1);
   };
+
+  // Auto-advance: on mobile single tap selects & advances; on desktop double-click advances
+  const selectAndAdvance = useCallback((setter: (id: string) => void, id: string) => {
+    setter(id);
+    // Small delay so user sees the selection highlight before advancing
+    setTimeout(() => setStep(prev => Math.min(prev + 1, 5)), 200);
+  }, []);
 
   const canProceed = () => {
     switch (step) {
@@ -274,7 +283,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                 {categories.map((cat) => (
                   <button
                     key={cat.id}
-                    onClick={() => setSelectedCategory(cat.id)}
+                    onClick={() => isMobile ? selectAndAdvance(setSelectedCategory, cat.id) : setSelectedCategory(cat.id)}
+                    onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedCategory, cat.id)}
                     className={cn(
                       "flex flex-col items-center gap-2 rounded-xl border-2 p-4 text-center transition-all hover:border-primary hover:bg-secondary",
                       selectedCategory === cat.id 
@@ -299,7 +309,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                 {filteredServices.map((service) => (
                   <button
                     key={service.id}
-                    onClick={() => setSelectedService(service.id)}
+                    onClick={() => isMobile ? selectAndAdvance(setSelectedService, service.id) : setSelectedService(service.id)}
+                    onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedService, service.id)}
                     className={cn(
                       "flex w-full items-center justify-between rounded-lg border-2 p-4 text-left transition-all hover:border-primary hover:bg-secondary",
                       selectedService === service.id 
@@ -331,7 +342,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                   return (
                     <button
                       key={doctor.id}
-                      onClick={() => setSelectedDoctor(doctor.id)}
+                      onClick={() => isMobile ? selectAndAdvance(setSelectedDoctor, doctor.id) : setSelectedDoctor(doctor.id)}
+                      onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedDoctor, doctor.id)}
                       className={cn(
                         "flex w-full items-center gap-4 rounded-lg border-2 p-3 text-left transition-all hover:border-primary hover:bg-secondary",
                         selectedDoctor === doctor.id 
@@ -406,7 +418,8 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                       {timeSlots.map((time) => (
                         <button
                           key={time}
-                          onClick={() => setSelectedTime(time)}
+                          onClick={() => isMobile ? selectAndAdvance(setSelectedTime, time) : setSelectedTime(time)}
+                          onDoubleClick={() => !isMobile && selectAndAdvance(setSelectedTime, time)}
                           className={cn(
                             "flex items-center justify-center gap-1 rounded-md border py-2 text-sm transition-all hover:border-primary",
                             selectedTime === time
