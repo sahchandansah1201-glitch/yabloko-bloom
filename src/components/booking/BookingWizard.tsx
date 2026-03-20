@@ -388,16 +388,36 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
               <div className="space-y-4">
                 <div>
                   <Label className="mb-2 block">Выберите дату</Label>
-                  <Calendar
-                    mode="single"
-                    selected={selectedDate}
-                    onSelect={setSelectedDate}
-                    disabled={(date) =>
-                      date < new Date() ||
-                      date.getDay() === 0
-                    }
-                    className="pointer-events-auto rounded-lg border border-border p-3 mx-auto"
-                  />
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          "w-full justify-start text-left font-normal",
+                          !selectedDate && "text-muted-foreground"
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        {selectedDate
+                          ? format(selectedDate, "d MMMM yyyy", { locale: ru })
+                          : "Выберите дату"
+                        }
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={selectedDate}
+                        onSelect={setSelectedDate}
+                        disabled={(date) =>
+                          date < new Date() ||
+                          date.getDay() === 0
+                        }
+                        initialFocus
+                        className="pointer-events-auto p-3"
+                      />
+                    </PopoverContent>
+                  </Popover>
                 </div>
 
                 <div>
