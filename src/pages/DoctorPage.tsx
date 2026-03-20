@@ -14,7 +14,7 @@ import { DoctorProfileFAQ } from "@/components/doctor-profile/DoctorProfileFAQ";
 import { DoctorProfileBookingForm } from "@/components/doctor-profile/DoctorProfileBookingForm";
 import { DoctorStickyBar } from "@/components/doctor-profile/DoctorStickyBar";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getPhysicianSchema, getPhysicianFAQSchema } from "@/lib/schema";
+import { getPhysicianSchema, getPhysicianFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export default function DoctorPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -75,6 +75,11 @@ export default function DoctorPage() {
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Специалисты", url: "/specialists" },
+          { name: doctor.name },
+        ]))}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">

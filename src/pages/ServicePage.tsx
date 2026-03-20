@@ -19,7 +19,7 @@ import { InlineContactBlock } from "@/components/messenger/InlineContactBlock";
 import { RecentInsights } from "@/components/advice/RecentInsights";
 import { getServicePageData, getServiceBySlug, serviceCategories } from "@/data/servicesData";
 import { useDoctors } from "@/hooks/useDoctors";
-import { getTherapySchema, getServiceFAQSchema } from "@/lib/schema";
+import { getTherapySchema, getServiceFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import NotFound from "./NotFound";
 
 export default function ServicePage() {
@@ -84,6 +84,12 @@ export default function ServicePage() {
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Услуги", url: "/services" },
+          ...(category ? [{ name: category.label }] : []),
+          { name: title },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
