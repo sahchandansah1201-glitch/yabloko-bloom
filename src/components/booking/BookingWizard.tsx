@@ -534,7 +534,7 @@ export function BookingWizard({ isOpen, onClose, preselectedDoctorId }: BookingW
                 </Button>
               )}
             </div>
-          </>
+          </div>
         )}
       </DialogContent>
     </Dialog>
