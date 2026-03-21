@@ -61,7 +61,7 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
             {doctors?.map((doctor) => (
               <CarouselItem key={doctor.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <Card className="overflow-hidden border-border/50 bg-card hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
-                  <CardContent className="p-0">
+                  <CardContent className="p-0 flex flex-col flex-1">
                     {/* Doctor Photo */}
                     <div className="relative aspect-[3/4] bg-gradient-to-br from-apple-green-light to-secondary overflow-hidden">
                       {(doctor.image_url || doctorPhotos[doctor.name]) ? (
@@ -103,15 +103,15 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
                     </div>
 
                     {/* Doctor Info */}
-                    <div className="p-4">
-                      <h3 className="font-heading font-semibold text-foreground mb-1">
+                    <div className="p-4 flex flex-col flex-1">
+                      <h3 className="font-heading font-semibold text-foreground mb-1 min-h-[2.5rem]">
                         {doctor.name}
                       </h3>
                       <p className="text-sm text-primary font-medium mb-2">
                         {doctor.specialty}
                       </p>
                       {doctor.bio && (
-                        <p className="text-xs text-muted-foreground line-clamp-2">
+                        <p className="text-xs text-muted-foreground line-clamp-2 mt-auto">
                           {doctor.bio}
                         </p>
                       )}
