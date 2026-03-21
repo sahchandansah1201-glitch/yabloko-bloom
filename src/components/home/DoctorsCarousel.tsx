@@ -104,7 +104,7 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
 
                     {/* Doctor Info */}
                     <div className="p-4">
-                      <h3 className="font-heading font-semibold text-foreground mb-1 line-clamp-1">
+                      <h3 className="font-heading font-semibold text-foreground mb-1">
                         {doctor.name}
                       </h3>
                       <p className="text-sm text-primary font-medium mb-2">
