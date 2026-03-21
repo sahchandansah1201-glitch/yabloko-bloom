@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import {
   aramoSg, lazmik03, rds3, galatea,
-  ehvch20, ehvch100, abc02, venusViva,
+  ehvch20, ehvch100, abc02, venusViva, sharplight,
 } from "@/assets/equipment";
 import type { LucideIcon } from "lucide-react";
 
