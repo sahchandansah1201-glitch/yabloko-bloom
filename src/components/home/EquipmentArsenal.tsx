@@ -27,7 +27,7 @@ const devices: EquipmentDevice[] = [
   {
     id: "sharplight",
     name: "SharpLight (Израиль)",
-    image: "", // handled separately as legacy placeholder
+    image: sharplight,
     argument: "Лазерная эпиляция и фотоомоложение мирового уровня.",
     benefits: [
       { icon: Thermometer, text: "Охлаждение до -10°C — без боли во время процедуры" },
