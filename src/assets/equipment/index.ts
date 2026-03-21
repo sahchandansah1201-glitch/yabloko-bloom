@@ -1,0 +1,8 @@
+export { default as aramoSg } from "./aramo-sg.jpg";
+export { default as lazmik03 } from "./lazmik-03.jpg";
+export { default as rds3 } from "./rds-3.jpg";
+export { default as galatea } from "./galatea.jpg";
+export { default as ehvch20 } from "./ehvch-20.jpg";
+export { default as ehvch100 } from "./ehvch-100.jpg";
+export { default as abc02 } from "./abc-02.jpg";
+export { default as venusViva } from "./venus-viva.jpg";
