@@ -7,7 +7,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBadges } from "@/components/home/TrustBadges";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { DoctorsCarousel } from "@/components/home/DoctorsCarousel";
-import { TechnologySection } from "@/components/home/TechnologySection";
+import { EquipmentArsenal } from "@/components/home/EquipmentArsenal";
 import { BeforeAfterSlider } from "@/components/home/BeforeAfterSlider";
 import { PromoSection } from "@/components/home/PromoSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
@@ -53,7 +53,7 @@ const Index = () => {
           <TrustBadges />
           <ServicesGrid onBookingClick={() => openBooking()} />
           <DoctorsCarousel onBookingClick={openBooking} />
-          <TechnologySection />
+          <EquipmentArsenal />
           <BeforeAfterSlider />
           <PromoSection onBookingClick={() => openBooking()} />
           <ReviewsSection />
