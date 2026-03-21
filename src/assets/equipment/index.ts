@@ -6,3 +6,4 @@ export { default as ehvch20 } from "./ehvch-20.jpg";
 export { default as ehvch100 } from "./ehvch-100.jpg";
 export { default as abc02 } from "./abc-02.jpg";
 export { default as venusViva } from "./venus-viva.jpg";
+export { default as sharplight } from "./sharplight.jpg";

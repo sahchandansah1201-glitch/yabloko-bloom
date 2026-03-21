@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import {
   aramoSg, lazmik03, rds3, galatea,
-  ehvch20, ehvch100, abc02, venusViva,
+  ehvch20, ehvch100, abc02, venusViva, sharplight,
 } from "@/assets/equipment";
 import type { LucideIcon } from "lucide-react";
 
@@ -27,7 +27,7 @@ const devices: EquipmentDevice[] = [
   {
     id: "sharplight",
     name: "SharpLight (Израиль)",
-    image: "", // handled separately as legacy placeholder
+    image: sharplight,
     argument: "Лазерная эпиляция и фотоомоложение мирового уровня.",
     benefits: [
       { icon: Thermometer, text: "Охлаждение до -10°C — без боли во время процедуры" },
@@ -134,20 +134,8 @@ const cardVariants = {
   }),
 };
 
-function SharpLightPlaceholder() {
-  return (
-    <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/30">
-      <div className="text-center p-6">
-        <Zap className="h-14 w-14 text-primary/30 mx-auto mb-2" />
-        <p className="text-xs text-muted-foreground font-medium">SharpLight Technology</p>
-      </div>
-    </div>
-  );
-}
 
 function EquipmentCard({ device, index }: { device: EquipmentDevice; index: number }) {
-  const isSharpLight = device.id === "sharplight";
-
   return (
     <motion.article
       custom={index}
@@ -159,16 +147,12 @@ function EquipmentCard({ device, index }: { device: EquipmentDevice; index: numb
     >
       {/* Image */}
       <div className="relative overflow-hidden bg-secondary/20">
-        {isSharpLight ? (
-          <SharpLightPlaceholder />
-        ) : (
-          <img
-            src={device.image}
-            alt={device.name}
-            className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-          />
-        )}
+        <img
+          src={device.image}
+          alt={device.name}
+          className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
       </div>
 
       {/* Content */}
