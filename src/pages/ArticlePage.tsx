@@ -163,7 +163,7 @@ export default function ArticlePage() {
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
 
-      <main className="min-h-screen bg-background pt-28 pb-20 md:pb-16">
+      <main className="min-h-screen bg-background pt-6 md:pt-8 pb-20 md:pb-16">
         <div className="container">
           {/* Breadcrumbs */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">

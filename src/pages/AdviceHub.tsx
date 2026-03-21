@@ -36,7 +36,7 @@ export default function AdviceHub() {
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
 
-      <main className="min-h-screen bg-background pt-28 pb-16">
+      <main className="min-h-screen bg-background pt-6 md:pt-8 pb-16">
         <div className="container">
           {/* Hero */}
           <div className="mb-10 text-center">
