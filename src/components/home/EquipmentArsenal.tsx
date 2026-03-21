@@ -136,8 +136,6 @@ const cardVariants = {
 
 
 function EquipmentCard({ device, index }: { device: EquipmentDevice; index: number }) {
-  const isSharpLight = device.id === "sharplight";
-
   return (
     <motion.article
       custom={index}
@@ -149,16 +147,12 @@ function EquipmentCard({ device, index }: { device: EquipmentDevice; index: numb
     >
       {/* Image */}
       <div className="relative overflow-hidden bg-secondary/20">
-        {isSharpLight ? (
-          <SharpLightPlaceholder />
-        ) : (
-          <img
-            src={device.image}
-            alt={device.name}
-            className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-          />
-        )}
+        <img
+          src={device.image}
+          alt={device.name}
+          className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
       </div>
 
       {/* Content */}
