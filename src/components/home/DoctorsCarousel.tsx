@@ -60,7 +60,7 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
           <CarouselContent className="-ml-4">
             {doctors?.map((doctor) => (
               <CarouselItem key={doctor.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="overflow-hidden border-border/50 bg-card hover:shadow-lg transition-all duration-300 group h-full">
+                <Card className="overflow-hidden border-border/50 bg-card hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
                   <CardContent className="p-0">
                     {/* Doctor Photo */}
                     <div className="relative aspect-[3/4] bg-gradient-to-br from-apple-green-light to-secondary overflow-hidden">
