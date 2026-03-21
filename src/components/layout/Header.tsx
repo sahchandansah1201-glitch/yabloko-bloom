@@ -116,15 +116,23 @@ export function Header({ onBookingClick }: HeaderProps) {
       {isMenuOpen && (
         <div className="border-t border-border bg-card/95 backdrop-blur-xl lg:hidden animate-fade-in">
           <nav className="container flex flex-col gap-2 py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="rounded-lg px-4 py-3 font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href || (link.href !== '/' && location.pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`rounded-lg px-4 py-3 font-medium transition-colors ${
+                    isActive
+                      ? "bg-secondary text-primary"
+                      : "text-foreground/80 hover:bg-secondary hover:text-primary"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             ))}
             <hr className="my-2 border-border" />
             <div className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
