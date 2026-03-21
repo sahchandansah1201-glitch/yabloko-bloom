@@ -96,7 +96,7 @@ export default function ServicePage() {
 
       <Header onBookingClick={() => setIsQuickBookOpen(true)} />
 
-      <main className="min-h-screen bg-background pt-28 scroll-mt-32 pb-20 md:pb-0">
+      <main className="min-h-screen bg-background pt-6 md:pt-8 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
           <ServiceBreadcrumbs categoryLabel={category?.label} serviceTitle={title} />
         </div>
