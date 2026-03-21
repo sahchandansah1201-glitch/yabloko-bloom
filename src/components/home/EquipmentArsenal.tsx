@@ -1,13 +1,18 @@
+import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Shield, Zap, Heart, Eye, Crosshair, Activity,
-  Droplets, Sparkles, ScanLine, Thermometer, Lock, RefreshCw
+  Droplets, Sparkles, ScanLine, Thermometer, Lock, RefreshCw,
+  ChevronLeft, ChevronRight,
 } from "lucide-react";
 import {
   aramoSg, lazmik03, rds3, galatea,
   ehvch20, ehvch100, abc02, venusViva, sharplight,
 } from "@/assets/equipment";
+import useEmblaCarousel from "embla-carousel-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import type { LucideIcon } from "lucide-react";
 
 interface EquipmentBenefit {
@@ -125,27 +130,9 @@ const devices: EquipmentDevice[] = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.07, duration: 0.4, ease: "easeOut" as const },
-  }),
-};
-
-
-function EquipmentCard({ device, index }: { device: EquipmentDevice; index: number }) {
+function EquipmentCard({ device }: { device: EquipmentDevice }) {
   return (
-    <motion.article
-      custom={index}
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30"
-    >
-      {/* Image */}
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 h-full">
       <div className="relative overflow-hidden bg-secondary/20">
         <img
           src={device.image}
@@ -154,8 +141,6 @@ function EquipmentCard({ device, index }: { device: EquipmentDevice; index: numb
           loading="lazy"
         />
       </div>
-
-      {/* Content */}
       <div className="flex flex-1 flex-col p-5 md:p-6">
         <h3 className="font-heading text-base md:text-lg font-bold text-foreground mb-2 leading-tight">
           {device.name}
@@ -163,8 +148,6 @@ function EquipmentCard({ device, index }: { device: EquipmentDevice; index: numb
         <p className="text-sm text-primary font-medium mb-4 leading-snug">
           {device.argument}
         </p>
-
-        {/* Benefits */}
         <ul className="mt-auto space-y-2.5">
           {device.benefits.map((benefit, i) => (
             <li key={i} className="flex items-start gap-2.5">
@@ -178,16 +161,48 @@ function EquipmentCard({ device, index }: { device: EquipmentDevice; index: numb
           ))}
         </ul>
       </div>
-    </motion.article>
+    </article>
   );
 }
 
 export function EquipmentArsenal() {
+  const isMobile = useIsMobile();
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    slidesToScroll: isMobile ? 1 : 3,
+  });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setActiveIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi, onSelect]);
+
+  const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10 md:mb-14"
+        >
           <Badge variant="outline" className="mb-4 border-primary text-primary">
             Передовое оборудование
           </Badge>
@@ -198,13 +213,62 @@ export function EquipmentArsenal() {
             Только сертифицированное оборудование премиум-класса для точной диагностики,
             эффективного лечения и безопасных процедур.
           </p>
+        </motion.div>
+
+        {/* Carousel */}
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex -ml-4 md:-ml-6">
+            {devices.map((device) => (
+              <div
+                key={device.id}
+                className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pl-4 md:pl-6"
+              >
+                <EquipmentCard device={device} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {devices.map((device, index) => (
-            <EquipmentCard key={device.id} device={device} index={index} />
-          ))}
+        {/* Navigation */}
+        <div className="flex items-center justify-center gap-3 mt-6 md:mt-8">
+          {!isMobile && (
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full h-9 w-9"
+              onClick={scrollPrev}
+              aria-label="Предыдущее оборудование"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+          )}
+
+          <div className="flex items-center gap-2">
+            {scrollSnaps.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                aria-label={`Страница ${i + 1}`}
+                className={`rounded-full transition-all duration-300 ${
+                  i === activeIndex
+                    ? "w-6 h-2.5 bg-primary"
+                    : "w-2.5 h-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+              />
+            ))}
+          </div>
+
+          {!isMobile && (
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full h-9 w-9"
+              onClick={scrollNext}
+              aria-label="Следующее оборудование"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          )}
         </div>
       </div>
     </section>
