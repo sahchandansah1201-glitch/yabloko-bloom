@@ -75,7 +75,7 @@ const About = () => {
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
 
-      <main className="pt-32">
+      <main className="pt-6 md:pt-8">
         {/* ─── SECTION 1: Mission Hero ─── */}
         <section className="bg-background py-16 md:py-24">
           <div className="container">
