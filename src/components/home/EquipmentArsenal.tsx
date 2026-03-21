@@ -134,16 +134,6 @@ const cardVariants = {
   }),
 };
 
-function SharpLightPlaceholder() {
-  return (
-    <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/30">
-      <div className="text-center p-6">
-        <Zap className="h-14 w-14 text-primary/30 mx-auto mb-2" />
-        <p className="text-xs text-muted-foreground font-medium">SharpLight Technology</p>
-      </div>
-    </div>
-  );
-}
 
 function EquipmentCard({ device, index }: { device: EquipmentDevice; index: number }) {
   const isSharpLight = device.id === "sharplight";
