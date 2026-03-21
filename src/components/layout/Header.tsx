@@ -11,13 +11,15 @@ interface HeaderProps {
 export function Header({ onBookingClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showBar, setShowBar] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+      setShowBar(window.scrollY > 500);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,11 +32,12 @@ export function Header({ onBookingClick }: HeaderProps) {
 
   return (
     <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 bg-background border-b ${
+      className={`sticky z-50 w-full transition-all duration-300 bg-background border-b ${
         isScrolled 
           ? "border-border/40 shadow-sm backdrop-blur-xl" 
           : "border-transparent"
       }`}
+      style={{ top: showBar ? '2.5rem' : '0' }}
     >
       <div className="container flex h-16 items-center justify-between md:h-20 gap-4">
         {/* Logo */}
