@@ -53,7 +53,7 @@ const Index = () => {
           <TrustBadges />
           <ServicesGrid onBookingClick={() => openBooking()} />
           <DoctorsCarousel onBookingClick={openBooking} />
-          <TechnologySection />
+          <EquipmentArsenal />
           <BeforeAfterSlider />
           <PromoSection onBookingClick={() => openBooking()} />
           <ReviewsSection />
