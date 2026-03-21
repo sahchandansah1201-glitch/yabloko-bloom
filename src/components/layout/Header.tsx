@@ -53,15 +53,22 @@ export function Header({ onBookingClick }: HeaderProps) {
 
         {/* Desktop Navigation - Center */}
         <nav className="hidden items-center lg:flex" style={{ gap: 'clamp(1rem, 2vw, 2rem)' }}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className="font-medium text-foreground/80 transition-colors hover:text-primary relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.href || (link.href !== '/' && location.pathname.startsWith(link.href));
+            return (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`font-medium transition-colors relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all ${
+                  isActive
+                    ? "text-primary after:w-full"
+                    : "text-foreground/80 hover:text-primary after:w-0 hover:after:w-full"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right side - Contact info & CTA */}
