@@ -35,7 +35,7 @@ export function Header({ onBookingClick }: HeaderProps) {
           : "border-transparent"
       }`}
     >
-      <div className="container flex h-16 items-center justify-between md:h-20">
+      <div className="container flex h-16 items-center justify-between md:h-20 gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img 
@@ -45,18 +45,18 @@ export function Header({ onBookingClick }: HeaderProps) {
             width={48}
             height={48}
           />
-          <span className="font-heading font-bold text-xl text-primary hidden sm:inline">
+          <span className="font-heading font-bold text-xl text-primary hidden sm:inline whitespace-nowrap">
             ЯБЛОКО
           </span>
         </Link>
 
         {/* Desktop Navigation - Center */}
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center lg:flex" style={{ gap: 'clamp(1rem, 2vw, 2rem)' }}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className="font-medium text-foreground/80 transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+              className="font-medium text-foreground/80 transition-colors hover:text-primary relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
             >
               {link.label}
             </Link>
@@ -64,9 +64,9 @@ export function Header({ onBookingClick }: HeaderProps) {
         </nav>
 
         {/* Right side - Contact info & CTA */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center shrink-0" style={{ gap: 'clamp(0.75rem, 1.5vw, 1.5rem)' }}>
           {/* Address */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-1.5 text-[clamp(0.75rem,0.85vw,0.875rem)] text-muted-foreground whitespace-nowrap">
             <MapPin className="h-4 w-4 text-primary shrink-0" />
             <span className="hidden xl:inline">Краснодар, ул. 70-летия Октября, 1/2</span>
             <span className="xl:hidden">Краснодар</span>
@@ -75,9 +75,9 @@ export function Header({ onBookingClick }: HeaderProps) {
           {/* Phone */}
           <a 
             href="tel:+79184128585" 
-            className="flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary"
+            className="flex items-center gap-1.5 text-[clamp(0.75rem,0.85vw,0.875rem)] font-medium text-foreground transition-colors hover:text-primary whitespace-nowrap"
           >
-            <Phone className="h-4 w-4 text-primary" />
+            <Phone className="h-4 w-4 text-primary shrink-0" />
             +7 (918) 412-85-85
           </a>
 
@@ -86,6 +86,7 @@ export function Header({ onBookingClick }: HeaderProps) {
             variant="hero" 
             size="default" 
             onClick={onBookingClick}
+            className="shrink-0"
           >
             Запись
           </Button>
