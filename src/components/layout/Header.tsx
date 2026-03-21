@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
@@ -11,6 +11,7 @@ interface HeaderProps {
 export function Header({ onBookingClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,15 +53,22 @@ export function Header({ onBookingClick }: HeaderProps) {
 
         {/* Desktop Navigation - Center */}
         <nav className="hidden items-center lg:flex" style={{ gap: 'clamp(1rem, 2vw, 2rem)' }}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className="font-medium text-foreground/80 transition-colors hover:text-primary relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.href || (link.href !== '/' && location.pathname.startsWith(link.href));
+            return (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`font-medium transition-colors relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all ${
+                  isActive
+                    ? "text-primary after:w-full"
+                    : "text-foreground/80 hover:text-primary after:w-0 hover:after:w-full"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right side - Contact info & CTA */}
@@ -108,16 +116,24 @@ export function Header({ onBookingClick }: HeaderProps) {
       {isMenuOpen && (
         <div className="border-t border-border bg-card/95 backdrop-blur-xl lg:hidden animate-fade-in">
           <nav className="container flex flex-col gap-2 py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="rounded-lg px-4 py-3 font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href || (link.href !== '/' && location.pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`rounded-lg px-4 py-3 font-medium transition-colors ${
+                    isActive
+                      ? "bg-secondary text-primary"
+                      : "text-foreground/80 hover:bg-secondary hover:text-primary"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            
             <hr className="my-2 border-border" />
             <div className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
