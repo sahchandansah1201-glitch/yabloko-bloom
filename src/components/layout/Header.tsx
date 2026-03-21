@@ -133,7 +133,7 @@ export function Header({ onBookingClick }: HeaderProps) {
                 </Link>
               );
             })}
-            ))}
+            
             <hr className="my-2 border-border" />
             <div className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
