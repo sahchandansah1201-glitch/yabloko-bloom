@@ -225,15 +225,29 @@ export function BookingWizard({ isOpen, onClose, onBack, preselectedDoctorId }: 
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-h-[90vh] flex flex-col overflow-hidden sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="font-heading text-xl">
-            {isSuccess ? "Заявка отправлена!" : "Запись на приём"}
-          </DialogTitle>
-          <DialogDescription>
-            {isSuccess 
-              ? "Мы свяжемся с вами для подтверждения" 
-              : `Шаг ${step} из 5`
-            }
-          </DialogDescription>
+          <div className="flex items-center gap-2">
+            {onBack && step === 1 && !isSuccess && (
+              <button
+                type="button"
+                onClick={() => { handleClose(); onBack(); }}
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                aria-label="Назад"
+              >
+                <ArrowLeft className="h-4 w-4" />
+              </button>
+            )}
+            <div>
+              <DialogTitle className="font-heading text-xl">
+                {isSuccess ? "Заявка отправлена!" : "Запись на приём"}
+              </DialogTitle>
+              <DialogDescription>
+                {isSuccess 
+                  ? "Мы свяжемся с вами для подтверждения" 
+                  : `Шаг ${step} из 5`
+                }
+              </DialogDescription>
+            </div>
+          </div>
         </DialogHeader>
 
         {/* Progress bar */}
