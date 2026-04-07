@@ -26,10 +26,13 @@ import NotFound from "./NotFound";
 
 export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
+  const [isChoiceOpen, setIsChoiceOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isQuickBookOpen, setIsQuickBookOpen] = useState(false);
   const [preselectedDoctorId, setPreselectedDoctorId] = useState<string | null>(null);
   const [bookingServiceName, setBookingServiceName] = useState<string>("");
+
+  const openChoice = () => setIsChoiceOpen(true);
 
   const pageData = slug ? getServicePageData(slug) : undefined;
   const serviceItem = slug ? getServiceBySlug(slug) : undefined;
