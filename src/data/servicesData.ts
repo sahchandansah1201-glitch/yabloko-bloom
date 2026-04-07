@@ -2144,7 +2144,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ],
   },
 
-
+  massazh: {
     slug: "massazh",
     title: "Лечебно-профилактический массаж",
     subtitle: "Профессиональный массаж для снятия боли, расслабления и восстановления — только опытные руки специалиста.",
