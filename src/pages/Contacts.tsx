@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
+import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, Car, Copy, Check, ExternalLink, MessageCircle } from "lucide-react";
@@ -45,18 +47,21 @@ function useIsOpen() {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const now = new Date();
-    const day = now.getDay(); // 0=Sun
+    const day = now.getDay();
     const hour = now.getHours();
-    // Mon-Sat (1-6), 9-20
     setIsOpen(day >= 1 && day <= 6 && hour >= 9 && hour < 20);
   }, []);
   return isOpen;
 }
 
 const Contacts = () => {
+  const [isChoiceOpen, setIsChoiceOpen] = useState(false);
+  const [isQuickOpen, setIsQuickOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const isOpen = useIsOpen();
+
+  const openChoice = () => setIsChoiceOpen(true);
 
   const copyAddress = () => {
     navigator.clipboard.writeText(ADDRESS);
@@ -97,7 +102,7 @@ const Contacts = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <Header onBookingClick={() => setIsBookingOpen(true)} />
+      <Header onBookingClick={openChoice} />
 
       {/* Mobile quick actions */}
       <div className="md:hidden sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border px-4 py-3 flex gap-2">
@@ -250,7 +255,7 @@ const Contacts = () => {
               variant="hero"
               size="xl"
               className="w-full"
-              onClick={() => setIsBookingOpen(true)}
+              onClick={openChoice}
             >
               Записаться на приём
             </Button>
@@ -290,7 +295,23 @@ const Contacts = () => {
       </main>
 
       <Footer />
-      <BookingWizard isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+
+      <BookingChoiceModal
+        isOpen={isChoiceOpen}
+        onClose={() => setIsChoiceOpen(false)}
+        onQuickContact={() => setIsQuickOpen(true)}
+        onFullBooking={() => setIsBookingOpen(true)}
+      />
+      <QuickBookingModal
+        isOpen={isQuickOpen}
+        onClose={() => setIsQuickOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
+      />
+      <BookingWizard
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
+      />
     </>
   );
 };
