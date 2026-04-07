@@ -31,6 +31,7 @@ const itemSlugMap: Record<string, string> = {
   "чистка лица": "chistka-litsa",
   "уходовые процедуры": "chistka-litsa",
   "массаж лица": "massazh-litsa",
+  "миофасциальный массаж лица": "miofastsialnyy-massazh-litsa",
   "нитевой лифтинг": "nitevoy-lifting",
   "фотоомоложение": "fotoомоlozhenie",
   "rf-лифтинг": "rf-lifting",
