@@ -39,7 +39,11 @@ export default function ServicesHub() {
   const filteredServices = useMemo(() => {
     if (!searchQuery.trim()) return null;
     const q = searchQuery.toLowerCase();
-    return allServices.filter((s) => s.title.toLowerCase().includes(q));
+    return allServices.filter(
+      (s) =>
+        s.title.toLowerCase().includes(q) ||
+        (s.problems && s.problems.some((p) => p.toLowerCase().includes(q)))
+    );
   }, [searchQuery, allServices]);
 
   const isSearching = searchQuery.trim().length > 0;
