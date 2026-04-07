@@ -90,7 +90,7 @@ export function QuickBookingModal({
               <button
                 type="button"
                 onClick={() => { handleClose(); onBack(); }}
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 aria-label="Назад"
               >
                 <ArrowLeft className="h-4 w-4" />
