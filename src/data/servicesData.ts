@@ -80,6 +80,7 @@ export const serviceCategories: ServiceCategory[] = [
       { slug: "nevrolog", title: "Невролог", icon: "brain", priceFrom: "от 2 500 ₽", category: "health", problems: ["головная боль", "мигрень", "бессонница", "невралгия", "онемение", "головокружение", "стресс"] },
       { slug: "nutritsiolog", title: "Нутрициолог", icon: "salad", priceFrom: "от 5 300 ₽", category: "health", problems: ["дефицит витаминов", "усталость", "питание", "нутрицевтики", "биодобавки", "энергия"] },
       { slug: "massazh", title: "Массаж", icon: "hand", priceFrom: "от 100 ₽", category: "health", problems: ["боль в спине", "напряжение", "стресс", "целлюлит", "отёки", "усталость мышц", "расслабление"] },
+      { slug: "bioimpedansometriya", title: "Биоимпедансометрия", icon: "activity", priceFrom: "от 2 700 ₽", category: "health", problems: ["состав тела", "процент жира", "мышечная масса", "водный баланс", "метаболизм", "контроль веса", "похудение"] },
     ],
   },
 ];
