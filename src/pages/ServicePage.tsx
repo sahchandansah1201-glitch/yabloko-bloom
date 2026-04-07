@@ -28,6 +28,7 @@ export default function ServicePage() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isQuickBookOpen, setIsQuickBookOpen] = useState(false);
   const [preselectedDoctorId, setPreselectedDoctorId] = useState<string | null>(null);
+  const [bookingServiceName, setBookingServiceName] = useState<string>("");
 
   const pageData = slug ? getServicePageData(slug) : undefined;
   const serviceItem = slug ? getServiceBySlug(slug) : undefined;
@@ -127,7 +128,10 @@ export default function ServicePage() {
 
         <ServicePatientStories />
 
-        <ServicePricing pricing={pricingWithTags} />
+        <ServicePricing pricing={pricingWithTags} onBook={(name) => {
+          setBookingServiceName(name);
+          setIsQuickBookOpen(true);
+        }} />
 
         <InlineContactBlock pageTitle={title} />
 
@@ -145,7 +149,7 @@ export default function ServicePage() {
       <QuickBookingModal
         isOpen={isQuickBookOpen}
         onClose={() => setIsQuickBookOpen(false)}
-        serviceName={title}
+        serviceName={bookingServiceName || title}
       />
 
       <BookingWizard
