@@ -114,7 +114,7 @@ export interface ServicePageData {
   contraindications?: string[];
   howItWorks?: string[];
   extraSections?: ContentSection[];
-  pricing: { name: string; price: string }[];
+  pricing: { name: string; price: string; valueTag?: string }[];
   crossSell: { slug: string; title: string }[];
   faq: { question: string; answer: string }[];
 }
