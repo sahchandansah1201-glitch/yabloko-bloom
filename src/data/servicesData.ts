@@ -4,6 +4,7 @@ export interface ServiceItem {
   icon: string;
   priceFrom: string;
   category: string;
+  problems?: string[];
 }
 
 export interface ServiceCategory {
