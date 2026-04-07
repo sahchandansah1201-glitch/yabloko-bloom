@@ -1754,6 +1754,13 @@ export const servicePages: Record<string, ServicePageData> = {
     pricing: [
       { name: "Лазерная шлифовка рубца", price: "от 3 000 ₽" },
       { name: "Инъекционная коррекция", price: "от 5 000 ₽" },
+      { name: "Тест-проба Коллост", price: "1 200 ₽", valueTag: "Обязательно перед процедурой" },
+      { name: "Коллост 7% 0,5 мл", price: "5 800 ₽" },
+      { name: "Коллост 7% 1,5 мл", price: "9 700 ₽" },
+      { name: "Коллост 15% 1,5 мл", price: "13 500 ₽" },
+      { name: "Коллост Микро 150 мг", price: "7 200 ₽" },
+      { name: "Сферогель Medium 1 шприц", price: "11 400 ₽" },
+      { name: "Сферогель Medium 2 шприца", price: "18 900 ₽" },
     ],
     crossSell: [
       { slug: "lazernaya-shlifovka", title: "Лазерная шлифовка" },
