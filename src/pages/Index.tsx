@@ -13,20 +13,24 @@ import { PromoSection } from "@/components/home/PromoSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ChiefDoctorSection } from "@/components/home/ChiefDoctorSection";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
+import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
 import { getClinicSchema, getOrganizationSchema } from "@/lib/schema";
 
 const Index = () => {
+  const [isChoiceOpen, setIsChoiceOpen] = useState(false);
+  const [isQuickOpen, setIsQuickOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [preselectedDoctorId, setPreselectedDoctorId] = useState<string | null>(null);
 
-  const openBooking = (doctorId?: string) => {
-    if (doctorId) {
-      setPreselectedDoctorId(doctorId);
-    }
+  const openChoice = () => setIsChoiceOpen(true);
+
+  const openBookingDirect = (doctorId?: string) => {
+    if (doctorId) setPreselectedDoctorId(doctorId);
     setIsBookingOpen(true);
   };
-  
+
   const closeBooking = () => {
     setIsBookingOpen(false);
     setPreselectedDoctorId(null);
@@ -46,23 +50,40 @@ const Index = () => {
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
-        <Header onBookingClick={() => openBooking()} />
+        <Header onBookingClick={openChoice} />
         
         <main className="flex-1 pb-20 md:pb-0">
-          <HeroSection onBookingClick={() => openBooking()} />
+          <HeroSection onBookingClick={openChoice} />
           <TrustBadges />
-          <ServicesGrid onBookingClick={() => openBooking()} />
-          <DoctorsCarousel onBookingClick={openBooking} />
+          <ServicesGrid onBookingClick={openChoice} />
+          <DoctorsCarousel onBookingClick={(doctorId?: string) => {
+            if (doctorId) {
+              openBookingDirect(doctorId);
+            } else {
+              openChoice();
+            }
+          }} />
           <EquipmentArsenal />
           <BeforeAfterSlider />
-          <PromoSection onBookingClick={() => openBooking()} />
+          <PromoSection onBookingClick={openChoice} />
           <ReviewsSection />
-          <ChiefDoctorSection onBookingClick={() => openBooking()} />
+          <ChiefDoctorSection onBookingClick={openChoice} />
         </main>
 
         <Footer />
-        <DesktopConversionBar onBookingClick={() => openBooking()} />
-        <MobileBookingBar onBookingClick={() => openBooking()} />
+        <DesktopConversionBar onBookingClick={openChoice} />
+        <MobileBookingBar onBookingClick={openChoice} />
+
+        <BookingChoiceModal
+          isOpen={isChoiceOpen}
+          onClose={() => setIsChoiceOpen(false)}
+          onQuickContact={() => setIsQuickOpen(true)}
+          onFullBooking={() => setIsBookingOpen(true)}
+        />
+        <QuickBookingModal
+          isOpen={isQuickOpen}
+          onClose={() => setIsQuickOpen(false)}
+        />
         <BookingWizard 
           isOpen={isBookingOpen} 
           onClose={closeBooking}
