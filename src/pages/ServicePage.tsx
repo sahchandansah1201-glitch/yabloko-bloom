@@ -99,7 +99,7 @@ export default function ServicePage() {
         ]))}</script>
       </Helmet>
 
-      <Header onBookingClick={() => setIsQuickBookOpen(true)} />
+      <Header onBookingClick={openChoice} />
 
       <main className="min-h-screen bg-background pt-6 md:pt-8 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
@@ -111,7 +111,7 @@ export default function ServicePage() {
           subtitle={subtitle}
           duration={duration}
           recovery={recovery}
-          onBook={() => setIsQuickBookOpen(true)}
+          onBook={openChoice}
         />
 
         <ServiceContent
@@ -134,7 +134,7 @@ export default function ServicePage() {
 
         <ServicePricing pricing={pricingWithTags} onBook={(name) => {
           setBookingServiceName(name);
-          setIsQuickBookOpen(true);
+          openChoice();
         }} />
 
         <InlineContactBlock pageTitle={title} />
@@ -148,17 +148,26 @@ export default function ServicePage() {
 
       <Footer />
 
-      <ServiceMobileCTA price={displayPrice} onBook={() => setIsQuickBookOpen(true)} />
+      <ServiceMobileCTA price={displayPrice} onBook={openChoice} />
+
+      <BookingChoiceModal
+        isOpen={isChoiceOpen}
+        onClose={() => setIsChoiceOpen(false)}
+        onQuickContact={() => setIsQuickBookOpen(true)}
+        onFullBooking={() => setIsBookingOpen(true)}
+      />
 
       <QuickBookingModal
         isOpen={isQuickBookOpen}
         onClose={() => { setIsQuickBookOpen(false); setBookingServiceName(""); }}
+        onBack={() => setIsChoiceOpen(true)}
         serviceName={bookingServiceName || title}
       />
 
       <BookingWizard
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
         preselectedDoctorId={preselectedDoctorId}
       />
     </>
