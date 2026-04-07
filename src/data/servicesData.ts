@@ -521,9 +521,16 @@ export const servicePages: Record<string, ServicePageData> = {
       "Нанесение успокаивающей маски, увлажнение и SPF-защита",
     ],
     pricing: [
-      { name: "Пилинг поверхностный", price: "от 2 500 ₽" },
-      { name: "Пилинг салициловый", price: "от 3 000 ₽" },
-      { name: "Пилинг ретиноевый (жёлтый)", price: "от 5 000 ₽" },
+      { name: "Пилинг миндальный", price: "3 400 ₽" },
+      { name: "Пилинг салициловый", price: "3 400 ₽" },
+      { name: "Пилинг азелаиновый Anti-acne", price: "3 400 ₽" },
+      { name: "Пилинг азелаиновый Anti-acne спины", price: "5 300 ₽" },
+      { name: "Пилинг Джеснера", price: "4 350 ₽" },
+      { name: "Пилинг ТСА", price: "4 800 ₽" },
+      { name: "Пилинг осветляющий", price: "4 800 ₽" },
+      { name: "Пилинг ретиноловый", price: "6 300 ₽" },
+      { name: "Пилинг омолаживающий для зоны вокруг глаз", price: "900 ₽" },
+      { name: "Пилинг для волос TIME TO GROW", price: "3 300 ₽" },
     ],
     crossSell: [
       { slug: "biorevitalizatsiya", title: "Биоревитализация" },
@@ -633,7 +640,13 @@ export const servicePages: Record<string, ServicePageData> = {
       "Курс: 3–5 сеансов с интервалом 14 дней, результат нарастает в течение месяца",
     ],
     pricing: [
-      { name: "Коллагенотерапия (1 процедура)", price: "от 7 000 ₽" },
+      { name: "Коллост 7% 0,5 мл", price: "10 600 ₽" },
+      { name: "Коллост 7% 1,5 мл", price: "15 300 ₽" },
+      { name: "Коллост 15% 1,5 мл", price: "23 900 ₽" },
+      { name: "Коллост Микро 150 мг", price: "22 600 ₽" },
+      { name: "Тест-проба Коллост", price: "3 500 ₽" },
+      { name: "Сферогель Medium 1 шпр.", price: "11 600 ₽" },
+      { name: "Сферогель Medium 2 шпр.", price: "20 900 ₽" },
     ],
     crossSell: [
       { slug: "biorevitalizatsiya", title: "Биоревитализация" },
@@ -684,8 +697,12 @@ export const servicePages: Record<string, ServicePageData> = {
       "Осмотр через 7–14 дней, финальный результат через 2–3 месяца",
     ],
     pricing: [
-      { name: "Мезонити (10 шт.)", price: "от 15 000 ₽" },
-      { name: "Лифтинговые нити (1 шт.)", price: "от 7 000 ₽" },
+      { name: "Мезонити PDO MONO 10 шт.", price: "от 7 400 ₽" },
+      { name: "Мезонити PDO SCREW 10 шт.", price: "от 10 500 ₽" },
+      { name: "Мезонити PDO DOUBLE SCREW 10 шт.", price: "от 13 700 ₽" },
+      { name: "Мезонити PLLA SCREW 10 шт.", price: "от 11 600 ₽" },
+      { name: "Мезонити PLLA DOUBLE SCREW 10 шт.", price: "от 15 800 ₽" },
+      { name: "Нити Aptos Excellence Elegance", price: "от 21 000 ₽" },
     ],
     crossSell: [
       { slug: "botoks", title: "Ботокс / Диспорт" },
@@ -1795,9 +1812,11 @@ export const servicePages: Record<string, ServicePageData> = {
       "Курс: 6–10 процедур раз в 1–2 недели, затем поддерживающие сеансы",
     ],
     pricing: [
-      { name: "Плазмотерапия головы", price: "от 5 000 ₽" },
-      { name: "Мезотерапия головы", price: "от 3 500 ₽" },
-      { name: "Плацентарная терапия", price: "от 6 000 ₽" },
+      { name: "Биоревитализация Hair X с пептидами 2 мл (шприц)", price: "9 700 ₽" },
+      { name: "Биоревитализация Hair X 2 мл (флакон)", price: "4 000 ₽" },
+      { name: "Мезотерапия головы Hair X с пептидами 2 мл (шприц)", price: "9 700 ₽" },
+      { name: "Мезотерапия головы безинъекционная", price: "3 300 ₽" },
+      { name: "Внутрикожное введение Бетаметазон", price: "4 800 ₽" },
     ],
     crossSell: [
       { slug: "diagnostika-volos", title: "Диагностика волос" },
@@ -1848,7 +1867,8 @@ export const servicePages: Record<string, ServicePageData> = {
       "Курс: 8–10 процедур с интервалом 7–10 дней",
     ],
     pricing: [
-      { name: "Мезотерапия кожи головы", price: "от 3 500 ₽" },
+      { name: "Мезотерапия головы Hair X 2 мл (шприц)", price: "9 700 ₽" },
+      { name: "Мезотерапия головы безинъекционная", price: "3 300 ₽" },
     ],
     crossSell: [
       { slug: "plazmoterapiya-golovy", title: "Плазмотерапия головы" },
