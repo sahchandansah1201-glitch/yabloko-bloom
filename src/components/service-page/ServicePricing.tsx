@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Calendar } from "lucide-react";
 
 interface PricingItem {
   name: string;
@@ -11,9 +12,10 @@ interface PricingItem {
 
 interface ServicePricingProps {
   pricing: PricingItem[];
+  onBook?: (serviceName: string) => void;
 }
 
-export function ServicePricing({ pricing }: ServicePricingProps) {
+export function ServicePricing({ pricing, onBook }: ServicePricingProps) {
   if (!pricing.length) return null;
 
   return (
@@ -41,7 +43,20 @@ export function ServicePricing({ pricing }: ServicePricingProps) {
                     </Badge>
                   )}
                 </div>
-                <span className="text-lg font-bold text-primary whitespace-nowrap">{p.price}</span>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="text-lg font-bold text-primary whitespace-nowrap">{p.price}</span>
+                  {onBook && (
+                    <Button
+                      size="sm"
+                      variant="hero"
+                      className="text-xs h-8 px-3 gap-1"
+                      onClick={() => onBook(p.name)}
+                    >
+                      <Calendar className="h-3.5 w-3.5" />
+                      <span className="hidden sm:inline">Записаться</span>
+                    </Button>
+                  )}
+                </div>
               </Card>
             </motion.div>
           ))}
