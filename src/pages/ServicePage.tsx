@@ -148,7 +148,7 @@ export default function ServicePage() {
 
       <QuickBookingModal
         isOpen={isQuickBookOpen}
-        onClose={() => setIsQuickBookOpen(false)}
+        onClose={() => { setIsQuickBookOpen(false); setBookingServiceName(""); }}
         serviceName={bookingServiceName || title}
       />
 
