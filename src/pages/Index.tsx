@@ -83,10 +83,12 @@ const Index = () => {
         <QuickBookingModal
           isOpen={isQuickOpen}
           onClose={() => setIsQuickOpen(false)}
+          onBack={() => setIsChoiceOpen(true)}
         />
         <BookingWizard 
           isOpen={isBookingOpen} 
           onClose={closeBooking}
+          onBack={() => setIsChoiceOpen(true)}
           preselectedDoctorId={preselectedDoctorId}
         />
       </div>

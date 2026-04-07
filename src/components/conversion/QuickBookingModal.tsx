@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
 import { TrustAnchors } from "./TrustAnchors";
 
@@ -37,12 +37,14 @@ type FormData = z.infer<typeof schema>;
 interface QuickBookingModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onBack?: () => void;
   serviceName?: string;
 }
 
 export function QuickBookingModal({
   isOpen,
   onClose,
+  onBack,
   serviceName,
 }: QuickBookingModalProps) {
   const [submitting, setSubmitting] = useState(false);
@@ -83,16 +85,30 @@ export function QuickBookingModal({
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-heading text-xl">
-            {success ? "Заявка принята!" : "Быстрая запись"}
-          </DialogTitle>
-          <DialogDescription>
-            {success
-              ? "Мы перезвоним в течение 15 минут"
-              : serviceName
-                ? `${serviceName} — без предоплаты`
-                : "Без предоплаты • Перезвоним за 15 мин"}
-          </DialogDescription>
+          <div className="flex items-center gap-2">
+            {onBack && !success && (
+              <button
+                type="button"
+                onClick={() => { handleClose(); onBack(); }}
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                aria-label="Назад"
+              >
+                <ArrowLeft className="h-4 w-4" />
+              </button>
+            )}
+            <div>
+              <DialogTitle className="font-heading text-xl">
+                {success ? "Заявка принята!" : "Быстрая запись"}
+              </DialogTitle>
+              <DialogDescription>
+                {success
+                  ? "Мы перезвоним в течение 15 минут"
+                  : serviceName
+                    ? `${serviceName} — без предоплаты`
+                    : "Без предоплаты • Перезвоним за 15 мин"}
+              </DialogDescription>
+            </div>
+          </div>
         </DialogHeader>
 
         {success ? (
