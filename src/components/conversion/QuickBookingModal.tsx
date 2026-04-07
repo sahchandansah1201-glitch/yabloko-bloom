@@ -37,6 +37,7 @@ type FormData = z.infer<typeof schema>;
 interface QuickBookingModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onBack?: () => void;
   serviceName?: string;
 }
 

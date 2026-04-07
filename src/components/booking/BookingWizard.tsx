@@ -43,6 +43,7 @@ import { toast } from "sonner";
 interface BookingWizardProps {
   isOpen: boolean;
   onClose: () => void;
+  onBack?: () => void;
   preselectedDoctorId?: string | null;
 }
 
