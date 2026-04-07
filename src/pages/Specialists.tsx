@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
+import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { DoctorCard } from "@/components/specialists/DoctorCard";
 import { DoctorProfile } from "@/components/specialists/DoctorProfile";
 import { useDoctors, Doctor } from "@/hooks/useDoctors";
@@ -19,6 +21,8 @@ const administrators = [
 
 export default function Specialists() {
   const navigate = useNavigate();
+  const [isChoiceOpen, setIsChoiceOpen] = useState(false);
+  const [isQuickOpen, setIsQuickOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -28,6 +32,8 @@ export default function Specialists() {
 
   const topSpecialists = doctors?.filter(d => d.is_top_specialist) || [];
   const otherDoctors = doctors?.filter(d => !d.is_top_specialist) || [];
+
+  const openChoice = () => setIsChoiceOpen(true);
 
   const handleOpenProfile = (doctor: Doctor) => {
     if (doctor.slug) {
@@ -44,11 +50,6 @@ export default function Specialists() {
     setIsBookingOpen(true);
   };
 
-  const handleOpenBooking = () => {
-    setPreselectedDoctorId(null);
-    setIsBookingOpen(true);
-  };
-
   return (
     <>
       <Helmet>
@@ -60,7 +61,7 @@ export default function Specialists() {
         <meta name="keywords" content="дерматолог Краснодар, косметолог Краснодар, врач трихолог, клиника Яблоко специалисты" />
       </Helmet>
 
-      <Header onBookingClick={handleOpenBooking} />
+      <Header onBookingClick={openChoice} />
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
@@ -218,7 +219,7 @@ export default function Specialists() {
               Позвоните нам или оставьте заявку — мы поможем подобрать врача под ваши потребности.
             </p>
             <button
-              onClick={handleOpenBooking}
+              onClick={openChoice}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-background text-foreground px-8 py-4 font-semibold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               Записаться на консультацию
@@ -228,7 +229,7 @@ export default function Specialists() {
       </main>
 
       <Footer />
-      <MobileBookingBar onBookingClick={handleOpenBooking} />
+      <MobileBookingBar onBookingClick={openChoice} />
 
       {/* Doctor Profile Modal */}
       <DoctorProfile
@@ -238,10 +239,21 @@ export default function Specialists() {
         onBook={handleBookWithDoctor}
       />
 
-      {/* Booking Wizard */}
+      <BookingChoiceModal
+        isOpen={isChoiceOpen}
+        onClose={() => setIsChoiceOpen(false)}
+        onQuickContact={() => setIsQuickOpen(true)}
+        onFullBooking={() => setIsBookingOpen(true)}
+      />
+      <QuickBookingModal
+        isOpen={isQuickOpen}
+        onClose={() => setIsQuickOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
+      />
       <BookingWizard
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
         preselectedDoctorId={preselectedDoctorId}
       />
     </>

@@ -11,6 +11,8 @@ import { Footer } from "@/components/layout/Footer";
 import { InteriorCarousel } from "@/components/about/InteriorCarousel";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
+import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { pavlyukMaria } from "@/assets/doctors";
@@ -61,7 +63,11 @@ const equipmentCards = [
 ];
 
 const About = () => {
+  const [isChoiceOpen, setIsChoiceOpen] = useState(false);
+  const [isQuickOpen, setIsQuickOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+
+  const openChoice = () => setIsChoiceOpen(true);
 
   return (
     <>
@@ -73,7 +79,7 @@ const About = () => {
         />
       </Helmet>
 
-      <Header onBookingClick={() => setIsBookingOpen(true)} />
+      <Header onBookingClick={openChoice} />
 
       <main className="pt-6 md:pt-8">
         {/* ─── SECTION 1: Mission Hero ─── */}
@@ -345,7 +351,7 @@ const About = () => {
                   variant="hero"
                   size="xl"
                   className="gap-2"
-                  onClick={() => setIsBookingOpen(true)}
+                  onClick={openChoice}
                 >
                   <Calendar className="h-5 w-5" />
                   Записаться на консультацию
@@ -360,10 +366,23 @@ const About = () => {
       </main>
 
       <Footer />
-      <MobileBookingBar onBookingClick={() => setIsBookingOpen(true)} />
+      <MobileBookingBar onBookingClick={openChoice} />
+
+      <BookingChoiceModal
+        isOpen={isChoiceOpen}
+        onClose={() => setIsChoiceOpen(false)}
+        onQuickContact={() => setIsQuickOpen(true)}
+        onFullBooking={() => setIsBookingOpen(true)}
+      />
+      <QuickBookingModal
+        isOpen={isQuickOpen}
+        onClose={() => setIsQuickOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
+      />
       <BookingWizard
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
       />
     </>
   );
