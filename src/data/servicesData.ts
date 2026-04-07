@@ -114,7 +114,7 @@ export interface ServicePageData {
   contraindications?: string[];
   howItWorks?: string[];
   extraSections?: ContentSection[];
-  pricing: { name: string; price: string }[];
+  pricing: { name: string; price: string; valueTag?: string }[];
   crossSell: { slug: string; title: string }[];
   faq: { question: string; answer: string }[];
 }
@@ -1724,6 +1724,7 @@ export const servicePages: Record<string, ServicePageData> = {
     doctorSlugs: ["pavlyuk", "allam"],
     description: [
       "В клинике мы удаляем рубцы и шрамы разными методами: инъекционная косметология и плазмотерапия для неглубоких рубцов, контурная пластика для восполнения объёмов, лазерная шлифовка для выравнивания рельефа.",
+      "Для коллагенозамещающей терапии используем препараты Коллост и Сферогель — натуральный коллаген, восстанавливающий повреждённые ткани изнутри. Коллост стимулирует синтез собственного коллагена и заполняет атрофические рубцы.",
       "План лечения составляется индивидуально после осмотра дерматолога. Часто используется сочетание нескольких методов для максимального эффекта.",
     ],
     indications: [
@@ -1754,6 +1755,13 @@ export const servicePages: Record<string, ServicePageData> = {
     pricing: [
       { name: "Лазерная шлифовка рубца", price: "от 3 000 ₽" },
       { name: "Инъекционная коррекция", price: "от 5 000 ₽" },
+      { name: "Тест-проба Коллост", price: "1 200 ₽", valueTag: "Обязательно перед процедурой" },
+      { name: "Коллост 7% 0,5 мл", price: "5 800 ₽" },
+      { name: "Коллост 7% 1,5 мл", price: "9 700 ₽" },
+      { name: "Коллост 15% 1,5 мл", price: "13 500 ₽" },
+      { name: "Коллост Микро 150 мг", price: "7 200 ₽" },
+      { name: "Сферогель Medium 1 шприц", price: "11 400 ₽" },
+      { name: "Сферогель Medium 2 шприца", price: "18 900 ₽" },
     ],
     crossSell: [
       { slug: "lazernaya-shlifovka", title: "Лазерная шлифовка" },
