@@ -75,11 +75,11 @@ export const serviceCategories: ServiceCategory[] = [
     label: "Здоровье",
     icon: "heart-pulse",
     services: [
-      { slug: "osteopat", title: "Остеопат", icon: "hand", priceFrom: "от 6 500 ₽", category: "health" },
-      { slug: "dietolog", title: "Диетолог", icon: "apple", priceFrom: "от 2 700 ₽", category: "health" },
-      { slug: "nevrolog", title: "Невролог", icon: "brain", priceFrom: "от 2 500 ₽", category: "health" },
-      { slug: "nutritsiolog", title: "Нутрициолог", icon: "salad", priceFrom: "от 5 300 ₽", category: "health" },
-      { slug: "massazh", title: "Массаж", icon: "hand", priceFrom: "от 100 ₽", category: "health" },
+      { slug: "osteopat", title: "Остеопат", icon: "hand", priceFrom: "от 6 500 ₽", category: "health", problems: ["боль в спине", "головная боль", "осанка", "зажимы", "боль в шее", "суставы", "позвоночник"] },
+      { slug: "dietolog", title: "Диетолог", icon: "apple", priceFrom: "от 2 700 ₽", category: "health", problems: ["лишний вес", "похудение", "правильное питание", "диета", "ожирение", "нарушение обмена веществ"] },
+      { slug: "nevrolog", title: "Невролог", icon: "brain", priceFrom: "от 2 500 ₽", category: "health", problems: ["головная боль", "мигрень", "бессонница", "невралгия", "онемение", "головокружение", "стресс"] },
+      { slug: "nutritsiolog", title: "Нутрициолог", icon: "salad", priceFrom: "от 5 300 ₽", category: "health", problems: ["дефицит витаминов", "усталость", "питание", "нутрицевтики", "биодобавки", "энергия"] },
+      { slug: "massazh", title: "Массаж", icon: "hand", priceFrom: "от 100 ₽", category: "health", problems: ["боль в спине", "напряжение", "стресс", "целлюлит", "отёки", "усталость мышц", "расслабление"] },
     ],
   },
 ];
