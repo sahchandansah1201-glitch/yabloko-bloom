@@ -80,6 +80,17 @@ export default function ServicesHub() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
+            <div className="flex flex-wrap justify-center gap-2 mt-4 max-w-xl mx-auto">
+              {["акне", "морщины", "выпадение волос", "пигментация", "целлюлит", "купероз", "рубцы", "сухость кожи"].map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setSearchQuery(tag)}
+                  className="px-3.5 py-1.5 rounded-full text-sm border border-border bg-card hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors cursor-pointer"
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
             <TrustBar />
           </div>
         </section>
