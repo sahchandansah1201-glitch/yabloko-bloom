@@ -84,8 +84,8 @@ export default function ServicesHub() {
               {["акне", "морщины", "выпадение волос", "пигментация", "целлюлит", "купероз", "рубцы", "сухость кожи"].map((tag) => (
                 <button
                   key={tag}
-                  onClick={() => setSearchQuery(tag)}
-                  className="px-3.5 py-1.5 rounded-full text-sm border border-border bg-card hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors cursor-pointer"
+                  onClick={() => setSearchQuery(searchQuery.toLowerCase() === tag ? "" : tag)}
+                  className={`px-3.5 py-1.5 rounded-full text-sm border transition-colors cursor-pointer ${searchQuery.toLowerCase() === tag ? "bg-primary text-primary-foreground border-primary" : "border-border bg-card hover:bg-primary hover:text-primary-foreground hover:border-primary"}`}
                 >
                   {tag}
                 </button>
