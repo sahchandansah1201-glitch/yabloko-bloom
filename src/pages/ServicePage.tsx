@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
 import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { ServiceBreadcrumbs } from "@/components/service-page/ServiceBreadcrumbs";
 import { ServiceHero } from "@/components/service-page/ServiceHero";
@@ -25,10 +26,13 @@ import NotFound from "./NotFound";
 
 export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
+  const [isChoiceOpen, setIsChoiceOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isQuickBookOpen, setIsQuickBookOpen] = useState(false);
   const [preselectedDoctorId, setPreselectedDoctorId] = useState<string | null>(null);
   const [bookingServiceName, setBookingServiceName] = useState<string>("");
+
+  const openChoice = () => setIsChoiceOpen(true);
 
   const pageData = slug ? getServicePageData(slug) : undefined;
   const serviceItem = slug ? getServiceBySlug(slug) : undefined;
@@ -95,7 +99,7 @@ export default function ServicePage() {
         ]))}</script>
       </Helmet>
 
-      <Header onBookingClick={() => setIsQuickBookOpen(true)} />
+      <Header onBookingClick={openChoice} />
 
       <main className="min-h-screen bg-background pt-6 md:pt-8 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
@@ -107,7 +111,7 @@ export default function ServicePage() {
           subtitle={subtitle}
           duration={duration}
           recovery={recovery}
-          onBook={() => setIsQuickBookOpen(true)}
+          onBook={openChoice}
         />
 
         <ServiceContent
@@ -130,7 +134,7 @@ export default function ServicePage() {
 
         <ServicePricing pricing={pricingWithTags} onBook={(name) => {
           setBookingServiceName(name);
-          setIsQuickBookOpen(true);
+          openChoice();
         }} />
 
         <InlineContactBlock pageTitle={title} />
@@ -144,17 +148,26 @@ export default function ServicePage() {
 
       <Footer />
 
-      <ServiceMobileCTA price={displayPrice} onBook={() => setIsQuickBookOpen(true)} />
+      <ServiceMobileCTA price={displayPrice} onBook={openChoice} />
+
+      <BookingChoiceModal
+        isOpen={isChoiceOpen}
+        onClose={() => setIsChoiceOpen(false)}
+        onQuickContact={() => setIsQuickBookOpen(true)}
+        onFullBooking={() => setIsBookingOpen(true)}
+      />
 
       <QuickBookingModal
         isOpen={isQuickBookOpen}
         onClose={() => { setIsQuickBookOpen(false); setBookingServiceName(""); }}
+        onBack={() => setIsChoiceOpen(true)}
         serviceName={bookingServiceName || title}
       />
 
       <BookingWizard
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
+        onBack={() => setIsChoiceOpen(true)}
         preselectedDoctorId={preselectedDoctorId}
       />
     </>
