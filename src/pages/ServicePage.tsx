@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BookingWizard } from "@/components/booking/BookingWizard";
+import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
 import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 import { ServiceBreadcrumbs } from "@/components/service-page/ServiceBreadcrumbs";
 import { ServiceHero } from "@/components/service-page/ServiceHero";
