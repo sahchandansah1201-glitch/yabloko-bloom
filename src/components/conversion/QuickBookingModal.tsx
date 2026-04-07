@@ -44,6 +44,7 @@ interface QuickBookingModalProps {
 export function QuickBookingModal({
   isOpen,
   onClose,
+  onBack,
   serviceName,
 }: QuickBookingModalProps) {
   const [submitting, setSubmitting] = useState(false);
