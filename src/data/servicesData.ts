@@ -243,6 +243,9 @@ export const servicePages: Record<string, ServicePageData> = {
       { name: "РЕВИ Стайл (REVI Style) 1% 2 мл", price: "16 800 ₽" },
       { name: "РЕВИ Стронг (REVI Strong) 1,5% 1 мл", price: "16 300 ₽" },
       { name: "РЕВИ Стронг (REVI Strong) 1,5% 2 мл", price: "22 100 ₽" },
+      { name: "Лазерная биоревитализация лицо", price: "3 200 ₽" },
+      { name: "Лазерная биоревитализация лицо + шея", price: "3 700 ₽" },
+      { name: "Лазерная биоревитализация лицо + шея + декольте", price: "4 200 ₽" },
     ],
     crossSell: [
       { slug: "botoks", title: "Ботокс / Диспорт" },
@@ -2335,6 +2338,7 @@ export const servicePages: Record<string, ServicePageData> = {
       { name: "Криомассаж", price: "1 200 ₽" },
       { name: "Ультразвуковой массаж лицо", price: "1 200 ₽" },
       { name: "Ультразвуковой массаж лицо + шея", price: "1 500 ₽" },
+      { name: "Ультразвуковой массаж 1 зона лица (10 мин)", price: "600 ₽" },
       { name: "Детский общий массаж 1–3 года", price: "900 ₽" },
       { name: "Детский общий массаж 4–6 лет", price: "1 200 ₽" },
       { name: "Детский общий массаж 7–11 лет", price: "1 500 ₽" },
