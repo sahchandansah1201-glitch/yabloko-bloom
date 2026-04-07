@@ -62,12 +62,12 @@ export const serviceCategories: ServiceCategory[] = [
     label: "Трихология",
     icon: "scissors",
     services: [
-      { slug: "consult-triho", title: "Приём трихолога", icon: "user-check", priceFrom: "от 2 000 ₽", category: "trichology" },
-      { slug: "diagnostika-volos", title: "Диагностика волос", icon: "search", priceFrom: "от 2 000 ₽", category: "trichology" },
-      { slug: "inyektsionnaya-trikhologiya", title: "Инъекционная трихология", icon: "syringe", priceFrom: "от 4 000 ₽", category: "trichology" },
-      { slug: "mezoterapiya-golovy", title: "Мезотерапия головы", icon: "droplets", priceFrom: "от 3 500 ₽", category: "trichology" },
-      { slug: "pilingi-golovy", title: "Пилинги кожи головы", icon: "layers", priceFrom: "от 2 000 ₽", category: "trichology" },
-      { slug: "plazmoterapiya-golovy", title: "Плазмотерапия головы", icon: "heart-pulse", priceFrom: "от 5 000 ₽", category: "trichology" },
+      { slug: "consult-triho", title: "Приём трихолога", icon: "user-check", priceFrom: "от 2 000 ₽", category: "trichology", problems: ["выпадение волос", "облысение", "перхоть", "зуд кожи головы", "тонкие волосы", "ломкие волосы"] },
+      { slug: "diagnostika-volos", title: "Диагностика волос", icon: "search", priceFrom: "от 2 000 ₽", category: "trichology", problems: ["выпадение волос", "облысение", "истончение волос", "проблемы с кожей головы", "алопеция"] },
+      { slug: "inyektsionnaya-trikhologiya", title: "Инъекционная трихология", icon: "syringe", priceFrom: "от 4 000 ₽", category: "trichology", problems: ["выпадение волос", "облысение", "алопеция", "тонкие волосы", "редкие волосы"] },
+      { slug: "mezoterapiya-golovy", title: "Мезотерапия головы", icon: "droplets", priceFrom: "от 3 500 ₽", category: "trichology", problems: ["выпадение волос", "перхоть", "сухость кожи головы", "тусклые волосы", "ломкость волос"] },
+      { slug: "pilingi-golovy", title: "Пилинги кожи головы", icon: "layers", priceFrom: "от 2 000 ₽", category: "trichology", problems: ["перхоть", "себорея", "жирная кожа головы", "шелушение", "зуд головы"] },
+      { slug: "plazmoterapiya-golovy", title: "Плазмотерапия головы", icon: "heart-pulse", priceFrom: "от 5 000 ₽", category: "trichology", problems: ["выпадение волос", "алопеция", "редкие волосы", "восстановление роста волос"] },
     ],
   },
   {
