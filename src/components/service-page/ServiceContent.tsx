@@ -6,6 +6,7 @@ interface ServiceContentProps {
   indications?: string[];
   benefits?: string[];
   contraindications?: string[];
+  title?: string;
 }
 
 export function ServiceContent({ description, indications, benefits, contraindications }: ServiceContentProps) {
