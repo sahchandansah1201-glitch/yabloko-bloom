@@ -65,7 +65,7 @@ export default function ServicesHub() {
         <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
           <div className="container max-w-3xl text-center">
             <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
-              Услуги и цены клиники Яблоко
+              Услуги клиники Яблоко
             </h1>
             <p className="text-fluid-lg text-muted-foreground mb-8">
               Найдите нужную процедуру или выберите направление
