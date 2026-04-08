@@ -306,14 +306,14 @@ export default function PricePage() {
       <BookingChoiceModal
         isOpen={isChoiceOpen}
         onClose={() => setIsChoiceOpen(false)}
-        onQuickBooking={handleChoiceQuick}
+        onQuickContact={handleChoiceQuick}
         onFullBooking={handleChoiceFull}
       />
       <QuickBookingModal
         isOpen={isQuickBookingOpen}
         onClose={() => setIsQuickBookingOpen(false)}
         onBack={handleBackToChoice}
-        prefilledService={bookingService}
+        serviceName={bookingService}
       />
       <BookingWizard isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </>
