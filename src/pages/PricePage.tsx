@@ -348,7 +348,7 @@ const CategorySection = forwardRef<HTMLElement, CategorySectionProps>(
                 <PriceRow
                   key={`${item.name}-${i}`}
                   item={item}
-                  onBook={item.bookable ? () => onBook(item.name) : undefined}
+                  onBook={() => onBook(item.name)}
                 />
               ))}
             </div>
