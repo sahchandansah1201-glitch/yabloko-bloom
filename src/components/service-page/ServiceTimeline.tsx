@@ -27,7 +27,7 @@ export function ServiceTimeline({ steps }: ServiceTimelineProps) {
           Каждый этап — под контролем вашего врача
         </p>
 
-        <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {/* Connector line */}
           <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-border z-0" />
 
