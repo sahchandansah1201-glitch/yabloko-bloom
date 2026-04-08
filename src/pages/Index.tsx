@@ -15,7 +15,7 @@ import { ChiefDoctorSection } from "@/components/home/ChiefDoctorSection";
 import { BookingWizard } from "@/components/booking/BookingWizard";
 import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
 import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
-import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
+
 import { getClinicSchema, getOrganizationSchema } from "@/lib/schema";
 
 const Index = () => {
@@ -71,7 +71,7 @@ const Index = () => {
         </main>
 
         <Footer />
-        <DesktopConversionBar onBookingClick={openChoice} />
+        
         <MobileBookingBar onBookingClick={openChoice} />
 
         <BookingChoiceModal
