@@ -42,7 +42,7 @@ export function ServiceTimeline({ steps }: ServiceTimelineProps) {
                 transition={{ duration: 0.3, delay: i * 0.1 }}
                 className="relative z-10 group"
               >
-                <div className="flex flex-col items-center text-center bg-card rounded-2xl border border-border p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 group-hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center bg-card rounded-2xl border border-border p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 group-hover:-translate-y-1 h-full">
                   {/* Step circle */}
                   <div className="relative mb-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
