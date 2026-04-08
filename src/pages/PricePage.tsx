@@ -142,7 +142,7 @@ export default function PricePage() {
         <section className="bg-gradient-to-b from-secondary to-background py-14 md:py-20">
           <div className="container max-w-3xl text-center">
             <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-3">
-              Цены на услуги
+              Стоимость услуг
             </h1>
             <p className="text-fluid-lg text-muted-foreground mb-8">
               Полный прайс-лист клиники — {totalCount}+ позиций
