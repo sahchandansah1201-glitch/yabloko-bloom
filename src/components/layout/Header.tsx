@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MapPin } from "lucide-react";
+import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
 
@@ -31,7 +32,9 @@ export function Header({ onBookingClick }: HeaderProps) {
   ];
 
   return (
-    <header 
+    <>
+      <DesktopConversionBar onBookingClick={onBookingClick} />
+      <header 
       className={`sticky z-50 w-full transition-all duration-300 bg-background border-b ${
         isScrolled 
           ? "border-border/40 shadow-sm backdrop-blur-xl" 
@@ -166,5 +169,6 @@ export function Header({ onBookingClick }: HeaderProps) {
         </div>
       )}
     </header>
+    </>
   );
 }
