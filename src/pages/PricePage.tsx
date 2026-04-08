@@ -252,7 +252,7 @@ export default function PricePage() {
                             <PriceRow
                               key={`${item.categoryId}-${item.name}-${i}`}
                               item={item}
-                              onBook={item.bookable ? () => handleBook(item.name) : undefined}
+                              onBook={() => handleBook(item.name)}
                               badge={item.categoryTitle}
                             />
                           ))}
@@ -348,7 +348,7 @@ const CategorySection = forwardRef<HTMLElement, CategorySectionProps>(
                 <PriceRow
                   key={`${item.name}-${i}`}
                   item={item}
-                  onBook={item.bookable ? () => onBook(item.name) : undefined}
+                  onBook={() => onBook(item.name)}
                 />
               ))}
             </div>
