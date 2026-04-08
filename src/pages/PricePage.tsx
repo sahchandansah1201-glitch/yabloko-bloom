@@ -162,7 +162,7 @@ export default function PricePage() {
 
         <section className="py-8 md:py-12">
           <div className="container max-w-6xl">
-            <div className="flex gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
               {/* Sidebar — Desktop */}
               {!isMobile && (
                 <nav className="hidden md:block w-64 shrink-0">
