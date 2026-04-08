@@ -503,7 +503,6 @@ export const servicePages: Record<string, ServicePageData> = {
       { name: "Чистка лица с пилингом (Павлюк М. О.)", price: "8 500 ₽" },
       { name: "Чистка от прыщей", price: "4 800 ₽" },
       { name: "Чистка спины", price: "5 700 ₽" },
-      { name: "Ультразвуковой пилинг головы", price: "3 300 ₽" },
     ],
     crossSell: [
       { slug: "pilingi", title: "Пилинги" },
