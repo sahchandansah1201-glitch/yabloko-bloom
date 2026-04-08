@@ -55,6 +55,7 @@ export function Footer() {
           <div>
             <h4 className="mb-4 font-heading font-semibold">Информация</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to="/price" className="hover:text-primary">Цены</Link></li>
               <li><Link to="/specialists" className="hover:text-primary">Специалисты</Link></li>
               <li><Link to="/advice" className="hover:text-primary">Советы экспертов</Link></li>
               <li><Link to="/about" className="hover:text-primary">О клинике</Link></li>
