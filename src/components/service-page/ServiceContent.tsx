@@ -6,10 +6,13 @@ interface ServiceContentProps {
   indications?: string[];
   benefits?: string[];
   contraindications?: string[];
+  title?: string;
 }
 
-export function ServiceContent({ description, indications, benefits, contraindications }: ServiceContentProps) {
+export function ServiceContent({ description, indications, benefits, contraindications, title }: ServiceContentProps) {
   const hasIndicationsOrBenefits = (indications && indications.length > 0) || (benefits && benefits.length > 0);
+  const isConsultation = title?.toLowerCase().includes("приём врача");
+  const sectionTitle = isConsultation ? "На приёме врача" : "О процедуре";
 
   return (
     <>
@@ -17,7 +20,7 @@ export function ServiceContent({ description, indications, benefits, contraindic
       {description && description.length > 0 && (
         <section className="py-12 md:py-16">
           <div className="container max-w-3xl">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">О процедуре</h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">{sectionTitle}</h2>
             <div className="space-y-4">
               {description.map((p, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>

@@ -119,6 +119,7 @@ export default function ServicePage() {
           indications={pageData?.indications}
           benefits={pageData?.benefits}
           contraindications={pageData?.contraindications}
+          title={pageData?.title}
         />
 
         <ServiceTimeline steps={pageData?.howItWorks ?? []} />
