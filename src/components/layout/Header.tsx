@@ -69,6 +69,8 @@ export function Header({ onBookingClick }: HeaderProps) {
               <Link
                 key={link.href}
                 to={link.href}
+                onMouseEnter={() => prefetch(link.href)}
+                onFocus={() => prefetch(link.href)}
                 className={`font-medium transition-colors relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all ${
                   isActive
                     ? "text-primary after:w-full"
