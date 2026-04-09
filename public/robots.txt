@@ -17,6 +17,5 @@ User-agent: *
 Allow: /
 
 Disallow: /404
-Disallow: /admin
 
 Sitemap: https://yabloko-clinic.ru/sitemap.xml
