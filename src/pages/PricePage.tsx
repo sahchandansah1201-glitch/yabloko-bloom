@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { getClinicSchema } from "@/lib/schema";
+import { getClinicSchema, getBreadcrumbSchema } from "@/lib/schema";
 import {
   priceCategories,
   getAllPriceItems,

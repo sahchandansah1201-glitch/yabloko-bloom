@@ -12,6 +12,7 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { serviceCategories, getAllServices, type ServiceItem } from "@/data/servicesData";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   cosmetology: <Sparkles className="h-4 w-4" />,
@@ -57,6 +58,15 @@ export default function ServicesHub() {
           content="Каталог услуг клиники «Яблоко»: косметология, дерматология, трихология, остеопатия. Актуальные цены, описание процедур. Запись онлайн в Краснодаре."
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/services" />
+        <script type="application/ld+json">{JSON.stringify(getCollectionPageSchema({
+          title: "Услуги клиники «Яблоко»",
+          description: "Каталог услуг клиники «Яблоко»: косметология, дерматология, трихология, остеопатия.",
+          url: "/services",
+        }))}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Услуги" },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />

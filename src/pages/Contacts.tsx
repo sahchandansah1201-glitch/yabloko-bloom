@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, Car, Copy, Check, ExternalLink, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 const PHONE = "+79184128585";
 const PHONE_DISPLAY = "+7 (918) 412-85-85";
@@ -72,12 +73,15 @@ const Contacts = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
+    "@id": "https://yabloko-clinic.ru/#clinic",
     name: "Клиника Яблоко",
     description: "Клиника дерматологии и косметологии в Краснодаре",
     address: {
       "@type": "PostalAddress",
       streetAddress: "ул. 70-летия Октября, 1/2",
       addressLocality: "Краснодар",
+      addressRegion: "Краснодарский край",
+      postalCode: "350000",
       addressCountry: "RU",
     },
     telephone: "+7-918-412-85-85",
@@ -92,6 +96,11 @@ const Contacts = () => {
     geo: { "@type": "GeoCoordinates", latitude: 45.026234, longitude: 38.904027 },
     url: "https://yabloko-clinic.ru/contacts",
   };
+
+  const breadcrumbJsonLd = getBreadcrumbSchema([
+    { name: "Главная", url: "/" },
+    { name: "Контакты" },
+  ]);
 
   return (
     <>

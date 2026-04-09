@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { InteriorCarousel } from "@/components/about/InteriorCarousel";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
 import { BookingWizard } from "@/components/booking/BookingWizard";
@@ -78,6 +79,15 @@ const About = () => {
           content="Клиника «Яблоко» в Краснодаре — интегративный центр дерматологии и косметологии. Лицензированные врачи, оборудование Candela и Ultraformer, рейтинг 5.0."
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/about" />
+        <script type="application/ld+json">{JSON.stringify(getCollectionPageSchema({
+          title: "О клинике «Яблоко»",
+          description: "Клиника «Яблоко» в Краснодаре — интегративный центр дерматологии и косметологии. Лицензированные врачи, оборудование Candela и Ultraformer.",
+          url: "/about",
+        }))}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "О клинике" },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={openChoice} />
