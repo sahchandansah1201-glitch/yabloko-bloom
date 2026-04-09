@@ -102,11 +102,13 @@ export default function DoctorPage() {
           {profileData.services && profileData.services.length > 0 && (
             <DoctorProfileServices services={profileData.services} />
           )}
-          {(profileData.timeline || profileData.certificates) && (
+          {(profileData.timeline || profileData.certificates || profileData.education || profileData.accreditation) && (
             <DoctorProfileEducation
               timeline={profileData.timeline}
               internships={profileData.internships}
               certificates={profileData.certificates}
+              education={profileData.education}
+              accreditation={profileData.accreditation}
             />
           )}
           {profileData.faq && profileData.faq.length > 0 && (

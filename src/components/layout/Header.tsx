@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+import { Menu, X, Phone, MapPin, Eye, EyeOff } from "lucide-react";
 import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
 import { Button } from "@/components/ui/button";
+import { useAccessibility } from "@/contexts/AccessibilityContext";
 import logo from "@/assets/logo.jpg";
 
 interface HeaderProps {
@@ -14,6 +15,7 @@ export function Header({ onBookingClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showBar, setShowBar] = useState(false);
   const location = useLocation();
+  const { isHighContrast, toggleHighContrast } = useAccessibility();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +97,18 @@ export function Header({ onBookingClick }: HeaderProps) {
             +7 (918) 412-85-85
           </a>
 
+          {/* Accessibility Toggle */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleHighContrast}
+            className="shrink-0"
+            aria-label="Версия для слабовидящих"
+            title="Версия для слабовидящих"
+          >
+            {isHighContrast ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+          </Button>
+
           {/* CTA Button */}
           <Button 
             variant="hero" 
@@ -152,6 +166,18 @@ export function Header({ onBookingClick }: HeaderProps) {
               <Phone className="h-4 w-4 text-primary" />
               +7 (918) 412-85-85
             </a>
+            <div className="flex items-center gap-3 px-4 pt-2">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={toggleHighContrast}
+                className="gap-2"
+                aria-label="Версия для слабовидящих"
+              >
+                {isHighContrast ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                <span className="text-sm">Для слабовидящих</span>
+              </Button>
+            </div>
             <div className="px-4 pt-2">
               <Button 
                 variant="hero" 

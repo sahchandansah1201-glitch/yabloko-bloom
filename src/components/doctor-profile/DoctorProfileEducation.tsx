@@ -1,18 +1,21 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GraduationCap, FileCheck, MapPin } from "lucide-react";
+import { GraduationCap, FileCheck, MapPin, ShieldCheck } from "lucide-react";
 
 interface Props {
   timeline?: { year: string; text: string }[];
   internships?: string[];
   certificates?: string[];
+  education?: string;
+  accreditation?: { title: string; validUntil?: string }[];
 }
 
-export function DoctorProfileEducation({ timeline, internships, certificates }: Props) {
+export function DoctorProfileEducation({ timeline, internships, certificates, education, accreditation }: Props) {
   const hasTimeline = timeline && timeline.length > 0;
   const hasCerts = certificates && certificates.length > 0;
+  const hasAccreditation = accreditation && accreditation.length > 0;
 
-  if (!hasTimeline && !hasCerts) return null;
+  if (!hasTimeline && !hasCerts && !education && !hasAccreditation) return null;
 
   return (
     <section className="py-12 md:py-16">
@@ -93,6 +96,40 @@ export function DoctorProfileEducation({ timeline, internships, certificates }: 
               </TabsContent>
             )}
           </Tabs>
+
+          {/* Qualification block */}
+          {(education || hasAccreditation) && (
+            <div className="mt-8 max-w-3xl mx-auto rounded-xl border bg-secondary/40 p-6 space-y-4">
+              <div className="flex items-center gap-2 mb-2">
+                <ShieldCheck className="h-5 w-5 text-primary" />
+                <h3 className="font-heading text-base font-semibold">Квалификация</h3>
+              </div>
+              {education && (
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground/60 mb-1">Уровень образования</p>
+                  <p className="text-sm text-foreground">{education}</p>
+                </div>
+              )}
+              {hasAccreditation && (
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground/60 mb-2">Аккредитация / Сертификаты</p>
+                  <ul className="space-y-2">
+                    {accreditation!.map((acc, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                        <span>
+                          {acc.title}
+                          {acc.validUntil && (
+                            <span className="ml-2 text-xs text-muted-foreground">(действ. до {acc.validUntil})</span>
+                          )}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
