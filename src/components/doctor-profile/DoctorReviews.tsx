@@ -60,13 +60,13 @@ export function DoctorReviews() {
                 className="h-full"
               >
                 <Card className="h-full flex flex-col hover:shadow-md transition-shadow">
-                  <CardContent className="p-5">
+                  <CardContent className="p-5 flex flex-col flex-1">
                     <div className="flex gap-0.5 mb-3">
                       {Array.from({ length: review.rating }).map((_, j) => (
                         <Star key={j} className="h-4 w-4 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
-                    <p className="text-sm leading-relaxed text-foreground">«{review.text}»</p>
+                    <p className="text-sm leading-relaxed text-foreground flex-1">«{review.text}»</p>
                     <div className="mt-4 flex items-center justify-between">
                       <p className="text-xs font-medium text-muted-foreground">{review.author}</p>
                       <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${sourceColors[review.source] || "bg-muted text-muted-foreground"}`}>
