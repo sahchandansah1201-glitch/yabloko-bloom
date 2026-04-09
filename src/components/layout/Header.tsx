@@ -4,6 +4,7 @@ import { Menu, X, Phone, MapPin, Eye, EyeOff } from "lucide-react";
 import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
 import { Button } from "@/components/ui/button";
 import { useAccessibility } from "@/contexts/AccessibilityContext";
+import { usePrefetch } from "@/hooks/usePrefetch";
 import logo from "@/assets/logo.jpg";
 
 interface HeaderProps {
