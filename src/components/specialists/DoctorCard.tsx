@@ -46,12 +46,6 @@ export function DoctorCard({
             <User className="h-16 w-16 text-muted-foreground" />
           </div>
         )}
-        {isTopSpecialist && (
-          <Badge className="absolute top-3 left-3 gap-1 bg-primary text-primary-foreground shadow-md">
-            <Star className="h-3 w-3 fill-current" />
-            Ведущий специалист
-          </Badge>
-        )}
       </div>
 
       {/* Info */}
