@@ -65,10 +65,10 @@ export default function DoctorPage() {
   return (
     <>
       <Helmet>
-        <title>{`${doctor.specialty} ${doctor.name} | Клиника Яблоко Краснодар`}</title>
+        <title>{`${doctor.specialty} ${shortName} — клиника «Яблоко» Краснодар`}</title>
         <meta
           name="description"
-          content={`${doctor.name} — ${doctor.specialty}. ${doctor.bio || "Запись онлайн в клинике «Яблоко» в Краснодаре."}`}
+          content={`${doctor.name} — ${doctor.specialty} клиники «Яблоко» в Краснодаре. ${doctor.bio ? doctor.bio.slice(0, 100) : "Запись онлайн без предоплаты."}`}
         />
         <link rel="canonical" href={`https://yabloko-clinic.ru/doctor/${slug}`} />
         <script type="application/ld+json">{JSON.stringify(physicianJsonLd)}</script>
