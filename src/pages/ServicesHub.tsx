@@ -73,12 +73,12 @@ export default function ServicesHub() {
 
       <main className="min-h-screen bg-background scroll-mt-24">
         {/* Hero + Search */}
-        <section className="bg-gradient-to-b from-secondary to-background pt-10 pb-6 md:pt-14 md:pb-8">
+        <section className="bg-gradient-to-b from-secondary to-background pt-8 pb-4 md:pt-10 md:pb-6">
           <div className="container max-w-3xl text-center">
-            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-3">
+            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-2">
               Услуги клиники «Яблоко» в Краснодаре
             </h1>
-            <p className="text-fluid-lg text-muted-foreground mb-6">
+            <p className="text-fluid-lg text-muted-foreground mb-4">
               Подберите процедуру по проблеме — от акне и морщин до восстановления волос и коррекции фигуры
             </p>
             <div className="relative max-w-xl mx-auto">
