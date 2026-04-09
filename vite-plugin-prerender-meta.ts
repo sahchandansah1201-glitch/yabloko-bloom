@@ -110,7 +110,7 @@ const staticRoutes: RouteMeta[] = [
       address: {
         "@type": "PostalAddress",
         streetAddress: "ул. 70-летия Октября, 1/2",
-        addressLocality: CITY,
+        addressLocality: CITY_NOM,
         addressRegion: "Краснодарский край",
         postalCode: "350000",
         addressCountry: "RU",
