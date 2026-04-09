@@ -78,8 +78,8 @@ export function getClinicSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 45.0355,
-      longitude: 38.9753,
+      latitude: 45.026234,
+      longitude: 38.904027,
     },
     medicalSpecialty: [
       "Dermatology",
@@ -103,8 +103,8 @@ export function getClinicSchema() {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "342",
+      ratingValue: "5.0",
+      reviewCount: "6517",
       bestRating: "5",
     },
   };
