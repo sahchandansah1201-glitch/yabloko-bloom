@@ -72,7 +72,7 @@ export function ChiefDoctorSection({ onBookingClick }: ChiefDoctorSectionProps) 
                 Записаться к врачу
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/specialists/maria-pavlyuk">
+              <Link to="/doctor/pavlyuk">
                 <Button variant="outline" size="lg">
                   Подробнее о враче
                 </Button>
