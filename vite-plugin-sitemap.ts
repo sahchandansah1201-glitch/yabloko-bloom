@@ -43,8 +43,8 @@ function extractDoctorProfileKeys(content: string): string[] {
   return keys;
 }
 
-function buildUrl(loc: string, changefreq: string, priority: number): string {
-  return `  <url><loc>${DOMAIN}${loc}</loc><changefreq>${changefreq}</changefreq><priority>${priority.toFixed(1)}</priority></url>`;
+function buildUrl(loc: string, changefreq: string, priority: number, lastmod: string): string {
+  return `  <url><loc>${DOMAIN}${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority.toFixed(1)}</priority></url>`;
 }
 
 export function sitemapPlugin(): Plugin {
