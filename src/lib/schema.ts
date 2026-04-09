@@ -169,9 +169,9 @@ export function getPhysicianSchema(doc: PhysicianSchemaInput) {
 
 /* ── Physician FAQ (separate FAQPage entity) ───── */
 
-export function getPhysicianFAQSchema(faq: { question: string; answer: string }[]) {
+export function getPhysicianFAQSchema(faq: { question: string; answer: string }[], physicianSlug?: string) {
   if (!faq.length) return null;
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faq.map((f) => ({
@@ -183,6 +183,10 @@ export function getPhysicianFAQSchema(faq: { question: string; answer: string }[
       },
     })),
   };
+  if (physicianSlug) {
+    schema.about = { "@id": `${SITE_URL}/doctor/${physicianSlug}#physician` };
+  }
+  return schema;
 }
 
 /* ── MedicalTherapy Entity ──────────────────────── */
