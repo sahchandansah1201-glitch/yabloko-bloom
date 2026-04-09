@@ -82,12 +82,11 @@ export default function DoctorPavlyuk() {
   return (
     <>
       <Helmet>
-        <title>Врач-косметолог, дерматолог Павлюк Мария Олеговна | Клиника Яблоко Краснодар</title>
+        <title>Дерматолог Павлюк Мария — клиника «Яблоко» Краснодар</title>
         <meta
           name="description"
-          content="Павлюк Мария Олеговна — главный врач клиники «Яблоко», дерматовенеролог, косметолог, трихолог со стажем 15 лет. Запись онлайн в Краснодаре."
+          content="Павлюк Мария Олеговна — главный врач клиники «Яблоко» в Краснодаре. Дерматовенеролог, косметолог, трихолог, стаж 15 лет. Запись онлайн без предоплаты."
         />
-        <meta name="keywords" content="Павлюк Мария Олеговна, дерматолог Краснодар, косметолог Краснодар, главный врач Яблоко" />
         <link rel="canonical" href="https://yabloko-clinic.ru/doctor/pavlyuk" />
         <script type="application/ld+json">{JSON.stringify(physicianJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
