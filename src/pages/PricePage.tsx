@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { getClinicSchema } from "@/lib/schema";
+import { getClinicSchema, getBreadcrumbSchema } from "@/lib/schema";
 import {
   priceCategories,
   getAllPriceItems,
@@ -133,6 +133,10 @@ export default function PricePage() {
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/price" />
         <script type="application/ld+json">{JSON.stringify(priceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Цены" },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => { setBookingService(""); setIsChoiceOpen(true); }} />

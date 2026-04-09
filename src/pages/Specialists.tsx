@@ -13,6 +13,7 @@ import { useDoctors, Doctor } from "@/hooks/useDoctors";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Users, Award, Stethoscope, HeartHandshake } from "lucide-react";
 import { adminPhotos } from "@/assets/admins";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 const administrators = [
   { name: "Стефанова Виктория Геннадьевна", role: "Администратор" },
@@ -78,6 +79,15 @@ export default function Specialists() {
           content="Дерматологи, косметологи и трихологи клиники «Яблоко» в Краснодаре. Стаж от 15 лет, регулярные стажировки. Запишитесь к специалисту онлайн."
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/specialists" />
+        <script type="application/ld+json">{JSON.stringify(getCollectionPageSchema({
+          title: "Врачи клиники «Яблоко»",
+          description: "Дерматологи, косметологи и трихологи клиники «Яблоко» в Краснодаре. Стаж от 15 лет.",
+          url: "/specialists",
+        }))}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Специалисты" },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={openChoice} />
