@@ -32,11 +32,12 @@ export default function PatientsInfo() {
   return (
     <>
       <Helmet>
-        <title>Информация для пациентов | Клиника Яблоко</title>
+        <title>Информация для пациентов — клиника «Яблоко»</title>
         <meta
           name="description"
-          content="Правовая информация клиники Яблоко: лицензии, реквизиты, контролирующие органы, права пациентов."
+          content="Правовая информация клиники «Яблоко» в Краснодаре: лицензия № ЛО-23-01-014846, реквизиты, контролирующие органы, права пациентов по ФЗ-323."
         />
+        <link rel="canonical" href="https://yabloko-clinic.ru/patients" />
       </Helmet>
 
       <Header onBookingClick={openChoice} />
@@ -50,10 +51,10 @@ export default function PatientsInfo() {
               </div>
             </div>
             <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
-              Информация для пациентов
+              Информация для пациентов клиники «Яблоко»
             </h1>
             <p className="text-fluid-lg text-muted-foreground">
-              Правовая информация, лицензии и документы клиники «Яблоко»
+              Лицензии, реквизиты, контролирующие органы и Ваши права — в соответствии с приказом Минздрава № 118н
             </p>
           </div>
         </section>
