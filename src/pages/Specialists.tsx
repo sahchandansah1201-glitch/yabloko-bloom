@@ -93,7 +93,7 @@ export default function Specialists() {
                 <p className="text-sm text-muted-foreground mt-1">Лет опыта</p>
               </div>
               <div className="text-center p-4 rounded-xl bg-card border">
-                <p className="font-heading text-fluid-2xl font-bold text-primary">5000+</p>
+                <p className="font-heading text-fluid-2xl font-bold text-primary">6517+</p>
                 <p className="text-sm text-muted-foreground mt-1">Пациентов</p>
               </div>
             </div>

@@ -60,7 +60,7 @@ export function ReviewsSection() {
             Нам доверяют
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Более 5000 довольных пациентов. Рейтинг 5.0 на Яндекс Картах.
+            Более 6517 довольных пациентов. Рейтинг 5.0 на Яндекс Картах.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export function ReviewsSection() {
           {[
             { value: "5.0", label: "Рейтинг Яндекс" },
             { value: "4.8", label: "Рейтинг 2ГИС" },
-            { value: "5000+", label: "Довольных пациентов" },
+            { value: "6517+", label: "Довольных пациентов" },
             { value: "98%", label: "Рекомендуют нас" },
           ].map((stat, i) => (
             <div key={i} className="text-center p-4 rounded-xl bg-secondary/50">
