@@ -75,9 +75,10 @@ export default function ServicePage() {
     indications: pageData?.indications,
     doctorSlugs: pageData?.doctorSlugs,
     faq,
+    categoryLabel: category?.label,
   });
 
-  const faqJsonLd = getServiceFAQSchema(faq);
+  const faqJsonLd = getServiceFAQSchema(faq, slug);
 
   const displayPrice = pricing[0]?.price ?? serviceItem?.priceFrom ?? "";
 
