@@ -10,8 +10,8 @@ const Privacy = () => {
   return (
     <>
       <Helmet>
-        <title>Политика конфиденциальности | Клиника "Яблоко"</title>
-        <meta name="description" content="Политика конфиденциальности клиники дерматологии и косметологии Яблоко. Обработка персональных данных в соответствии с ФЗ-152." />
+        <title>Политика конфиденциальности — клиника «Яблоко»</title>
+        <meta name="description" content="Политика обработки персональных данных клиники «Яблоко» в Краснодаре. Порядок сбора, хранения и защиты данных пациентов по ФЗ-152." />
         <link rel="canonical" href="https://yabloko-clinic.ru/privacy" />
       </Helmet>
 
@@ -21,7 +21,7 @@ const Privacy = () => {
         <main className="flex-1">
           <div className="container max-w-3xl py-12 md:py-16">
             <h1 className="font-heading text-3xl font-bold mb-8 text-foreground">
-              Политика конфиденциальности
+              Политика обработки персональных данных
             </h1>
 
             <div className="prose prose-sm max-w-none text-muted-foreground space-y-6">
