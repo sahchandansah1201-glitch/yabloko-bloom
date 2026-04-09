@@ -118,6 +118,7 @@ interface PhysicianSchemaInput {
   specialty: string;
   bio?: string | null;
   experience?: string;
+  imageUrl?: string | null;
   education?: { year: string; text: string }[];
   knowsAbout?: string[];
   faq?: { question: string; answer: string }[];
