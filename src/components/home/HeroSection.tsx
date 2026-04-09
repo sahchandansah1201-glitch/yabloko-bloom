@@ -29,20 +29,19 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
 
           {/* Main Heading */}
           <h1 className="font-heading text-fluid-4xl font-bold leading-tight tracking-tight animate-slide-up">
-            <span className="text-foreground">Клиника «</span>
-            <span className="text-primary">Яблоко</span>
-            <span className="text-foreground">» — это центр медицины кожи,</span>
+            <span className="text-foreground">Клиника косметологии и дерматологии</span>
             <br className="hidden md:block" />
-            <span className="text-foreground"> где </span>
+            <span className="text-foreground"> «</span>
+            <span className="text-primary">Яблоко</span>
+            <span className="text-foreground">» </span>
             <span className="bg-gradient-to-r from-primary to-apple-green-dark bg-clip-text text-transparent">
-              красота достигается через здоровье
+              в Краснодаре
             </span>
-            <span className="text-foreground">.</span>
           </h1>
 
           {/* Subtitle */}
           <p className="mx-auto mt-6 max-w-2xl text-fluid-lg text-muted-foreground animate-slide-up stagger-1">
-            Мы решаем все проблемы кожи — от заболеваний до эстетики.
+            Центр медицины кожи, где красота достигается через здоровье. Решаем проблемы от акне до anti-age — с точной диагностикой и современными лазерными технологиями.
           </p>
 
           {/* CTA Buttons */}
