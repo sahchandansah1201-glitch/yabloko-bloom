@@ -37,7 +37,7 @@ export function ChiefDoctorSection({ onBookingClick }: ChiefDoctorSectionProps) 
             </h2>
             
             <p className="mt-2 text-lg text-primary">
-              Дерматолог • Трихолог • Anti-Age эксперт
+              Главный врач клиники «Яблоко» в Краснодаре • Дерматолог • Трихолог
             </p>
 
             {/* Quote */}
