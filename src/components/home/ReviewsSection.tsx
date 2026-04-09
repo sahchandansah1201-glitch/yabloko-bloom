@@ -65,18 +65,18 @@ export function ReviewsSection() {
         </div>
 
         {/* Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
             <Card
               key={index}
-              className="break-inside-avoid border-border/50 bg-card hover:shadow-lg transition-shadow duration-300"
+              className="h-full flex flex-col border-border/50 bg-card hover:shadow-lg transition-shadow duration-300"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-1">
                 {/* Quote Icon */}
                 <Quote className="h-8 w-8 text-primary/20 mb-4" />
 
                 {/* Review Text */}
-                <p className="text-foreground mb-4 leading-relaxed">
+                <p className="text-foreground mb-4 leading-relaxed flex-1">
                   "{review.text}"
                 </p>
 
