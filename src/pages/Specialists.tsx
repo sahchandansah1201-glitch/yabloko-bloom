@@ -30,8 +30,27 @@ export default function Specialists() {
 
   const { data: doctors, isLoading, error } = useDoctors();
 
-  const topSpecialists = doctors?.filter(d => d.is_top_specialist) || [];
-  const otherDoctors = doctors?.filter(d => !d.is_top_specialist) || [];
+  const doctorSortOrder = [
+    "Аллам",
+    "Грачева",
+    "Игитханян",
+    "Райкова",
+    "Ковалев",
+    "Павлюк Егор",
+    "Медведкова",
+    "Павлюк Евгений",
+    "Акопян",
+  ];
+
+  const sortedDoctors = doctors
+    ? [...doctors].sort((a, b) => {
+        const indexA = doctorSortOrder.findIndex(name => a.name.includes(name));
+        const indexB = doctorSortOrder.findIndex(name => b.name.includes(name));
+        const posA = indexA === -1 ? 999 : indexA;
+        const posB = indexB === -1 ? 999 : indexB;
+        return posA - posB;
+      })
+    : [];
 
   const openChoice = () => setIsChoiceOpen(true);
 
