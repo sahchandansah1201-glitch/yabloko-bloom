@@ -146,6 +146,8 @@ export function Header({ onBookingClick }: HeaderProps) {
                 <Link
                   key={link.href}
                   to={link.href}
+                  onMouseEnter={() => prefetch(link.href)}
+                  onFocus={() => prefetch(link.href)}
                   className={`rounded-lg px-4 py-3 font-medium transition-colors ${
                     isActive
                       ? "bg-secondary text-primary"
