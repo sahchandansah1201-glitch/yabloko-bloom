@@ -30,8 +30,27 @@ export default function Specialists() {
 
   const { data: doctors, isLoading, error } = useDoctors();
 
-  const topSpecialists = doctors?.filter(d => d.is_top_specialist) || [];
-  const otherDoctors = doctors?.filter(d => !d.is_top_specialist) || [];
+  const doctorSortOrder = [
+    "Аллам",
+    "Грачева",
+    "Игитханян",
+    "Райкова",
+    "Ковалев",
+    "Павлюк Егор",
+    "Медведкова",
+    "Павлюк Евгений",
+    "Акопян",
+  ];
+
+  const sortedDoctors = doctors
+    ? [...doctors].sort((a, b) => {
+        const indexA = doctorSortOrder.findIndex(name => a.name.includes(name));
+        const indexB = doctorSortOrder.findIndex(name => b.name.includes(name));
+        const posA = indexA === -1 ? 999 : indexA;
+        const posB = indexB === -1 ? 999 : indexB;
+        return posA - posB;
+      })
+    : [];
 
   const openChoice = () => setIsChoiceOpen(true);
 
@@ -100,41 +119,6 @@ export default function Specialists() {
           </div>
         </section>
 
-        {/* Top Specialists */}
-        {topSpecialists.length > 0 && (
-          <section className="py-12 md:py-16">
-            <div className="container">
-              <div className="flex items-center gap-2 mb-8">
-                <Award className="h-6 w-6 text-primary" />
-                <h2 className="font-heading text-fluid-2xl font-bold">Ведущие специалисты</h2>
-              </div>
-
-              {isLoading ? (
-                <div className="grid gap-4 md:grid-cols-2">
-                  {[1, 2].map(i => (
-                    <Skeleton key={i} className="h-36 rounded-xl" />
-                  ))}
-                </div>
-              ) : (
-              <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                  {topSpecialists.map(doctor => (
-                    <DoctorCard
-                      key={doctor.id}
-                      id={doctor.id}
-                      name={doctor.name}
-                      specialty={doctor.specialty}
-                      bio={doctor.bio}
-                      imageUrl={doctor.image_url}
-                      isTopSpecialist={doctor.is_top_specialist || false}
-                      onClick={() => handleOpenProfile(doctor)}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-        )}
-
         {/* All Doctors */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container">
@@ -155,7 +139,7 @@ export default function Specialists() {
               </div>
             ) : (
               <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {otherDoctors.map(doctor => (
+                {sortedDoctors.map(doctor => (
                   <DoctorCard
                     key={doctor.id}
                     id={doctor.id}
