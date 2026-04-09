@@ -199,6 +199,7 @@ interface TherapySchemaInput {
   indications?: string[];
   doctorSlugs?: string[];
   faq?: { question: string; answer: string }[];
+  categoryLabel?: string;
 }
 
 export function getTherapySchema(therapy: TherapySchemaInput) {
@@ -241,9 +242,9 @@ export function getTherapySchema(therapy: TherapySchemaInput) {
 
 /* ── Service FAQ (voice-optimised) ──────────────── */
 
-export function getServiceFAQSchema(faq: { question: string; answer: string }[]) {
+export function getServiceFAQSchema(faq: { question: string; answer: string }[], therapySlug?: string) {
   if (!faq.length) return null;
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faq.map((f) => ({
@@ -255,6 +256,10 @@ export function getServiceFAQSchema(faq: { question: string; answer: string }[])
       },
     })),
   };
+  if (therapySlug) {
+    schema.about = { "@id": `${SITE_URL}/services/${therapySlug}#therapy` };
+  }
+  return schema;
 }
 
 /* ── MedicalWebPage (Knowledge Base articles) ───── */
