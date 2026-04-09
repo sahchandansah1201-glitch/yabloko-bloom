@@ -261,7 +261,13 @@ const Contacts = () => {
           </div>
 
           {/* RIGHT — Visual (2 cols) */}
-          <div className="lg:col-span-2 space-y-6">
+          <motion.div
+            className="lg:col-span-2 space-y-6"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             {/* Clinic photo placeholder */}
             <div className="rounded-2xl overflow-hidden bg-muted aspect-[4/3] flex items-center justify-center">
               <div className="text-center text-muted-foreground space-y-2 p-6">
@@ -271,25 +277,38 @@ const Contacts = () => {
             </div>
 
             {/* How to find us */}
-            <div className="rounded-xl bg-secondary p-5 space-y-2">
+            <motion.div
+              className="rounded-xl bg-secondary p-5 space-y-2"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
               <h3 className="font-heading font-semibold text-foreground">Как нас найти</h3>
               <ul className="text-sm text-muted-foreground space-y-1.5">
                 <li>• Главный вход со стороны ул. 70-летия Октября</li>
                 <li>• 1-й этаж, вывеска «Яблоко»</li>
                 <li>• Ориентир — рядом с остановкой «70-летия Октября»</li>
               </ul>
-            </div>
+            </motion.div>
 
             {/* Booking CTA */}
-            <Button
-              variant="hero"
-              size="xl"
-              className="w-full"
-              onClick={openChoice}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: 0.35 }}
             >
-              Записаться на приём
-            </Button>
-          </div>
+              <Button
+                variant="hero"
+                size="xl"
+                className="w-full"
+                onClick={openChoice}
+              >
+                Записаться на приём
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* Map section */}
