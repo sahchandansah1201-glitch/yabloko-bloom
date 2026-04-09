@@ -20,6 +20,26 @@ interface DoctorsCarouselProps {
 export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
   const { data: doctors, isLoading } = useDoctors();
 
+  const doctorSortOrder = [
+    "Аллам",
+    "Грачева",
+    "Игитханян",
+    "Райкова",
+    "Ковалев",
+    "Павлюк Егор",
+    "Медведкова",
+    "Павлюк Евгений",
+    "Акопян",
+  ];
+
+  const sortedDoctors = doctors
+    ? [...doctors].sort((a, b) => {
+        const indexA = doctorSortOrder.findIndex(name => a.name.includes(name));
+        const indexB = doctorSortOrder.findIndex(name => b.name.includes(name));
+        return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+      })
+    : [];
+
   if (isLoading) {
     return (
       <section className="py-16 md:py-24 bg-background">
