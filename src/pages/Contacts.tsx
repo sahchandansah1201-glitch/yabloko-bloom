@@ -18,12 +18,12 @@ const YANDEX_MAP_URL = "https://yandex.ru/maps/?pt=38.904027,45.026234&z=17&l=ma
 const YANDEX_NAVI_URL = "https://yandex.ru/navi/?whatshere[point]=38.904027,45.026234&whatshere[zoom]=17";
 
 const SCHEDULE = [
-  { day: "Понедельник", hours: "9:00 – 20:00" },
-  { day: "Вторник", hours: "9:00 – 20:00" },
-  { day: "Среда", hours: "9:00 – 20:00" },
-  { day: "Четверг", hours: "9:00 – 20:00" },
-  { day: "Пятница", hours: "9:00 – 20:00" },
-  { day: "Суббота", hours: "9:00 – 20:00" },
+  { day: "Понедельник", hours: "9:00 – 21:00" },
+  { day: "Вторник", hours: "9:00 – 21:00" },
+  { day: "Среда", hours: "9:00 – 21:00" },
+  { day: "Четверг", hours: "9:00 – 21:00" },
+  { day: "Пятница", hours: "9:00 – 21:00" },
+  { day: "Суббота", hours: "9:00 – 21:00" },
   { day: "Воскресенье", hours: "Выходной" },
 ];
 
@@ -86,7 +86,7 @@ const Contacts = () => {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         opens: "09:00",
-        closes: "20:00",
+        closes: "21:00",
       },
     ],
     geo: { "@type": "GeoCoordinates", latitude: 45.026234, longitude: 38.904027 },
@@ -97,7 +97,7 @@ const Contacts = () => {
     <>
       <Helmet>
         <title>Контакты клиники «Яблоко» — адрес, телефон, карта</title>
-        <meta name="description" content="Клиника «Яблоко» в Краснодаре: ул. 70-летия Октября, 1/2. Телефон +7 918 412-85-85. Пн–Сб 9:00–20:00. Бесплатная парковка. Запись онлайн." />
+        <meta name="description" content="Клиника «Яблоко» в Краснодаре: ул. 70-летия Октября, 1/2. Телефон +7 918 412-85-85. Пн–Сб 9:00–21:00. Бесплатная парковка. Запись онлайн." />
         <link rel="canonical" href="https://yabloko-clinic.ru/contacts" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
