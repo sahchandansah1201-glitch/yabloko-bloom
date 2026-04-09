@@ -126,10 +126,10 @@ export default function PricePage() {
   return (
     <>
       <Helmet>
-        <title>Цены на услуги клиники Яблоко в Краснодаре | Полный прайс-лист 2026</title>
+        <title>Цены клиники «Яблоко» в Краснодаре — прайс 2026</title>
         <meta
           name="description"
-          content={`Актуальный прайс-лист клиники Яблоко: ${totalCount}+ услуг. Дерматология, косметология, трихология, аппаратные процедуры. Цены от 85 ₽.`}
+          content={`Актуальный прайс-лист клиники «Яблоко» в Краснодаре: ${totalCount}+ процедур. Косметология, дерматология, трихология, остеопатия. Цены от 85 ₽. Запись онлайн.`}
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/price" />
         <script type="application/ld+json">{JSON.stringify(priceSchema)}</script>
@@ -141,11 +141,11 @@ export default function PricePage() {
         {/* Hero */}
         <section className="bg-gradient-to-b from-secondary to-background py-14 md:py-20">
           <div className="container max-w-3xl text-center">
-            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-3">
-              Стоимость услуг
+             <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-3">
+              Цены на услуги клиники «Яблоко» в Краснодаре
             </h1>
             <p className="text-fluid-lg text-muted-foreground mb-8">
-              Полный прайс-лист клиники — {totalCount}+ позиций
+              Полный прайс-лист — {totalCount}+ позиций. Стоимость фиксируется на момент записи.
             </p>
             <div className="relative max-w-xl mx-auto">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
