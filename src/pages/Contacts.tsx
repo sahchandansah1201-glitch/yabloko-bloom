@@ -90,15 +90,15 @@ const Contacts = () => {
       },
     ],
     geo: { "@type": "GeoCoordinates", latitude: 45.026234, longitude: 38.904027 },
-    url: "https://yabloko-bloom.lovable.app/contacts",
+    url: "https://yabloko-clinic.ru/contacts",
   };
 
   return (
     <>
       <Helmet>
-        <title>Контакты — Клиника Яблоко | Краснодар</title>
-        <meta name="description" content="Контакты клиники дерматологии и косметологии Яблоко в Краснодаре. Адрес, телефон, график работы, карта проезда." />
-        <link rel="canonical" href="https://yabloko-bloom.lovable.app/contacts" />
+        <title>Контакты клиники «Яблоко» — адрес, телефон, карта</title>
+        <meta name="description" content="Клиника «Яблоко» в Краснодаре: ул. 70-летия Октября, 1/2. Телефон +7 918 412-85-85. Пн–Сб 9:00–20:00. Бесплатная парковка. Запись онлайн." />
+        <link rel="canonical" href="https://yabloko-clinic.ru/contacts" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -128,10 +128,10 @@ const Contacts = () => {
           transition={{ duration: 0.4 }}
         >
           <h1 className="font-heading text-fluid-3xl font-bold text-foreground mb-2">
-            Ждём вас в клинике Яблоко
+            Как добраться до клиники «Яблоко» в Краснодаре
           </h1>
           <p className="text-muted-foreground text-fluid-lg mb-8 md:mb-12 max-w-xl">
-            Красота через здоровье — запишитесь на приём или свяжитесь с нами удобным способом.
+            Свяжитесь удобным способом или запишитесь на приём онлайн — без предоплаты.
           </p>
         </motion.div>
 
