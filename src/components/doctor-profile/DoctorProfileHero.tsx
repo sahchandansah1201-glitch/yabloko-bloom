@@ -45,12 +45,6 @@ export function DoctorProfileHero({ name, specialty, photo, isTopSpecialist, exp
             className="space-y-6 pt-6 md:pt-0"
           >
             <div className="flex flex-wrap gap-2">
-              {isTopSpecialist && (
-                <Badge className="gap-1 bg-primary text-primary-foreground">
-                  <Award className="h-3 w-3" />
-                  Ведущий специалист
-                </Badge>
-              )}
               {experience && <Badge variant="secondary">Стаж {experience}</Badge>}
             </div>
 

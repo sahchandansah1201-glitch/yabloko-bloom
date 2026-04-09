@@ -78,13 +78,6 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
                       )}
                       
                       {/* Verified Badge */}
-                      {doctor.is_top_specialist && (
-                        <div className="absolute top-3 left-3">
-                          <Badge className="bg-primary text-primary-foreground gap-1.5 shadow-md">
-                            <BadgeCheck className="h-3.5 w-3.5" />
-                            Ведущий специалист
-                          </Badge>
-                        </div>
                       )}
                       
                       {/* Overlay on hover */}
