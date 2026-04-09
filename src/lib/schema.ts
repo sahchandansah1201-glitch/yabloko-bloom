@@ -274,19 +274,31 @@ interface ArticleSchemaInput {
   authorSlug?: string;
   reviewedByName?: string;
   reviewedBySlug?: string;
+  imageUrl?: string;
 }
 
 export function getArticleSchema(article: ArticleSchemaInput) {
+  const articleId = `${SITE_URL}/advice/${article.slug}#article`;
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
+    "@id": articleId,
     headline: article.title,
     url: `${SITE_URL}/advice/${article.slug}`,
     datePublished: article.publishedAt,
     description: article.excerpt,
     publisher: { "@id": CLINIC_ID },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
     inLanguage: "ru",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/advice/${article.slug}`,
+    },
   };
+
+  if (article.imageUrl) {
+    schema.image = article.imageUrl;
+  }
 
   if (article.authorSlug) {
     schema.author = { "@id": `${SITE_URL}/doctor/${article.authorSlug}#physician` };
@@ -301,6 +313,21 @@ export function getArticleSchema(article: ArticleSchemaInput) {
   }
 
   return schema;
+}
+
+/* ── CollectionPage (for listing pages) ─────────── */
+
+export function getCollectionPageSchema(input: { title: string; description: string; url: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE_URL}${input.url}#collection`,
+    name: input.title,
+    description: input.description,
+    url: `${SITE_URL}${input.url}`,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    provider: { "@id": CLINIC_ID },
+  };
 }
 
 /* ── BreadcrumbList ──────────────────────────────── */
