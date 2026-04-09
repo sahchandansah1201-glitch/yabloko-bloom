@@ -140,7 +140,13 @@ const Contacts = () => {
           {/* LEFT — Info (3 cols) */}
           <div className="lg:col-span-3 space-y-8">
             {/* Phone */}
-            <section className="space-y-3">
+            <motion.section
+              className="space-y-3"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+            >
               <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary" /> Телефон
               </h2>
@@ -150,10 +156,16 @@ const Contacts = () => {
               >
                 {PHONE_DISPLAY}
               </a>
-            </section>
+            </motion.section>
 
             {/* Messengers */}
-            <section className="space-y-3">
+            <motion.section
+              className="space-y-3"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: 0.15 }}
+            >
               <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 text-primary" /> Мессенджеры
               </h2>
@@ -171,10 +183,16 @@ const Contacts = () => {
                   </a>
                 </Button>
               </div>
-            </section>
+            </motion.section>
 
             {/* Address */}
-            <section className="space-y-3">
+            <motion.section
+              className="space-y-3"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
               <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" /> Адрес
               </h2>
@@ -188,10 +206,16 @@ const Contacts = () => {
                   {copied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4" />}
                 </button>
               </div>
-            </section>
+            </motion.section>
 
             {/* Schedule */}
-            <section className="space-y-3">
+            <motion.section
+              className="space-y-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" /> График работы
                 {isOpen ? (
@@ -217,17 +241,23 @@ const Contacts = () => {
                   </tbody>
                 </table>
               </div>
-            </section>
+            </motion.section>
 
             {/* Parking */}
-            <section className="space-y-3">
+            <motion.section
+              className="space-y-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: 0.15 }}
+            >
               <h2 className="font-heading text-fluid-lg font-semibold text-foreground flex items-center gap-2">
                 <Car className="h-5 w-5 text-primary" /> Информация о парковке
               </h2>
               <p className="text-muted-foreground">
                 Бесплатная парковка доступна на прилегающей территории. Заезд со стороны ул. 70-летия Октября.
               </p>
-            </section>
+            </motion.section>
           </div>
 
           {/* RIGHT — Visual (2 cols) */}
