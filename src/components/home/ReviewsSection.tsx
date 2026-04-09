@@ -69,7 +69,7 @@ export function ReviewsSection() {
           {reviews.map((review, index) => (
             <Card
               key={index}
-              className="break-inside-avoid border-border/50 bg-card hover:shadow-lg transition-shadow duration-300"
+              className="h-full flex flex-col border-border/50 bg-card hover:shadow-lg transition-shadow duration-300"
             >
               <CardContent className="p-6">
                 {/* Quote Icon */}
