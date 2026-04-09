@@ -43,7 +43,7 @@ export function TrustBadges() {
           <div className="flex items-center gap-2">
             <Award className="h-5 w-5 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              10+ лет опыта
+              8+ лет опыта
             </span>
           </div>
         </div>
