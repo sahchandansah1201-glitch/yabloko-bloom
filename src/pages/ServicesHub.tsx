@@ -102,7 +102,9 @@ export default function ServicesHub() {
                 </button>
               ))}
             </div>
-            <TrustBar />
+            <div className="hidden md:block">
+              <TrustBar />
+            </div>
           </div>
         </section>
 
