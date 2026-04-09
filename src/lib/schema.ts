@@ -312,6 +312,52 @@ export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
+/* ── WebSite Schema (Sitelinks Search Box) ──────── */
+
+export function getWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: "Клиника «Яблоко»",
+    url: SITE_URL,
+    publisher: { "@id": ORG_ID },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/services?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+/* ── Review Schema (UI-matched individual reviews) ── */
+
+interface ReviewInput {
+  name: string;
+  text: string;
+  rating: number;
+  source: string;
+  date: string;
+}
+
+export function getReviewsSchema(reviews: ReviewInput[]) {
+  return reviews.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    reviewBody: r.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: String(r.rating),
+      bestRating: "5",
+    },
+    publisher: { "@type": "Organization", name: r.source },
+    itemReviewed: { "@id": CLINIC_ID },
+  }));
+}
+
 /* ── Helpers ─────────────────────────────────────── */
 
 /** Truncate FAQ answer to ~50 words for AIO/Voice Search compliance */
