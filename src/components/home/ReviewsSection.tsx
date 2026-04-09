@@ -1,57 +1,57 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+
+const reviews = [
+  { name: "Анна К.", text: "Лучшая клиника в Краснодаре! Наконец-то избавилась от акне после многих лет борьбы. Спасибо доктору Павлюк!", rating: 5, source: "Яндекс", date: "Январь 2024" },
+  { name: "Елена М.", text: "Dr. Pavlyuk is a genius! Результат превзошел все ожидания. Рекомендую всем!", rating: 5, source: "2ГИС", date: "Декабрь 2023" },
+  { name: "Ольга П.", text: "Очень довольна процедурой биоревитализации. Кожа просто сияет. Персонал вежливый и профессиональный.", rating: 5, source: "Яндекс", date: "Январь 2024" },
+  { name: "Мария С.", text: "Прохожу лечение у трихолога. Волосы стали заметно гуще. Индивидуальный подход к каждому пациенту.", rating: 5, source: "2ГИС", date: "Ноябрь 2023" },
+  { name: "Татьяна В.", text: "Современное оборудование, уютная атмосфера. Лазерная эпиляция прошла безболезненно!", rating: 5, source: "Яндекс", date: "Декабрь 2023" },
+  { name: "Ирина Д.", text: "Комплексный подход к красоте и здоровью. Нутрициолог помог нормализовать питание, что отразилось на коже.", rating: 5, source: "2ГИС", date: "Октябрь 2023" },
+];
+
+function ReviewCard({ review }: { review: typeof reviews[number] }) {
+  return (
+    <Card className="h-full flex flex-col border-border/50 bg-card hover:shadow-lg transition-shadow duration-300">
+      <CardContent className="p-6 flex flex-col flex-1">
+        <Quote className="h-8 w-8 text-primary/20 mb-4 shrink-0" />
+        <p className="text-foreground mb-4 leading-relaxed flex-1">
+          "{review.text}"
+        </p>
+        <div className="flex gap-0.5 mb-4">
+          {[...Array(review.rating)].map((_, i) => (
+            <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+          ))}
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="font-medium text-foreground">{review.name}</p>
+            <p className="text-xs text-muted-foreground">{review.date}</p>
+          </div>
+          <Badge variant="secondary" className="text-xs">
+            {review.source}
+          </Badge>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
 
 export function ReviewsSection() {
-  const reviews = [
-    {
-      name: "Анна К.",
-      text: "Лучшая клиника в Краснодаре! Наконец-то избавилась от акне после многих лет борьбы. Спасибо доктору Павлюк!",
-      rating: 5,
-      source: "Яндекс",
-      date: "Январь 2024",
-    },
-    {
-      name: "Елена М.",
-      text: "Dr. Pavlyuk is a genius! Результат превзошел все ожидания. Рекомендую всем!",
-      rating: 5,
-      source: "2ГИС",
-      date: "Декабрь 2023",
-    },
-    {
-      name: "Ольга П.",
-      text: "Очень довольна процедурой биоревитализации. Кожа просто сияет. Персонал вежливый и профессиональный.",
-      rating: 5,
-      source: "Яндекс",
-      date: "Январь 2024",
-    },
-    {
-      name: "Мария С.",
-      text: "Прохожу лечение у трихолога. Волосы стали заметно гуще. Индивидуальный подход к каждому пациенту.",
-      rating: 5,
-      source: "2ГИС",
-      date: "Ноябрь 2023",
-    },
-    {
-      name: "Татьяна В.",
-      text: "Современное оборудование, уютная атмосфера. Лазерная эпиляция прошла безболезненно!",
-      rating: 5,
-      source: "Яндекс",
-      date: "Декабрь 2023",
-    },
-    {
-      name: "Ирина Д.",
-      text: "Комплексный подход к красоте и здоровью. Нутрициолог помог нормализовать питание, что отразилось на коже.",
-      rating: 5,
-      source: "2ГИС",
-      date: "Октябрь 2023",
-    },
-  ];
+  const isMobile = useIsMobile();
 
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4 border-primary text-primary">
             Отзывы пациентов
@@ -64,45 +64,24 @@ export function ReviewsSection() {
           </p>
         </div>
 
-        {/* Masonry Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((review, index) => (
-            <Card
-              key={index}
-              className="h-full flex flex-col border-border/50 bg-card hover:shadow-lg transition-shadow duration-300"
-            >
-              <CardContent className="p-6 flex flex-col flex-1">
-                {/* Quote Icon */}
-                <Quote className="h-8 w-8 text-primary/20 mb-4" />
+        {isMobile ? (
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-3">
+              {reviews.map((review, index) => (
+                <CarouselItem key={index} className="pl-3 basis-[85%]">
+                  <ReviewCard review={review} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        ) : (
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            {reviews.map((review, index) => (
+              <ReviewCard key={index} review={review} />
+            ))}
+          </div>
+        )}
 
-                {/* Review Text */}
-                <p className="text-foreground mb-4 leading-relaxed flex-1">
-                  "{review.text}"
-                </p>
-
-                {/* Rating */}
-                <div className="flex gap-0.5 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-
-                {/* Author Info */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-medium text-foreground">{review.name}</p>
-                    <p className="text-xs text-muted-foreground">{review.date}</p>
-                  </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {review.source}
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Trust Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { value: "5.0", label: "Рейтинг Яндекс" },
@@ -111,9 +90,7 @@ export function ReviewsSection() {
             { value: "98%", label: "Рекомендуют нас" },
           ].map((stat, i) => (
             <div key={i} className="text-center p-4 rounded-xl bg-secondary/50">
-              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">
-                {stat.value}
-              </p>
+              <p className="font-heading text-2xl md:text-3xl font-bold text-primary">{stat.value}</p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
