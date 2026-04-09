@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Clock, Instagram, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, MessageCircle, ExternalLink } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
       <div className="container py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
@@ -59,8 +59,28 @@ export function Footer() {
               <li><Link to="/specialists" className="hover:text-primary">Специалисты</Link></li>
               <li><Link to="/advice" className="hover:text-primary">Советы экспертов</Link></li>
               <li><Link to="/about" className="hover:text-primary">О клинике</Link></li>
-              <li><Link to="/privacy" className="hover:text-primary">Политика конфиденциальности</Link></li>
             </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="mb-4 font-heading font-semibold">Правовая информация</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to="/privacy" className="hover:text-primary">Политика обработки персональных данных</Link></li>
+              <li><Link to="/patients" className="hover:text-primary">Сведения о медицинской организации</Link></li>
+              <li><Link to="/patients#authorities" className="hover:text-primary">Контролирующие органы</Link></li>
+            </ul>
+            <div className="mt-4">
+              <a
+                href="https://bus.gov.ru"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3 py-2 text-xs font-medium text-primary hover:bg-primary/10 transition-colors"
+              >
+                <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+                <span>Независимая оценка качества (НОК)</span>
+              </a>
+            </div>
           </div>
 
           {/* Contact */}
@@ -97,7 +117,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 text-center text-xs text-muted-foreground md:flex-row md:text-left">
           <p>© 2024 Клиника "Яблоко". Все права защищены.</p>
-          <p>Лицензия № ЛО-23-01-XXXXXX</p>
+          <p>Лицензия № ЛО-23-01-014846</p>
         </div>
       </div>
     </footer>
