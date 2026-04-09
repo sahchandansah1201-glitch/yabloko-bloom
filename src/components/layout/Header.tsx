@@ -4,6 +4,7 @@ import { Menu, X, Phone, MapPin, Eye, EyeOff } from "lucide-react";
 import { DesktopConversionBar } from "@/components/conversion/DesktopConversionBar";
 import { Button } from "@/components/ui/button";
 import { useAccessibility } from "@/contexts/AccessibilityContext";
+import { usePrefetch } from "@/hooks/usePrefetch";
 import logo from "@/assets/logo.jpg";
 
 interface HeaderProps {
@@ -16,6 +17,7 @@ export function Header({ onBookingClick }: HeaderProps) {
   const [showBar, setShowBar] = useState(false);
   const location = useLocation();
   const { isHighContrast, toggleHighContrast } = useAccessibility();
+  const prefetch = usePrefetch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +69,8 @@ export function Header({ onBookingClick }: HeaderProps) {
               <Link
                 key={link.href}
                 to={link.href}
+                onMouseEnter={() => prefetch(link.href)}
+                onFocus={() => prefetch(link.href)}
                 className={`font-medium transition-colors relative whitespace-nowrap text-[clamp(0.825rem,0.9vw,1rem)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all ${
                   isActive
                     ? "text-primary after:w-full"
@@ -142,6 +146,8 @@ export function Header({ onBookingClick }: HeaderProps) {
                 <Link
                   key={link.href}
                   to={link.href}
+                  onMouseEnter={() => prefetch(link.href)}
+                  onFocus={() => prefetch(link.href)}
                   className={`rounded-lg px-4 py-3 font-medium transition-colors ${
                     isActive
                       ? "bg-secondary text-primary"
