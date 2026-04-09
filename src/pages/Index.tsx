@@ -16,7 +16,16 @@ import { BookingWizard } from "@/components/booking/BookingWizard";
 import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
 import { QuickBookingModal } from "@/components/conversion/QuickBookingModal";
 
-import { getClinicSchema, getOrganizationSchema } from "@/lib/schema";
+import { getClinicSchema, getOrganizationSchema, getWebSiteSchema, getReviewsSchema } from "@/lib/schema";
+
+const HOME_REVIEWS = [
+  { name: "Анна К.", text: "Лучшая клиника в Краснодаре! Наконец-то избавилась от акне после многих лет борьбы. Спасибо доктору Павлюк!", rating: 5, source: "Яндекс", date: "2024-01" },
+  { name: "Елена М.", text: "Dr. Pavlyuk is a genius! Результат превзошел все ожидания. Рекомендую всем!", rating: 5, source: "2ГИС", date: "2023-12" },
+  { name: "Ольга П.", text: "Очень довольна процедурой биоревитализации. Кожа просто сияет. Персонал вежливый и профессиональный.", rating: 5, source: "Яндекс", date: "2024-01" },
+  { name: "Мария С.", text: "Прохожу лечение у трихолога. Волосы стали заметно гуще. Индивидуальный подход к каждому пациенту.", rating: 5, source: "2ГИС", date: "2023-11" },
+  { name: "Татьяна В.", text: "Современное оборудование, уютная атмосфера. Лазерная эпиляция прошла безболезненно!", rating: 5, source: "Яндекс", date: "2023-12" },
+  { name: "Ирина Д.", text: "Комплексный подход к красоте и здоровью. Нутрициолог помог нормализовать питание, что отразилось на коже.", rating: 5, source: "2ГИС", date: "2023-10" },
+];
 
 const Index = () => {
   const [isChoiceOpen, setIsChoiceOpen] = useState(false);
@@ -47,6 +56,8 @@ const Index = () => {
         <link rel="canonical" href="https://yabloko-clinic.ru/" />
         <script type="application/ld+json">{JSON.stringify(getClinicSchema())}</script>
         <script type="application/ld+json">{JSON.stringify(getOrganizationSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify(getWebSiteSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", itemListElement: getReviewsSchema(HOME_REVIEWS) })}</script>
       </Helmet>
 
       <div className="flex min-h-screen flex-col">
