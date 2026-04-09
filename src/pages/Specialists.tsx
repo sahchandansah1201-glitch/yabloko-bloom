@@ -72,12 +72,12 @@ export default function Specialists() {
   return (
     <>
       <Helmet>
-        <title>Специалисты клиники Яблоко | Врачи-дерматологи и косметологи в Краснодаре</title>
+        <title>Врачи клиники «Яблоко» — косметологи Краснодара</title>
         <meta
           name="description"
-          content="Команда опытных врачей клиники Яблоко в Краснодаре: дерматологи, косметологи, трихологи. Записывайтесь к ведущим специалистам онлайн."
+          content="Дерматологи, косметологи и трихологи клиники «Яблоко» в Краснодаре. Стаж от 15 лет, регулярные стажировки. Запишитесь к специалисту онлайн."
         />
-        <meta name="keywords" content="дерматолог Краснодар, косметолог Краснодар, врач трихолог, клиника Яблоко специалисты" />
+        <link rel="canonical" href="https://yabloko-clinic.ru/specialists" />
       </Helmet>
 
       <Header onBookingClick={openChoice} />
@@ -93,11 +93,11 @@ export default function Specialists() {
                 </div>
               </div>
               <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
-                Наши специалисты
+                Врачи клиники «Яблоко» в Краснодаре
               </h1>
               <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
-                Команда врачей клиники «Яблоко» — это профессионалы с многолетним опытом, 
-                которые постоянно совершенствуют свои навыки и следят за последними достижениями медицины.
+                Дерматологи, косметологи, трихологи и остеопаты с опытом от 15 лет.
+                Каждый специалист регулярно проходит стажировки и работает по доказательным протоколам.
               </p>
             </div>
 
@@ -197,10 +197,10 @@ export default function Specialists() {
         <section className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container text-center">
             <h2 className="font-heading text-fluid-2xl font-bold mb-4">
-              Не знаете, к какому специалисту записаться?
+              Не знаете, к какому врачу записаться?
             </h2>
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-              Позвоните нам или оставьте заявку — мы поможем подобрать врача под ваши потребности.
+              Позвоните или оставьте заявку — мы подберём специалиста под Вашу задачу. Консультация без предоплаты.
             </p>
             <button
               onClick={openChoice}
