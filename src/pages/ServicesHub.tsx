@@ -51,11 +51,12 @@ export default function ServicesHub() {
   return (
     <>
       <Helmet>
-        <title>Услуги и цены клиники Яблоко | Косметология, Дерматология в Краснодаре</title>
+        <title>Услуги и цены — клиника «Яблоко» в Краснодаре</title>
         <meta
           name="description"
-          content="Полный каталог услуг клиники Яблоко: косметология, дерматология, трихология. Цены, описания процедур, запись онлайн."
+          content="Каталог услуг клиники «Яблоко»: косметология, дерматология, трихология, остеопатия. Актуальные цены, описание процедур. Запись онлайн в Краснодаре."
         />
+        <link rel="canonical" href="https://yabloko-clinic.ru/services" />
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
@@ -65,10 +66,10 @@ export default function ServicesHub() {
         <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
           <div className="container max-w-3xl text-center">
             <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
-              Услуги клиники Яблоко
+              Услуги клиники «Яблоко» в Краснодаре
             </h1>
             <p className="text-fluid-lg text-muted-foreground mb-8">
-              Найдите нужную процедуру или выберите направление
+              Подберите процедуру по проблеме — от акне и морщин до восстановления волос и коррекции фигуры
             </p>
             <div className="relative max-w-xl mx-auto">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
