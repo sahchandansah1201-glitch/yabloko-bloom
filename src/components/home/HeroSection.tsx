@@ -23,7 +23,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
               ))}
             </div>
             <span className="text-sm font-medium text-muted-foreground">
-              5.0 на Яндекс Картах • Более 5000 пациентов
+              5.0 на Яндекс Картах • Более 6517 пациентов
             </span>
           </div>
 
@@ -72,7 +72,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4 animate-fade-in stagger-3">
             {[
               { value: "8+", label: "лет опыта" },
-              { value: "5000+", label: "пациентов" },
+              { value: "6517+", label: "пациентов" },
               { value: "50+", label: "процедур" },
               { value: "5.0", label: "рейтинг" },
             ].map((stat, i) => (
