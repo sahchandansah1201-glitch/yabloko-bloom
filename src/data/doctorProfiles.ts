@@ -9,6 +9,8 @@ export interface DoctorProfileData {
   certificates?: string[];
   experience?: string;
   faq?: { question: string; answer: string }[];
+  education?: string;
+  accreditation?: { title: string; validUntil?: string }[];
 }
 
 const profileData: Record<string, DoctorProfileData> = {
