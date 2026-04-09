@@ -84,8 +84,8 @@ export default function ServicePage() {
   return (
     <>
       <Helmet>
-        <title>{title} | Клиника Яблоко Краснодар</title>
-        <meta name="description" content={`${title} в клинике Яблоко. ${subtitle} Запишитесь онлайн.`} />
+        <title>{`${title} в Краснодаре — клиника «Яблоко»`}</title>
+        <meta name="description" content={`${title} в клинике «Яблоко» в Краснодаре. ${subtitle ? subtitle + ' ' : ''}${displayPrice ? `Цена от ${displayPrice}. ` : ''}Запись онлайн без предоплаты.`} />
         <link rel="canonical" href={`https://yabloko-clinic.ru/services/${slug}`} />
         <script type="application/ld+json">{JSON.stringify(therapyJsonLd)}</script>
         {faqJsonLd && (
