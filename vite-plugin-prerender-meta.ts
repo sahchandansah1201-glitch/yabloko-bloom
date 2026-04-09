@@ -190,8 +190,8 @@ function extractServices(content: string): RouteMeta[] {
       detailedSlugs.add(slug);
       results.push({
         path: `/services/${slug}`,
-        title: `${title} — ${CLINIC_NAME} ${CITY}`,
-        description: `${title} в ${CLINIC_NAME}, ${CITY}. Современные методики, опытные врачи, индивидуальный подход. Запись онлайн.`,
+        title: `${title} — ${CLINIC_NAME} ${CITY_NOM}`,
+        description: `${title} в ${CLINIC_NAME}, ${CITY_NOM}. Современные методики, опытные врачи, индивидуальный подход. Запись онлайн.`,
         jsonLd: {
           "@context": "https://schema.org",
           "@type": "MedicalTherapy",
@@ -236,7 +236,7 @@ function extractDoctors(content: string): RouteMeta[] {
     const slug = m[1];
     results.push({
       path: `/doctor/${slug}`,
-      title: `Врач ${slug} — ${CLINIC_NAME} ${CITY}`,
+      title: `Врач ${slug} — ${CLINIC_NAME} ${CITY_NOM}`,
       description: `Профиль врача клиники «Яблоко». Образование, специализация, отзывы пациентов. Запись онлайн.`,
       jsonLd: {
         "@context": "https://schema.org",
