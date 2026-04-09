@@ -49,7 +49,7 @@ export function DoctorReviews() {
             Отзывы пациентов
           </h2>
 
-          <div className="columns-1 gap-4 md:columns-2 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {reviews.map((review, i) => (
               <motion.div
                 key={i}
@@ -57,9 +57,9 @@ export function DoctorReviews() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="mb-4 break-inside-avoid"
+                className="h-full"
               >
-                <Card className="hover:shadow-md transition-shadow">
+                <Card className="h-full flex flex-col hover:shadow-md transition-shadow">
                   <CardContent className="p-5">
                     <div className="flex gap-0.5 mb-3">
                       {Array.from({ length: review.rating }).map((_, j) => (
