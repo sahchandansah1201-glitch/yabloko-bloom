@@ -133,6 +133,10 @@ export default function PricePage() {
         />
         <link rel="canonical" href="https://yabloko-clinic.ru/price" />
         <script type="application/ld+json">{JSON.stringify(priceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Цены" },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => { setBookingService(""); setIsChoiceOpen(true); }} />

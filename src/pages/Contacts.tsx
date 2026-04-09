@@ -109,6 +109,7 @@ const Contacts = () => {
         <meta name="description" content="Клиника «Яблоко» в Краснодаре: ул. 70-летия Октября, 1/2. Телефон +7 918 412-85-85. Пн–Сб 9:00–21:00. Бесплатная парковка. Запись онлайн." />
         <link rel="canonical" href="https://yabloko-clinic.ru/contacts" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Header onBookingClick={openChoice} />
