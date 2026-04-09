@@ -16,7 +16,8 @@ import path from "path";
 
 const DOMAIN = "https://yabloko-clinic.ru";
 const CLINIC_NAME = "Клиника «Яблоко»";
-const CITY = "Краснодар";
+const CITY = "Краснодаре";
+const CITY_NOM = "Краснодар";
 const DEFAULT_IMAGE =
   "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4d5390d9-904f-421d-b5ce-752b09bc7aa4/id-preview-a1c0c64d--a90f24cd-236d-4888-b788-27e2347a039d.lovable.app-1773742924479.png";
 
