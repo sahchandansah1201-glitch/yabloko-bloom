@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GraduationCap, FileCheck, MapPin } from "lucide-react";
+import { GraduationCap, FileCheck, MapPin, ShieldCheck } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
