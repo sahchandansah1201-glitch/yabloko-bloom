@@ -51,6 +51,7 @@ export function sitemapPlugin(): Plugin {
   return {
     name: "vite-plugin-sitemap",
     closeBundle() {
+      const today = new Date().toISOString().slice(0, 10);
       const srcDir = path.resolve(__dirname, "src/data");
 
       // Read data files
@@ -66,22 +67,22 @@ export function sitemapPlugin(): Plugin {
 
       // Static routes
       for (const r of staticRoutes) {
-        urls.push(buildUrl(r.path, r.changefreq, r.priority));
+        urls.push(buildUrl(r.path, r.changefreq, r.priority, today));
       }
 
       // Doctor profile pages
       for (const p of doctorPaths) {
-        urls.push(buildUrl(p, "monthly", 0.7));
+        urls.push(buildUrl(p, "monthly", 0.7, today));
       }
 
       // Service pages
       for (const p of servicePaths) {
-        urls.push(buildUrl(p, "monthly", 0.7));
+        urls.push(buildUrl(p, "monthly", 0.7, today));
       }
 
       // Article pages
       for (const p of articlePaths) {
-        urls.push(buildUrl(p, "yearly", 0.6));
+        urls.push(buildUrl(p, "yearly", 0.6, today));
       }
 
       const xml = [
