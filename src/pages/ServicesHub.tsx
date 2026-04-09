@@ -73,12 +73,12 @@ export default function ServicesHub() {
 
       <main className="min-h-screen bg-background scroll-mt-24">
         {/* Hero + Search */}
-        <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
+        <section className="bg-gradient-to-b from-secondary to-background pt-10 pb-6 md:pt-14 md:pb-8">
           <div className="container max-w-3xl text-center">
-            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-4">
+            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-3">
               Услуги клиники «Яблоко» в Краснодаре
             </h1>
-            <p className="text-fluid-lg text-muted-foreground mb-8">
+            <p className="text-fluid-lg text-muted-foreground mb-6">
               Подберите процедуру по проблеме — от акне и морщин до восстановления волос и коррекции фигуры
             </p>
             <div className="relative max-w-xl mx-auto">
@@ -91,7 +91,7 @@ export default function ServicesHub() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-2 mt-4 max-w-xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-2 mt-3 max-w-xl mx-auto">
               {["акне", "морщины", "дерматолог", "выпадение волос", "остеопат", "невролог", "массаж", "родинки", "бородавки", "папилломы", "диетолог"].map((tag) => (
                 <button
                   key={tag}
@@ -107,7 +107,7 @@ export default function ServicesHub() {
         </section>
 
         {/* Content */}
-        <section className="py-12 md:py-16 scroll-mt-24">
+        <section className="py-8 md:py-10 scroll-mt-24">
           <div className="container max-w-4xl">
             <AnimatePresence mode="wait">
               {isSearching ? (
