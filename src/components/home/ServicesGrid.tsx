@@ -75,10 +75,10 @@ export function ServicesGrid({ onBookingClick }: ServicesGridProps) {
               <Link
               key={service.id}
               to={`/services?tab=${service.id}`}
-              className="group relative overflow-hidden rounded-xl border border-border/40 bg-background p-7 shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.08)] transition-all duration-300 hover:border-primary hover:shadow-[0_6px_20px_-4px_hsl(var(--primary)/0.18)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_1px_4px_-1px_hsl(var(--foreground)/0.1)] md:p-8"
+              className="group relative overflow-hidden rounded-xl border border-border/40 bg-background p-7 shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.08)] transition-all duration-300 hover:border-primary hover:shadow-[0_6px_20px_-4px_hsl(var(--primary)/0.18)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_1px_4px_-1px_hsl(var(--foreground)/0.1)] md:p-8 min-h-[220px] md:min-h-[260px]"
             >
               {/* Text content */}
-              <div className="relative z-10 pr-28 md:pr-36">
+              <div className="relative z-10 pr-36 sm:pr-40 md:pr-48 lg:pr-52">
                 <h3 className="font-heading text-xl font-bold text-foreground md:text-2xl">
                   {service.title}
                 </h3>
@@ -108,7 +108,7 @@ export function ServicesGrid({ onBookingClick }: ServicesGridProps) {
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute bottom-6 right-6 h-24 w-24 rounded-full border-4 border-card object-cover shadow-sm transition-transform duration-500 group-hover:scale-110 md:h-32 md:w-32"
+                className="absolute bottom-4 right-4 h-32 w-32 rounded-full border-4 border-card object-cover shadow-md transition-transform duration-500 group-hover:scale-110 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-48 lg:w-48"
               />
             </Link>
           ))}
