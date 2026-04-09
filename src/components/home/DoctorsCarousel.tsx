@@ -20,6 +20,26 @@ interface DoctorsCarouselProps {
 export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
   const { data: doctors, isLoading } = useDoctors();
 
+  const doctorSortOrder = [
+    "Аллам",
+    "Грачева",
+    "Игитханян",
+    "Райкова",
+    "Ковалев",
+    "Павлюк Егор",
+    "Медведкова",
+    "Павлюк Евгений",
+    "Акопян",
+  ];
+
+  const sortedDoctors = doctors
+    ? [...doctors].sort((a, b) => {
+        const indexA = doctorSortOrder.findIndex(name => a.name.includes(name));
+        const indexB = doctorSortOrder.findIndex(name => b.name.includes(name));
+        return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+      })
+    : [];
+
   if (isLoading) {
     return (
       <section className="py-16 md:py-24 bg-background">
@@ -58,7 +78,7 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent className="-ml-4">
-            {doctors?.map((doctor) => (
+            {sortedDoctors.map((doctor) => (
               <CarouselItem key={doctor.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <Card className="overflow-hidden border-border/50 bg-card hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
                   <CardContent className="p-0 flex flex-col flex-1">
