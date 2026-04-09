@@ -73,12 +73,12 @@ export default function ServicesHub() {
 
       <main className="min-h-screen bg-background scroll-mt-24">
         {/* Hero + Search */}
-        <section className="bg-gradient-to-b from-secondary to-background pt-8 pb-4 md:pt-10 md:pb-6">
+        <section className="bg-gradient-to-b from-secondary to-background pt-4 pb-2 md:pt-10 md:pb-6">
           <div className="container max-w-3xl text-center">
-            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-2">
+            <h1 className="font-heading text-fluid-4xl font-bold text-foreground mb-1 md:mb-2">
               Услуги клиники «Яблоко» в Краснодаре
             </h1>
-            <p className="text-fluid-lg text-muted-foreground mb-4">
+            <p className="text-fluid-lg text-muted-foreground mb-3 md:mb-4 hidden md:block">
               Подберите процедуру по проблеме — от акне и морщин до восстановления волос и коррекции фигуры
             </p>
             <div className="relative max-w-xl mx-auto">
@@ -86,28 +86,30 @@ export default function ServicesHub() {
               <Input
                 type="search"
                 placeholder="Какую проблему вы хотите решить? (акне, морщины, выпадение волос)..."
-                className="h-14 rounded-2xl pl-12 pr-4 text-base bg-card border-2 border-border focus-visible:border-primary shadow-md"
+                className="h-12 md:h-14 rounded-2xl pl-12 pr-4 text-base bg-card border-2 border-border focus-visible:border-primary shadow-md"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-2 mt-3 max-w-xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mt-2 md:mt-3 max-w-xl mx-auto">
               {["акне", "морщины", "дерматолог", "выпадение волос", "остеопат", "невролог", "массаж", "родинки", "бородавки", "папилломы", "диетолог"].map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setSearchQuery(searchQuery.toLowerCase() === tag ? "" : tag)}
-                  className={`px-3.5 py-1.5 rounded-full text-sm border transition-colors cursor-pointer ${searchQuery.toLowerCase() === tag ? "bg-primary text-primary-foreground border-primary" : "border-border bg-card hover:bg-primary hover:text-primary-foreground hover:border-primary"}`}
+                  className={`px-3 py-1 md:px-3.5 md:py-1.5 rounded-full text-xs md:text-sm border transition-colors cursor-pointer ${searchQuery.toLowerCase() === tag ? "bg-primary text-primary-foreground border-primary" : "border-border bg-card hover:bg-primary hover:text-primary-foreground hover:border-primary"}`}
                 >
                   {tag}
                 </button>
               ))}
             </div>
-            <TrustBar />
+            <div className="hidden md:block">
+              <TrustBar />
+            </div>
           </div>
         </section>
 
         {/* Content */}
-        <section className="py-8 md:py-10 scroll-mt-24">
+        <section className="py-4 md:py-10 scroll-mt-24">
           <div className="container max-w-4xl">
             <AnimatePresence mode="wait">
               {isSearching ? (
