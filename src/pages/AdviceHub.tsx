@@ -30,8 +30,9 @@ export default function AdviceHub() {
   return (
     <>
       <Helmet>
-        <title>Советы экспертов | Клиника Яблоко Краснодар</title>
-        <meta name="description" content="Экспертные статьи врачей клиники Яблоко: косметология, дерматология, трихология. Полезные советы и разборы процедур." />
+        <title>Блог клиники «Яблоко» — советы косметологов</title>
+        <meta name="description" content="Статьи врачей клиники «Яблоко» в Краснодаре: уход за кожей, разбор процедур, советы дерматологов и трихологов. Реальные кейсы и рекомендации." />
+        <link rel="canonical" href="https://yabloko-clinic.ru/advice" />
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
@@ -41,10 +42,10 @@ export default function AdviceHub() {
           {/* Hero */}
           <div className="mb-10 text-center">
             <h1 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Советы экспертов
+              Советы врачей клиники «Яблоко»
             </h1>
             <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-              Полезные статьи от врачей клиники «Яблоко». Разбираем процедуры, развенчиваем мифы и делимся реальными кейсами.
+              Разбираем процедуры, развенчиваем мифы и делимся реальными кейсами из практики наших дерматологов и косметологов в Краснодаре.
             </p>
           </div>
 
