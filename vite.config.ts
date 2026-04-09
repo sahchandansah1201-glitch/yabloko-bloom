@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { sitemapPlugin } from "./vite-plugin-sitemap";
+import { prerenderMetaPlugin } from "./vite-plugin-prerender-meta";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -17,6 +18,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === "development" && process.env.LOVABLE_DEV_SERVER !== "true" && componentTagger(),
     mode === "production" && sitemapPlugin(),
+    mode === "production" && prerenderMetaPlugin(),
   ].filter(Boolean),
   resolve: {
     alias: {
