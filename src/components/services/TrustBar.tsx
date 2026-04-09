@@ -17,7 +17,7 @@ const items = [
 
 export function TrustBar() {
   return (
-    <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+    <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
       {items.map((item) => (
         <div key={item.text} className="flex items-center gap-2 text-sm text-muted-foreground">
           <item.icon className="h-4 w-4 shrink-0 text-lime-400" />
