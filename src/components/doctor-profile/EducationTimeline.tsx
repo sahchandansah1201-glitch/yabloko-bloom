@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GraduationCap, FileCheck, MapPin } from "lucide-react";
+import { GraduationCap, FileCheck, MapPin, ShieldCheck } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -126,6 +126,35 @@ export function EducationTimeline() {
               <CarouselPrevious className="-left-4" />
               <CarouselNext className="-right-4" />
             </Carousel>
+          </div>
+
+          {/* Qualification block */}
+          <div className="mt-8 max-w-3xl mx-auto rounded-xl border bg-secondary/40 p-6 space-y-4">
+            <div className="flex items-center gap-2 mb-2">
+              <ShieldCheck className="h-5 w-5 text-primary" />
+              <h3 className="font-heading text-base font-semibold">Квалификация</h3>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground/60 mb-1">Уровень образования</p>
+              <p className="text-sm text-foreground">Высшее медицинское — КубГМУ, Лечебное дело (2005–2011)</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground/60 mb-2">Аккредитация / Сертификаты</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  <span>Аккредитация по дерматовенерологии <span className="ml-2 text-xs text-muted-foreground">(действ. до 2027)</span></span>
+                </li>
+                <li className="flex items-start gap-2 text-sm">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  <span>Аккредитация по косметологии <span className="ml-2 text-xs text-muted-foreground">(действ. до 2027)</span></span>
+                </li>
+                <li className="flex items-start gap-2 text-sm">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  <span>Сертификат по трихологии <span className="ml-2 text-xs text-muted-foreground">(действ. до 2028)</span></span>
+                </li>
+              </ul>
+            </div>
           </div>
         </motion.div>
       </div>
