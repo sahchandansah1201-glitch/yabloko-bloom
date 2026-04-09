@@ -104,12 +104,12 @@ export default function Specialists() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-12 max-w-2xl mx-auto">
               <div className="text-center p-4 rounded-xl bg-card border">
-                <p className="font-heading text-fluid-2xl font-bold text-primary">5+</p>
+                <p className="font-heading text-fluid-2xl font-bold text-primary">8+</p>
                 <p className="text-sm text-muted-foreground mt-1">Врачей</p>
               </div>
               <div className="text-center p-4 rounded-xl bg-card border">
                 <p className="font-heading text-fluid-2xl font-bold text-primary">15+</p>
-                <p className="text-sm text-muted-foreground mt-1">Лет опыта</p>
+                <p className="text-sm text-muted-foreground mt-1">Лет опыта врачей</p>
               </div>
               <div className="text-center p-4 rounded-xl bg-card border">
                 <p className="font-heading text-fluid-2xl font-bold text-primary">6517+</p>
