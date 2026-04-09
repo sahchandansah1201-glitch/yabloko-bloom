@@ -78,7 +78,7 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent className="-ml-4">
-            {doctors?.map((doctor) => (
+            {sortedDoctors.map((doctor) => (
               <CarouselItem key={doctor.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <Card className="overflow-hidden border-border/50 bg-card hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
                   <CardContent className="p-0 flex flex-col flex-1">
