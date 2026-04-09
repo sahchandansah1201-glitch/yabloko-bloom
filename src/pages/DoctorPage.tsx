@@ -53,12 +53,13 @@ export default function DoctorPage() {
     specialty: doctor.specialty,
     bio: doctor.bio,
     experience: profileData.experience,
+    imageUrl: photo,
     education: profileData.timeline,
     knowsAbout: profileData.services?.flatMap((s) => s.items),
     faq: profileData.faq,
   });
 
-  const faqJsonLd = getPhysicianFAQSchema(profileData.faq || []);
+  const faqJsonLd = getPhysicianFAQSchema(profileData.faq || [], slug);
 
   const shortName = doctor.name.split(" ").slice(0, 2).join(" ");
 
