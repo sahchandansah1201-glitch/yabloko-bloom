@@ -44,8 +44,16 @@ export function DoctorProfileHero({ name, specialty, photo, isTopSpecialist, exp
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6 pt-6 md:pt-0"
           >
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap items-center gap-3">
               {experience && <Badge variant="secondary">Стаж {experience}</Badge>}
+              <div className="flex items-center gap-1.5">
+                <div className="flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-muted-foreground">5.0</span>
+              </div>
             </div>
 
             <h1 className="font-heading text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">

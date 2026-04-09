@@ -133,6 +133,7 @@ export function getPhysicianSchema(doc: PhysicianSchemaInput) {
     name: doc.name,
     jobTitle: doc.specialty,
     url: `${SITE_URL}/doctor/${doc.slug}`,
+    image: doc.imageUrl || LOGO_URL,
     description: `${doc.name} — ${doc.specialty}. ${doc.bio || ""}`.trim(),
     medicalSpecialty: doc.specialty,
     worksFor: { "@id": CLINIC_ID },
@@ -143,7 +144,6 @@ export function getPhysicianSchema(doc: PhysicianSchemaInput) {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "48",
       bestRating: "5",
     },
   };
