@@ -71,7 +71,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           {/* Trust indicators */}
           <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4 animate-fade-in stagger-3">
             {[
-              { value: "15+", label: "лет опыта" },
+              { value: "8+", label: "лет опыта" },
               { value: "5000+", label: "пациентов" },
               { value: "50+", label: "процедур" },
               { value: "5.0", label: "рейтинг" },
