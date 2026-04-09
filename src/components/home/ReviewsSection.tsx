@@ -71,7 +71,7 @@ export function ReviewsSection() {
               key={index}
               className="h-full flex flex-col border-border/50 bg-card hover:shadow-lg transition-shadow duration-300"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-1">
                 {/* Quote Icon */}
                 <Quote className="h-8 w-8 text-primary/20 mb-4" />
 
