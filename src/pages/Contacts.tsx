@@ -49,7 +49,7 @@ function useIsOpen() {
     const now = new Date();
     const day = now.getDay();
     const hour = now.getHours();
-    setIsOpen(day >= 1 && day <= 6 && hour >= 9 && hour < 20);
+    setIsOpen(day >= 1 && day <= 6 && hour >= 9 && hour < 21);
   }, []);
   return isOpen;
 }
