@@ -7,6 +7,7 @@ import { BookingWizard } from "@/components/booking/BookingWizard";
 import { ArticleCard } from "@/components/advice/ArticleCard";
 import { Input } from "@/components/ui/input";
 import { articles, articleCategories } from "@/data/articlesData";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export default function AdviceHub() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -33,6 +34,15 @@ export default function AdviceHub() {
         <title>Блог клиники «Яблоко» — советы косметологов</title>
         <meta name="description" content="Статьи врачей клиники «Яблоко» в Краснодаре: уход за кожей, разбор процедур, советы дерматологов и трихологов. Реальные кейсы и рекомендации." />
         <link rel="canonical" href="https://yabloko-clinic.ru/advice" />
+        <script type="application/ld+json">{JSON.stringify(getCollectionPageSchema({
+          title: "Советы врачей клиники «Яблоко»",
+          description: "Статьи врачей клиники «Яблоко» в Краснодаре: уход за кожей, разбор процедур, советы дерматологов и трихологов.",
+          url: "/advice",
+        }))}</script>
+        <script type="application/ld+json">{JSON.stringify(getBreadcrumbSchema([
+          { name: "Главная", url: "/" },
+          { name: "Советы экспертов" },
+        ]))}</script>
       </Helmet>
 
       <Header onBookingClick={() => setIsBookingOpen(true)} />
