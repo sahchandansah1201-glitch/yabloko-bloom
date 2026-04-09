@@ -137,11 +137,6 @@ export function DoctorProfile({ doctor, isOpen, onClose, onBook }: DoctorProfile
                 <User className="h-14 w-14 text-muted-foreground" />
               </div>
             )}
-            {doctor.is_top_specialist && (
-              <div className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary shadow-lg">
-                <Star className="h-5 w-5 fill-primary-foreground text-primary-foreground" />
-              </div>
-            )}
           </div>
 
           <h2 className="font-heading text-xl font-bold text-foreground">
@@ -149,12 +144,6 @@ export function DoctorProfile({ doctor, isOpen, onClose, onBook }: DoctorProfile
           </h2>
           <p className="text-muted-foreground">{doctor.specialty}</p>
 
-          {doctor.is_top_specialist && (
-            <Badge className="mt-3 gap-1">
-              <Award className="h-3 w-3" />
-              Ведущий специалист клиники
-            </Badge>
-          )}
 
           <div className="flex items-center gap-2 mt-4 text-sm text-muted-foreground">
             <Briefcase className="h-4 w-4" />
