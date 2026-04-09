@@ -76,7 +76,7 @@ export function ReviewsSection() {
                 <Quote className="h-8 w-8 text-primary/20 mb-4" />
 
                 {/* Review Text */}
-                <p className="text-foreground mb-4 leading-relaxed">
+                <p className="text-foreground mb-4 leading-relaxed flex-1">
                   "{review.text}"
                 </p>
 
