@@ -81,7 +81,7 @@ export default function ServicesHub() {
               />
             </div>
             <div className="flex flex-wrap justify-center gap-2 mt-4 max-w-xl mx-auto">
-              {["акне", "морщины", "выпадение волос", "пигментация", "целлюлит", "купероз", "рубцы", "сухость кожи"].map((tag) => (
+              {["акне", "морщины", "дерматолог", "выпадение волос", "остеопат", "невролог", "массаж", "родинки", "бородавки", "папилломы", "диетолог"].map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setSearchQuery(searchQuery.toLowerCase() === tag ? "" : tag)}
