@@ -108,7 +108,7 @@ export function ServicesGrid({ onBookingClick }: ServicesGridProps) {
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute bottom-4 right-4 h-32 w-32 rounded-full border-4 border-card object-cover shadow-md transition-transform duration-500 group-hover:scale-110 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-48 lg:w-48"
+                className="absolute bottom-4 right-4 h-24 w-24 rounded-full border-4 border-card object-cover shadow-md transition-transform duration-500 group-hover:scale-110 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-48 lg:w-48"
               />
             </Link>
           ))}
