@@ -72,11 +72,12 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>О клинике Яблоко — Красота через здоровье | Краснодар</title>
+        <title>О клинике «Яблоко» — косметология в Краснодаре</title>
         <meta
           name="description"
-          content="Клиника «Яблоко» — концептуальный центр эстетической и интегративной медицины в Краснодаре. Лицензированные врачи, оригинальное оборудование, безопасность."
+          content="Клиника «Яблоко» в Краснодаре — интегративный центр дерматологии и косметологии. Лицензированные врачи, оборудование Candela и Ultraformer, рейтинг 5.0."
         />
+        <link rel="canonical" href="https://yabloko-clinic.ru/about" />
       </Helmet>
 
       <Header onBookingClick={openChoice} />
@@ -96,7 +97,7 @@ const About = () => {
                   variants={fadeUp}
                   className="font-heading text-fluid-4xl font-bold leading-tight"
                 >
-                  Красота через здоровье
+                  Клиника косметологии и дерматологии «Яблоко» в Краснодаре
                 </motion.h1>
                 <motion.p
                   custom={1}
@@ -159,7 +160,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-center font-heading text-fluid-2xl font-bold"
             >
-              Почему выбирают нас
+              Почему пациенты Краснодара выбирают «Яблоко»
             </motion.h2>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -336,15 +337,15 @@ const About = () => {
                 variants={fadeUp}
                 className="font-heading text-fluid-2xl font-bold"
               >
-                Доверьте свою красоту профессионалам
+                Запишитесь на консультацию в Краснодаре
               </motion.h2>
               <motion.p
                 custom={1}
                 variants={fadeUp}
                 className="mx-auto mt-4 max-w-md text-muted-foreground"
               >
-                Запишитесь на консультацию — мы составим индивидуальный план и
-                подберём оптимальное решение.
+                Врач составит индивидуальный план лечения или ухода —
+                без предоплаты и навязывания процедур.
               </motion.p>
               <motion.div custom={2} variants={fadeUp} className="mt-8">
                 <Button
