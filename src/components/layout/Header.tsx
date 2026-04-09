@@ -17,6 +17,7 @@ export function Header({ onBookingClick }: HeaderProps) {
   const [showBar, setShowBar] = useState(false);
   const location = useLocation();
   const { isHighContrast, toggleHighContrast } = useAccessibility();
+  const prefetch = usePrefetch();
 
   useEffect(() => {
     const handleScroll = () => {
