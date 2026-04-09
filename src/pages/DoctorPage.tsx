@@ -53,6 +53,7 @@ export default function DoctorPage() {
     specialty: doctor.specialty,
     bio: doctor.bio,
     experience: profileData.experience,
+    imageUrl: photo,
     education: profileData.timeline,
     knowsAbout: profileData.services?.flatMap((s) => s.items),
     faq: profileData.faq,
