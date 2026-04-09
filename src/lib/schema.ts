@@ -213,6 +213,7 @@ export function getTherapySchema(therapy: TherapySchemaInput) {
     url: `${SITE_URL}/services/${therapy.slug}`,
     description: therapy.subtitle,
     provider: { "@id": CLINIC_ID },
+    ...(therapy.categoryLabel ? { medicalSpecialty: therapy.categoryLabel } : {}),
   };
 
   if (therapy.priceFrom) {
