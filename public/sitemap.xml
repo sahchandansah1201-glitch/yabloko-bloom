@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static pages -->
+  <url><loc>https://yabloko-clinic.ru/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://yabloko-clinic.ru/specialists</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/contacts</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/price</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/patients</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yabloko-clinic.ru/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Doctor pages -->
+  <url><loc>https://yabloko-clinic.ru/doctor/pavlyuk</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yabloko-clinic.ru/doctor/pavlyuk-evgeniy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/doctor/pavlyuk-egor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Service pages -->
+  <url><loc>https://yabloko-clinic.ru/services/consult-cosm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/biorevitalizatsiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/lazernaya-biorevitalizatsiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/botoks</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/konturnaya-plastika</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/lazernaya-shlifovka</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/chistka-litsa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/pilingi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/plazmoterapiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/kolostoterapiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/nitevoy-lifting</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/smas-lifting</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/kholodnaya-plazma</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/mikrotokovaya-terapiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/infrakrasnyj-termolifting</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/rf-lifting</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/venus-viva</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/pressoterapiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/fotoomolozhenie</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/lazernaya-epilyatsiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/korrektsiya-figury</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/mezoterapiya-tela</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/massazh-litsa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/miofastsialnyy-massazh-litsa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/anti-age</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/geneticheskoe-testirovanie</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/consult-derm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/lechenie-akne</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/pigmentatsiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-papillom</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-rodinok</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-borodavok</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-sosudov</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/lechenie-gribka-nogtey</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/rubtsy-i-shramy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-nevusov</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-mollyuskov</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-angiom</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-ksantelazm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/udalenie-gemangiom</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/consult-triho</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/diagnostika-volos</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/inyektsionnaya-trikhologiya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/mezoterapiya-golovy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/pilingi-golovy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/ultrazvukovoy-piling-golovy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/plazmoterapiya-golovy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/osteopat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/terapevt</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/dietolog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/nevrolog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/nutritsiolog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/massazh</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/antitsellyulitnyy-massazh</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/detskiy-massazh</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yabloko-clinic.ru/services/bioimpedansometriya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Article pages -->
+  <url><loc>https://yabloko-clinic.ru/advice/mozhno-li-delat-botoks-litsa</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/botoks-plyusy-i-minusy</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/fotoomolozhenie-plyusy-i-minusy</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/fotoomolozhenie-do-i-posle</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/lazernaya-epilyatsiya-bikini</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/nelzya-posle-lazernoy-epilyatsii</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/pered-lazernoy-epilyatsiey</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/vozrast-lazernoy-epilyatsii</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/lechenie-akne-v-krasnodare</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/vypadenie-volos-prichiny</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://yabloko-clinic.ru/advice/kejs-lazernaya-shlifovka-rubtsov</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+</urlset>
