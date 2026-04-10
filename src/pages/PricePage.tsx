@@ -384,6 +384,10 @@ const DOCTOR_SLUG_MAP: Record<string, string> = {
   "Грачева": "gracheva",
   "Райкова С.А.": "raykova",
   "Райкова": "raykova",
+  "Ковалев И.П.": "kovalev",
+  "Ковалев": "kovalev",
+  "Медведкова Н.А.": "medvedkova",
+  "Медведкова": "medvedkova",
 };
 
 function extractDoctorSlug(item: PriceItem): string | null {
