@@ -20,7 +20,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getClinicSchema, getBreadcrumbSchema } from "@/lib/schema";
 import {
@@ -419,28 +419,13 @@ function PriceRow({
     <Card className="px-4 py-3 hover:shadow-sm hover:border-primary/20 transition-all">
       <div className="flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          {/* Code badge */}
-          {item.code && (
-            <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wide">
-              {item.code}
-            </span>
+          {/* Code + nomenclature inline */}
+          {(item.code || item.nomenclatureName) && (
+            <p className="text-[10px] font-mono text-muted-foreground/70 tracking-wide leading-snug">
+              {item.code}{item.code && item.nomenclatureName && item.nomenclatureName !== item.name ? ' — ' : ''}{item.nomenclatureName && item.nomenclatureName !== item.name ? item.nomenclatureName : ''}
+            </p>
           )}
           <p className="text-sm font-medium text-foreground leading-snug">{item.name}</p>
-
-          {/* Nomenclature collapsible */}
-          {item.nomenclatureName && item.nomenclatureName !== item.name && (
-            <Collapsible>
-              <CollapsibleTrigger className="text-[11px] text-muted-foreground/60 hover:text-primary transition-colors flex items-center gap-1 mt-0.5">
-                <Info className="h-3 w-3" />
-                <span>Полное медицинское название</span>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <p className="text-[11px] text-muted-foreground mt-1 pl-4 border-l-2 border-primary/20">
-                  {item.nomenclatureName}
-                </p>
-              </CollapsibleContent>
-            </Collapsible>
-          )}
 
           {/* Category badge in search + Doctor link */}
           <div className="flex items-center gap-2 mt-1 flex-wrap">
