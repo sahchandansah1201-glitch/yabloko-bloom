@@ -1,7 +1,8 @@
-import { useState, useMemo, useRef, useCallback } from "react";
+import { useState, useMemo, useRef, useCallback, forwardRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Calendar, ChevronDown } from "lucide-react";
+import { Search, Calendar, ChevronDown, Info, HelpCircle, User } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
@@ -12,11 +13,19 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getClinicSchema, getBreadcrumbSchema } from "@/lib/schema";
 import {
   priceCategories,
   getAllPriceItems,
+  searchPriceItems,
   getTotalPriceCount,
   type PriceCategory,
   type PriceItem,
@@ -46,13 +55,7 @@ export default function PricePage() {
 
   const searchResults = useMemo(() => {
     if (!isSearching) return null;
-    const q = searchQuery.toLowerCase();
-    return allItems.filter(
-      (item) =>
-        item.name.toLowerCase().includes(q) ||
-        item.categoryTitle.toLowerCase().includes(q) ||
-        item.subcategoryTitle.toLowerCase().includes(q)
-    );
+    return searchPriceItems(allItems, searchQuery);
   }, [searchQuery, allItems, isSearching]);
 
   const displayCategories = useMemo(() => {
@@ -155,7 +158,7 @@ export default function PricePage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Найти услугу по названию…"
+                placeholder="Найти по названию или коду (напр. B01.008.001)…"
                 className="h-14 rounded-2xl pl-12 pr-4 text-base bg-card border-2 border-border focus-visible:border-primary shadow-md"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -239,58 +242,65 @@ export default function PricePage() {
 
               {/* Main Content */}
               <div className="flex-1 min-w-0">
-                <AnimatePresence mode="wait">
-                  {isSearching ? (
-                    <motion.div
-                      key="search"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      <p className="text-sm text-muted-foreground mb-4">
-                        Найдено: {searchResults?.length ?? 0}
-                      </p>
-                      {searchResults && searchResults.length > 0 ? (
-                        <div className="space-y-2">
-                          {searchResults.map((item, i) => (
-                            <PriceRow
-                              key={`${item.categoryId}-${item.name}-${i}`}
-                              item={item}
-                              onBook={() => handleBook(item.name)}
-                              badge={item.categoryTitle}
-                            />
-                          ))}
-                        </div>
-                      ) : (
-                        <p className="text-center text-muted-foreground py-12">
-                          Ничего не найдено. Попробуйте другой запрос.
+                <TooltipProvider delayDuration={200}>
+                  <AnimatePresence mode="wait">
+                    {isSearching ? (
+                      <motion.div
+                        key="search"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Найдено: {searchResults?.length ?? 0}
                         </p>
-                      )}
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key="categories"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="space-y-10"
-                    >
-                      {displayCategories.map((cat) => (
-                        <CategorySection
-                          key={cat.id}
-                          category={cat}
-                          ref={(el) => { sectionRefs.current[cat.id] = el; }}
-                          onBook={handleBook}
-                        />
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                        {searchResults && searchResults.length > 0 ? (
+                          <div className="space-y-2">
+                            {searchResults.map((item, i) => (
+                              <PriceRow
+                                key={`${item.categoryId}-${item.name}-${i}`}
+                                item={item}
+                                onBook={() => handleBook(item.name)}
+                                badge={item.categoryTitle}
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-center text-muted-foreground py-12">
+                            Ничего не найдено. Попробуйте другой запрос.
+                          </p>
+                        )}
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        key="categories"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="space-y-10"
+                      >
+                        {displayCategories.map((cat) => (
+                          <CategorySection
+                            key={cat.id}
+                            category={cat}
+                            ref={(el) => { sectionRefs.current[cat.id] = el; }}
+                            onBook={handleBook}
+                          />
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </TooltipProvider>
 
-                {/* E-E-A-T footer */}
-                <div className="mt-12 border-t border-border pt-6">
+                {/* E-E-A-T + 804n compliance footer */}
+                <div className="mt-12 border-t border-border pt-6 space-y-4">
+                  <div className="p-4 rounded-xl bg-secondary/60 border border-border/50">
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      📋 Прейскурант соответствует номенклатуре медицинских услуг, утв. приказом Минздрава РФ № 804н.
+                      Цены актуальны на {today}. Стоимость услуг включает все необходимые медицинские расходные материалы.
+                    </p>
+                  </div>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    Цены актуальны на {today} и включают все необходимые медицинские расходные материалы.
                     Окончательная стоимость определяется врачом на приёме после осмотра.
                     Клиника оставляет за собой право корректировать цены. Подробную информацию уточняйте по телефону{" "}
                     <a href="tel:+79184128585" className="text-primary hover:underline">
@@ -325,8 +335,6 @@ export default function PricePage() {
 }
 
 /* ── Category Section ── */
-
-import { forwardRef } from "react";
 
 interface CategorySectionProps {
   category: PriceCategory;
@@ -364,6 +372,32 @@ const CategorySection = forwardRef<HTMLElement, CategorySectionProps>(
 );
 CategorySection.displayName = "CategorySection";
 
+/* ── Doctor name → slug mapping ── */
+
+const DOCTOR_SLUG_MAP: Record<string, string> = {
+  "Аллам А.Х.": "allam",
+  "Аллам": "allam",
+  "Павлюк М.О.": "pavlyuk",
+  "Павлюк": "pavlyuk",
+  "Грачева В.С.": "gracheva",
+  "Грачева": "gracheva",
+  "Райкова С.А.": "raikova",
+  "Райкова": "raikova",
+};
+
+function extractDoctorSlug(item: PriceItem): string | null {
+  if (item.doctorSlug) return item.doctorSlug;
+  for (const [pattern, slug] of Object.entries(DOCTOR_SLUG_MAP)) {
+    if (item.name.includes(pattern)) return slug;
+  }
+  return null;
+}
+
+function extractDoctorLabel(name: string): string | null {
+  const match = name.match(/\(([^)]*(?:А\.Х\.|М\.О\.|В\.С\.|С\.А\.)[^)]*)\)/);
+  return match ? match[1].trim() : null;
+}
+
 /* ── Price Row ── */
 
 function PriceRow({
@@ -375,31 +409,97 @@ function PriceRow({
   onBook?: () => void;
   badge?: string;
 }) {
+  const doctorSlug = extractDoctorSlug(item);
+  const doctorLabel = extractDoctorLabel(item.name);
+  const hasVariablePrice = item.variablePriceReason || item.price.startsWith("от ");
+  const variableReason = item.variablePriceReason || "Стоимость зависит от объёма процедуры и индивидуальных показаний";
+
   return (
-    <Card className="flex items-center gap-3 px-4 py-3 hover:shadow-sm hover:border-primary/20 transition-all">
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-foreground leading-snug">{item.name}</p>
-        {badge && (
-          <Badge variant="secondary" className="mt-1 text-[10px] font-normal">
-            {badge}
-          </Badge>
-        )}
-      </div>
-      <div className="flex items-center gap-2.5 shrink-0">
-        <span className="text-sm md:text-base font-bold text-primary whitespace-nowrap">
-          {item.price}
-        </span>
-        {onBook && (
-          <Button
-            size="sm"
-            variant="hero"
-            className="text-xs h-7 px-2.5 gap-1"
-            onClick={onBook}
-          >
-            <Calendar className="h-3 w-3" />
-            <span className="hidden sm:inline">Записаться</span>
-          </Button>
-        )}
+    <Card className="px-4 py-3 hover:shadow-sm hover:border-primary/20 transition-all">
+      <div className="flex items-center gap-3">
+        <div className="flex-1 min-w-0">
+          {/* Code badge */}
+          {item.code && (
+            <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wide">
+              {item.code}
+            </span>
+          )}
+          <p className="text-sm font-medium text-foreground leading-snug">{item.name}</p>
+
+          {/* Nomenclature collapsible */}
+          {item.nomenclatureName && item.nomenclatureName !== item.name && (
+            <Collapsible>
+              <CollapsibleTrigger className="text-[11px] text-muted-foreground/60 hover:text-primary transition-colors flex items-center gap-1 mt-0.5">
+                <Info className="h-3 w-3" />
+                <span>Номенклатура 804н</span>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <p className="text-[11px] text-muted-foreground mt-1 pl-4 border-l-2 border-primary/20">
+                  {item.nomenclatureName}
+                </p>
+              </CollapsibleContent>
+            </Collapsible>
+          )}
+
+          {/* Category badge in search + Doctor link */}
+          <div className="flex items-center gap-2 mt-1 flex-wrap">
+            {badge && (
+              <Badge variant="secondary" className="text-[10px] font-normal">
+                {badge}
+              </Badge>
+            )}
+            {doctorSlug && doctorLabel && (
+              <Link
+                to={`/doctor/${doctorSlug}`}
+                className="inline-flex items-center gap-1 text-[10px] text-primary hover:underline"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <User className="h-3 w-3" />
+                {doctorLabel}
+              </Link>
+            )}
+            {item.serviceSlug && (
+              <Link
+                to={`/services/${item.serviceSlug}`}
+                className="inline-flex items-center gap-1 text-[10px] text-muted-foreground hover:text-primary"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Info className="h-3 w-3" />
+                Подробнее
+              </Link>
+            )}
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Variable price tooltip */}
+          {hasVariablePrice && (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button className="text-muted-foreground/50 hover:text-primary transition-colors" aria-label="Почему цена «от»">
+                  <HelpCircle className="h-3.5 w-3.5" />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-[240px] text-xs">
+                {variableReason}
+              </TooltipContent>
+            </Tooltip>
+          )}
+          <span className="text-sm md:text-base font-bold text-primary whitespace-nowrap">
+            {item.price}
+          </span>
+          {onBook && (
+            <Button
+              size="sm"
+              variant="hero"
+              className="text-xs h-7 px-2.5 gap-1"
+              onClick={onBook}
+            >
+              <Calendar className="h-3 w-3" />
+              <span className="hidden sm:inline">Записаться</span>
+            </Button>
+          )}
+        </div>
       </div>
     </Card>
   );
