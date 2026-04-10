@@ -749,6 +749,22 @@ export function getAllPriceItems(): (PriceItem & { categoryTitle: string; subcat
   return result;
 }
 
+/** Search items by name, category, subcategory, OR nomenclature code */
+export function searchPriceItems(
+  items: ReturnType<typeof getAllPriceItems>,
+  query: string
+): ReturnType<typeof getAllPriceItems> {
+  const q = query.toLowerCase().trim();
+  return items.filter(
+    (item) =>
+      item.name.toLowerCase().includes(q) ||
+      item.categoryTitle.toLowerCase().includes(q) ||
+      item.subcategoryTitle.toLowerCase().includes(q) ||
+      (item.code && item.code.toLowerCase().includes(q)) ||
+      (item.nomenclatureName && item.nomenclatureName.toLowerCase().includes(q))
+  );
+}
+
 /** Total number of price items */
 export function getTotalPriceCount(): number {
   return priceCategories.reduce((total, cat) =>
