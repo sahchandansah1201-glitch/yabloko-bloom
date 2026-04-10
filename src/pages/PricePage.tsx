@@ -20,7 +20,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getClinicSchema, getBreadcrumbSchema } from "@/lib/schema";
 import {
