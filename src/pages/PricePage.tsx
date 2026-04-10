@@ -458,7 +458,7 @@ function PriceRow({
                 {doctorLabel}
               </Link>
             )}
-            {item.serviceSlug && (
+            {item.serviceSlug && getServiceBySlug(item.serviceSlug) && (
               <Link
                 to={`/services/${item.serviceSlug}`}
                 className="inline-flex items-center gap-1 text-[10px] text-muted-foreground hover:text-primary"
