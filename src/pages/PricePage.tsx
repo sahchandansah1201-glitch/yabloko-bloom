@@ -398,9 +398,20 @@ function extractDoctorSlug(item: PriceItem): string | null {
   return null;
 }
 
-function extractDoctorLabel(name: string): string | null {
-  const match = name.match(/\(([^)]*(?:А\.Х\.|М\.О\.|В\.С\.|С\.А\.)[^)]*)\)/);
-  return match ? match[1].trim() : null;
+const DOCTOR_LABEL_MAP: Record<string, string> = {
+  allam: "Аллам А.Х.",
+  pavlyuk: "Павлюк М.О.",
+  gracheva: "Грачева В.С.",
+  raykova: "Райкова С.А.",
+  kovalev: "Ковалев И.П.",
+  medvedkova: "Медведкова Н.А.",
+};
+
+function extractDoctorLabel(name: string, slug: string | null): string | null {
+  const match = name.match(/\(([^)]*(?:А\.Х\.|М\.О\.|В\.С\.|С\.А\.|И\.П\.|Н\.А\.)[^)]*)\)/);
+  if (match) return match[1].trim();
+  if (slug && DOCTOR_LABEL_MAP[slug]) return DOCTOR_LABEL_MAP[slug];
+  return null;
 }
 
 /* ── Price Row ── */
@@ -415,7 +426,7 @@ function PriceRow({
   badge?: string;
 }) {
   const doctorSlug = extractDoctorSlug(item);
-  const doctorLabel = extractDoctorLabel(item.name);
+  const doctorLabel = extractDoctorLabel(item.name, doctorSlug);
   const hasVariablePrice = item.variablePriceReason || item.price.startsWith("от ");
   const variableReason = item.variablePriceReason || "Стоимость зависит от объёма процедуры и индивидуальных показаний";
 
