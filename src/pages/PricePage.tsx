@@ -431,7 +431,7 @@ function PriceRow({
             <Collapsible>
               <CollapsibleTrigger className="text-[11px] text-muted-foreground/60 hover:text-primary transition-colors flex items-center gap-1 mt-0.5">
                 <Info className="h-3 w-3" />
-                <span>Номенклатура 804н</span>
+                <span>Полное медицинское название</span>
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <p className="text-[11px] text-muted-foreground mt-1 pl-4 border-l-2 border-primary/20">
