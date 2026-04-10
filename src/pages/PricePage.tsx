@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useCallback, forwardRef } from "react";
+import { getServiceBySlug } from "@/data/servicesData";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Calendar, ChevronDown, Info, HelpCircle, User } from "lucide-react";
