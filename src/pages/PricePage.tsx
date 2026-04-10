@@ -419,13 +419,15 @@ function PriceRow({
     <Card className="px-4 py-3 hover:shadow-sm hover:border-primary/20 transition-all">
       <div className="flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          {/* Code + nomenclature inline */}
-          {(item.code || item.nomenclatureName) && (
-            <p className="text-[10px] font-mono text-muted-foreground/70 tracking-wide leading-snug">
+          {/* Marketing name — primary visual anchor */}
+          <p className="text-sm md:text-[15px] font-semibold text-foreground leading-snug">{item.name}</p>
+
+          {/* Code + nomenclature — secondary info */}
+          {(item.code || (item.nomenclatureName && item.nomenclatureName !== item.name)) && (
+            <p className="text-[10px] font-mono text-muted-foreground/50 tracking-wide leading-snug mt-0.5">
               {item.code}{item.code && item.nomenclatureName && item.nomenclatureName !== item.name ? ' — ' : ''}{item.nomenclatureName && item.nomenclatureName !== item.name ? item.nomenclatureName : ''}
             </p>
           )}
-          <p className="text-sm font-medium text-foreground leading-snug">{item.name}</p>
 
           {/* Category badge in search + Doctor link */}
           <div className="flex items-center gap-2 mt-1 flex-wrap">
