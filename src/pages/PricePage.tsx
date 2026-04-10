@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useCallback, forwardRef } from "react";
+import { getServiceBySlug } from "@/data/servicesData";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Calendar, ChevronDown, Info, HelpCircle, User } from "lucide-react";
@@ -458,7 +459,7 @@ function PriceRow({
                 {doctorLabel}
               </Link>
             )}
-            {item.serviceSlug && (
+            {item.serviceSlug && getServiceBySlug(item.serviceSlug) && (
               <Link
                 to={`/services/${item.serviceSlug}`}
                 className="inline-flex items-center gap-1 text-[10px] text-muted-foreground hover:text-primary"
