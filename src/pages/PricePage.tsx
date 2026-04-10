@@ -426,7 +426,7 @@ function PriceRow({
   badge?: string;
 }) {
   const doctorSlug = extractDoctorSlug(item);
-  const doctorLabel = extractDoctorLabel(item.name);
+  const doctorLabel = extractDoctorLabel(item.name, doctorSlug);
   const hasVariablePrice = item.variablePriceReason || item.price.startsWith("от ");
   const variableReason = item.variablePriceReason || "Стоимость зависит от объёма процедуры и индивидуальных показаний";
 
