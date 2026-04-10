@@ -8,8 +8,16 @@ export interface PriceItem {
   price: string;
   /** medical code e.g. B01.008.001 */
   code?: string;
+  /** full nomenclature name per Order 804n */
+  nomenclatureName?: string;
   /** high-intent = show booking button */
   bookable?: boolean;
+  /** doctor slug for cross-linking */
+  doctorSlug?: string;
+  /** service page slug for cross-linking */
+  serviceSlug?: string;
+  /** explanation for variable/from-price */
+  variablePriceReason?: string;
 }
 
 export interface PriceSubcategory {
