@@ -86,11 +86,11 @@ export function Header({ onBookingClick }: HeaderProps) {
         {/* Right side - Contact info & CTA */}
         <div className="hidden lg:flex items-center shrink-0" style={{ gap: 'clamp(0.75rem, 1.5vw, 1.5rem)' }}>
           {/* Address */}
-          <div className="flex items-center gap-1.5 text-[clamp(0.75rem,0.85vw,0.875rem)] text-muted-foreground whitespace-nowrap">
+          <Link to="/contacts" className="flex items-center gap-1.5 text-[clamp(0.75rem,0.85vw,0.875rem)] text-muted-foreground whitespace-nowrap hover:text-primary transition-colors">
             <MapPin className="h-4 w-4 text-primary shrink-0" />
             <span className="hidden xl:inline">Краснодар, ул. 70-летия Октября, 1/2</span>
             <span className="xl:hidden">Краснодар</span>
-          </div>
+          </Link>
 
           {/* Phone */}
           <a 
@@ -161,10 +161,10 @@ export function Header({ onBookingClick }: HeaderProps) {
             })}
             
             <hr className="my-2 border-border" />
-            <div className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
+            <Link to="/contacts" className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
               <MapPin className="h-4 w-4 text-primary" />
               <span>Краснодар, ул. 70-летия Октября, 1/2</span>
-            </div>
+            </Link>
             <a 
               href="tel:+79184128585" 
               className="flex items-center gap-2 rounded-lg px-4 py-3 font-medium text-foreground/80 transition-colors hover:bg-secondary"
