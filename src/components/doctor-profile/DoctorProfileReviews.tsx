@@ -1,0 +1,88 @@
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import type { DoctorReview } from "@/data/doctorProfiles";
+
+const sourceColors: Record<string, string> = {
+  "ПроДокторов": "bg-primary/10 text-primary",
+  "Яндекс": "bg-amber-100 text-amber-700",
+  "2ГИС": "bg-emerald-100 text-emerald-700",
+};
+
+function ReviewCard({ review, index }: { review: DoctorReview; index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="h-full"
+    >
+      <Card className="h-full flex flex-col hover:shadow-md transition-shadow">
+        <CardContent className="p-5 flex flex-col flex-1">
+          <div className="flex gap-0.5 mb-3">
+            {Array.from({ length: review.rating }).map((_, j) => (
+              <Star key={j} className="h-4 w-4 fill-amber-400 text-amber-400" />
+            ))}
+          </div>
+          <p className="text-sm leading-relaxed text-foreground flex-1">«{review.text}»</p>
+          <div className="mt-4 flex items-center justify-between">
+            <p className="text-xs font-medium text-muted-foreground">{review.author}</p>
+            <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${sourceColors[review.source] || "bg-muted text-muted-foreground"}`}>
+              {review.source}
+            </span>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
+
+interface Props {
+  reviews: DoctorReview[];
+}
+
+export function DoctorProfileReviews({ reviews }: Props) {
+  const isMobile = useIsMobile();
+
+  return (
+    <section className="py-12 md:py-16">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl mb-8 text-center">
+            Отзывы пациентов
+          </h2>
+
+          {isMobile ? (
+            <Carousel opts={{ align: "start", loop: true }} className="w-full">
+              <CarouselContent className="-ml-3">
+                {reviews.map((review, i) => (
+                  <CarouselItem key={i} className="pl-3 basis-[85%]">
+                    <ReviewCard review={review} index={i} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              {reviews.map((review, i) => (
+                <ReviewCard key={i} review={review} index={i} />
+              ))}
+            </div>
+          )}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

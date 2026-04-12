@@ -1,5 +1,12 @@
 import { doctorPhotos } from "@/assets/doctors";
 
+export interface DoctorReview {
+  text: string;
+  author: string;
+  source: string;
+  rating: number;
+}
+
 export interface DoctorProfileData {
   quote?: string;
   quoteAuthor?: string;
@@ -11,6 +18,7 @@ export interface DoctorProfileData {
   faq?: { question: string; answer: string }[];
   education?: string;
   accreditation?: { title: string; validUntil?: string }[];
+  reviews?: DoctorReview[];
 }
 
 const profileData: Record<string, DoctorProfileData> = {
