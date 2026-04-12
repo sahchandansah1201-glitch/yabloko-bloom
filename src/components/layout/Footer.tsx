@@ -89,7 +89,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>г. Краснодар, ул. 70-летия Октября, 1/2</span>
+                <Link to="/contacts" className="hover:text-primary transition-colors">г. Краснодар, ул. 70-летия Октября, 1/2</Link>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
