@@ -11,6 +11,7 @@ import { DoctorProfileEmpathy } from "@/components/doctor-profile/DoctorProfileE
 import { DoctorProfileServices } from "@/components/doctor-profile/DoctorProfileServices";
 import { DoctorProfileEducation } from "@/components/doctor-profile/DoctorProfileEducation";
 import { DoctorProfileFAQ } from "@/components/doctor-profile/DoctorProfileFAQ";
+import { DoctorProfileReviews } from "@/components/doctor-profile/DoctorProfileReviews";
 import { DoctorProfileBookingForm } from "@/components/doctor-profile/DoctorProfileBookingForm";
 import { DoctorStickyBar } from "@/components/doctor-profile/DoctorStickyBar";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -114,6 +115,9 @@ export default function DoctorPage() {
           )}
           {profileData.faq && profileData.faq.length > 0 && (
             <DoctorProfileFAQ faq={profileData.faq} />
+          )}
+          {profileData.reviews && profileData.reviews.length > 0 && (
+            <DoctorProfileReviews reviews={profileData.reviews} />
           )}
           <DoctorProfileBookingForm doctorId={doctor.id} doctorName={doctor.name} />
         </main>
