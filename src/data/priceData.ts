@@ -1,6 +1,6 @@
 /**
  * Single Source of Truth — Прайс-лист клиники «Яблоко»
- * Extracted from "Прайс для печати.xlsx", актуален с 01.01.2026 г.
+ * Extracted from "Прайс для печати 22.01.2026.xlsx", актуален с 10.04.2026 г.
  */
 
 export interface PriceItem {
@@ -118,7 +118,7 @@ export const priceCategories: PriceCategory[] = [
         title: "Дополнительно",
         items: [
           { name: "Патолого-анатомическое исследование материала (1 шт)", price: "3 200 ₽", code: "А08.30.014", nomenclatureName: "Патолого-анатомическое исследование биопсийного (операционного) материала опухолей мягких тканей" },
-          { name: "Местная анестезия", price: "700 ₽", code: "B01.003.004.005" },
+          { name: "Местная анестезия", price: "700 ₽", code: "В01.003.004" },
         ],
       },
     ],
@@ -616,7 +616,7 @@ export const priceCategories: PriceCategory[] = [
           { name: "Общий массаж (до 120 кг), 60 мин", price: "2 500 ₽", code: "A21.01.001", nomenclatureName: "Общий массаж медицинский", serviceSlug: "massazh" },
           { name: "Общий массаж (более 120 кг), 60 мин", price: "2 800 ₽", code: "A21.01.001", nomenclatureName: "Общий массаж медицинский", serviceSlug: "massazh" },
           { name: "Массаж спины (до 120 кг)", price: "1 000 ₽", code: "А21.03.007", nomenclatureName: "Массаж спины медицинский", serviceSlug: "massazh" },
-          { name: "Массаж спины (более 120 кг)", price: "1 250 ₽", code: "A21.01.003", nomenclatureName: "Массаж спины медицинский", serviceSlug: "massazh" },
+          { name: "Массаж спины (более 120 кг)", price: "1 250 ₽", code: "A21.01.007", nomenclatureName: "Массаж спины медицинский", serviceSlug: "massazh" },
           { name: "Массаж шеи + воротниковая область (15 мин)", price: "700 ₽", code: "A21.01.003.001", nomenclatureName: "Массаж шеи медицинский + массаж воротниковой области", serviceSlug: "massazh" },
           { name: "Массаж рук (обе)", price: "800 ₽", code: "A21.01.004", nomenclatureName: "Массаж верхней конечности медицинский", serviceSlug: "massazh" },
           { name: "Массаж руки (одна)", price: "400 ₽", code: "A21.01.004", nomenclatureName: "Массаж верхней конечности медицинский", serviceSlug: "massazh" },
@@ -646,7 +646,7 @@ export const priceCategories: PriceCategory[] = [
           { name: "Приём врача-диетолога + биоимпедансометрия (повторный)", price: "7 000 ₽", code: "B01.013.002, A05.30.014", nomenclatureName: "Приём (осмотр, консультация) врача-диетолога повторный + Определение процентного соотношения воды, мышечной и жировой ткани с помощью биоимпедансометра", bookable: true, doctorSlug: "medvedkova", serviceSlug: "dietolog" },
           { name: "Биоимпедансометрия", price: "2 700 ₽", code: "A05.30.014", nomenclatureName: "Определение процентного соотношения воды, мышечной и жировой ткани с помощью биоимпедансометра", doctorSlug: "medvedkova", serviceSlug: "dietolog" },
           { name: "Биоимпедансометрия + приём врача-диетолога первичный", price: "5 000 ₽", code: "A05.30.014, B01.013.001", nomenclatureName: "Определение процентного соотношения воды, мышечной и жировой ткани с помощью биоимпедансометра + Приём (осмотр, консультация) врача-диетолога первичный (по результатам обследования)", bookable: true, doctorSlug: "medvedkova", serviceSlug: "dietolog" },
-          { name: "Генетический тест «Диетология» + консультация", price: "22 900 ₽", code: "B03.019, A01.30.013", nomenclatureName: "Лабораторная генетика (генетический тест: панель «Диетология») + Сбор анамнеза и жалоб при генетическом консультировании", doctorSlug: "medvedkova", serviceSlug: "dietolog" },
+          
           { name: "Программа индивидуальной диетотерапии", price: "19 000 ₽", code: "B01.013.002", nomenclatureName: "Приём (осмотр, консультация) врача-диетолога повторный (программа индивидуальной диетотерапии)", doctorSlug: "medvedkova", serviceSlug: "dietolog" },
           { name: "Программа похудения «Соло»", price: "28 000 ₽", code: "B01.013.001, B01.013.002", nomenclatureName: "Приём (осмотр, консультация) врача-диетолога первичный, повторный (программа похудения «Соло»)", doctorSlug: "medvedkova", serviceSlug: "dietolog" },
           { name: "Программа похудения «Дуэт»", price: "40 000 ₽", code: "B01.013.001, B01.013.002", nomenclatureName: "Приём (осмотр, консультация) врача-диетолога первичный, повторный (программа похудения «Дуэт»)", doctorSlug: "medvedkova", serviceSlug: "dietolog" },
@@ -692,44 +692,6 @@ export const priceCategories: PriceCategory[] = [
         items: [
           { name: "Приём врача-невролога первичный", price: "2 500 ₽", code: "B01.023.001", nomenclatureName: "Приём (осмотр, консультация) врача-невролога первичный", bookable: true, serviceSlug: "nevrolog" },
           { name: "Приём врача-невролога повторный", price: "2 500 ₽", code: "B01.023.002", nomenclatureName: "Приём (осмотр, консультация) врача-невролога повторный", bookable: true, serviceSlug: "nevrolog" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "genetics",
-    title: "Генетические панели",
-    subcategories: [
-      {
-        title: "Генетическое тестирование",
-        items: [
-          { name: "Базовый генетический тест «Косметология» (45 генов)", price: "15 800 ₽", code: "B03.019", nomenclatureName: "Лабораторная генетика", serviceSlug: "geneticheskoe-testirovanie" },
-          { name: "Панель «Трихология» (24 гена)", price: "13 700 ₽", code: "B03.019", nomenclatureName: "Лабораторная генетика", serviceSlug: "geneticheskoe-testirovanie" },
-          { name: "Панель «Диетология» (48 генов)", price: "17 900 ₽", code: "B03.019", nomenclatureName: "Лабораторная генетика", serviceSlug: "geneticheskoe-testirovanie" },
-          { name: "Панель «Активное долголетие» (62 гена)", price: "17 900 ₽", code: "B03.019", nomenclatureName: "Лабораторная генетика", serviceSlug: "geneticheskoe-testirovanie" },
-          { name: "Консультация врача по результатам тестирования", price: "5 000 ₽", code: "A01.30.013", nomenclatureName: "Сбор анамнеза и жалоб при генетическом консультировании (консультация врача по результатам генетического тестирования)", bookable: true, serviceSlug: "geneticheskoe-testirovanie" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "household",
-    title: "Бытовые услуги",
-    subcategories: [
-      {
-        title: "Дополнительные услуги",
-        items: [
-          { name: "Уход за кожей рук (парафинотерапия, массаж, крем)", price: "650 ₽" },
-          { name: "Уход за кожей рук (доп. к процедуре)", price: "350 ₽" },
-          { name: "Уход за кожей вокруг глаз (увлажнение)", price: "1 100 ₽" },
-          { name: "Уход за кожей вокруг глаз (доп. к процедуре)", price: "650 ₽" },
-          { name: "Альгинатная маска", price: "1 100 ₽" },
-          { name: "Альгинатная маска (доп. к процедуре)", price: "750 ₽" },
-          { name: "Скраб тела (по типу кожи)", price: "1 600 ₽" },
-          { name: "Обёртывание тела", price: "1 600 ₽" },
-          { name: "Антигравитационная маска", price: "2 000 ₽" },
-          { name: "Интенсивный уход: энзимный пилинг, маска, сыворотка, крем", price: "2 400 ₽" },
-          { name: "Биомеханический массаж лица (БМС)", price: "2 700 ₽" },
         ],
       },
     ],
