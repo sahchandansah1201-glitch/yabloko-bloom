@@ -100,7 +100,10 @@ export default function DoctorPavlyuk() {
           <EmpathyBlock />
           <ExpertiseServices />
           <EducationTimeline />
-          <DoctorBeforeAfter />
+          <DoctorBeforeAfter cases={[
+            { title: "Лечение акне", sessions: "Курс 6 процедур" },
+            { title: "Anti-Age терапия", sessions: "Курс 4 процедуры" },
+          ]} doctorName="Павлюк Мария Олеговна" />
           <DoctorReviews />
           <DoctorFAQ />
           <InlineBookingForm />
