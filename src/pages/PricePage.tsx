@@ -2,7 +2,7 @@ import { useState, useMemo, useRef, useCallback, forwardRef } from "react";
 import { getServiceBySlug } from "@/data/servicesData";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Calendar, ChevronDown, Info, HelpCircle, User } from "lucide-react";
+import { Search, Calendar, ChevronDown, HelpCircle, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -434,8 +434,18 @@ function PriceRow({
     <Card className="px-4 py-3 hover:shadow-sm hover:border-primary/20 transition-all">
       <div className="flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          {/* Marketing name — primary visual anchor */}
-          <p className="text-sm md:text-[15px] font-semibold text-foreground leading-snug">{item.name}</p>
+          {/* Marketing name — primary visual anchor, linked if service page exists */}
+          {item.serviceSlug && getServiceBySlug(item.serviceSlug) ? (
+            <Link
+              to={`/services/${item.serviceSlug}`}
+              className="text-sm md:text-[15px] font-semibold text-foreground leading-snug hover:text-primary transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {item.name}
+            </Link>
+          ) : (
+            <p className="text-sm md:text-[15px] font-semibold text-foreground leading-snug">{item.name}</p>
+          )}
 
           {/* Code + nomenclature — secondary info */}
           {(item.code || (item.nomenclatureName && item.nomenclatureName !== item.name)) && (
@@ -459,16 +469,6 @@ function PriceRow({
               >
                 <User className="h-3 w-3" />
                 {doctorLabel}
-              </Link>
-            )}
-            {item.serviceSlug && getServiceBySlug(item.serviceSlug) && (
-              <Link
-                to={`/services/${item.serviceSlug}`}
-                className="inline-flex items-center gap-1 text-[10px] text-muted-foreground hover:text-primary"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Info className="h-3 w-3" />
-                Подробнее
               </Link>
             )}
           </div>
