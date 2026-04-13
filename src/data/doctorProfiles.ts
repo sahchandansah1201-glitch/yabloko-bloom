@@ -7,6 +7,11 @@ export interface DoctorReview {
   rating: number;
 }
 
+export interface BeforeAfterCase {
+  title: string;
+  sessions?: string;
+}
+
 export interface DoctorProfileData {
   quote?: string;
   quoteAuthor?: string;
@@ -19,6 +24,7 @@ export interface DoctorProfileData {
   education?: string;
   accreditation?: { title: string; validUntil?: string }[];
   reviews?: DoctorReview[];
+  beforeAfter?: BeforeAfterCase[];
 }
 
 const profileData: Record<string, DoctorProfileData> = {
