@@ -6,13 +6,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import type { BeforeAfterCase } from "@/data/doctorProfiles";
 
-const cases = [
-  { title: "Лечение акне", caption: "Результат лечения. Врач: Павлюк М.О." },
-  { title: "Anti-Age терапия", caption: "Результат лечения. Врач: Павлюк М.О." },
-];
+interface DoctorBeforeAfterProps {
+  cases: BeforeAfterCase[];
+  doctorName: string;
+}
 
-export function DoctorBeforeAfter() {
+export function DoctorBeforeAfter({ cases, doctorName }: DoctorBeforeAfterProps) {
+  if (!cases.length) return null;
+
+  const shortName = doctorName.split(" ").slice(0, 2).join(" ");
+
   return (
     <section className="py-12 md:py-16 bg-secondary/30">
       <div className="container">
@@ -52,10 +57,10 @@ export function DoctorBeforeAfter() {
                       </div>
                     </div>
                     <p className="mt-4 text-center text-sm text-muted-foreground italic">
-                      {c.caption}
+                      {c.title}{c.sessions ? ` · ${c.sessions}` : ""}
                     </p>
                     <p className="text-center text-xs text-muted-foreground/60 mt-1">
-                      Работа врача Павлюк М.О.
+                      Работа врача {shortName}
                     </p>
                   </div>
                 </CarouselItem>

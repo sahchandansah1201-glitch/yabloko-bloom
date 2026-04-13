@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { BookingWizard } from "@/components/booking/BookingWizard";
 import { useDoctor } from "@/hooks/useDoctor";
 import { getDoctorProfileData, getDoctorPhoto } from "@/data/doctorProfiles";
+import { DoctorBeforeAfter } from "@/components/doctor-profile/DoctorBeforeAfter";
 import { DoctorProfileHero } from "@/components/doctor-profile/DoctorProfileHero";
 import { DoctorProfileEmpathy } from "@/components/doctor-profile/DoctorProfileEmpathy";
 import { DoctorProfileServices } from "@/components/doctor-profile/DoctorProfileServices";
@@ -115,6 +116,9 @@ export default function DoctorPage() {
           )}
           {profileData.faq && profileData.faq.length > 0 && (
             <DoctorProfileFAQ faq={profileData.faq} />
+          )}
+          {profileData.beforeAfter && profileData.beforeAfter.length > 0 && (
+            <DoctorBeforeAfter cases={profileData.beforeAfter} doctorName={doctor.name} />
           )}
           {profileData.reviews && profileData.reviews.length > 0 && (
             <DoctorProfileReviews reviews={profileData.reviews} />
