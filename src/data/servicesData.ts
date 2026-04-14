@@ -144,7 +144,7 @@ export const servicePages: Record<string, ServicePageData> = {
     slug: "consult-cosm",
     title: "Приём врача-косметолога",
     subtitle: "Персональная программа омоложения и устранения эстетических проблем кожи. Индивидуальный план процедур на первом визите.",
-    duration: "30–60 мин",
+    duration: "30 мин.",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
     description: [

@@ -40,7 +40,7 @@ export function ServiceHero({ title, subtitle, duration, recovery, onBook }: Ser
               </Badge>
               <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
                 <BadgeCheck className="h-3.5 w-3.5" />
-                Сертифицировано
+                Аккредитованный врач
               </Badge>
             </div>
             <div className="flex flex-wrap items-center gap-4">
