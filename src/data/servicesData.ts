@@ -186,6 +186,7 @@ export const servicePages: Record<string, ServicePageData> = {
       { name: "Дерматоскопия", price: "1 700 ₽" },
       { name: "Приём врача-диетолога первичный", price: "4 300 ₽" },
       { name: "Приём врача-диетолога повторный", price: "4 300 ₽" },
+      { name: "Приём нутрициолога (первичный)", price: "5 300 ₽" },
     ],
     crossSell: [
       { slug: "biorevitalizatsiya", title: "Биоревитализация" },
