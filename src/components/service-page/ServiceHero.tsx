@@ -36,11 +36,11 @@ export function ServiceHero({ title, subtitle, duration, recovery, certification
             <div className="flex flex-wrap gap-3 mb-8">
               <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
                 <Clock className="h-3.5 w-3.5" />
-                {duration}
+                {durationLabel}
               </Badge>
               <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
                 <ShieldCheck className="h-3.5 w-3.5" />
-                {recovery}
+                {recoveryLabel}
               </Badge>
               <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
                 <BadgeCheck className="h-3.5 w-3.5" />
