@@ -122,6 +122,7 @@ export interface ServicePageData {
   subtitle: string;
   duration: string;
   recovery: string;
+  certification?: string;
   heroImage?: string;
   doctorSlugs: string[];
   description: string[];
