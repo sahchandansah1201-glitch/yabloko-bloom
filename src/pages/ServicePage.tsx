@@ -17,6 +17,7 @@ import { ServicePatientStories } from "@/components/service-page/ServicePatientS
 import { ServiceCrossSell } from "@/components/service-page/ServiceCrossSell";
 import { ServiceFAQ } from "@/components/service-page/ServiceFAQ";
 import { ServiceMobileCTA } from "@/components/service-page/ServiceMobileCTA";
+import { ServiceStickyTitle } from "@/components/service-page/ServiceStickyTitle";
 import { InlineContactBlock } from "@/components/messenger/InlineContactBlock";
 import { RecentInsights } from "@/components/advice/RecentInsights";
 import { getServicePageData, getServiceBySlug, serviceCategories } from "@/data/servicesData";
@@ -101,6 +102,7 @@ export default function ServicePage() {
       </Helmet>
 
       <Header onBookingClick={openChoice} />
+      <ServiceStickyTitle title={title} />
 
       <main className="min-h-screen bg-background pt-6 md:pt-8 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
