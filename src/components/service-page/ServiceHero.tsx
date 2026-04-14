@@ -8,10 +8,11 @@ interface ServiceHeroProps {
   subtitle: string;
   duration: string;
   recovery: string;
+  certification?: string;
   onBook: () => void;
 }
 
-export function ServiceHero({ title, subtitle, duration, recovery, onBook }: ServiceHeroProps) {
+export function ServiceHero({ title, subtitle, duration, recovery, certification = "Сертифицировано", onBook }: ServiceHeroProps) {
   return (
     <section className="py-12 md:py-20">
       <div className="container">
@@ -40,7 +41,7 @@ export function ServiceHero({ title, subtitle, duration, recovery, onBook }: Ser
               </Badge>
               <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
                 <BadgeCheck className="h-3.5 w-3.5" />
-                Аккредитованный врач
+                {certification}
               </Badge>
             </div>
             <div className="flex flex-wrap items-center gap-4">

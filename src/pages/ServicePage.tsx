@@ -45,6 +45,7 @@ export default function ServicePage() {
   const subtitle = pageData?.subtitle ?? "";
   const duration = pageData?.duration ?? "30 мин";
   const recovery = pageData?.recovery ?? "Без реабилитации";
+  const certification = pageData?.certification;
   const pricing = pageData?.pricing ?? [];
   const faq = pageData?.faq ?? [];
   const crossSell = pageData?.crossSell ?? [];
@@ -114,6 +115,7 @@ export default function ServicePage() {
           subtitle={subtitle}
           duration={duration}
           recovery={recovery}
+          certification={certification}
           onBook={openChoice}
         />
 

@@ -122,6 +122,7 @@ export interface ServicePageData {
   subtitle: string;
   duration: string;
   recovery: string;
+  certification?: string;
   heroImage?: string;
   doctorSlugs: string[];
   description: string[];
@@ -146,6 +147,7 @@ export const servicePages: Record<string, ServicePageData> = {
     subtitle: "Персональная программа омоложения и устранения эстетических проблем кожи. Индивидуальный план процедур на первом визите.",
     duration: "30 мин.",
     recovery: "Без реабилитации",
+    certification: "Аккредитованный врач",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
     description: [
       "Задача врача-косметолога — составить эффективную, результативную программу устранения эстетических проблем и омоложения. На консультации врач проведёт осмотр, оценит состояние кожи и предложит индивидуальный план процедур.",
