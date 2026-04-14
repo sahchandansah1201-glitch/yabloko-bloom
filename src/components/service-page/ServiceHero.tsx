@@ -13,6 +13,9 @@ interface ServiceHeroProps {
 }
 
 export function ServiceHero({ title, subtitle, duration, recovery, certification = "Сертифицировано", onBook }: ServiceHeroProps) {
+  const isConsultation = certification === "Аккредитованный врач";
+  const durationLabel = isConsultation ? duration : `${duration} длительность`;
+  const recoveryLabel = isConsultation ? recovery : `${recovery} реабилитация`;
   return (
     <section className="py-12 md:py-20">
       <div className="container">
