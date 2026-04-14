@@ -184,6 +184,8 @@ export const servicePages: Record<string, ServicePageData> = {
       { name: "Приём врача-косметолога повторный", price: "1 600 ₽" },
       { name: "Приём врача-косметолога повторный (Павлюк М.О.)", price: "2 200 ₽" },
       { name: "Дерматоскопия", price: "1 700 ₽" },
+      { name: "Приём врача-диетолога первичный", price: "4 300 ₽" },
+      { name: "Приём врача-диетолога повторный", price: "4 300 ₽" },
     ],
     crossSell: [
       { slug: "biorevitalizatsiya", title: "Биоревитализация" },
