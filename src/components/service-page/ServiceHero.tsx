@@ -12,7 +12,7 @@ interface ServiceHeroProps {
   onBook: () => void;
 }
 
-export function ServiceHero({ title, subtitle, duration, recovery, certification = "Сертифицировано", onBook }: ServiceHeroProps) {
+export function ServiceHero({ title, subtitle, duration, recovery, certification = "Зарегистрировано в качестве медицинского изделия", onBook }: ServiceHeroProps) {
   const isConsultation = certification === "Аккредитованный врач";
   const normalizedDuration = duration.endsWith('.') ? duration : `${duration}.`;
   const durationLabel = isConsultation ? duration : `${normalizedDuration} длительность`;
