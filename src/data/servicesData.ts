@@ -2379,7 +2379,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "plazmoterapiya-golovy": {
     slug: "plazmoterapiya-golovy",
     title: "Плазмотерапия для кожи головы",
-    subtitle: "Плазмотерапия волос в Краснодаре от 5 000 ₽: собственная плазма пациента — самый физиологичный способ остановить выпадение и стимулировать рост.",
+    subtitle: "Плазмотерапия волос в Краснодаре: собственная плазма пациента — самый физиологичный способ остановить выпадение и стимулировать рост.",
     duration: "40–60 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam"],
