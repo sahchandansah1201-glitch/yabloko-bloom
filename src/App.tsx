@@ -11,20 +11,41 @@ import { AccessibilityProvider } from "@/contexts/AccessibilityContext";
 // Eager-load the landing page for instant first paint
 import Index from "./pages/Index";
 
+// Retry dynamic imports once, then hard-reload to recover from stale chunk hashes after a deploy
+const lazyWithReload = <T extends { default: React.ComponentType<any> }>(
+  factory: () => Promise<T>
+) =>
+  lazy(() =>
+    factory().catch((err) => {
+      const key = "__chunk_reloaded__";
+      if (typeof window !== "undefined" && !sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, "1");
+        window.location.reload();
+        return new Promise<T>(() => {});
+      }
+      throw err;
+    })
+  );
+
 // Lazy-load all other pages
-const Specialists = lazy(() => import("./pages/Specialists"));
-const DoctorPavlyuk = lazy(() => import("./pages/DoctorPavlyuk"));
-const DoctorPage = lazy(() => import("./pages/DoctorPage"));
-const ServicesHub = lazy(() => import("./pages/ServicesHub"));
-const ServicePage = lazy(() => import("./pages/ServicePage"));
-const AdviceHub = lazy(() => import("./pages/AdviceHub"));
-const ArticlePage = lazy(() => import("./pages/ArticlePage"));
-const Contacts = lazy(() => import("./pages/Contacts"));
-const About = lazy(() => import("./pages/About"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const PricePage = lazy(() => import("./pages/PricePage"));
-const PatientsInfo = lazy(() => import("./pages/PatientsInfo"));
+const Specialists = lazyWithReload(() => import("./pages/Specialists"));
+const DoctorPavlyuk = lazyWithReload(() => import("./pages/DoctorPavlyuk"));
+const DoctorPage = lazyWithReload(() => import("./pages/DoctorPage"));
+const ServicesHub = lazyWithReload(() => import("./pages/ServicesHub"));
+const ServicePage = lazyWithReload(() => import("./pages/ServicePage"));
+const AdviceHub = lazyWithReload(() => import("./pages/AdviceHub"));
+const ArticlePage = lazyWithReload(() => import("./pages/ArticlePage"));
+const Contacts = lazyWithReload(() => import("./pages/Contacts"));
+const About = lazyWithReload(() => import("./pages/About"));
+const NotFound = lazyWithReload(() => import("./pages/NotFound"));
+const Privacy = lazyWithReload(() => import("./pages/Privacy"));
+const PricePage = lazyWithReload(() => import("./pages/PricePage"));
+const PatientsInfo = lazyWithReload(() => import("./pages/PatientsInfo"));
+
+// Clear the reload guard after a successful load
+if (typeof window !== "undefined") {
+  window.addEventListener("load", () => sessionStorage.removeItem("__chunk_reloaded__"));
+}
 
 const queryClient = new QueryClient({
   defaultOptions: {
