@@ -1163,7 +1163,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "korrektsiya-figury": {
     slug: "korrektsiya-figury",
     title: "Коррекция фигуры",
-    subtitle: "Коррекция фигуры в Краснодаре от 2 700 ₽: RF-липолиз, термолифтинг, липолитики. Убираем «упрямые» зоны без операции и реабилитации.",
+    subtitle: "Коррекция фигуры в Краснодаре: RF-липолиз, термолифтинг, липолитики. Убираем «упрямые» зоны без операции и реабилитации.",
     duration: "40–60 мин",
     recovery: "1–3 дня",
     doctorSlugs: ["pavlyuk", "allam", "gracheva"],
