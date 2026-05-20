@@ -554,7 +554,7 @@ export const servicePages: Record<string, ServicePageData> = {
   pilingi: {
     slug: "pilingi",
     title: "Пилинги",
-    subtitle: "Химические пилинги в Краснодаре от 900 ₽: миндальный, салициловый, ТСА, ретиноловый, Джесснера. Курс 3–4 процедуры — кожа ровная и сияющая.",
+    subtitle: "Химические пилинги в Краснодаре: миндальный, салициловый, ТСА, ретиноловый, Джесснера. Курс 3–4 процедуры — кожа ровная и сияющая.",
     duration: "30–40 мин",
     recovery: "2–7 дней",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
