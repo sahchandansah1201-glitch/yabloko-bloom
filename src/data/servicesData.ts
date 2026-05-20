@@ -3581,7 +3581,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "udalenie-gemangiom": {
     slug: "udalenie-gemangiom",
     title: "Удаление гемангиом",
-    subtitle: "Удаление гемангиом в Краснодаре методом электрокоагуляции от 1 600 ₽. Без кровотечения, под наблюдением дерматолога с онкологической настороженностью.",
+    subtitle: "Удаление гемангиом в Краснодаре методом электрокоагуляции. Без кровотечения, под наблюдением дерматолога с онкологической настороженностью.",
     duration: "15–30 мин",
     recovery: "5–10 дней",
     doctorSlugs: ["allam", "raykova", "gracheva"],
