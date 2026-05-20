@@ -492,7 +492,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "chistka-litsa": {
     slug: "chistka-litsa",
     title: "Чистка лица",
-    subtitle: "Чистка лица в Краснодаре от 3 200 ₽: атравматичная, ультразвуковая, комбинированная, лечебная при акне. Кожа без чёрных точек и воспалений.",
+    subtitle: "Чистка лица в Краснодаре: атравматичная, ультразвуковая, комбинированная, лечебная при акне. Кожа без чёрных точек и воспалений.",
     duration: "60–90 мин",
     recovery: "1–2 дня",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
