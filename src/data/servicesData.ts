@@ -811,7 +811,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "infrakrasnyj-termolifting": {
     slug: "infrakrasnyj-termolifting",
     title: "Инфракрасный термолифтинг",
-    subtitle: "ИК-термолифтинг лица и тела в Краснодаре на платформе SharpLight (Израиль). От 3 200 ₽, видимый лифтинг после первой процедуры, без реабилитации.",
+    subtitle: "ИК-термолифтинг лица и тела в Краснодаре на платформе SharpLight (Израиль). Видимый лифтинг после первой процедуры, без реабилитации.",
     duration: "30–45 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam"],
