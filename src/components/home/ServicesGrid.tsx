@@ -5,6 +5,7 @@ import cosmetologyImg from "@/assets/services/cosmetology-circle.jpg";
 import dermatologyImg from "@/assets/services/dermatology-circle.jpg";
 import trichologyImg from "@/assets/services/trichology-circle.jpg";
 import healthImg from "@/assets/services/health-circle.jpg";
+import removalsImg from "@/assets/services/removals-circle.jpg";
 
 interface ServicesGridProps {
   onBookingClick: () => void;
@@ -27,9 +28,9 @@ const services = [
     title: "Дерматология",
     problems: [
       "Акне (угревая болезнь)",
-      "Папилломы и бородавки",
-      "Проверка и удаление родинок",
-      "Купероз (сосуды)",
+      "Розацеа и купероз",
+      "Пигментация",
+      "Грибок ногтей",
     ],
     image: dermatologyImg,
   },
@@ -45,13 +46,24 @@ const services = [
     image: trichologyImg,
   },
   {
-    id: "health",
-    title: "Здоровье и Тело",
+    id: "removals",
+    title: "Удаление родинок, папиллом, бородавок",
     problems: [
-      "Остеопатией",
-      "Неврологией",
-      "Диетологией",
-      "Массажем",
+      "Родинки и невусы",
+      "Папилломы и бородавки",
+      "Гемангиомы и ангиомы",
+      "Ксантелазмы и моллюски",
+    ],
+    image: removalsImg,
+  },
+  {
+    id: "health",
+    title: "Здоровье",
+    problems: [
+      "Остеопатия",
+      "Неврология",
+      "Диетология и нутрициология",
+      "Массаж",
     ],
     image: healthImg,
   },
