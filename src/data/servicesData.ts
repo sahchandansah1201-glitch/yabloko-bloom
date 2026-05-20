@@ -3466,7 +3466,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "udalenie-angiom": {
     slug: "udalenie-angiom",
     title: "Удаление ангиом",
-    subtitle: "Удаление красных точек и звёздчатых ангиом в Краснодаре от 1 200 ₽ за см. Электрокоагуляция за 10 минут, без рубцов и реабилитации.",
+    subtitle: "Удаление красных точек и звёздчатых ангиом в Краснодаре. Электрокоагуляция за 10 минут, без рубцов и реабилитации.",
     duration: "10–20 мин",
     recovery: "3–7 дней",
     doctorSlugs: ["allam", "raykova", "gracheva"],
