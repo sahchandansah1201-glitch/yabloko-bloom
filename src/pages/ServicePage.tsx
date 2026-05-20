@@ -107,7 +107,7 @@ export default function ServicePage() {
 
       <main className="min-h-screen bg-background pt-6 md:pt-8 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
-          <ServiceBreadcrumbs categoryLabel={category?.label} serviceTitle={title} />
+          <ServiceBreadcrumbs categoryLabel={category?.label} categoryId={category?.id} serviceTitle={title} />
         </div>
 
         <ServiceHero
