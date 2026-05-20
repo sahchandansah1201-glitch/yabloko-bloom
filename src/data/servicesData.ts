@@ -1090,7 +1090,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "lazernaya-epilyatsiya": {
     slug: "lazernaya-epilyatsiya",
     title: "Лазерная эпиляция",
-    subtitle: "Лазерная эпиляция в Краснодаре на SharpLight (Израиль) от 850 ₽: гладкая кожа на годы, без вросших волос и раздражения. Курс 6–10 процедур.",
+    subtitle: "Лазерная эпиляция в Краснодаре на SharpLight (Израиль): гладкая кожа на годы, без вросших волос и раздражения. Курс 6–10 процедур.",
     duration: "15–60 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam", "gracheva"],
