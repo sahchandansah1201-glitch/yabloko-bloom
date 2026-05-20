@@ -354,7 +354,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "konturnaya-plastika": {
     slug: "konturnaya-plastika",
     title: "Контурная пластика",
-    subtitle: "Контурная пластика лица и губ в Краснодаре от 4 750 ₽: Belotero, Stylage, Radiesse, ART FILLER. Естественный результат на 8–18 месяцев.",
+    subtitle: "Контурная пластика лица и губ в Краснодаре: Belotero, Stylage, Radiesse, ART FILLER. Естественный результат на 8–18 месяцев.",
     duration: "30–60 мин",
     recovery: "1–3 дня",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
