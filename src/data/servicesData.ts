@@ -2561,7 +2561,7 @@ export const servicePages: Record<string, ServicePageData> = {
   nevrolog: {
     slug: "nevrolog",
     title: "Невролог",
-    subtitle: "Приём невролога в Краснодаре — 2 500 ₽. Лечим головную боль, мигрень, бессонницу, боли в спине. Врач невролог + остеопат.",
+    subtitle: "Приём невролога в Краснодаре. Лечим головную боль, мигрень, бессонницу, боли в спине. Врач невролог + остеопат.",
     duration: "30–60 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["kovalev"],
