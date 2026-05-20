@@ -2899,7 +2899,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "kholodnaya-plazma": {
     slug: "kholodnaya-plazma",
     title: "Холодная плазма (импульсный спрей)",
-    subtitle: "Холодная плазма в Краснодаре: безоперационная блефаропластика от 4 200 ₽, шлифовка рубцов и растяжек, лечение акне. Без скальпеля и швов.",
+    subtitle: "Холодная плазма в Краснодаре: безоперационная блефаропластика, шлифовка рубцов и растяжек, лечение акне. Без скальпеля и швов.",
     duration: "20–60 мин",
     recovery: "3–7 дней",
     doctorSlugs: ["pavlyuk", "allam", "gracheva"],
