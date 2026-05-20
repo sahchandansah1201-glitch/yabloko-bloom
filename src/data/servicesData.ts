@@ -2211,7 +2211,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "mezoterapiya-golovy": {
     slug: "mezoterapiya-golovy",
     title: "Мезотерапия кожи головы",
-    subtitle: "Мезотерапия головы в Краснодаре от 3 300 ₽: коктейль витаминов и аминокислот точно к корню волоса. Курс 8–10 процедур — заметная плотность.",
+    subtitle: "Мезотерапия головы в Краснодаре: коктейль витаминов и аминокислот точно к корню волоса. Курс 8–10 процедур — заметная плотность.",
     duration: "30 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam"],
