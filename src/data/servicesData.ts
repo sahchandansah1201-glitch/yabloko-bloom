@@ -1840,7 +1840,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "udalenie-borodavok": {
     slug: "udalenie-borodavok",
     title: "Удаление бородавок",
-    subtitle: "Удаление бородавок в Краснодаре: электрокоагуляция или криодеструкция от 1 200 ₽, плюс схема против ВПЧ, чтобы не возвращались.",
+    subtitle: "Удаление бородавок в Краснодаре: электрокоагуляция или криодеструкция плюс схема против ВПЧ, чтобы не возвращались.",
     duration: "15–30 мин",
     recovery: "5–10 дней",
     doctorSlugs: ["pavlyuk", "allam", "raykova"],
