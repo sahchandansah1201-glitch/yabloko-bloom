@@ -1007,7 +1007,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "fotoомоlozhenie": {
     slug: "fotoомоlozhenie",
     title: "Фотоомоложение",
-    subtitle: "Фотоомоложение IPL в Краснодаре на SharpLight: убирает пигментные пятна, сосуды и купероз за 3–5 сеансов. Безопасно, без боли. От 4 300 ₽ за зону.",
+    subtitle: "Фотоомоложение IPL в Краснодаре на SharpLight: убирает пигментные пятна, сосуды и купероз за 3–5 сеансов. Безопасно, без боли.",
     duration: "30–45 мин",
     recovery: "1–3 дня",
     doctorSlugs: ["pavlyuk", "allam"],
