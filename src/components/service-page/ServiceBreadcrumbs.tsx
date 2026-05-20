@@ -26,9 +26,9 @@ export function ServiceBreadcrumbs({ categoryLabel, categoryId, serviceTitle }: 
         type="button"
         onClick={handleBack}
         aria-label="Назад к списку услуг"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors min-h-[44px] -my-2 pr-2 shrink-0"
+        className="group inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary/10 px-4 py-2 text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground hover:shadow-primary transition-all min-h-[44px] shrink-0"
       >
-        <ArrowLeft className="h-4 w-4" />
+        <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
         <span>Назад</span>
       </button>
       <div className="h-4 w-px bg-border shrink-0" />
