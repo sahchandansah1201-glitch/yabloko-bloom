@@ -1909,7 +1909,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "udalenie-sosudov": {
     slug: "udalenie-sosudov",
     title: "Удаление сосудов на лице",
-    subtitle: "Удаление сосудов и купероза в Краснодаре от 85 ₽/вспышка: SharpLight Rapid DPC. Крылья носа — 3 200 ₽, всё лицо — 9 500 ₽. Без боли и рубцов.",
+    subtitle: "Удаление сосудов и купероза в Краснодаре на SharpLight Rapid DPC: крылья носа, всё лицо, отдельные звёздочки. Без боли и рубцов.",
     duration: "20–30 мин",
     recovery: "1–3 дня",
     doctorSlugs: ["pavlyuk", "allam"],
