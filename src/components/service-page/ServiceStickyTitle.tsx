@@ -50,10 +50,10 @@ export function ServiceStickyTitle({ title, categoryId }: ServiceStickyTitleProp
               type="button"
               onClick={handleBack}
               aria-label="Назад к списку услуг"
-              className="flex items-center gap-1.5 shrink-0 text-sm font-medium text-muted-foreground hover:text-primary transition-colors min-h-[44px] -my-2 pr-2"
+              className="group inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary/10 px-4 py-2 text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground hover:shadow-primary transition-all min-h-[40px] shrink-0"
             >
-              <ArrowLeft className="h-4 w-4" />
-              <span className="hidden sm:inline">Назад</span>
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
+              <span>Назад</span>
             </button>
             <div className="h-5 w-px bg-border shrink-0" />
             <p className="font-heading text-sm md:text-base font-semibold text-foreground truncate">
