@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Sparkles, Stethoscope, Scissors, HeartPulse } from "lucide-react";
+import { Search, Sparkles, Stethoscope, Scissors, HeartPulse, Eraser } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBookingBar } from "@/components/layout/MobileBookingBar";
@@ -17,6 +17,7 @@ import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 const categoryIcons: Record<string, React.ReactNode> = {
   cosmetology: <Sparkles className="h-4 w-4" />,
   dermatology: <Stethoscope className="h-4 w-4" />,
+  removals: <Eraser className="h-4 w-4" />,
   trichology: <Scissors className="h-4 w-4" />,
   health: <HeartPulse className="h-4 w-4" />,
 };
