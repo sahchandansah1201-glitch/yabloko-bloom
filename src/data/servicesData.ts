@@ -691,7 +691,7 @@ export const servicePages: Record<string, ServicePageData> = {
   kolostoterapiya: {
     slug: "kolostoterapiya",
     title: "Колостотерапия (Коллагенотерапия)",
-    subtitle: "Коллост и Сферогель в Краснодаре от 10 600 ₽: инъекции природного коллагена. Восстановление каркаса кожи, эффект — до 1,5 лет.",
+    subtitle: "Коллост и Сферогель в Краснодаре: инъекции природного коллагена. Восстановление каркаса кожи, эффект — до 1,5 лет.",
     duration: "40–60 мин",
     recovery: "1–3 дня",
     doctorSlugs: ["pavlyuk", "allam"],
