@@ -197,7 +197,7 @@ export const servicePages: Record<string, ServicePageData> = {
   biorevitalizatsiya: {
     slug: "biorevitalizatsiya",
     title: "Биоревитализация",
-    subtitle: "Биоревитализация в Краснодаре от 3 150 ₽: курс 3–5 процедур, гиалуроновая кислота от Profhilo, Jalupro, NCTF135. Результат — после первого сеанса.",
+    subtitle: "Биоревитализация в Краснодаре: курс 3–5 процедур, гиалуроновая кислота Profhilo, Jalupro, NCTF135. Результат — после первого сеанса.",
     duration: "30–40 мин",
     recovery: "1–2 дня",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
