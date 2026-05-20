@@ -625,7 +625,7 @@ export const servicePages: Record<string, ServicePageData> = {
   plazmoterapiya: {
     slug: "plazmoterapiya",
     title: "Плазмотерапия",
-    subtitle: "PRP-плазмотерапия лица в Краснодаре от 5 500 ₽: инъекции собственной обогащённой плазмы. Без аллергии, эффект — на курсе 3–5 процедур.",
+    subtitle: "PRP-плазмотерапия лица в Краснодаре: инъекции собственной обогащённой плазмы. Без аллергии, эффект — на курсе 3–5 процедур.",
     duration: "40–60 мин",
     recovery: "1–2 дня",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
