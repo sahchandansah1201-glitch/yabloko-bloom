@@ -2498,7 +2498,7 @@ export const servicePages: Record<string, ServicePageData> = {
   dietolog: {
     slug: "dietolog",
     title: "Диетолог",
-    subtitle: "Диетолог в Краснодаре от 4 300 ₽: программа «Худеем сытно», 7 меню, ежедневный контроль. Без голода.",
+    subtitle: "Диетолог в Краснодаре: программа «Худеем сытно», 7 меню, ежедневный контроль. Без голода.",
     duration: "40–60 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["medvedkova"],
