@@ -2839,7 +2839,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "smas-lifting": {
     slug: "smas-lifting",
     title: "СМАС-лифтинг Ultraformer",
-    subtitle: "СМАС-лифтинг Ultraformer в Краснодаре от 130 ₽/линия: безоперационная подтяжка овала лица и шеи, эффект до 1,5–2 лет. Замена хирургическому фейслифтингу.",
+    subtitle: "СМАС-лифтинг Ultraformer в Краснодаре: безоперационная подтяжка овала лица и шеи, эффект до 1,5–2 лет. Замена хирургическому фейслифтингу.",
     duration: "40–90 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam"],
