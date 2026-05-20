@@ -103,7 +103,7 @@ export default function ServicePage() {
       </Helmet>
 
       <Header onBookingClick={openChoice} />
-      <ServiceStickyTitle title={title} />
+      <ServiceStickyTitle title={title} categoryId={category?.id} />
 
       <main className="min-h-screen bg-background pt-6 md:pt-8 scroll-mt-32 pb-20 md:pb-0">
         <div className="container">
