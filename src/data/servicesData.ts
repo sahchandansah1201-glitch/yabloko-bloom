@@ -292,7 +292,7 @@ export const servicePages: Record<string, ServicePageData> = {
   botoks: {
     slug: "botoks",
     title: "Ботокс / Диспорт (Ботулинотерапия)",
-    subtitle: "Ботокс и Диспорт в Краснодаре от 147 ₽/ед. у сертифицированных врачей. Морщины уходят через 3–7 дней, эффект — до 8 месяцев.",
+    subtitle: "Ботокс и Диспорт в Краснодаре у сертифицированных врачей. Морщины уходят через 3–7 дней, эффект — до 8 месяцев.",
     duration: "15–20 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["pavlyuk", "allam", "igithanyan", "gracheva"],
