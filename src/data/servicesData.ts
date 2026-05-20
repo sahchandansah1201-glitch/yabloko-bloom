@@ -2615,7 +2615,7 @@ export const servicePages: Record<string, ServicePageData> = {
   nutritsiolog: {
     slug: "nutritsiolog",
     title: "Нутрициолог",
-    subtitle: "Консультация нутрициолога — 5 300 ₽. Подбор витаминов под анализы, рацион для энергии, чистой кожи и волос в Краснодаре.",
+    subtitle: "Консультация нутрициолога в Краснодаре. Подбор витаминов под анализы, рацион для энергии, чистой кожи и волос.",
     duration: "50–60 мин",
     recovery: "Без реабилитации",
     doctorSlugs: ["medvedkova"],
