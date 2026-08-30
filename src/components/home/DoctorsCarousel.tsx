@@ -132,9 +132,28 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden xl:flex -left-12" />
-          <CarouselNext className="hidden xl:flex -right-12" />
+          <CarouselPrevious
+            aria-label="Предыдущий врач"
+            className="hidden xl:flex -left-12"
+          />
+          <CarouselNext
+            aria-label="Следующий врач"
+            className="hidden xl:flex -right-12"
+          />
+
+          {/* Кнопки листания для узких экранов — отдельная строка под каруселью */}
+          <div className="mt-6 flex items-center justify-center gap-4 xl:hidden">
+            <CarouselPrevious
+              aria-label="Предыдущий врач"
+              className="static translate-y-0 h-12 w-12"
+            />
+            <CarouselNext
+              aria-label="Следующий врач"
+              className="static translate-y-0 h-12 w-12"
+            />
+          </div>
         </Carousel>
+
 
         {/* CTA */}
         <div className="text-center mt-10">
