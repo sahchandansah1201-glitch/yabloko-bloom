@@ -16,7 +16,8 @@ export function ServiceHero({ title, subtitle, duration, recovery, certification
   const isConsultation = certification === "Аккредитованный врач";
   const normalizedDuration = duration.endsWith('.') ? duration : `${duration}.`;
   const durationLabel = isConsultation ? duration : `${normalizedDuration} длительность`;
-  const recoveryLabel = isConsultation ? recovery : `${recovery} реабилитация`;
+  const mentionsRecovery = /реабилитац/i.test(recovery);
+  const recoveryLabel = isConsultation || mentionsRecovery ? recovery : `Реабилитация: ${recovery}`;
   return (
     <section className="py-12 md:py-20">
       <div className="container">
