@@ -104,7 +104,7 @@ export function FloatingActionButton() {
       >
         {/* Ping ring */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full border-2 border-primary animate-ping opacity-40 pointer-events-none" />
+          <span className="absolute inset-[25%] rounded-full border-2 border-primary animate-ping opacity-40 pointer-events-none" />
         )}
         <span className="relative flex items-center justify-center">
           {isOpen ? (

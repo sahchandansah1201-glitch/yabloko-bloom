@@ -132,8 +132,8 @@ export function DoctorsCarousel({ onBookingClick }: DoctorsCarouselProps) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12" />
-          <CarouselNext className="hidden md:flex -right-12" />
+          <CarouselPrevious className="hidden xl:flex -left-12" />
+          <CarouselNext className="hidden xl:flex -right-12" />
         </Carousel>
 
         {/* CTA */}
