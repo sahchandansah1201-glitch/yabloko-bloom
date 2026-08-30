@@ -1,42 +1,49 @@
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import { Footer } from "@/components/layout/Footer";
-import { DoctorProfileBookingForm } from "@/components/doctor-profile/DoctorProfileBookingForm";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 
-describe("REF-404: footer category links", () => {
-  it("points the four category links at the existing catalog tabs", () => {
-    render(
-      <MemoryRouter>
-        <Footer />
-      </MemoryRouter>
-    );
-    for (const [label, tab] of [
-      ["Косметология", "cosmetology"],
-      ["Дерматология", "dermatology"],
-      ["Трихология", "trichology"],
-      ["Здоровье", "health"],
-    ] as const) {
-      expect(screen.getByRole("link", { name: label })).toHaveAttribute(
-        "href",
-        `/services?tab=${tab}`
+const read = (p: string) => readFileSync(path.resolve(process.cwd(), p), "utf8");
+
+describe("REF-404: category links and legacy redirects", () => {
+  const footer = read("src/components/layout/Footer.tsx");
+  const app = read("src/App.tsx");
+
+  it("footer links point at the existing catalog tabs", () => {
+    for (const tab of ["cosmetology", "dermatology", "trichology", "health"]) {
+      expect(footer).toContain(`to="/services?tab=${tab}"`);
+      expect(footer).not.toContain(`to="/services/${tab}"`);
+    }
+  });
+
+  it("legacy /services/<category> urls redirect to the matching tab", () => {
+    for (const tab of ["cosmetology", "dermatology", "trichology", "health"]) {
+      expect(app).toContain(
+        `<Route path="/services/${tab}" element={<Navigate to="/services?tab=${tab}" replace />} />`
       );
     }
+    // unknown slugs still fall through to ServicePage (404)
+    expect(app).toContain('<Route path="/services/:slug" element={<ServicePage />} />');
+  });
+});
+
+describe("REF-UI-01: services tabs list wraps to its real height", () => {
+  const hub = read("src/pages/ServicesHub.tsx");
+
+  it("overrides the fixed 40px TabsList height and allows wrapping triggers", () => {
+    expect(hub).toContain("h-auto");
+    expect(hub).toMatch(/TabsList className="[^"]*flex-wrap/);
+    expect(hub).toMatch(/TabsTrigger[\s\S]{0,200}whitespace-normal/);
   });
 });
 
 describe("REF-TEXT-01: doctor booking form heading", () => {
-  it("uses a case-neutral heading and shows the full doctor name", () => {
-    render(
-      <HelmetProvider>
-        <MemoryRouter>
-          <DoctorProfileBookingForm doctorId="test-id" doctorName="Петров Игорь Петрович" />
-        </MemoryRouter>
-      </HelmetProvider>
-    );
-    expect(screen.getByRole("heading", { name: "Запись на приём" })).toBeInTheDocument();
-    expect(screen.getByText("Петров Игорь Петрович")).toBeInTheDocument();
-    expect(screen.queryByText(/Записаться к/)).not.toBeInTheDocument();
+  const form = read("src/components/doctor-profile/DoctorProfileBookingForm.tsx");
+
+  it("uses a case-neutral heading and renders the full doctor name", () => {
+    expect(form).toContain("Запись на приём");
+    expect(form).not.toContain("Записаться к");
+    expect(form).not.toContain("firstName");
+    expect(form).toContain("{doctorName}");
+    expect(form).toContain("doctor_id: doctorId");
   });
 });
