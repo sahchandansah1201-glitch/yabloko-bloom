@@ -32,7 +32,7 @@ export function ServiceBreadcrumbs({ categoryLabel, categoryId, serviceTitle }: 
         <span>Назад</span>
       </button>
       <div className="h-4 w-px bg-border shrink-0" />
-      <nav className="flex items-center gap-1 text-sm text-muted-foreground flex-wrap">
+      <nav className="flex min-w-0 flex-1 flex-wrap items-center gap-1 text-sm text-muted-foreground">
         <Link to="/" className="hover:text-primary transition-colors">Главная</Link>
         <ChevronRight className="h-3 w-3 shrink-0" />
         <Link to={backTarget} className="hover:text-primary transition-colors">Услуги</Link>
@@ -43,7 +43,7 @@ export function ServiceBreadcrumbs({ categoryLabel, categoryId, serviceTitle }: 
           </>
         )}
         <ChevronRight className="h-3 w-3 shrink-0" />
-        <span className="text-foreground font-medium truncate">{serviceTitle}</span>
+        <span className="min-w-0 max-w-full break-words text-foreground font-medium">{serviceTitle}</span>
       </nav>
     </div>
   );

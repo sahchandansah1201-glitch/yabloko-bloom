@@ -44,10 +44,10 @@ export function Footer() {
           <div>
             <h4 className="mb-4 font-heading font-semibold">Услуги</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/services/cosmetology" className="hover:text-primary">Косметология</Link></li>
-              <li><Link to="/services/dermatology" className="hover:text-primary">Дерматология</Link></li>
-              <li><Link to="/services/trichology" className="hover:text-primary">Трихология</Link></li>
-              <li><Link to="/services/health" className="hover:text-primary">Здоровье</Link></li>
+              <li><Link to="/services?tab=cosmetology" className="hover:text-primary">Косметология</Link></li>
+              <li><Link to="/services?tab=dermatology" className="hover:text-primary">Дерматология</Link></li>
+              <li><Link to="/services?tab=trichology" className="hover:text-primary">Трихология</Link></li>
+              <li><Link to="/services?tab=health" className="hover:text-primary">Здоровье</Link></li>
             </ul>
           </div>
 

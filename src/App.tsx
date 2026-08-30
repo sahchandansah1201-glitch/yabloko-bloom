@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { FloatingActionButton } from "@/components/messenger/FloatingActionButton";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AccessibilityProvider } from "@/contexts/AccessibilityContext";
 
@@ -69,6 +69,10 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/specialists" element={<Specialists />} />
                 <Route path="/services" element={<ServicesHub />} />
+                <Route path="/services/cosmetology" element={<Navigate to="/services?tab=cosmetology" replace />} />
+                <Route path="/services/dermatology" element={<Navigate to="/services?tab=dermatology" replace />} />
+                <Route path="/services/trichology" element={<Navigate to="/services?tab=trichology" replace />} />
+                <Route path="/services/health" element={<Navigate to="/services?tab=health" replace />} />
                 <Route path="/services/:slug" element={<ServicePage />} />
                 <Route path="/advice" element={<AdviceHub />} />
                 <Route path="/advice/:slug" element={<ArticlePage />} />

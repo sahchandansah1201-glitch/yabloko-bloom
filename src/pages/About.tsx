@@ -277,7 +277,7 @@ const About = () => {
 
                   <div className="mt-8">
                     <Link to="/specialists">
-                      <Button variant="outline" size="lg" className="gap-2">
+                      <Button variant="outline" size="lg" className="h-auto max-w-full gap-2 whitespace-normal py-3 text-left">
                         Познакомиться со всеми врачами
                         <ArrowRight className="h-4 w-4" />
                       </Button>
@@ -361,7 +361,7 @@ const About = () => {
                 <Button
                   variant="hero"
                   size="xl"
-                  className="gap-2"
+                  className="h-auto max-w-full gap-2 whitespace-normal py-4 text-left"
                   onClick={openChoice}
                 >
                   <Calendar className="h-5 w-5" />

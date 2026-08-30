@@ -29,7 +29,6 @@ interface Props {
 export function DoctorProfileBookingForm({ doctorId, doctorName }: Props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const firstName = doctorName.split(" ").slice(1, 3).join(" ");
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -84,8 +83,9 @@ export function DoctorProfileBookingForm({ doctorId, doctorName }: Props) {
           <div className="text-center mb-6">
             <Calendar className="mx-auto mb-3 h-8 w-8 text-primary" />
             <h2 className="font-heading text-xl font-bold text-foreground">
-              Записаться к {firstName || doctorName}
+              Запись на приём
             </h2>
+            <p className="text-sm font-medium text-foreground mt-1">{doctorName}</p>
             <p className="text-sm text-muted-foreground mt-1">Оставьте заявку — мы перезвоним</p>
           </div>
 

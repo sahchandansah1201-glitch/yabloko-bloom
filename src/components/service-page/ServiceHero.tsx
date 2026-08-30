@@ -27,23 +27,23 @@ export function ServiceHero({ title, subtitle, duration, recovery, certification
           className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
         >
           {/* Left — Value Proposition */}
-          <div>
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <div className="min-w-0">
+            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 break-words hyphens-auto">
               {title}
             </h1>
             {subtitle && (
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{subtitle}</p>
             )}
             <div className="flex flex-wrap gap-3 mb-8">
-              <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
+              <Badge variant="secondary" className="max-w-full whitespace-normal break-words text-left gap-1.5 px-3 py-1.5 text-sm">
                 <Clock className="h-3.5 w-3.5" />
                 {durationLabel}
               </Badge>
-              <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
+              <Badge variant="secondary" className="max-w-full whitespace-normal break-words text-left gap-1.5 px-3 py-1.5 text-sm">
                 <ShieldCheck className="h-3.5 w-3.5" />
                 {recoveryLabel}
               </Badge>
-              <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm">
+              <Badge variant="secondary" className="max-w-full whitespace-normal break-words text-left gap-1.5 px-3 py-1.5 text-sm">
                 <BadgeCheck className="h-3.5 w-3.5" />
                 {certification}
               </Badge>

@@ -116,13 +116,13 @@ const Contacts = () => {
 
       {/* Mobile quick actions */}
       <div className="md:hidden sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border px-4 py-3 flex gap-2">
-        <Button asChild variant="hero" size="lg" className="flex-1 gap-2">
+        <Button asChild variant="hero" size="lg" className="min-w-0 flex-1 gap-2 px-3">
           <a href={`tel:${PHONE}`}>
             <Phone className="h-5 w-5" />
             Позвонить
           </a>
         </Button>
-        <Button asChild size="lg" className="flex-1 gap-2 bg-[hsl(142_69%_58%)] hover:bg-[hsl(142_69%_48%)] text-white">
+        <Button asChild size="lg" className="min-w-0 flex-1 gap-2 px-3 bg-[hsl(142_69%_58%)] hover:bg-[hsl(142_69%_48%)] text-white">
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon className="h-5 w-5" />
             WhatsApp
@@ -273,8 +273,8 @@ const Contacts = () => {
           {/* RIGHT — Visual (2 cols) */}
           <motion.div
             className="lg:col-span-2 space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
