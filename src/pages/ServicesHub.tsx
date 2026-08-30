@@ -147,12 +147,12 @@ export default function ServicesHub() {
                   exit={{ opacity: 0 }}
                 >
                   <Tabs value={activeTab} onValueChange={handleTabChange}>
-                    <TabsList className="w-full justify-start gap-1 bg-transparent p-0 mb-8 flex-wrap">
+                    <TabsList className="flex h-auto w-full flex-wrap items-stretch justify-start gap-2 bg-transparent p-0 mb-8">
                       {serviceCategories.map((cat) => (
                         <TabsTrigger
                           key={cat.id}
                           value={cat.id}
-                          className="gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary transition-all"
+                          className="max-w-full shrink whitespace-normal text-left gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium leading-snug data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary transition-all"
                         >
                           {categoryIcons[cat.id]}
                           {cat.label}
