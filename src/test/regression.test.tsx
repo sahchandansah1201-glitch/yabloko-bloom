@@ -47,3 +47,36 @@ describe("REF-TEXT-01: doctor booking form heading", () => {
     expect(form).toContain("doctor_id: doctorId");
   });
 });
+
+describe("REF-TEXT-02: service hero recovery label", () => {
+  const hero = read("src/components/service-page/ServiceHero.tsx");
+
+  it("does not append 'реабилитация' when the value already mentions it", () => {
+    expect(hero).not.toContain("${recovery} реабилитация");
+    expect(hero).toContain("/реабилитац/i.test(recovery)");
+    expect(hero).toContain("`Реабилитация: ${recovery}`");
+  });
+});
+
+describe("REF-TEXT-03: 404 page is localized", () => {
+  const nf = read("src/pages/NotFound.tsx");
+
+  it("uses Russian copy and keeps the home link", () => {
+    expect(nf).toContain("Страница не найдена");
+    expect(nf).toContain("На главную");
+    expect(nf).not.toContain("Oops!");
+    expect(nf).not.toContain("Return to Home");
+    expect(nf).toContain('href="/"');
+  });
+});
+
+describe("REF-UI-02: doctors carousel controls are reachable at every width", () => {
+  const c = read("src/components/home/DoctorsCarousel.tsx");
+
+  it("renders a visible control row below the carousel on narrow screens", () => {
+    expect(c).toMatch(/xl:hidden[\s\S]{0,400}CarouselPrevious/);
+    expect(c).toContain('aria-label="Предыдущий врач"');
+    expect(c).toContain('aria-label="Следующий врач"');
+    expect(c).toContain("static translate-y-0");
+  });
+});
