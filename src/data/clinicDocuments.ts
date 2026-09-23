@@ -54,12 +54,6 @@ export const clinicDocuments: ClinicDocument[] = [
   { id: "doc-49", title: "ИДС фототерапия", href: "https://yaclinic.ru/wp-content/uploads/2023/09/ИДС-фототерапия.docx", format: "DOCX", category: "consents" },
   { id: "doc-50", title: "Инф. согласие коагуляция сосудов", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Инф.-согласие-коагуляция-сосудов.docx", format: "DOCX", category: "consents" },
   { id: "doc-51", title: "Информационное согласие УЛЬТРАФОРМЕР III", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Информационное-согласие-УЛЬТРАФОРМЕР-III.docx", format: "DOCX", category: "consents" },
-  { id: "doc-52", title: "", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Выписка-ИФНС-1-scaled.jpg", format: "JPG", category: "consents" },
-  { id: "doc-53", title: "", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Выписка-ИФНС-2-scaled.jpg", format: "JPG", category: "consents" },
-  { id: "doc-54", title: "", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Заключение-СЭС-1-scaled.jpg", format: "JPG", category: "consents" },
-  { id: "doc-55", title: "", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Заключение-СЭС-2-scaled.jpg", format: "JPG", category: "consents" },
-  { id: "doc-56", title: "", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Свидетельство-ИФНС-scaled.jpg", format: "JPG", category: "consents" },
-  { id: "doc-57", title: "", href: "https://yaclinic.ru/wp-content/uploads/2023/09/Адреса-и-телефона-контролирующих-организаций-scaled.jpg", format: "JPG", category: "consents" },
 ];
 
 export const quickDocumentIds = ["doc-1", "doc-5", "doc-6", "doc-13"];
