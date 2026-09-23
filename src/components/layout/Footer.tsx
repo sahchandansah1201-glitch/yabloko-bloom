@@ -67,6 +67,7 @@ export function Footer() {
             <h4 className="mb-4 font-heading font-semibold">Правовая информация</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/privacy" className="hover:text-primary">Политика обработки персональных данных</Link></li>
+              <li><Link to="/dokumenty" className="hover:text-primary">Документы клиники</Link></li>
               <li><Link to="/patients" className="hover:text-primary">Сведения о медицинской организации</Link></li>
               <li><Link to="/patients#authorities" className="hover:text-primary">Контролирующие органы</Link></li>
             </ul>

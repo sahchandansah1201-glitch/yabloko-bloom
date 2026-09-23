@@ -195,13 +195,13 @@ export default function DocumentsPage() {
       <Footer />
 
       <BookingChoiceModal
-        open={isChoiceOpen}
-        onOpenChange={setIsChoiceOpen}
-        onQuickBooking={() => { setIsChoiceOpen(false); setIsQuickOpen(true); }}
-        onFullBooking={() => { setIsChoiceOpen(false); setIsBookingOpen(true); }}
+        isOpen={isChoiceOpen}
+        onClose={() => setIsChoiceOpen(false)}
+        onQuickContact={() => setIsQuickOpen(true)}
+        onFullBooking={() => setIsBookingOpen(true)}
       />
-      <QuickBookingModal open={isQuickOpen} onOpenChange={setIsQuickOpen} />
-      <BookingWizard open={isBookingOpen} onOpenChange={setIsBookingOpen} />
+      <QuickBookingModal isOpen={isQuickOpen} onClose={() => setIsQuickOpen(false)} onBack={() => setIsChoiceOpen(true)} />
+      <BookingWizard isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} onBack={() => setIsChoiceOpen(true)} />
     </>
   );
 }

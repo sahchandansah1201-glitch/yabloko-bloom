@@ -40,6 +40,7 @@ const About = lazyWithReload(() => import("./pages/About"));
 const NotFound = lazyWithReload(() => import("./pages/NotFound"));
 const Privacy = lazyWithReload(() => import("./pages/Privacy"));
 const PricePage = lazyWithReload(() => import("./pages/PricePage"));
+const DocumentsPage = lazyWithReload(() => import("./pages/DocumentsPage"));
 const PatientsInfo = lazyWithReload(() => import("./pages/PatientsInfo"));
 
 // Clear the reload guard after a successful load
@@ -83,6 +84,7 @@ const App = () => (
                 <Route path="/price" element={<PricePage />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/patients" element={<PatientsInfo />} />
+                <Route path="/dokumenty" element={<DocumentsPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
