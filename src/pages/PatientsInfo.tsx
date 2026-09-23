@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FileText,
   Building2,
@@ -195,6 +196,13 @@ export default function PatientsInfo() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            <Link
+              to="/dokumenty"
+              className="mt-6 flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-6 py-4 font-medium text-primary hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <FileText className="h-5 w-5 shrink-0" />
+              Документы клиники
+            </Link>
           </div>
         </section>
       </main>
