@@ -103,3 +103,11 @@ describe("REF-DOC-DATE: unverified date is not shown on document pages", () => {
     expect(src).not.toMatch(/DATE_RE|MONTHS|blockText/);
   });
 });
+
+describe("REF-DOC-ROW: catalog rows use the title as the only link", () => {
+  it("has no 'Читать документ' button and uses a stretched link", () => {
+    const src = readFileSync(path.resolve(__dirname, "../pages/DocumentsPage.tsx"), "utf8");
+    expect(src).not.toContain("Читать документ");
+    expect(src).toContain("after:absolute after:inset-0");
+  });
+});

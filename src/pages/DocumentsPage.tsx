@@ -21,24 +21,20 @@ const filters: { id: Filter; label: string }[] = [
 
 function DocumentRow({ doc }: { doc: ClinicDocument }) {
   return (
-    <li className="flex flex-col gap-3 rounded-xl border border-border bg-card p-4 sm:flex-row sm:items-center">
-      <div className="flex min-w-0 flex-1 items-start gap-3">
-        <FileText className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-        <div className="min-w-0">
-          <p className="break-words text-sm font-medium text-foreground md:text-base">{doc.title}</p>
-          <span className="mt-1 inline-block rounded-md bg-secondary px-2 py-0.5 text-xs font-semibold text-muted-foreground">
-            {doc.format}
-          </span>
-        </div>
+    <li className="relative flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary hover:bg-primary/5 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
+      <FileText className="mt-0.5 h-5 w-5 shrink-0 self-start text-primary" aria-hidden="true" />
+      <div className="min-w-0 flex-1">
+        <Link
+          to={`/dokumenty/${doc.slug}`}
+          className="break-words text-sm font-medium text-foreground focus-visible:outline-none md:text-base after:absolute after:inset-0 after:rounded-xl after:content-['']"
+        >
+          {doc.title}
+        </Link>
+        <span className="mt-1 block w-fit rounded-md bg-secondary px-2 py-0.5 text-xs font-semibold text-muted-foreground">
+          {doc.format}
+        </span>
       </div>
-      <Link
-        to={`/dokumenty/${doc.slug}`}
-        className="inline-flex min-h-[44px] shrink-0 items-center justify-center gap-2 rounded-full border border-primary px-4 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-      >
-        Читать документ
-        <ChevronRight className="h-4 w-4" aria-hidden="true" />
-        <span className="sr-only">: {doc.title}</span>
-      </Link>
+      <ChevronRight className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
     </li>
   );
 }
