@@ -18,15 +18,6 @@ const categoryLabels: Record<DocumentCategory, string> = {
   consents: "Информированные согласия",
 };
 
-const MONTHS = "января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря";
-const DATE_RE = new RegExp(`(\\d{1,2}\\.\\d{1,2}\\.\\d{4})|(«?\\d{1,2}»?\\s+(?:${MONTHS})\\s+\\d{4})`, "i");
-
-function blockText(b: DocBlock): string {
-  if (b.type === "list") return b.items.join(" ");
-  if (b.type === "table") return b.rows.flat().join(" ");
-  return b.text;
-}
-
 const btnBase =
   "inline-flex min-h-[44px] max-w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-center whitespace-normal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
@@ -101,15 +92,6 @@ export default function DocumentDetailPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [doc?.id]);
 
-  const date = useMemo(() => {
-    if (!blocks) return null;
-    for (const b of blocks) {
-      const m = blockText(b).match(DATE_RE);
-      if (m) return m[0].replace(/[«»]/g, "");
-    }
-    return null;
-  }, [blocks]);
-
   const headings = useMemo(
     () => (blocks ?? []).map((b, i) => ({ b, i })).filter((x) => x.b.type === "heading"),
     [blocks]
@@ -173,7 +155,6 @@ export default function DocumentDetailPage() {
             <dl className="flex flex-wrap gap-2 text-sm">
               <div className="flex gap-1 rounded-md bg-secondary px-2 py-1"><dt className="text-muted-foreground">Категория:</dt><dd className="font-medium text-foreground">{categoryLabels[doc.category]}</dd></div>
               <div className="flex gap-1 rounded-md bg-secondary px-2 py-1"><dt className="text-muted-foreground">Формат оригинала:</dt><dd className="font-medium text-foreground">{doc.format}</dd></div>
-              {date && <div className="flex gap-1 rounded-md bg-secondary px-2 py-1"><dt className="text-muted-foreground">Дата в тексте:</dt><dd className="font-medium text-foreground">{date}</dd></div>}
             </dl>
           </div>
         </section>
