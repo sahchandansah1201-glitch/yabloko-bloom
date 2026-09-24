@@ -81,6 +81,17 @@ export function sitemapPlugin(): Plugin {
         urls.push(buildUrl(p, "monthly", 0.7, today));
       }
 
+      // Document pages (index only: non-consent with extracted text)
+      const docsContent = fs.readFileSync(path.join(srcDir, "clinicDocuments.ts"), "utf-8");
+      const docRegex = /id: "(doc-\d+)", slug: "([^"]+)"[^}]*category: "(\w+)"/g;
+      let dm: RegExpExecArray | null;
+      while ((dm = docRegex.exec(docsContent)) !== null) {
+        const textId = dm[1] === "doc-21" ? "doc-7" : dm[1];
+        if (dm[3] === "consents") continue;
+        if (!fs.existsSync(path.join(srcDir, "documentTexts", `${textId}.json`))) continue;
+        urls.push(buildUrl(`/dokumenty/${dm[2]}`, "yearly", 0.4, today));
+      }
+
       // Article pages
       for (const p of articlePaths) {
         urls.push(buildUrl(p, "yearly", 0.6, today));
