@@ -80,3 +80,18 @@ describe("REF-UI-02: doctors carousel controls are reachable at every width", ()
     expect(c).toContain("static translate-y-0");
   });
 });
+
+import { clinicDocuments as __docs } from "@/data/clinicDocuments";
+import { hasDocumentText } from "@/data/documentTexts";
+describe("document detail pages", () => {
+  it("has 51 unique slugs and extracted text for each", () => {
+    expect(__docs).toHaveLength(51);
+    expect(new Set(__docs.map((d) => d.slug)).size).toBe(51);
+    __docs.forEach((d) => {
+      expect(d.slug).toMatch(/^[a-z0-9-]+$/);
+      expect(d.href).toMatch(/^https:\/\/yaclinic\.ru\//);
+      expect(hasDocumentText(d.id)).toBe(true);
+    });
+    expect(__docs.filter((d) => d.category !== "consents")).toHaveLength(21);
+  });
+});
