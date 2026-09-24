@@ -27,6 +27,7 @@ interface RouteMeta {
   title: string;
   description: string;
   jsonLd?: object;
+  robots?: string;
 }
 
 function escapeHtml(str: string): string {
@@ -52,6 +53,7 @@ function buildHtml(
     <title>${titleEsc}</title>
     <meta name="description" content="${descEsc}" />
     <link rel="canonical" href="${canonical}" />
+    <meta name="robots" content="${meta.robots ?? "index,follow"}" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -254,6 +256,26 @@ function extractDoctors(content: string): RouteMeta[] {
   return results;
 }
 
+function extractDocuments(content: string, textsDir: string): RouteMeta[] {
+  const results: RouteMeta[] = [];
+  const regex = /id: "(doc-\d+)", slug: "([^"]+)", title: "([^"]+)"[^}]*category: "(\w+)"/g;
+  let m: RegExpExecArray | null;
+  while ((m = regex.exec(content)) !== null) {
+    const [, id, slug, title, category] = m;
+    const textId = id === "doc-21" ? "doc-7" : id;
+    const hasText = fs.existsSync(path.join(textsDir, `${textId}.json`));
+    const indexable = category !== "consents" && hasText;
+    const desc = `${title} — текстовая версия для ознакомления. ${CLINIC_NAME}, ${CITY_NOM}.`;
+    results.push({
+      path: `/dokumenty/${slug}`,
+      title: `${title.length > 70 ? title.slice(0, 67).trimEnd() + "…" : title} — ${CLINIC_NAME}`,
+      description: desc.length > 160 ? desc.slice(0, 157).trimEnd() + "…" : desc,
+      robots: indexable ? "index,follow" : "noindex,follow",
+    });
+  }
+  return results;
+}
+
 // ─── plugin ─────────────────────────────────────────────────────────
 export function prerenderMetaPlugin(): Plugin {
   return {
@@ -288,6 +310,10 @@ export function prerenderMetaPlugin(): Plugin {
         ...extractServices(servicesContent),
         ...extractArticles(articlesContent),
         ...extractDoctors(doctorsContent),
+        ...extractDocuments(
+          fs.readFileSync(path.join(srcDir, "clinicDocuments.ts"), "utf-8"),
+          path.join(srcDir, "documentTexts"),
+        ),
       ];
 
       let generated = 0;

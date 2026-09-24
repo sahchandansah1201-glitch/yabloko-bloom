@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ChevronRight, ExternalLink, FileText, Phone, Search, X, Star } from "lucide-react";
+import { ChevronRight, FileText, Phone, Search, X, Star } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BookingChoiceModal } from "@/components/conversion/BookingChoiceModal";
@@ -19,8 +19,6 @@ const filters: { id: Filter; label: string }[] = [
   { id: "consents", label: "Информированные согласия" },
 ];
 
-const linkProps = { target: "_blank", rel: "noopener noreferrer" } as const;
-
 function DocumentRow({ doc }: { doc: ClinicDocument }) {
   return (
     <li className="flex flex-col gap-3 rounded-xl border border-border bg-card p-4 sm:flex-row sm:items-center">
@@ -33,15 +31,14 @@ function DocumentRow({ doc }: { doc: ClinicDocument }) {
           </span>
         </div>
       </div>
-      <a
-        href={doc.href}
-        {...linkProps}
+      <Link
+        to={`/dokumenty/${doc.slug}`}
         className="inline-flex min-h-[44px] shrink-0 items-center justify-center gap-2 rounded-full border border-primary px-4 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
-        Открыть документ
-        <ExternalLink className="h-4 w-4" aria-hidden="true" />
-        <span className="sr-only">(откроется в новой вкладке)</span>
-      </a>
+        Читать документ
+        <ChevronRight className="h-4 w-4" aria-hidden="true" />
+        <span className="sr-only">: {doc.title}</span>
+      </Link>
     </li>
   );
 }
@@ -70,6 +67,7 @@ export default function DocumentsPage() {
           name="description"
           content="Документы клиники «Яблоко»: оферта, политика обработки персональных данных, положение о платных услугах, информация для пациентов и формы информированного согласия."
         />
+        <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://yabloko-clinic.ru/dokumenty" />
       </Helmet>
 
@@ -98,16 +96,14 @@ export default function DocumentsPage() {
             <ul className="grid gap-3 sm:grid-cols-2">
               {quick.map((d) => (
                 <li key={d.id}>
-                  <a
-                    href={d.href}
-                    {...linkProps}
+                  <Link
+                    to={`/dokumenty/${d.slug}`}
                     className="flex h-full min-h-[44px] items-start gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm font-medium text-foreground transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <Star className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
                     <span className="min-w-0 flex-1 break-words">{d.title}</span>
-                    <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                    <span className="sr-only">(откроется в новой вкладке)</span>
-                  </a>
+                    <ChevronRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                  </Link>
                 </li>
               ))}
             </ul>
