@@ -26,6 +26,8 @@ interface EquipmentDevice {
   image: string;
   argument: string;
   benefits: EquipmentBenefit[];
+  /** CSS object-position for the 1:1 media zone (default: center) */
+  imagePosition?: string;
 }
 
 const devices: EquipmentDevice[] = [
@@ -33,6 +35,8 @@ const devices: EquipmentDevice[] = [
     id: "sharplight",
     name: "SharpLight (Израиль)",
     image: sharplight,
+    // Design reference: keep both the SharpLight device and the treatment zone visible on narrow screens
+    imagePosition: "left center",
     argument: "Лазерная эпиляция и фотоомоложение мирового уровня.",
     benefits: [
       { icon: Thermometer, text: "Охлаждение до -10°C — без боли во время процедуры" },
@@ -138,6 +142,7 @@ function EquipmentCard({ device }: { device: EquipmentDevice }) {
           src={device.image}
           alt={device.name}
           className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          style={device.imagePosition ? { objectPosition: device.imagePosition } : undefined}
           loading="lazy"
         />
       </div>
