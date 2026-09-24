@@ -95,3 +95,11 @@ describe("document detail pages", () => {
     expect(__docs.filter((d) => d.category !== "consents")).toHaveLength(21);
   });
 });
+
+describe("REF-DOC-DATE: unverified date is not shown on document pages", () => {
+  it("DocumentDetailPage has no auto-detected date heuristic or 'Дата в тексте' label", () => {
+    const src = readFileSync(path.resolve(__dirname, "../pages/DocumentDetailPage.tsx"), "utf8");
+    expect(src).not.toContain("Дата в тексте");
+    expect(src).not.toMatch(/DATE_RE|MONTHS|blockText/);
+  });
+});
