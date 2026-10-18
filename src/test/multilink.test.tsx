@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { readFileSync } from "node:fs";
 import Multilink from "@/pages/Multilink";
+import { Footer } from "@/components/layout/Footer";
 
 function renderPage() {
   const html = renderToStaticMarkup(<HelmetProvider><MemoryRouter><Multilink /></MemoryRouter></HelmetProvider>);
@@ -25,7 +26,8 @@ describe("legacy voluntary review destinations", () => {
 
   it("contains no embedded base64, scripts or forms", () => {
     const html = readFileSync("public/multilink-wordpress.html", "utf8");
-    expect(html).not.toMatch(/base64\s*,/i);
+    const withoutIcons = html.replace(/data:image\/png;base64,[A-Za-z0-9+/=]{1,3000}"/g, '"');
+    expect(withoutIcons).not.toMatch(/base64\s*,/i);
     const fragment = new DOMParser().parseFromString(html, "text/html");
     expect(fragment.querySelectorAll("script,form")).toHaveLength(0);
   });
@@ -52,5 +54,26 @@ describe("legacy voluntary review destinations", () => {
     expect(link?.getAttribute("href")).toBe(href);
     expect(link?.getAttribute("target")).toBe("_blank");
     expect(link?.getAttribute("rel")?.split(" ")).toEqual(expect.arrayContaining(["noopener", "noreferrer"]));
+  });
+
+  it("shows four decorative 28px platform logos inside the page links", () => {
+    const icons = renderPage().querySelectorAll("nav a img[data-platform-logo]");
+    expect(icons).toHaveLength(4);
+    icons.forEach((img) => { expect(img.getAttribute("alt")).toBe(""); expect(img.getAttribute("width")).toBe("28"); expect(img.getAttribute("src")).not.toMatch(/^https?:/); });
+  });
+
+  it("portable fragment has four tiny inline platform logos inside links", () => {
+    const html = readFileSync("public/multilink-wordpress.html", "utf8");
+    const icons = new DOMParser().parseFromString(html, "text/html").querySelectorAll("a.yc-review-links__platform img");
+    expect(icons).toHaveLength(4);
+    icons.forEach((img) => { expect(img.getAttribute("alt")).toBe(""); expect(img.getAttribute("src")).toMatch(/^data:image\/png;base64,/); });
+  });
+
+  it("footer links to /multilink/ as «Оставить отзыв»", () => {
+    const html = renderToStaticMarkup(<MemoryRouter><Footer /></MemoryRouter>);
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    const link = Array.from(doc.querySelectorAll("a")).filter((a) => a.textContent === "Оставить отзыв");
+    expect(link).toHaveLength(1);
+    expect(link[0].getAttribute("href")).toBe("/multilink/");
   });
 });

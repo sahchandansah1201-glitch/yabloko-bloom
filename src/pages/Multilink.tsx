@@ -4,12 +4,16 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
 import "./Multilink.css";
+import yandexLogo from "@/assets/review-platforms/yandex.png";
+import prodoctorovLogo from "@/assets/review-platforms/prodoctorov.png";
+import twoGisLogo from "@/assets/review-platforms/2gis.png";
+import googleLogo from "@/assets/review-platforms/google.png";
 
 const platforms = [
-  { name: "Яндекс Карты", href: "https://yandex.ru/maps/org/yabloko/64934325707/?ll=38.903861%2C45.026285&z=16" },
-  { name: "ПроДокторов", href: "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/" },
-  { name: "2ГИС", href: "https://2gis.ru/krasnodar/firm/70000001033657523" },
-  { name: "Google Карты", href: "https://maps.app.goo.gl/466w7vogWfcf7FUr7" },
+  { name: "Яндекс Карты", logo: yandexLogo, href: "https://yandex.ru/maps/org/yabloko/64934325707/?ll=38.903861%2C45.026285&z=16" },
+  { name: "ПроДокторов", logo: prodoctorovLogo, href: "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/" },
+  { name: "2ГИС", logo: twoGisLogo, href: "https://2gis.ru/krasnodar/firm/70000001033657523" },
+  { name: "Google Карты", logo: googleLogo, href: "https://maps.app.goo.gl/466w7vogWfcf7FUr7" },
 ];
 
 export default function Multilink() {
@@ -31,10 +35,10 @@ export default function Multilink() {
           </h1>
           <p className="mt-3 text-center text-base text-muted-foreground">Выберите удобную площадку</p>
           <nav aria-label="Площадки для отзывов" className="mt-7 flex flex-col gap-3">
-            {platforms.map(({ name, href }) => (
+            {platforms.map(({ name, logo, href }) => (
               <Button key={name} asChild variant="outline" className="h-auto min-h-14 w-full justify-between gap-4 whitespace-normal rounded-lg px-5 py-4 text-base shadow-none focus-visible:ring-foreground motion-reduce:transition-none">
                 <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} — открыть в новой вкладке`}>
-                  <span>{name}</span>
+                  <span className="flex items-center gap-3"><img src={logo} alt="" width={28} height={28} className="h-7 w-7 shrink-0 object-contain" data-platform-logo />{name}</span>
                   <ExternalLink aria-hidden="true" />
                 </a>
               </Button>
