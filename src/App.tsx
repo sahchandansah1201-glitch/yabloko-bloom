@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { FloatingActionButton } from "@/components/messenger/FloatingActionButton";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AccessibilityProvider } from "@/contexts/AccessibilityContext";
 
@@ -43,6 +43,12 @@ const PricePage = lazyWithReload(() => import("./pages/PricePage"));
 const DocumentsPage = lazyWithReload(() => import("./pages/DocumentsPage"));
 const DocumentDetailPage = lazyWithReload(() => import("./pages/DocumentDetailPage"));
 const PatientsInfo = lazyWithReload(() => import("./pages/PatientsInfo"));
+const Multilink = lazyWithReload(() => import("./pages/Multilink"));
+
+function ClinicContactOverlay() {
+  const { pathname } = useLocation();
+  return /^\/multilink\/*$/i.test(pathname) ? null : <FloatingActionButton />;
+}
 
 // Clear the reload guard after a successful load
 if (typeof window !== "undefined") {
@@ -87,11 +93,12 @@ const App = () => (
                 <Route path="/patients" element={<PatientsInfo />} />
                 <Route path="/dokumenty" element={<DocumentsPage />} />
                 <Route path="/dokumenty/:slug" element={<DocumentDetailPage />} />
+                <Route path="/multilink" element={<Multilink />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
+            <ClinicContactOverlay />
           </BrowserRouter>
-          <FloatingActionButton />
         </TooltipProvider>
       </QueryClientProvider>
     </AccessibilityProvider>
