@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
+import "./Multilink.css";
 
 const platforms = [
   { name: "Яндекс Карты", href: "https://yandex.ru/maps/org/yabloko/64934325707/?ll=38.903861%2C45.026285&z=16" },
@@ -22,7 +23,7 @@ export default function Multilink() {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
       </Helmet>
-      <main className="min-h-screen bg-card px-5 pb-12 pt-8 sm:pt-12">
+      <main className="yc-review-links min-h-screen bg-card px-5 pb-12 pt-8 sm:pt-12">
         <div className="mx-auto w-full max-w-md">
           <img src={logo} alt="Клиника «Яблоко»" width={96} height={96} className="mx-auto h-24 w-24 object-contain" />
           <h1 className="mt-6 text-center text-2xl font-semibold leading-snug tracking-normal sm:text-3xl">
