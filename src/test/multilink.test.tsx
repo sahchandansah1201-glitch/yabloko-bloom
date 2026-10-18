@@ -18,6 +18,18 @@ const expectedLinks = [
 ];
 
 describe("legacy voluntary review destinations", () => {
+  it("keeps the portable static fragment below 20KB", () => {
+    const html = readFileSync("public/multilink-wordpress.html");
+    expect(html.byteLength).toBeLessThan(20 * 1024);
+  });
+
+  it("contains no embedded base64, scripts or forms", () => {
+    const html = readFileSync("public/multilink-wordpress.html", "utf8");
+    expect(html).not.toMatch(/base64\s*,/i);
+    const fragment = new DOMParser().parseFromString(html, "text/html");
+    expect(fragment.querySelectorAll("script,form")).toHaveLength(0);
+  });
+
   it.each(expectedLinks)("preserves %s exactly and opens it safely", (name, href) => {
     const page = renderPage();
     const link = page.querySelector(`a[aria-label="${name} — открыть в новой вкладке"]`);
