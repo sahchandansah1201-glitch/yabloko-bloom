@@ -44,10 +44,11 @@ const DocumentsPage = lazyWithReload(() => import("./pages/DocumentsPage"));
 const DocumentDetailPage = lazyWithReload(() => import("./pages/DocumentDetailPage"));
 const PatientsInfo = lazyWithReload(() => import("./pages/PatientsInfo"));
 const Multilink = lazyWithReload(() => import("./pages/Multilink"));
+const ReviewsUnifiedDemo = lazyWithReload(() => import("./pages/ReviewsUnifiedDemo"));
 
 function ClinicContactOverlay() {
   const { pathname } = useLocation();
-  return /^\/multilink\/*$/i.test(pathname) ? null : <FloatingActionButton />;
+  return /^\/(multilink|design\/reviews-unified)\/*$/i.test(pathname) ? null : <FloatingActionButton />;
 }
 
 // Clear the reload guard after a successful load
@@ -94,6 +95,7 @@ const App = () => (
                 <Route path="/dokumenty" element={<DocumentsPage />} />
                 <Route path="/dokumenty/:slug" element={<DocumentDetailPage />} />
                 <Route path="/multilink" element={<Multilink />} />
+                <Route path="/design/reviews-unified" element={<ReviewsUnifiedDemo />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
