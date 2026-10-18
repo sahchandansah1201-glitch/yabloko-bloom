@@ -1,5 +1,5 @@
 # Multilink
 
-- [ ] Add the standalone legacy review route without changing services or publishing.
-- [ ] Add a self-contained WordPress HTML fragment with the same destinations.
-- [ ] Verify regression tests, automatic build, and all requested viewport sizes.
+- [x] Add the standalone legacy review route without changing services or publishing.
+- [x] Add a self-contained WordPress HTML fragment with the same destinations.
+- [x] Verify regression tests, automatic build, and all requested viewport sizes.
