@@ -1,11 +1,14 @@
-import { afterEach, describe, expect, it } from "vitest";
-import { cleanup, render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { readFileSync } from "node:fs";
 import Multilink from "@/pages/Multilink";
 
-afterEach(cleanup);
+function renderPage() {
+  const html = renderToStaticMarkup(<HelmetProvider><MemoryRouter><Multilink /></MemoryRouter></HelmetProvider>);
+  return new DOMParser().parseFromString(html, "text/html");
+}
 
 const expectedLinks = [
   ["Яндекс Карты", "https://yandex.ru/maps/org/yabloko/64934325707/?ll=38.903861%2C45.026285&z=16"],
@@ -16,18 +19,18 @@ const expectedLinks = [
 
 describe("legacy voluntary review destinations", () => {
   it.each(expectedLinks)("preserves %s exactly and opens it safely", (name, href) => {
-    render(<HelmetProvider><MemoryRouter><Multilink /></MemoryRouter></HelmetProvider>);
-    const link = screen.getByRole("link", { name: `${name} — открыть в новой вкладке` });
-    expect(link.getAttribute("href")).toBe(href);
-    expect(link).toHaveAttribute("target", "_blank");
-    expect(link.getAttribute("rel")?.split(" ")).toEqual(expect.arrayContaining(["noopener", "noreferrer"]));
+    const page = renderPage();
+    const link = page.querySelector(`a[aria-label="${name} — открыть в новой вкладке"]`);
+    expect(link?.getAttribute("href")).toBe(href);
+    expect(link?.getAttribute("target")).toBe("_blank");
+    expect(link?.getAttribute("rel")?.split(" ")).toEqual(expect.arrayContaining(["noopener", "noreferrer"]));
   });
 
   it("offers all four destinations directly without a form or sentiment gate", () => {
-    const { container } = render(<HelmetProvider><MemoryRouter><Multilink /></MemoryRouter></HelmetProvider>);
-    expect(screen.getAllByRole("link")).toHaveLength(5);
-    expect(container.querySelectorAll("form,input,textarea,select")).toHaveLength(0);
-    expect(screen.getByRole("link", { name: "На сайт клиники" })).toHaveAttribute("href", "/");
+    const page = renderPage();
+    expect(page.querySelectorAll("a")).toHaveLength(5);
+    expect(page.querySelectorAll("form,input,textarea,select")).toHaveLength(0);
+    expect(page.querySelector('a[href="/"]')).not.toBeNull();
   });
 
   it.each(expectedLinks)("portable fragment preserves %s exactly and safely", (name, href) => {
