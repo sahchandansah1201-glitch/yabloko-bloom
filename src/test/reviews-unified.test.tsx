@@ -44,6 +44,25 @@ describe("isolated review demo", () => {
     click(Array.from(page.querySelectorAll("button")).find(b => b.textContent === "Свернуть") ?? null);
     expect(page.querySelectorAll("article")).toHaveLength(3);
   });
+  it("never collapses short reviews without a read-more control in either version", () => {
+    const page = render();
+    const check = (scope: ParentNode) => {
+      const texts = Array.from(scope.querySelectorAll(".demo-text"));
+      const shortTexts = texts.filter(text => (text.textContent?.length ?? 0) <= 350);
+      expect(shortTexts.length).toBeGreaterThan(0);
+      shortTexts.forEach(text => expect(text.classList.contains("is-collapsed")).toBe(false));
+      expect(texts.find(text => (text.textContent?.length ?? 0) > 350)?.classList.contains("is-collapsed")).toBe(true);
+    };
+    check(page);
+    const html = readFileSync("public/design/reviews-unified-standalone.html", "utf8");
+    const standalone = document.createElement("div");
+    standalone.innerHTML = html;
+    const script = standalone.querySelector("script")?.textContent;
+    if (!script) throw new Error("Missing standalone script");
+    const standaloneDocument = { querySelector: standalone.querySelector.bind(standalone), getElementById: (id: string) => standalone.querySelector(`[id="${id}"]`) };
+    new Function("document", script)(standaloneDocument);
+    check(standalone);
+  });
   it("expands and collapses text and the clinic reply", () => {
     const page = render();
     const expand = Array.from(page.querySelectorAll("button")).find(b => b.textContent === "Читать полностью");

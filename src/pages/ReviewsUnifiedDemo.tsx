@@ -42,7 +42,7 @@ function DemoReview({ index, sourceIndex }: { index: number; sourceIndex: number
       <div><p className="demo-author">Анонимный посетитель {index + 1}</p><time className="demo-date" dateTime={`2026-10-${String(18 - index).padStart(2, "0")}`}>{18 - index} октября 2026 · демо</time></div>
       <Stars rating={index === 4 ? 4 : 5} />
     </div>
-    <p id={`text-${id}`} className={`demo-text ${expanded ? "" : "is-collapsed"}`}>{text}</p>
+    <p id={`text-${id}`} className={`demo-text ${long && !expanded ? "is-collapsed" : ""}`}>{text}</p>
     {long && <Button variant="link" className="demo-action" aria-expanded={expanded} aria-controls={`text-${id}`} onClick={() => setExpanded(!expanded)}>{expanded ? "Свернуть текст" : "Читать полностью"}</Button>}
     <div className="demo-review-actions">
       <Button asChild variant="link" className="demo-action"><a href={sources[sourceIndex].href} target="_blank" rel="noopener noreferrer">Открыть оригинал <ExternalLink aria-hidden="true" /><span className="demo-caption">демоссылка</span></a></Button>
