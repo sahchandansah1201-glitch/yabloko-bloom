@@ -1,3 +1,4 @@
+(() => {
 // Demo-only adapter. Original native bundle is never modified.
 const sourceIds = ["yandex", "2gis", "google", "prodoctorov"];
 const sourceUrls = ["https://yandex.ru/maps/org/yabloko/64934325707/", "https://2gis.ru/krasnodar/firm/70000001033657523", "https://maps.app.goo.gl/466w7vogWfcf7FUr7", "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/"];
@@ -58,3 +59,5 @@ function mountNativeDemo(container, payload) {
 }
 
 window.NativeReviewsDemo = {createDemoPayload, loadNativeBundle, mountNativeDemo, chromeOverride};
+
+})();

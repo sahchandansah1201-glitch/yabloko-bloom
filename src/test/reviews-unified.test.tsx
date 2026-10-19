@@ -20,7 +20,7 @@ function click(element: Element | null) {
 }
 afterEach(() => { act(() => root?.unmount()); root = undefined; container?.remove(); });
 const adapterSource = readFileSync("public/design/native-reviews-demo.js", "utf8");
-const adapter = new Function(adapterSource.replace(/export /g, "") + ";return {createDemoPayload, mountNativeDemo, chromeOverride};")();
+const adapter = new Function(adapterSource + ";return window.NativeReviewsDemo;")();
 new Function(readFileSync("public/design/native-reviews-widget.js", "utf8"))();
 async function native(index: number, all = false) {
   container = document.createElement("div"); document.body.append(container);
