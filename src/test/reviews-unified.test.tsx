@@ -18,65 +18,66 @@ function click(element: Element | null) {
   if (!(element instanceof HTMLElement)) throw new Error("Missing interactive control");
   act(() => element.click());
 }
-afterEach(() => { act(() => root?.unmount()); container?.remove(); });
+afterEach(() => { act(() => root?.unmount()); root = undefined; container?.remove(); });
+const adapterSource = readFileSync("public/design/native-reviews-demo.js", "utf8");
+const adapter = new Function(adapterSource.replace(/export /g, "") + ";return {createDemoPayload, mountNativeDemo, chromeOverride};")();
+new Function(readFileSync("public/design/native-reviews-widget.js", "utf8"))();
+async function native(index: number, all = false) {
+  container = document.createElement("div"); document.body.append(container);
+  const widget = adapter.mountNativeDemo(container, adapter.createDemoPayload(index, all));
+  await new Promise(resolve => setTimeout(resolve, 60));
+  return widget.shadowRoot as ShadowRoot;
+}
 
-describe("isolated review demo", () => {
-  it("switches all four sources without using real review IDs", () => {
-    const page = render();
-    const expected = ["https://yandex.ru/maps/org/yabloko/64934325707/", "https://2gis.ru/krasnodar/firm/70000001033657523", "https://maps.app.goo.gl/466w7vogWfcf7FUr7", "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/"];
-    const tabs = page.querySelectorAll('[role="tab"]');
+describe("isolated native review demo", () => {
+  it("keeps all four outer tabs working and keyboard focus", () => {
+    const page = render(); const tabs = page.querySelectorAll('[role="tab"]');
     expect(tabs).toHaveLength(4);
-    tabs.forEach((tab, i) => {
-      click(tab); expect(tab.getAttribute("aria-selected")).toBe("true");
-      expect(page.querySelector("article a")?.getAttribute("href")).toBe(expected[i]);
-      expect(page.querySelectorAll("article")).toHaveLength(3);
-    });
+    tabs.forEach(tab => { click(tab); expect(tab.getAttribute("aria-selected")).toBe("true"); });
+    act(() => tabs[0].dispatchEvent(new KeyboardEvent("keydown", {key: "ArrowRight", bubbles: true})));
+    expect(document.activeElement).toBe(tabs[1]);
   });
-  it("keeps the explicit demo disclosure outside the review section", () => {
-    const page = render(); const banner = page.querySelector('[role="note"]');
+  it("keeps the explicit disclosure outside the section", () => {
+    const banner = render().querySelector('[role="note"]');
     expect(banner?.textContent).toContain("Демонстрационные отзывы и оценки, не реальные данные площадок");
     expect(banner?.closest("section")).toBeNull();
   });
-  it("shows three more reviews and collapses to three", () => {
-    const page = render();
-    click(Array.from(page.querySelectorAll("button")).find(b => b.textContent === "Показать ещё 3") ?? null);
-    expect(page.querySelectorAll("article")).toHaveLength(6);
-    click(Array.from(page.querySelectorAll("button")).find(b => b.textContent === "Свернуть") ?? null);
-    expect(page.querySelectorAll("article")).toHaveLength(3);
+  it.each([[0,"ym-reviews"],[1,"tg-reviews"],[2,"gm-reviews"],[3,"pd-reviews"]])("renders original native source %s with local data", async (index, className) => {
+    const shadow = await native(Number(index));
+    expect(shadow.querySelector(`.${className}`)).not.toBeNull();
+    expect(shadow.querySelectorAll("article")).toHaveLength(3);
+    const expected = ["https://yandex.ru/maps/org/yabloko/64934325707/", "https://2gis.ru/krasnodar/firm/70000001033657523", "https://maps.app.goo.gl/466w7vogWfcf7FUr7", "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/"];
+    expect(shadow.querySelector(".rw-review-origin")?.getAttribute("href")).toBe(expected[Number(index)]);
+    expect(container.querySelector("reviews-widget")?.hasAttribute("data-endpoint")).toBe(false);
+    const payload = adapter.createDemoPayload(Number(index));
+    expect(payload.settings.source_order).toEqual([payload.settings.default_source]);
+    expect(payload.sources).toHaveLength(1);
   });
-  it("never collapses short reviews without a read-more control in either version", () => {
-    const page = render();
-    const check = (scope: ParentNode) => {
-      const texts = Array.from(scope.querySelectorAll(".demo-text"));
-      const shortTexts = texts.filter(text => (text.textContent?.length ?? 0) <= 350);
-      expect(shortTexts.length).toBeGreaterThan(0);
-      shortTexts.forEach(text => expect(text.classList.contains("is-collapsed")).toBe(false));
-      expect(texts.find(text => (text.textContent?.length ?? 0) > 350)?.classList.contains("is-collapsed")).toBe(true);
-    };
-    check(page);
-    const html = readFileSync("public/design/reviews-unified-standalone.html", "utf8");
-    const standalone = document.createElement("div");
-    standalone.innerHTML = html;
-    const script = standalone.querySelector("script")?.textContent;
-    if (!script) throw new Error("Missing standalone script");
-    const standaloneDocument = { querySelector: standalone.querySelector.bind(standalone), getElementById: (id: string) => standalone.querySelector(`[id="${id}"]`) };
-    new Function("document", script)(standaloneDocument);
-    check(standalone);
+  it("shows six through local payload and returns to three", async () => {
+    expect((await native(0, true)).querySelectorAll("article")).toHaveLength(6);
+    container.remove();
+    expect((await native(0)).querySelectorAll("article")).toHaveLength(3);
   });
-  it("expands and collapses text and the clinic reply", () => {
-    const page = render();
-    const expand = Array.from(page.querySelectorAll("button")).find(b => b.textContent === "Читать полностью");
-    click(expand ?? null); expect(expand?.getAttribute("aria-expanded")).toBe("true");
-    click(expand ?? null); expect(expand?.getAttribute("aria-expanded")).toBe("false");
-    const reply = Array.from(page.querySelectorAll("button")).find(b => b.textContent === "Ответ клиники");
-    click(reply ?? null); expect(page.querySelector(".demo-reply")).not.toBeNull();
-    click(reply ?? null); expect(page.querySelector(".demo-reply")).toBeNull();
+  it("uses the original expandable Yandex reply", async () => {
+    const shadow = await native(0);
+    const toggle = shadow.querySelector(".ym-reply-toggle");
+    click(toggle); await new Promise(resolve => setTimeout(resolve, 30));
+    expect(shadow.querySelector(".ym-reply")).not.toBeNull();
+    click(toggle); await new Promise(resolve => setTimeout(resolve, 30));
+    expect(shadow.querySelector(".ym-reply")).toBeNull();
   });
-  it("supports arrow-key source selection and focus", () => {
-    const page = render(); const first = page.querySelector('[role="tab"]');
-    act(() => first?.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true })));
-    expect(page.querySelectorAll('[role="tab"]')[1].getAttribute("aria-selected")).toBe("true");
-    expect(document.activeElement).toBe(page.querySelectorAll('[role="tab"]')[1]);
+  it("does not assert verified visits in demo data", () => {
+    const twoGis = adapter.createDemoPayload(1).sources[0];
+    expect(twoGis.place.ratings_count).toBe(0);
+    twoGis.reviews.forEach((review: {verification: {verified: boolean; visits_count: null}}) => {
+      expect(review.verification.verified).toBe(false); expect(review.verification.visits_count).toBeNull();
+    });
+    adapter.createDemoPayload(3).sources[0].reviews.forEach((review: {verification: {verified: boolean}; visit: null; doctor: null}) => {
+      expect(review.verification.verified).toBe(false); expect(review.visit).toBeNull(); expect(review.doctor).toBeNull();
+    });
+  });
+  it("preserves the original bundle byte-for-byte", () => {
+    expect(createHash("sha256").update(readFileSync("public/design/native-reviews-widget.js")).digest("hex")).toBe("c580ffc4c68efda69537b1fd64c3068ca699efb829c1d6474a39059db0bd524b");
   });
   it.each([
     ["src/pages/Index.tsx", "02e4b39a80eb70b29c5486d32a7b59e0b875311ee16f11c5d640bc6c98afee32"],
