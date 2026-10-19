@@ -6,7 +6,7 @@ const demoTexts = ["Спасибо за внимательное отношен�
 const chromeOverride = `.rw-header, .rw-tabs { display: none !important; }
 .rw-widget { padding: 0 !important; }
 .rw-container { max-width: none; margin: 0; }
-.rw-panel { padding: 0 !important; margin: 0; border: 0; border-radius: 0; box-shadow: none; }`;
+.rw-panel { margin-top: 0; }`;
 function createDemoPayload(sourceIndex, showAll = false, empty = false) {
   const source = sourceIds[sourceIndex];
   const reviewUrl = sourceUrls[sourceIndex];
