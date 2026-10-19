@@ -1,12 +1,12 @@
 // Demo-only adapter. Original native bundle is never modified.
-export const sourceIds = ["yandex", "2gis", "google", "prodoctorov"];
-export const sourceUrls = ["https://yandex.ru/maps/org/yabloko/64934325707/", "https://2gis.ru/krasnodar/firm/70000001033657523", "https://maps.app.goo.gl/466w7vogWfcf7FUr7", "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/"];
-export const demoTexts = ["Спасибо за внимательное отношение и понятные объяснения. Было удобно выбрать время и найти клинику. Перед визитом мне спокойно ответили на вопросы и уточнили детали. На месте всё было организовано понятно: встретили вовремя, подсказали, куда пройти, и не торопили. Особенно понравилось, что можно было задать дополнительные вопросы и получить подробный ответ. Осталось приятное впечатление от общения и организации визита.", "Было легко связаться с клиникой и договориться об удобном времени. Адрес и ориентиры объяснили заранее. Спасибо за спокойное и доброжелательное общение.", "В клинике чисто и спокойно. Меня встретили вовремя, внимательно выслушали и понятно ответили на вопросы. Все организационные детали были ясны ещё до визита.", "Удобно, что информацию о визите можно уточнить заранее. Сотрудники были вежливы и помогли разобраться с расписанием. Спасибо за внимание к деталям.", "Понравилось, что общение было спокойным и без спешки. Нашлось время на все мои вопросы. Клиника оказалась там, где было указано, и добраться было несложно.", "Запись прошла понятно, напоминание о времени было кстати. На месте не пришлось долго ждать. Благодарю за аккуратную организацию и доброжелательную встречу."];
-export const chromeOverride = `.rw-header, .rw-tabs { display: none !important; }
+const sourceIds = ["yandex", "2gis", "google", "prodoctorov"];
+const sourceUrls = ["https://yandex.ru/maps/org/yabloko/64934325707/", "https://2gis.ru/krasnodar/firm/70000001033657523", "https://maps.app.goo.gl/466w7vogWfcf7FUr7", "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/"];
+const demoTexts = ["Спасибо за внимательное отношение и понятные объяснения. Было удобно выбрать время и найти клинику. Перед визитом мне спокойно ответили на вопросы и уточнили детали. На месте всё было организовано понятно: встретили вовремя, подсказали, куда пройти, и не торопили. Особенно понравилось, что можно было задать дополнительные вопросы и получить подробный ответ. Осталось приятное впечатление от общения и организации визита.", "Было легко связаться с клиникой и договориться об удобном времени. Адрес и ориентиры объяснили заранее. Спасибо за спокойное и доброжелательное общение.", "В клинике чисто и спокойно. Меня встретили вовремя, внимательно выслушали и понятно ответили на вопросы. Все организационные детали были ясны ещё до визита.", "Удобно, что информацию о визите можно уточнить заранее. Сотрудники были вежливы и помогли разобраться с расписанием. Спасибо за внимание к деталям.", "Понравилось, что общение было спокойным и без спешки. Нашлось время на все мои вопросы. Клиника оказалась там, где было указано, и добраться было несложно.", "Запись прошла понятно, напоминание о времени было кстати. На месте не пришлось долго ждать. Благодарю за аккуратную организацию и доброжелательную встречу."];
+const chromeOverride = `.rw-header, .rw-tabs { display: none !important; }
 .rw-widget { padding: 0 !important; }
 .rw-container { max-width: none; margin: 0; }
 .rw-panel { padding: 0 !important; margin: 0; border: 0; border-radius: 0; box-shadow: none; }`;
-export function createDemoPayload(sourceIndex, showAll = false, empty = false) {
+function createDemoPayload(sourceIndex, showAll = false, empty = false) {
   const source = sourceIds[sourceIndex];
   const reviewUrl = sourceUrls[sourceIndex];
   const reviews = demoTexts.map((_, index) => {
@@ -33,7 +33,7 @@ export function createDemoPayload(sourceIndex, showAll = false, empty = false) {
   return {schema_version: "1.0", generated_at: "2026-10-19T05:07:00Z", settings: {section_label: "Нам доверяют", titles: {yandex: "Отзывы пациентов", "2gis": "Отзывы пациентов", google: "Отзывы пациентов", prodoctorov: "Отзывы пациентов"}, subtitle: "", default_source: source, source_order: [source], initial_visible_count: showAll ? 6 : 3, page_size: 3, organization_name: "Клиника «Яблоко» · демо", organization_url: "https://new.yaclinic.ru/multilink/"}, sources: [{source, enabled: true, source_place_id: `demo-${source}`, source_url: reviewUrl, write_review_url: null, place, reviews: empty ? [] : reviews}]};
 }
 let bundlePromise;
-export function loadNativeBundle(url) {
+function loadNativeBundle(url) {
   if (customElements.get("reviews-widget")) return Promise.resolve();
   if (!bundlePromise) bundlePromise = new Promise((resolve, reject) => {
     const script = document.createElement("script");
@@ -44,7 +44,7 @@ export function loadNativeBundle(url) {
   });
   return bundlePromise;
 }
-export function mountNativeDemo(container, payload) {
+function mountNativeDemo(container, payload) {
   const widget = document.createElement("reviews-widget");
   widget.payload = payload; // Set before connecting: never request a data-endpoint.
   container.replaceChildren(widget);
@@ -56,3 +56,5 @@ export function mountNativeDemo(container, payload) {
   }
   return widget;
 }
+
+window.NativeReviewsDemo = {createDemoPayload, loadNativeBundle, mountNativeDemo, chromeOverride};
