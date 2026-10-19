@@ -16,6 +16,25 @@ const sources = [
   { name: "ПроДокторов", logo: prodoctorovLogo, href: "https://prodoctorov.ru/krasnodar/lpu/54990-yabloko/", score: "5,0" },
 ];
 type DemoState = "ready" | "empty" | "loading" | "error";
+type NativeAdapter = {
+  loadNativeBundle: (url: string) => Promise<void>;
+  createDemoPayload: (index: number, all: boolean, empty: boolean) => unknown;
+  mountNativeDemo: (container: HTMLElement, payload: unknown) => HTMLElement;
+};
+let adapterPromise: Promise<NativeAdapter> | undefined;
+function loadAdapter() {
+  if (!adapterPromise) adapterPromise = new Promise<NativeAdapter>((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "/design/native-reviews-demo.js";
+    script.onload = () => {
+      const adapter = (window as Window & { NativeReviewsDemo?: NativeAdapter }).NativeReviewsDemo;
+      if (adapter) resolve(adapter); else reject(new Error("Local adapter unavailable"));
+    };
+    script.onerror = () => { adapterPromise = undefined; script.remove(); reject(new Error("Local adapter unavailable")); };
+    document.head.append(script);
+  });
+  return adapterPromise;
+}
 
 export default function ReviewsUnifiedDemo() {
   const [sourceIndex, setSourceIndex] = useState(0);
@@ -29,13 +48,12 @@ export default function ReviewsUnifiedDemo() {
     const container = nativeContainer.current;
     if (!container || state === "loading" || state === "error") return;
     let cancelled = false;
-    const adapterUrl = "/design/native-reviews-demo.js";
-    void import(/* @vite-ignore */ adapterUrl).then(async adapter => {
+    void loadAdapter().then(async adapter => {
       await adapter.loadNativeBundle("/design/native-reviews-widget.js");
       if (!cancelled) adapter.mountNativeDemo(container, adapter.createDemoPayload(sourceIndex, showAll, state === "empty"));
     }).catch(() => { if (!cancelled) setBundleError(true); });
     return () => { cancelled = true; container.replaceChildren(); };
-  }, [sourceIndex, showAll, state]);
+  }, [sourceIndex, showAll, state, bundleError]);
   const chooseSource = (index: number) => { setSourceIndex(index); setShowAll(false); };
 
   return <main className="reviews-unified-demo">
