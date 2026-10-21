@@ -1,0 +1,122 @@
+[
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-150x150.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-150x150-perf.webp",
+    "source_sha256": "5d07447a173c3aecaf09853d89f29d090561c93ba0edbac5167ecc0f25a1f45f",
+    "target_sha256": "1f384abdb6d037699cf51fb02157600cca474ae580f2b5088a1851a156ae8bba",
+    "width": 150,
+    "height": 150,
+    "before_bytes": 24629,
+    "after_bytes": 3076,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-300x300.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-300x300-perf.webp",
+    "source_sha256": "bcd284578f9d937620e675f56ee81690fc8c6b06183dd5cfdb27d3051d58d989",
+    "target_sha256": "03ffc22702059f3cbaa1303fa48b6eb338bb01cebb40b56a910105e899e3ffc3",
+    "width": 300,
+    "height": 300,
+    "before_bytes": 83182,
+    "after_bytes": 8050,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-768x768.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-768x768-perf.webp",
+    "source_sha256": "be0cf78472e099cd26456a808760364a0cabb947fd63ab194d8618d0792cef38",
+    "target_sha256": "d0ba1f574f324734cc5b0931ed3aadad8a77ddb821870676415a27ec08c3c51f",
+    "width": 768,
+    "height": 768,
+    "before_bytes": 435031,
+    "after_bytes": 28818,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-1024x1024.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-1024x1024-perf.webp",
+    "source_sha256": "5e23f982e6a99fa6ea3b24fb829f50a159acfcb9c4abb1bdabe3cedbf36c8b97",
+    "target_sha256": "817109987c13caf956c133057ad0ddebc67001dff0b3462947a5c651a3ec14ce",
+    "width": 1024,
+    "height": 1024,
+    "before_bytes": 712736,
+    "after_bytes": 41482,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/blob-edited-no-edvans-perf.webp",
+    "source_sha256": "49e72727723d3a4c49613b0290d32fc79958531114c7c496234250cc98da929b",
+    "target_sha256": "68b3cc85dae92e9bcce0ecd6983a243ebff9c1ebef45cec3d82f5b3686e4c7ec",
+    "width": 1254,
+    "height": 1254,
+    "before_bytes": 1363888,
+    "after_bytes": 56216,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-150x150.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-150x150-perf.webp",
+    "source_sha256": "543d43574c0266eae71c9bd7025552d9cb5c6dd13c47f91ee5d25a328b8e8484",
+    "target_sha256": "e3ae05bf84cc1eb8d3fc1fde244fa6f812fe4846f9816fa9eb5bf4d650ce270e",
+    "width": 150,
+    "height": 150,
+    "before_bytes": 20622,
+    "after_bytes": 2490,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-300x300.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-300x300-perf.webp",
+    "source_sha256": "5f02cbc81f45d48f389795d94f35a035795deafbebc97d26a6f5bab1c97a69d9",
+    "target_sha256": "b8862d4d14df6c4c6c35028c2f272d8ce6fa78430cc5c5706893a0fa850051be",
+    "width": 300,
+    "height": 300,
+    "before_bytes": 76897,
+    "after_bytes": 7358,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-768x768.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-768x768-perf.webp",
+    "source_sha256": "07461ce7d75d58a5035c3a7ee373767f05e5d5de9a8d1fb234a742e70f6bc0d8",
+    "target_sha256": "4310ecd2cfe5334f3427158f1a295458eb863fee14a84338cde1df60e7f420e1",
+    "width": 768,
+    "height": 768,
+    "before_bytes": 386833,
+    "after_bytes": 30210,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-1024x1024.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-1024x1024-perf.webp",
+    "source_sha256": "de7aeeb3844c3d5884a08d8e926454419f0080788904e9c783932b1a2112d03c",
+    "target_sha256": "fbe5d41abd85cf7354e84f3f6006468b4526e009cd8b20eb32dc86d72349648c",
+    "width": 1024,
+    "height": 1024,
+    "before_bytes": 624280,
+    "after_bytes": 44430,
+    "alpha_equal": true,
+    "original_modified": false
+  },
+  {
+    "source": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01.png",
+    "target": "https://new.yaclinic.ru/wp-content/uploads/2026/04/exec-2a2dbc73-41e2-48f8-a099-9090930fcd01-perf.webp",
+    "source_sha256": "2263373cc217637eed5e72a8d28e491d27b04c5bc0e13779d13cdb54d5c4b9ea",
+    "target_sha256": "c8ac52c3403c87712cb63b045454d32cf408b83f13396ed0429598e8c5a1e8c6",
+    "width": 1254,
+    "height": 1254,
+    "before_bytes": 1150073,
+    "after_bytes": 65478,
+    "alpha_equal": true,
+    "original_modified": false
+  }
+]
