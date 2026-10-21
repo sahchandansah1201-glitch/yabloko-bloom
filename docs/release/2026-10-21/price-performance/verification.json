@@ -1,0 +1,171 @@
+{
+  "http": {
+    "price": {
+      "prices_and_scripts_unchanged": true,
+      "unrelated_css_unchanged": true
+    },
+    "catalog": {
+      "prices_and_scripts_unchanged": true,
+      "unrelated_css_unchanged": true
+    },
+    "biorev": {
+      "prices_and_scripts_unchanged": true,
+      "unrelated_css_unchanged": true
+    },
+    "home": {
+      "prices_and_scripts_unchanged": true,
+      "unrelated_css_unchanged": true
+    }
+  },
+  "cards_and_booking_data_unchanged": true,
+  "layout": {
+    "390": "all 218 card texts, computed styles, widths and heights identical",
+    "1440": "all 218 card texts, computed styles, widths and heights identical"
+  },
+  "browser_medians_ms": {
+    "before": {
+      "390": {
+        "ttfb": 4416.8,
+        "load": 7760.8,
+        "dcl": 6999.6,
+        "encoded": 182879,
+        "decoded": 2434267,
+        "fcp": 5656
+      },
+      "1440": {
+        "ttfb": 4129.2,
+        "load": 7627.5,
+        "dcl": 6720.9,
+        "encoded": 182879,
+        "decoded": 2434267,
+        "fcp": 5260
+      }
+    },
+    "after-final-idle": {
+      "390": {
+        "ttfb": 4840.1,
+        "load": 9508.9,
+        "dcl": 8813.9,
+        "encoded": 101749,
+        "decoded": 1038740,
+        "fcp": 6500
+      },
+      "1440": {
+        "ttfb": 4200,
+        "load": 8170.4,
+        "dcl": 7333.2,
+        "encoded": 101749,
+        "decoded": 1038740,
+        "fcp": 5648
+      }
+    },
+    "control-off": {
+      "390": {
+        "ttfb": 3834.2,
+        "load": 7219.6,
+        "dcl": 6546.1,
+        "encoded": 182879,
+        "decoded": 2434267,
+        "fcp": 5092
+      },
+      "1440": {
+        "ttfb": 3941.5,
+        "load": 8297.2,
+        "dcl": 7412.8,
+        "encoded": 182879,
+        "decoded": 2434267,
+        "fcp": 5148
+      }
+    },
+    "control-on-idle": {
+      "390": {
+        "ttfb": 4069.1,
+        "load": 7172.4,
+        "dcl": 6525.1,
+        "encoded": 101749,
+        "decoded": 1038740,
+        "fcp": 5124
+      },
+      "1440": {
+        "ttfb": 3887.5,
+        "load": 7370.5,
+        "dcl": 6554,
+        "encoded": 101749,
+        "decoded": 1038740,
+        "fcp": 5172
+      }
+    }
+  },
+  "additional_widths": [
+    {
+      "width": 360,
+      "overflow": false,
+      "rows": 218,
+      "outOfBounds": 0
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "rows": 218,
+      "outOfBounds": 0
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "rows": 218,
+      "outOfBounds": 0
+    }
+  ],
+  "latest_guest_acceptance": {
+    "price": {
+      "status": 200,
+      "prices_and_scripts_unchanged": true,
+      "ttfb_median_seconds": 10.657565,
+      "ttfb_samples_seconds": [
+        5.252768,
+        10.657565,
+        11.694795
+      ]
+    },
+    "catalog": {
+      "status": 200,
+      "prices_and_scripts_unchanged": true,
+      "ttfb_median_seconds": 5.967243,
+      "ttfb_samples_seconds": [
+        5.967243,
+        7.265157,
+        5.040127
+      ]
+    },
+    "biorev": {
+      "status": 200,
+      "prices_and_scripts_unchanged": true,
+      "ttfb_median_seconds": 3.374051,
+      "ttfb_samples_seconds": [
+        3.724787,
+        3.26851,
+        3.374051
+      ]
+    },
+    "home": {
+      "status": 200,
+      "prices_and_scripts_unchanged": true,
+      "ttfb_median_seconds": 2.930724,
+      "ttfb_samples_seconds": [
+        3.008811,
+        2.930724,
+        2.843119
+      ]
+    }
+  },
+  "primary_close_in_time_browser_comparison": [
+    "control-off",
+    "control-on-idle"
+  ],
+  "excluded_browser_labels": {
+    "after-css": "ineffective first pilot",
+    "after-final": "overlapped guest HTTP diagnostics",
+    "control-on": "admin control tab remained open"
+  },
+  "method": "Chromium admin session, 844px height, DPR 1, CPU 4x, cache disabled, no network throttle; not physical phones or field CWV"
+}
