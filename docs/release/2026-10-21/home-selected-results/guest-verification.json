@@ -1,0 +1,37 @@
+{
+  "home": "https://new.yaclinic.ru/",
+  "cards": 10,
+  "photo_files": 13,
+  "duplicates": 0,
+  "existing_four_preserved": true,
+  "source_images_and_labels_preserved": true,
+  "neighbour_images_unchanged": true,
+  "single_shared_viewer": true,
+  "guest_adminbar": false,
+  "source_services": [
+    {
+      "url": "https://new.yaclinic.ru/services/chistka-licza/",
+      "gallery_unchanged": true
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/dietolog/",
+      "gallery_unchanged": true
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/konturnaya-plastika/",
+      "gallery_unchanged": true
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/mikroigolchatyj-rf-lifting/",
+      "gallery_unchanged": true
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/pigmentacziya/",
+      "gallery_unchanged": true
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/priem-vracha-dermatologa/",
+      "gallery_unchanged": true
+    }
+  ]
+}

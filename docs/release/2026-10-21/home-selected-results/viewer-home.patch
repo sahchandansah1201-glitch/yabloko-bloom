@@ -1,0 +1,8 @@
+--- snippet-9-before.php
++++ snippet-9-after.php
+@@ -427 +427 @@
+-    if (!is_singular(array('service_group', 'service', 'doctor'))) return;
++    if (!is_singular(array('service_group', 'service', 'doctor')) && !(is_front_page() && 6 === (int) get_queried_object_id())) return;
+@@ -467 +467 @@
+-    if (!is_singular(array('service_group', 'service', 'doctor'))) return;
++    if (!is_singular(array('service_group', 'service', 'doctor')) && !(is_front_page() && 6 === (int) get_queried_object_id())) return;

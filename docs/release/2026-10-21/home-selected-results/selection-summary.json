@@ -1,0 +1,66 @@
+{
+  "preserved": [
+    "Купероз лечение",
+    "Лечение акне",
+    "Ботокс",
+    "Биоревитализация"
+  ],
+  "added": [
+    {
+      "service": "https://new.yaclinic.ru/services/chistka-licza/",
+      "title": "Чистка лица",
+      "source_case_index": 0,
+      "comparison_order": "До — слева После — справа",
+      "files": [
+        "cleansing-before-after-01.webp"
+      ]
+    },
+    {
+      "service": "https://new.yaclinic.ru/services/dietolog/",
+      "title": "Диетолог",
+      "source_case_index": 0,
+      "comparison_order": "До — слева После — справа",
+      "files": [
+        "diet-result-1.jpg"
+      ]
+    },
+    {
+      "service": "https://new.yaclinic.ru/services/konturnaya-plastika/",
+      "title": "Контурная пластика",
+      "source_case_index": 5,
+      "comparison_order": "До — слева После — справа",
+      "files": [
+        "contour-result-07.jpg"
+      ]
+    },
+    {
+      "service": "https://new.yaclinic.ru/services/mikroigolchatyj-rf-lifting/",
+      "title": "Микроигольчатый РФ лифтинг",
+      "source_case_index": 1,
+      "comparison_order": "До — слева После — справа",
+      "files": [
+        "rf-work-02-collage.webp"
+      ]
+    },
+    {
+      "service": "https://new.yaclinic.ru/services/pigmentacziya/",
+      "title": "Пигментация",
+      "source_case_index": 0,
+      "comparison_order": "До — верхний снимок После — нижний снимок",
+      "files": [
+        "pigmentation-work-collage.webp"
+      ]
+    },
+    {
+      "service": "https://new.yaclinic.ru/services/priem-vracha-dermatologa/",
+      "title": "Прием врача дерматолога",
+      "source_case_index": 1,
+      "comparison_order": "До — слева После — справа",
+      "files": [
+        "dermatologist-case-02-before.webp",
+        "dermatologist-case-02-after.webp"
+      ]
+    }
+  ],
+  "total": 10
+}
