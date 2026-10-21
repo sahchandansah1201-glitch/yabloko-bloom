@@ -1,0 +1,117 @@
+{
+  "task": "approved-cookie-consent-ux",
+  "verified_date": "2026-10-22",
+  "timezone": "Europe/Moscow",
+  "target": "https://new.yaclinic.ru/",
+  "production_changed": false,
+  "publication": {
+    "method": "WordPress Code Snippets editor",
+    "snippet_id": 47,
+    "persisted_source_matches_expected": true,
+    "php_guard_hostname": "new.yaclinic.ru",
+    "js_guard_hostname": "new.yaclinic.ru",
+    "tracking_adapter_changed": false,
+    "tracking_adapter_sha256": "ac39891ab6d1edac1d62adaf990a7ae13d8a80e761782d267daa14e4d8708a38"
+  },
+  "local_checks": {
+    "presentation_tests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "original_tracking_regressions": {
+      "passed": 12,
+      "failed": 0,
+      "source": "research/tracker-installation-2026-10-20/test-tracking.cjs"
+    },
+    "javascript_syntax": "PASS",
+    "php_cli_lint": "NOT_RUN_BINARY_UNAVAILABLE"
+  },
+  "http_checks": {
+    "passed": 7,
+    "failed": 0,
+    "expected_status": 200,
+    "exact_inline_source": true,
+    "inline_occurrences": 1,
+    "paths": [
+      "/",
+      "/services/",
+      "/doctor/",
+      "/doctor/mariya-pavlyuk/",
+      "/services/biorevitalizacziya/",
+      "/contacts/",
+      "/price/"
+    ]
+  },
+  "browser_checks": {
+    "fresh_anonymous": {
+      "vendor_scripts": 0,
+      "tracker_resource_requests": 0,
+      "banner_visible": true
+    },
+    "necessary_only_after_reload": {
+      "choice": "denied",
+      "vendor_scripts": 0,
+      "tracker_resource_requests": 0,
+      "banner_visible": false
+    },
+    "accepted": {
+      "choice": "granted",
+      "vendor_scripts": 2,
+      "observed_provider_request_hosts": [
+        "mc.yandex.ru",
+        "www.googletagmanager.com"
+      ],
+      "persisted_after_reload": true
+    },
+    "revoked": {
+      "choice": "denied",
+      "vendor_scripts": 0,
+      "reloaded": true
+    },
+    "responsive_widths_css_px": [
+      360,
+      390,
+      768,
+      1440
+    ],
+    "horizontal_overflow": false,
+    "choice_button_min_height_px": 44,
+    "heading_font_size_px": 16,
+    "shared_footer_and_keyboard": {
+      "passed": 6,
+      "failed": 0,
+      "paths": [
+        "/doctor/mariya-pavlyuk/",
+        "/services/biorevitalizacziya/",
+        "/contacts/"
+      ],
+      "viewports": [
+        {
+          "width": 390,
+          "height": 844
+        },
+        {
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    "booking": {
+      "opened_with_denial": true,
+      "opened_with_acceptance": true,
+      "group_count": 5,
+      "closed": true,
+      "appointment_submitted": false,
+      "patient_details_entered": false
+    }
+  },
+  "limitations": {
+    "physical_mobile_devices_tested": false,
+    "provider_ingestion_audited": false,
+    "unrelated_console_errors": [
+      "jquery-core-js-after MutationObserver target error",
+      "HTTP Elementor custom-lightbox stylesheet blocked as mixed content"
+    ],
+    "before_deployment_console_baseline_available": false
+  }
+}
