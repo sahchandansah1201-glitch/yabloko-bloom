@@ -1,0 +1,42 @@
+{
+  "expansion": {
+    "before": {
+      "gap": 0,
+      "height": 2015.984375
+    },
+    "expandedText": {
+      "gap": 0,
+      "height": 2095.984375
+    },
+    "expandedResponse": {
+      "gap": 0,
+      "height": 2383.984375
+    }
+  },
+  "boundaries": [
+    {
+      "width": 767,
+      "gap": 0,
+      "display": "block",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "gap": 0,
+      "display": "flex",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "gap": 10,
+      "display": "flex",
+      "overflow": false
+    }
+  ],
+  "booking": {
+    "firstStepLoaded": true,
+    "groups": 5,
+    "closed": true,
+    "submitted": false
+  }
+}
