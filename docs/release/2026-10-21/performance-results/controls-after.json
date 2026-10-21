@@ -1,0 +1,132 @@
+[
+  {
+    "url": "https://new.yaclinic.ru/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/doctor/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/doctor/alisa-allam/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/holodnaya-plazma-impulsnyj-sprej/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/lechenie-akne/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/chistka-licza/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/price/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/dokumenty/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/contacts/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  },
+  {
+    "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+    "unique_css_equal": true,
+    "links_equal": true,
+    "images_equal": true,
+    "unrelated_scripts_equal": true,
+    "booking_context_equal": true,
+    "text_equal": true,
+    "lazy_loader_present": true
+  }
+]

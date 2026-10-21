@@ -1,0 +1,198 @@
+[
+  {
+    "label": "doctors",
+    "scrollWidth": 360,
+    "title": "Врачи — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/doctor/",
+    "width": 360
+  },
+  {
+    "label": "doctors",
+    "scrollWidth": 390,
+    "title": "Врачи — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/doctor/",
+    "width": 390
+  },
+  {
+    "label": "doctors",
+    "scrollWidth": 768,
+    "title": "Врачи — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/doctor/",
+    "width": 768
+  },
+  {
+    "label": "doctors",
+    "scrollWidth": 1440,
+    "title": "Врачи — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/doctor/",
+    "width": 1440
+  },
+  {
+    "label": "catalog",
+    "scrollWidth": 360,
+    "title": "Услуги — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/",
+    "width": 360
+  },
+  {
+    "label": "catalog",
+    "scrollWidth": 390,
+    "title": "Услуги — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/",
+    "width": 390
+  },
+  {
+    "label": "catalog",
+    "scrollWidth": 768,
+    "title": "Услуги — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/",
+    "width": 768
+  },
+  {
+    "label": "catalog",
+    "scrollWidth": 1440,
+    "title": "Услуги — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/",
+    "width": 1440
+  },
+  {
+    "label": "price",
+    "scrollWidth": 360,
+    "title": "Цены на услуги клиники «Яблоко» в Краснодаре — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/price/",
+    "width": 360
+  },
+  {
+    "label": "price",
+    "scrollWidth": 390,
+    "title": "Цены на услуги клиники «Яблоко» в Краснодаре — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/price/",
+    "width": 390
+  },
+  {
+    "label": "price",
+    "scrollWidth": 768,
+    "title": "Цены на услуги клиники «Яблоко» в Краснодаре — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/price/",
+    "width": 768
+  },
+  {
+    "label": "price",
+    "scrollWidth": 1440,
+    "title": "Цены на услуги клиники «Яблоко» в Краснодаре — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/price/",
+    "width": 1440
+  },
+  {
+    "label": "document",
+    "scrollWidth": 360,
+    "title": "Информационное согласие УЛЬТРАФОРМЕР III — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+    "width": 360
+  },
+  {
+    "label": "document",
+    "scrollWidth": 390,
+    "title": "Информационное согласие УЛЬТРАФОРМЕР III — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+    "width": 390
+  },
+  {
+    "label": "document",
+    "scrollWidth": 768,
+    "title": "Информационное согласие УЛЬТРАФОРМЕР III — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+    "width": 768
+  },
+  {
+    "label": "document",
+    "scrollWidth": 1440,
+    "title": "Информационное согласие УЛЬТРАФОРМЕР III — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+    "width": 1440
+  },
+  {
+    "label": "article",
+    "scrollWidth": 360,
+    "title": "Выпадение волос: основные причины и что делать — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+    "width": 360
+  },
+  {
+    "label": "article",
+    "scrollWidth": 390,
+    "title": "Выпадение волос: основные причины и что делать — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+    "width": 390
+  },
+  {
+    "label": "article",
+    "scrollWidth": 768,
+    "title": "Выпадение волос: основные причины и что делать — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+    "width": 768
+  },
+  {
+    "label": "article",
+    "scrollWidth": 1440,
+    "title": "Выпадение волос: основные причины и что делать — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+    "width": 1440
+  },
+  {
+    "label": "home",
+    "scrollWidth": 360,
+    "title": "Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/",
+    "width": 360
+  },
+  {
+    "label": "home",
+    "scrollWidth": 390,
+    "title": "Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/",
+    "width": 390
+  },
+  {
+    "label": "home",
+    "scrollWidth": 768,
+    "title": "Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/",
+    "width": 768
+  },
+  {
+    "label": "home",
+    "scrollWidth": 1440,
+    "title": "Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/",
+    "width": 1440
+  },
+  {
+    "label": "service",
+    "scrollWidth": 360,
+    "title": "Биоревитализация — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+    "width": 360
+  },
+  {
+    "label": "service",
+    "scrollWidth": 390,
+    "title": "Биоревитализация — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+    "width": 390
+  },
+  {
+    "label": "service",
+    "scrollWidth": 768,
+    "title": "Биоревитализация — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+    "width": 768
+  },
+  {
+    "label": "service",
+    "scrollWidth": 1440,
+    "title": "Биоревитализация — Клиника «Яблоко»",
+    "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+    "width": 1440
+  }
+]

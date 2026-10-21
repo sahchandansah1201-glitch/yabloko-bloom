@@ -1,0 +1,877 @@
+{
+  "utc": "2026-10-21T12:47:28.579390+00:00",
+  "method": "3 sequential guest compressed GET per URL; no server cache purge; no browser resources",
+  "rows": [
+    {
+      "url": "https://new.yaclinic.ru/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/",
+          "checked_utc": "2026-10-21T12:45:43.735711+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.875753,
+          "total": 3.139924,
+          "dns": 0.002177,
+          "tls_ready": 0.335227,
+          "wire_bytes": 132809,
+          "decoded_bytes": 903708,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 461428,
+          "repeated_css_bytes": 309586,
+          "elements": 2135
+        },
+        {
+          "url": "https://new.yaclinic.ru/",
+          "checked_utc": "2026-10-21T12:45:46.740956+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.480031,
+          "total": 2.762981,
+          "dns": 0.003255,
+          "tls_ready": 0.275852,
+          "wire_bytes": 132809,
+          "decoded_bytes": 903708,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 461428,
+          "repeated_css_bytes": 309586,
+          "elements": 2135
+        },
+        {
+          "url": "https://new.yaclinic.ru/",
+          "checked_utc": "2026-10-21T12:45:49.721149+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.470974,
+          "total": 2.74773,
+          "dns": 0.002006,
+          "tls_ready": 0.288272,
+          "wire_bytes": 132809,
+          "decoded_bytes": 903708,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 461428,
+          "repeated_css_bytes": 309586,
+          "elements": 2135
+        }
+      ],
+      "median_ttfb": 2.480031,
+      "median_total": 2.762981
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/services/",
+          "checked_utc": "2026-10-21T12:45:52.604240+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.361194,
+          "total": 2.648771,
+          "dns": 0.002528,
+          "tls_ready": 0.359412,
+          "wire_bytes": 108727,
+          "decoded_bytes": 879948,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 438058,
+          "repeated_css_bytes": 352360,
+          "elements": 1892
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/",
+          "checked_utc": "2026-10-21T12:45:56.138567+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.942042,
+          "total": 3.295193,
+          "dns": 0.002244,
+          "tls_ready": 0.284014,
+          "wire_bytes": 108727,
+          "decoded_bytes": 879948,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 438058,
+          "repeated_css_bytes": 352360,
+          "elements": 1892
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/",
+          "checked_utc": "2026-10-21T12:45:59.205465+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.499633,
+          "total": 2.82135,
+          "dns": 0.002393,
+          "tls_ready": 0.449106,
+          "wire_bytes": 108727,
+          "decoded_bytes": 879948,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 438058,
+          "repeated_css_bytes": 352360,
+          "elements": 1892
+        }
+      ],
+      "median_ttfb": 2.499633,
+      "median_total": 2.82135
+    },
+    {
+      "url": "https://new.yaclinic.ru/doctor/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/doctor/",
+          "checked_utc": "2026-10-21T12:46:00.989142+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.406218,
+          "total": 1.547243,
+          "dns": 0.002238,
+          "tls_ready": 0.261144,
+          "wire_bytes": 62968,
+          "decoded_bytes": 315145,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 124020,
+          "repeated_css_bytes": 51624,
+          "elements": 655
+        },
+        {
+          "url": "https://new.yaclinic.ru/doctor/",
+          "checked_utc": "2026-10-21T12:46:02.846743+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.496801,
+          "total": 1.626315,
+          "dns": 0.002439,
+          "tls_ready": 0.272461,
+          "wire_bytes": 62968,
+          "decoded_bytes": 315145,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 124020,
+          "repeated_css_bytes": 51624,
+          "elements": 655
+        },
+        {
+          "url": "https://new.yaclinic.ru/doctor/",
+          "checked_utc": "2026-10-21T12:46:04.581768+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.370184,
+          "total": 1.507029,
+          "dns": 0.002065,
+          "tls_ready": 0.282952,
+          "wire_bytes": 62968,
+          "decoded_bytes": 315145,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 124020,
+          "repeated_css_bytes": 51624,
+          "elements": 655
+        }
+      ],
+      "median_ttfb": 1.406218,
+      "median_total": 1.547243
+    },
+    {
+      "url": "https://new.yaclinic.ru/doctor/alisa-allam/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/doctor/alisa-allam/",
+          "checked_utc": "2026-10-21T12:46:07.541079+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.596425,
+          "total": 2.734716,
+          "dns": 0.002368,
+          "tls_ready": 0.274838,
+          "wire_bytes": 76284,
+          "decoded_bytes": 339197,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 77131,
+          "repeated_css_bytes": 0,
+          "elements": 957
+        },
+        {
+          "url": "https://new.yaclinic.ru/doctor/alisa-allam/",
+          "checked_utc": "2026-10-21T12:46:10.010297+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.111403,
+          "total": 2.24467,
+          "dns": 0.001926,
+          "tls_ready": 0.326238,
+          "wire_bytes": 76280,
+          "decoded_bytes": 339197,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 77131,
+          "repeated_css_bytes": 0,
+          "elements": 957
+        },
+        {
+          "url": "https://new.yaclinic.ru/doctor/alisa-allam/",
+          "checked_utc": "2026-10-21T12:46:13.456734+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 3.086303,
+          "total": 3.218372,
+          "dns": 0.002255,
+          "tls_ready": 0.266388,
+          "wire_bytes": 76283,
+          "decoded_bytes": 339197,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 77131,
+          "repeated_css_bytes": 0,
+          "elements": 957
+        }
+      ],
+      "median_ttfb": 2.596425,
+      "median_total": 2.734716
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+          "checked_utc": "2026-10-21T12:46:17.662283+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 3.668783,
+          "total": 3.97876,
+          "dns": 0.002248,
+          "tls_ready": 0.313363,
+          "wire_bytes": 136913,
+          "decoded_bytes": 1080052,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 533597,
+          "repeated_css_bytes": 408398,
+          "elements": 2477
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+          "checked_utc": "2026-10-21T12:46:20.875287+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.704924,
+          "total": 2.976025,
+          "dns": 0.001941,
+          "tls_ready": 0.293816,
+          "wire_bytes": 138721,
+          "decoded_bytes": 1080052,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 533597,
+          "repeated_css_bytes": 408398,
+          "elements": 2477
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+          "checked_utc": "2026-10-21T12:46:24.211507+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.827876,
+          "total": 3.097703,
+          "dns": 0.001939,
+          "tls_ready": 0.268821,
+          "wire_bytes": 138511,
+          "decoded_bytes": 1080052,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 533597,
+          "repeated_css_bytes": 408398,
+          "elements": 2477
+        }
+      ],
+      "median_ttfb": 2.827876,
+      "median_total": 3.097703
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/holodnaya-plazma-impulsnyj-sprej/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/services/holodnaya-plazma-impulsnyj-sprej/",
+          "checked_utc": "2026-10-21T12:46:27.459982+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.737826,
+          "total": 3.011643,
+          "dns": 0.002196,
+          "tls_ready": 0.327141,
+          "wire_bytes": 132849,
+          "decoded_bytes": 997593,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 484571,
+          "repeated_css_bytes": 361161,
+          "elements": 2238
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/holodnaya-plazma-impulsnyj-sprej/",
+          "checked_utc": "2026-10-21T12:46:30.648479+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.684561,
+          "total": 2.947921,
+          "dns": 0.001744,
+          "tls_ready": 0.271195,
+          "wire_bytes": 134103,
+          "decoded_bytes": 997593,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 484571,
+          "repeated_css_bytes": 361161,
+          "elements": 2238
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/holodnaya-plazma-impulsnyj-sprej/",
+          "checked_utc": "2026-10-21T12:46:33.937502+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.77968,
+          "total": 3.053459,
+          "dns": 0.003038,
+          "tls_ready": 0.282079,
+          "wire_bytes": 132993,
+          "decoded_bytes": 997593,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 484571,
+          "repeated_css_bytes": 361161,
+          "elements": 2238
+        }
+      ],
+      "median_ttfb": 2.737826,
+      "median_total": 3.011643
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/lechenie-akne/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/services/lechenie-akne/",
+          "checked_utc": "2026-10-21T12:46:36.574415+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.214609,
+          "total": 2.389419,
+          "dns": 0.002872,
+          "tls_ready": 0.288726,
+          "wire_bytes": 121603,
+          "decoded_bytes": 760465,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 316839,
+          "repeated_css_bytes": 193079,
+          "elements": 1778
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/lechenie-akne/",
+          "checked_utc": "2026-10-21T12:46:39.393702+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.073502,
+          "total": 2.584339,
+          "dns": 0.002211,
+          "tls_ready": 0.281074,
+          "wire_bytes": 121265,
+          "decoded_bytes": 760465,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 316839,
+          "repeated_css_bytes": 193079,
+          "elements": 1778
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/lechenie-akne/",
+          "checked_utc": "2026-10-21T12:46:42.133342+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.320162,
+          "total": 2.50935,
+          "dns": 0.002559,
+          "tls_ready": 0.291094,
+          "wire_bytes": 121589,
+          "decoded_bytes": 760465,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 316839,
+          "repeated_css_bytes": 193079,
+          "elements": 1778
+        }
+      ],
+      "median_ttfb": 1.214609,
+      "median_total": 2.50935
+    },
+    {
+      "url": "https://new.yaclinic.ru/services/chistka-licza/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/services/chistka-licza/",
+          "checked_utc": "2026-10-21T12:46:45.157854+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.503213,
+          "total": 2.787824,
+          "dns": 0.002916,
+          "tls_ready": 0.281232,
+          "wire_bytes": 124054,
+          "decoded_bytes": 792246,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 341486,
+          "repeated_css_bytes": 217721,
+          "elements": 1819
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/chistka-licza/",
+          "checked_utc": "2026-10-21T12:46:48.120990+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.460223,
+          "total": 2.729017,
+          "dns": 0.002202,
+          "tls_ready": 0.314273,
+          "wire_bytes": 123870,
+          "decoded_bytes": 792246,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 341486,
+          "repeated_css_bytes": 217721,
+          "elements": 1819
+        },
+        {
+          "url": "https://new.yaclinic.ru/services/chistka-licza/",
+          "checked_utc": "2026-10-21T12:46:51.418595+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.802828,
+          "total": 3.062644,
+          "dns": 0.002159,
+          "tls_ready": 0.275269,
+          "wire_bytes": 123568,
+          "decoded_bytes": 792246,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 341486,
+          "repeated_css_bytes": 217721,
+          "elements": 1819
+        }
+      ],
+      "median_ttfb": 2.503213,
+      "median_total": 2.787824
+    },
+    {
+      "url": "https://new.yaclinic.ru/price/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/price/",
+          "checked_utc": "2026-10-21T12:46:56.045774+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 4.132011,
+          "total": 4.391792,
+          "dns": 0.001813,
+          "tls_ready": 0.271894,
+          "wire_bytes": 90287,
+          "decoded_bytes": 988198,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 77510,
+          "repeated_css_bytes": 0,
+          "elements": 4840
+        },
+        {
+          "url": "https://new.yaclinic.ru/price/",
+          "checked_utc": "2026-10-21T12:47:01.172550+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 4.617958,
+          "total": 4.876423,
+          "dns": 0.002379,
+          "tls_ready": 0.271148,
+          "wire_bytes": 90287,
+          "decoded_bytes": 988198,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 77510,
+          "repeated_css_bytes": 0,
+          "elements": 4840
+        },
+        {
+          "url": "https://new.yaclinic.ru/price/",
+          "checked_utc": "2026-10-21T12:47:06.697302+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 4.991001,
+          "total": 5.271088,
+          "dns": 0.002512,
+          "tls_ready": 0.311494,
+          "wire_bytes": 90287,
+          "decoded_bytes": 988198,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 77510,
+          "repeated_css_bytes": 0,
+          "elements": 4840
+        }
+      ],
+      "median_ttfb": 4.617958,
+      "median_total": 4.876423
+    },
+    {
+      "url": "https://new.yaclinic.ru/dokumenty/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/dokumenty/",
+          "checked_utc": "2026-10-21T12:47:08.413184+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.327456,
+          "total": 1.457811,
+          "dns": 0.002958,
+          "tls_ready": 0.291235,
+          "wire_bytes": 54272,
+          "decoded_bytes": 217800,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 60392,
+          "repeated_css_bytes": 0,
+          "elements": 671
+        },
+        {
+          "url": "https://new.yaclinic.ru/dokumenty/",
+          "checked_utc": "2026-10-21T12:47:09.894661+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.134004,
+          "total": 1.264007,
+          "dns": 0.00258,
+          "tls_ready": 0.312971,
+          "wire_bytes": 54272,
+          "decoded_bytes": 217800,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 60392,
+          "repeated_css_bytes": 0,
+          "elements": 671
+        },
+        {
+          "url": "https://new.yaclinic.ru/dokumenty/",
+          "checked_utc": "2026-10-21T12:47:11.442769+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.174981,
+          "total": 1.332054,
+          "dns": 0.00223,
+          "tls_ready": 0.294165,
+          "wire_bytes": 54272,
+          "decoded_bytes": 217800,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 60392,
+          "repeated_css_bytes": 0,
+          "elements": 671
+        }
+      ],
+      "median_ttfb": 1.174981,
+      "median_total": 1.332054
+    },
+    {
+      "url": "https://new.yaclinic.ru/contacts/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/contacts/",
+          "checked_utc": "2026-10-21T12:47:13.184377+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.325037,
+          "total": 1.520564,
+          "dns": 0.001656,
+          "tls_ready": 0.26722,
+          "wire_bytes": 57670,
+          "decoded_bytes": 255258,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 64245,
+          "repeated_css_bytes": 0,
+          "elements": 576
+        },
+        {
+          "url": "https://new.yaclinic.ru/contacts/",
+          "checked_utc": "2026-10-21T12:47:14.775402+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.233511,
+          "total": 1.371604,
+          "dns": 0.002819,
+          "tls_ready": 0.294143,
+          "wire_bytes": 57670,
+          "decoded_bytes": 255258,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 64245,
+          "repeated_css_bytes": 0,
+          "elements": 576
+        },
+        {
+          "url": "https://new.yaclinic.ru/contacts/",
+          "checked_utc": "2026-10-21T12:47:17.031334+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.512723,
+          "total": 2.032519,
+          "dns": 0.003738,
+          "tls_ready": 0.293325,
+          "wire_bytes": 57670,
+          "decoded_bytes": 255258,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 64245,
+          "repeated_css_bytes": 0,
+          "elements": 576
+        }
+      ],
+      "median_ttfb": 1.325037,
+      "median_total": 1.520564
+    },
+    {
+      "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+          "checked_utc": "2026-10-21T12:47:18.933061+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.540567,
+          "total": 1.676018,
+          "dns": 0.003269,
+          "tls_ready": 0.276529,
+          "wire_bytes": 66081,
+          "decoded_bytes": 301812,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 106398,
+          "repeated_css_bytes": 16125,
+          "elements": 691
+        },
+        {
+          "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+          "checked_utc": "2026-10-21T12:47:20.769639+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.485568,
+          "total": 1.619178,
+          "dns": 0.002406,
+          "tls_ready": 0.276634,
+          "wire_bytes": 64925,
+          "decoded_bytes": 290179,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 99294,
+          "repeated_css_bytes": 12573,
+          "elements": 668
+        },
+        {
+          "url": "https://new.yaclinic.ru/advice/vypadenie-volos-prichiny/",
+          "checked_utc": "2026-10-21T12:47:23.989441+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 2.553253,
+          "total": 2.995239,
+          "dns": 0.002272,
+          "tls_ready": 0.268147,
+          "wire_bytes": 65713,
+          "decoded_bytes": 296383,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 102846,
+          "repeated_css_bytes": 12573,
+          "elements": 680
+        }
+      ],
+      "median_ttfb": 1.540567,
+      "median_total": 1.676018
+    },
+    {
+      "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+      "samples": [
+        {
+          "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+          "checked_utc": "2026-10-21T12:47:25.443567+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.097774,
+          "total": 1.228557,
+          "dns": 0.002637,
+          "tls_ready": 0.29617,
+          "wire_bytes": 54005,
+          "decoded_bytes": 204509,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 60392,
+          "repeated_css_bytes": 0,
+          "elements": 533
+        },
+        {
+          "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+          "checked_utc": "2026-10-21T12:47:26.966527+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.127509,
+          "total": 1.29759,
+          "dns": 0.001733,
+          "tls_ready": 0.262422,
+          "wire_bytes": 54005,
+          "decoded_bytes": 204509,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 60392,
+          "repeated_css_bytes": 0,
+          "elements": 533
+        },
+        {
+          "url": "https://new.yaclinic.ru/dokumenty/informacionnoe-soglasie-ultraformer-iii/",
+          "checked_utc": "2026-10-21T12:47:28.375129+00:00",
+          "curl_exit": 0,
+          "status": 200,
+          "ttfb": 1.053706,
+          "total": 1.184485,
+          "dns": 0.001956,
+          "tls_ready": 0.272593,
+          "wire_bytes": 54005,
+          "decoded_bytes": 204509,
+          "headers": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding"
+          },
+          "inline_css_bytes": 60392,
+          "repeated_css_bytes": 0,
+          "elements": 533
+        }
+      ],
+      "median_ttfb": 1.097774,
+      "median_total": 1.228557
+    }
+  ]
+}
