@@ -1,0 +1,12 @@
+{
+  "site": "https://new.yaclinic.ru",
+  "menu_id": 8,
+  "menu_name": "Service menu",
+  "items": [
+    {"id": 488, "title": "Косметология", "url": "/services/?ucterms=showcase_section:kosmetologiya", "parent": 0, "order": 1},
+    {"id": 489, "title": "Дерматология", "url": "/services/?ucterms=showcase_section:dermatologiya", "parent": 0, "order": 2},
+    {"id": 490, "title": "Трихология", "url": "/services/?ucterms=showcase_section:trihologiya", "parent": 0, "order": 3},
+    {"id": 491, "title": "Здоровье", "url": "/services/?ucterms=showcase_section:zdorove", "parent": 0, "order": 4}
+  ],
+  "rollback": "Remove only the newly added menu item 14043 from Service menu through WordPress and save. Do not restore the whole database or replace other menu items."
+}

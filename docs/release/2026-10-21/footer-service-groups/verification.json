@@ -1,0 +1,30 @@
+{
+  "site": "https://new.yaclinic.ru",
+  "production_mutated": false,
+  "source": "WordPress Service menu 8; new menu item 14043",
+  "persisted_confirmation": "Меню «Service menu» обновлено; five items present on saved editor and public HTML",
+  "http": {"authenticated": false, "pages": 9, "passed": 9, "failed": 0},
+  "browser": {
+    "authenticated": true,
+    "device_mode": "Chromium responsive emulation, not physical iOS/Android devices",
+    "navigation_widths": [390, 1440],
+    "navigation_checks": 10,
+    "navigation_passed": 10,
+    "groups": [
+      {"title": "Косметология", "slug": "kosmetologiya", "cards": 22},
+      {"title": "Дерматология", "slug": "dermatologiya", "cards": 2},
+      {"title": "Трихология", "slug": "trihologiya", "cards": 5},
+      {"title": "Здоровье", "slug": "zdorove", "cards": 7},
+      {"title": "Удаление родинок", "slug": "udalenie-rodinok", "cards": 6}
+    ],
+    "mobile_desktop_card_order_identical": true,
+    "catalog_measured_widths": [360, 390, 768, 1440],
+    "catalog_scroll_width_equals_viewport": true,
+    "footer_link_height_at_360_390_768": 48,
+    "shared_footer_pages": ["/", "/doctor/mariya-pavlyuk/", "/services/udalenie-rodinok/"],
+    "shared_footer_widths": [390, 1440],
+    "shared_footer_checks": 6,
+    "shared_footer_passed": 6
+  },
+  "scope": "Only one new link in existing shared menu; no PHP, CSS, snippets, prices, cards or booking logic changed"
+}
