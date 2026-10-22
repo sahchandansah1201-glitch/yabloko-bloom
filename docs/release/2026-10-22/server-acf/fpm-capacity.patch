@@ -1,0 +1,5 @@
+--- www.conf.before
++++ www.conf.after
+@@ -1 +1 @@
+-pm.max_children = 5
++pm.max_children = 8
