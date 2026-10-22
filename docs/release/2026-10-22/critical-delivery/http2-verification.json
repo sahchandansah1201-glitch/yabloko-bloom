@@ -1,0 +1,143 @@
+{
+  "publishedUtc": "2026-10-22T12:28:54.922204+00:00",
+  "beforeHash": "6b73dfedd9ba00528df1d26ff52b2c3b8cf7b62d0e73e1832eea0fab8f3433c9",
+  "afterHash": "55f92ded8ace563c6885ed8d2cf749c40b898d7dd05fdf255109d9706f2e18a5",
+  "changedListenParameters": 2,
+  "nginxTest": "PASS_WITH_PROTOCOL_OPTIONS_WARNINGS",
+  "http1Status": 200,
+  "http2Status": 200,
+  "intermediate": [
+    {
+      "path": "/",
+      "mobile": true,
+      "run": 1,
+      "lcp": 3324,
+      "fcp": 3100,
+      "ttfb": 746.4000000357628,
+      "cls": 0.009617592592592593,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": true,
+      "run": 1,
+      "lcp": 5600,
+      "fcp": 5532,
+      "ttfb": 3048.300000011921,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/",
+      "mobile": true,
+      "run": 2,
+      "lcp": 3636,
+      "fcp": 3100,
+      "ttfb": 982.8000000119209,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": true,
+      "run": 2,
+      "lcp": 3328,
+      "fcp": 3236,
+      "ttfb": 757.4000000357628,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/",
+      "mobile": true,
+      "run": 3,
+      "lcp": 3576,
+      "fcp": 2992,
+      "ttfb": 679.1000000238419,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": true,
+      "run": 3,
+      "lcp": 5024,
+      "fcp": 4436,
+      "ttfb": 2222.5,
+      "cls": 0.04780524691358025,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/",
+      "mobile": false,
+      "run": 1,
+      "lcp": 3356,
+      "fcp": 2940,
+      "ttfb": 2490.199999988079,
+      "cls": 0.004789255401234567,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": false,
+      "run": 1,
+      "lcp": 10812,
+      "fcp": 10304,
+      "ttfb": 8191.800000011921,
+      "cls": 0.004789255401234567,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/",
+      "mobile": false,
+      "run": 2,
+      "lcp": 1692,
+      "fcp": 1400,
+      "ttfb": 941.8999999761581,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": false,
+      "run": 2,
+      "lcp": 2304,
+      "fcp": 2092,
+      "ttfb": 1170,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/",
+      "mobile": false,
+      "run": 3,
+      "lcp": 4388,
+      "fcp": 4028,
+      "ttfb": 3139.300000011921,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": false,
+      "run": 3,
+      "lcp": 2040,
+      "fcp": 1880,
+      "ttfb": 1269.5,
+      "cls": 0,
+      "protocol": "h2",
+      "errors": []
+    }
+  ]
+}
