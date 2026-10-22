@@ -1,0 +1,368 @@
+{
+  "status": "published and verified",
+  "tests": {
+    "source": 5,
+    "cookie": 5,
+    "tracking": 12
+  },
+  "viewports": [
+    {
+      "width": 390,
+      "cards": [
+        {
+          "name": "Павлюк Мария Олеговна",
+          "specialty": "Врач дерматолог, косметолог , трихолог",
+          "profile": "https://yaclinic.ru/doctor/mariya-pavlyuk/",
+          "doctor": "729",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/pavlyuk-maria-c4lma5_x-1.webp);"
+        },
+        {
+          "name": "Павлюк Евгений Михайлович",
+          "specialty": "Медицинский брат по массажу",
+          "profile": "https://yaclinic.ru/doctor/evgenij-pavlyuk/",
+          "doctor": "730",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/pavlyuk-evgeniy-ci7ynt-n-1.webp);"
+        },
+        {
+          "name": "Медведкова Наргиза Ахматиллаевна",
+          "specialty": "Нутрициолог терапевт",
+          "profile": "https://yaclinic.ru/doctor/nargiza-medvedkova/",
+          "doctor": "731",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/medvedkova-nargiza-bgzeboim-1.webp);"
+        },
+        {
+          "name": "Ковалев Игорь Петрович",
+          "specialty": "Остеопат",
+          "profile": "https://yaclinic.ru/doctor/igor-kovalev/",
+          "doctor": "732",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/kovalev-igor-v_wtap3t-1.webp);"
+        },
+        {
+          "name": "Аллам Алиса Хусейновна",
+          "specialty": "Врач-косметолог, дерматовенеролог, трихолог​",
+          "profile": "https://yaclinic.ru/doctor/alisa-allam/",
+          "doctor": "733",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/allam-alisa-d7k8faml-1.webp);"
+        },
+        {
+          "name": "Акопян Нарине Романовна",
+          "specialty": "Медицинская сестра в косметологии",
+          "profile": "https://yaclinic.ru/doctor/narine-akopyan/",
+          "doctor": "734",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/akopyan-narine-mwf-chix-1.webp);"
+        },
+        {
+          "name": "Райкова Светлана Александровна",
+          "specialty": "Врач дерматовенеролог",
+          "profile": "https://yaclinic.ru/doctor/svetlana-rajkova/",
+          "doctor": "735",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/raykova-svetlana-djc5hk83-1.webp);"
+        },
+        {
+          "name": "Павлюк Егор Евгеньевич",
+          "specialty": "Врач-невролог",
+          "profile": "https://yaclinic.ru/doctor/egor-pavlyuk/",
+          "doctor": "736",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/pavlyuk-egor-cvihynhr-1.webp);"
+        },
+        {
+          "name": "Грачева Виктория Сергеевна",
+          "specialty": "Врач дерматовенеролог, косметолог",
+          "profile": "https://yaclinic.ru/doctor/viktoriya-gracheva/",
+          "doctor": "738",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1.webp);"
+        }
+      ],
+      "errors": [],
+      "price": {
+        "total": 218,
+        "absent": 0,
+        "match": 18,
+        "reset": 218,
+        "textRestored": true
+      }
+    },
+    {
+      "width": 1440,
+      "cards": [
+        {
+          "name": "Павлюк Мария Олеговна",
+          "specialty": "Врач дерматолог, косметолог , трихолог",
+          "profile": "https://yaclinic.ru/doctor/mariya-pavlyuk/",
+          "doctor": "729",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/pavlyuk-maria-c4lma5_x-1.webp);"
+        },
+        {
+          "name": "Павлюк Евгений Михайлович",
+          "specialty": "Медицинский брат по массажу",
+          "profile": "https://yaclinic.ru/doctor/evgenij-pavlyuk/",
+          "doctor": "730",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/pavlyuk-evgeniy-ci7ynt-n-1.webp);"
+        },
+        {
+          "name": "Медведкова Наргиза Ахматиллаевна",
+          "specialty": "Нутрициолог терапевт",
+          "profile": "https://yaclinic.ru/doctor/nargiza-medvedkova/",
+          "doctor": "731",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/medvedkova-nargiza-bgzeboim-1.webp);"
+        },
+        {
+          "name": "Ковалев Игорь Петрович",
+          "specialty": "Остеопат",
+          "profile": "https://yaclinic.ru/doctor/igor-kovalev/",
+          "doctor": "732",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/kovalev-igor-v_wtap3t-1.webp);"
+        },
+        {
+          "name": "Аллам Алиса Хусейновна",
+          "specialty": "Врач-косметолог, дерматовенеролог, трихолог​",
+          "profile": "https://yaclinic.ru/doctor/alisa-allam/",
+          "doctor": "733",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/allam-alisa-d7k8faml-1.webp);"
+        },
+        {
+          "name": "Акопян Нарине Романовна",
+          "specialty": "Медицинская сестра в косметологии",
+          "profile": "https://yaclinic.ru/doctor/narine-akopyan/",
+          "doctor": "734",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/akopyan-narine-mwf-chix-1.webp);"
+        },
+        {
+          "name": "Райкова Светлана Александровна",
+          "specialty": "Врач дерматовенеролог",
+          "profile": "https://yaclinic.ru/doctor/svetlana-rajkova/",
+          "doctor": "735",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/raykova-svetlana-djc5hk83-1.webp);"
+        },
+        {
+          "name": "Павлюк Егор Евгеньевич",
+          "specialty": "Врач-невролог",
+          "profile": "https://yaclinic.ru/doctor/egor-pavlyuk/",
+          "doctor": "736",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/pavlyuk-egor-cvihynhr-1.webp);"
+        },
+        {
+          "name": "Грачева Виктория Сергеевна",
+          "specialty": "Врач дерматовенеролог, косметолог",
+          "profile": "https://yaclinic.ru/doctor/viktoriya-gracheva/",
+          "doctor": "738",
+          "photo": " background-image: url(https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1.webp);"
+        }
+      ],
+      "errors": [],
+      "price": {
+        "total": 218,
+        "absent": 0,
+        "match": 18,
+        "reset": 218,
+        "textRestored": true
+      }
+    }
+  ],
+  "doctorCta": {
+    "events": [
+      {
+        "index": 0,
+        "name": "Павлюк Мария Олеговна",
+        "expected": "729",
+        "event": {
+          "source": "doctor",
+          "doctorId": 729
+        }
+      },
+      {
+        "index": 1,
+        "name": "Павлюк Евгений Михайлович",
+        "expected": "730",
+        "event": {
+          "source": "doctor",
+          "doctorId": 730
+        }
+      },
+      {
+        "index": 2,
+        "name": "Медведкова Наргиза Ахматиллаевна",
+        "expected": "731",
+        "event": {
+          "source": "doctor",
+          "doctorId": 731
+        }
+      },
+      {
+        "index": 3,
+        "name": "Ковалев Игорь Петрович",
+        "expected": "732",
+        "event": {
+          "source": "doctor",
+          "doctorId": 732
+        }
+      },
+      {
+        "index": 4,
+        "name": "Аллам Алиса Хусейновна",
+        "expected": "733",
+        "event": {
+          "source": "doctor",
+          "doctorId": 733
+        }
+      },
+      {
+        "index": 5,
+        "name": "Акопян Нарине Романовна",
+        "expected": "734",
+        "event": {
+          "source": "doctor",
+          "doctorId": 734
+        }
+      },
+      {
+        "index": 6,
+        "name": "Райкова Светлана Александровна",
+        "expected": "735",
+        "event": {
+          "source": "doctor",
+          "doctorId": 735
+        }
+      },
+      {
+        "index": 7,
+        "name": "Павлюк Егор Евгеньевич",
+        "expected": "736",
+        "event": {
+          "source": "doctor",
+          "doctorId": 736
+        }
+      },
+      {
+        "index": 8,
+        "name": "Грачева Виктория Сергеевна",
+        "expected": "738",
+        "event": {
+          "source": "doctor",
+          "doctorId": 738
+        }
+      }
+    ],
+    "profile": {
+      "expected": "https://yaclinic.ru/doctor/narine-akopyan/",
+      "url": "https://yaclinic.ru/doctor/narine-akopyan/",
+      "h1": "Акопян Нарине Романовна"
+    },
+    "back": "https://yaclinic.ru/",
+    "submitted": false
+  },
+  "cookie": [
+    {
+      "width": 360,
+      "initial": {
+        "gap": 12,
+        "top": 561.40625,
+        "left": 12,
+        "right": 348,
+        "width": 360,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 88,
+        "barVisible": true,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    },
+    {
+      "width": 390,
+      "initial": {
+        "gap": 12,
+        "top": 561.40625,
+        "left": 12,
+        "right": 378,
+        "width": 390,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 88,
+        "barVisible": true,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    },
+    {
+      "width": 768,
+      "initial": {
+        "gap": 16,
+        "top": 622.40625,
+        "left": 16,
+        "right": 496,
+        "width": 768,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 16,
+        "barVisible": false,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    },
+    {
+      "width": 1440,
+      "initial": {
+        "gap": 16,
+        "top": 622.40625,
+        "left": 16,
+        "right": 496,
+        "width": 1440,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 16,
+        "barVisible": false,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    }
+  ]
+}

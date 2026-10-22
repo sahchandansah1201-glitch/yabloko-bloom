@@ -1,0 +1,77 @@
+{
+  "elementor": [
+    {
+      "path": "post/6/node/d0b1077/settings/listing_posts_posttype",
+      "before": [
+        "specialist"
+      ],
+      "after": [
+        "doctor"
+      ]
+    },
+    {
+      "path": "post/190/node/32c0db0/settings/__dynamic__/uc_img",
+      "before": "[elementor-tag id=\"661d8db\" name=\"post-featured-image\" settings=\"%7B%7D\"]",
+      "after": "[elementor-tag id=\"86c207c\" name=\"acf-image\" settings=\"%7B%22key%22%3A%22field_sqns_doctor_site_photo%3Asite_photo%22%7D\"]"
+    },
+    {
+      "path": "post/190/node/32c0db0/settings/uc_btn_link/custom_attributes",
+      "before": "data-booking-source|doctor,data-doctor-id|729",
+      "after": "data-booking-source|doctor"
+    },
+    {
+      "path": "post/190/node/18a7138/settings/__dynamic__/title",
+      "before": "[elementor-tag id=\"7a0e919\" name=\"post-title\" settings=\"%7B%7D\"]",
+      "after": "[elementor-tag id=\"17ac1dc\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_sqns_doctor_display_name%3Adisplay_name%22%7D\"]"
+    },
+    {
+      "path": "post/190/node/18a7138/settings/__dynamic__/link",
+      "after": "[elementor-tag id=\"home-doctor-link\" name=\"post-url\" settings=\"%7B%7D\"]"
+    },
+    {
+      "path": "post/190/node/403ba7e/settings/__dynamic__",
+      "before": [],
+      "after": {
+        "title": "[elementor-tag id=\"2bcff77\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_sqns_doctor_specialty%3Aspecialty%22%7D\"]"
+      }
+    },
+    {
+      "path": "post/190/node/c09ce1c/settings/__dynamic__/excerpt",
+      "before": "[elementor-tag id=\"\" name=\"post-excerpt\" settings=\"%7B%22max_length%22%3A10%2C%22apply_to_post_content%22%3A%22%22%2C%22after%22%3A%22...%22%7D\"]"
+    },
+    {
+      "path": "post/190/node/c09ce1c/settings/__dynamic__/title",
+      "after": "[elementor-tag id=\"b386071\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_sqns_doctor_short_bio%3Ashort_bio%22%7D\"]"
+    },
+    {
+      "path": "post/190/node/c09ce1c/settings/header_size",
+      "after": "div"
+    },
+    {
+      "path": "post/190/node/c09ce1c/widgetType",
+      "before": "theme-post-excerpt",
+      "after": "heading"
+    }
+  ],
+  "snippet8": [
+    {
+      "start": "function repairHome()",
+      "before": "function repairHome() {\n    if (!document.body.classList.contains('home')) return;\n\n    var roles = {\n      'Аллам Алиса Хусейновна': 'Заведующая отделением дерматологии',\n      'Грачева Виктория Сергеевна': 'Врач-дерматовенеролог, косметолог',\n      'Игитханян Оксана Алексеевна': 'Врач-косметолог',\n      'Райкова Светлана Александровна': 'Дерматовенеролог',\n      'Ковалев Игорь Петрович': 'Остеопат',\n      'Павлюк Егор Евгеньевич': 'Врач-невролог',\n      'Медведкова Наргиза Ахматиллаевна': 'Нутрициолог, терапевт',\n      'Павлюк Евгений Михайлович': 'Медицинский брат по массажу',\n      'Акопян Нарине Романовна': 'Медицинская сестра в косметологии',\n      'Павлюк Мария Олеговна': 'Главный врач, дерматолог, трихолог, Anti-Age эксперт'\n    };\n\n    document.querySelectorAll('#uc_ue_listing_carousel_elementor_d0b1077 .owl-item').forEach(function (card) {\n      var text = card.textContent || '';\n      Object.keys(roles).some(function (name) {\n        if (!text.includes(name)) return false;\n        var role = card.querySelector('.elementor-element-403ba7e .elementor-heading-title');\n        if (role && role.textContent !== roles[name]) role.textContent = roles[name];\n        return true;\n      });\n    });\n\n    var number = document.querySelector('.elementor-element-b5d5b17 .elementor-heading-title');\n    var label = document.querySelector('.elementor-element-e2af11d .elementor-heading-title');\n    if (number && number.textContent !== '6517+') number.textContent = '6517+';\n    if (label && label.textContent !== 'пациентов') label.textContent = 'пациентов';\n\n    var heroExperience = document.querySelector(\n      '.elementor-element-072125d .elementor-icon-box-title span'\n    );\n    var trustExperience = document.querySelector(\n      '.elementor-element-404e21c .elementor-icon-box-title span'\n    );\n    if (heroExperience && heroExperience.textContent !== '9+') heroExperience.textContent = '9+';\n    if (trustExperience && trustExperience.textContent !== '9+ лет опыта') trustExperience.textContent = '9+ лет опыта';\n  }\n\n  ",
+      "after": "function repairHome() {\n    if (!document.body.classList.contains('home')) return;\n\n    var number = document.querySelector('.elementor-element-b5d5b17 .elementor-heading-title');\n    var label = document.querySelector('.elementor-element-e2af11d .elementor-heading-title');\n    if (number && number.textContent !== '6517+') number.textContent = '6517+';\n    if (label && label.textContent !== 'пациентов') label.textContent = 'пациентов';\n\n    var heroExperience = document.querySelector(\n      '.elementor-element-072125d .elementor-icon-box-title span'\n    );\n    var trustExperience = document.querySelector(\n      '.elementor-element-404e21c .elementor-icon-box-title span'\n    );\n    if (heroExperience && heroExperience.textContent !== '9+') heroExperience.textContent = '9+';\n    if (trustExperience && trustExperience.textContent !== '9+ лет опыта') trustExperience.textContent = '9+ лет опыта';\n  }\n\n  "
+    },
+    {
+      "start": "function repairPriceSearch()",
+      "before": "function repairPriceSearch() {\n    if (!document.body.classList.contains('page-id-2903')) return;\n\n    if (typeof window.g_ucDynamicFilters === 'undefined') {\n      window.g_ucDynamicFilters = { runWithTrashold: function () {} };\n    }\n\n    var input = document.querySelector('.uc-search-filter__input');\n    var items = Array.prototype.slice.call(document.querySelectorAll('.ue-grid-item'))\n      .filter(function (item) { return /Записаться/i.test(item.innerText || ''); });\n\n    if (!input || !items.length || input.dataset.yaclinicPriceFix) return;\n    input.dataset.yaclinicPriceFix = '1';\n\n    var wrapper = input.closest('.uc-search-filter-input-wrapper') || input.parentElement;\n    var status = document.createElement('div');\n    status.className = 'yaclinic-search-status';\n    status.setAttribute('role', 'status');\n    status.setAttribute('aria-live', 'polite');\n    wrapper.insertAdjacentElement('afterend', status);\n\n    function applyFilter() {\n      var query = normalize(input.value);\n      var count = 0;\n\n      items.forEach(function (item) {\n        var matches = !query || normalize(item.innerText).includes(query);\n        item.classList.toggle('yaclinic-price-hidden', !matches);\n        if (matches) count += 1;\n      });\n\n      if (!query) {\n        status.textContent = '';\n      } else if (count) {\n        status.textContent = 'Найдено: ' + count;\n      } else {\n        status.textContent = 'Ничего не найдено. Измените запрос.';\n      }\n    }\n\n    input.addEventListener('input', applyFilter);\n    window.addEventListener('pageshow', applyFilter);\n    window.setTimeout(applyFilter, 0);\n    applyFilter();\n  }\n\n  ",
+      "after": "function repairPriceSearch() {\n    if (!document.body.classList.contains('page-id-2903')) return;\n\n    if (typeof window.g_ucDynamicFilters === 'undefined') {\n      window.g_ucDynamicFilters = { runWithTrashold: function () {} };\n    }\n\n    var input = document.querySelector('.uc-search-filter__input');\n    var items = Array.prototype.slice.call(document.querySelectorAll('.ue-grid-item'));\n\n    if (!input || !items.length || input.dataset.yaclinicPriceFix) return;\n    input.dataset.yaclinicPriceFix = '1';\n\n    var wrapper = input.closest('.uc-search-filter-input-wrapper') || input.parentElement;\n    var status = document.createElement('div');\n    status.className = 'yaclinic-search-status';\n    status.setAttribute('role', 'status');\n    status.setAttribute('aria-live', 'polite');\n    wrapper.insertAdjacentElement('afterend', status);\n\n    function applyFilter() {\n      var query = normalize(input.value);\n      var count = 0;\n\n      items.forEach(function (item) {\n        var matches = !query || normalize(item.innerText).includes(query);\n        item.classList.toggle('yaclinic-price-hidden', !matches);\n        if (matches) count += 1;\n      });\n\n      if (!query) {\n        status.textContent = '';\n      } else if (count) {\n        status.textContent = 'Найдено: ' + count;\n      } else {\n        status.textContent = 'Ничего не найдено. Измените запрос.';\n      }\n    }\n\n    input.addEventListener('input', applyFilter);\n    window.addEventListener('pageshow', applyFilter);\n    window.setTimeout(applyFilter, 0);\n    applyFilter();\n  }\n\n  "
+    },
+    {
+      "start": "function attachBookingObserverWhenReady()",
+      "before": "function attachBookingObserverWhenReady() {\n    var host = document.getElementById('sqns-booking-widget-root');\n    if (!host || !host.shadowRoot) return false;\n    observeBookingWidget();\n    return true;\n  }\n\n  if (!attachBookingObserverWhenReady()) {\n    var bookingHostObserver = new MutationObserver(function (_, observer) {\n      if (!attachBookingObserverWhenReady()) return;\n      observer.disconnect();\n    });\n    bookingHostObserver.observe(document.body, { childList: true, subtree: true });\n  }\n",
+      "after": "function attachBookingObserverWhenReady() {\n    var host = document.getElementById('sqns-booking-widget-root');\n    if (!host || !host.shadowRoot) return false;\n    observeBookingWidget();\n    return true;\n  }\n\n  function attachBookingHostObserver() {\n    if (!document.body || attachBookingObserverWhenReady()) return;\n    var bookingHostObserver = new MutationObserver(function (_, observer) {\n      if (!attachBookingObserverWhenReady()) return;\n      observer.disconnect();\n    });\n    bookingHostObserver.observe(document.body, { childList: true, subtree: true });\n  }\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', attachBookingHostObserver, { once: true });\n  } else {\n    attachBookingHostObserver();\n  }\n"
+    },
+    {
+      "start": "scoped doctor render binding",
+      "after": "/* The home card uses the current published doctor, never a fixed staff ID. */\nadd_filter('elementor/widget/render_content', static function ($content, $widget) {\n    if ('32c0db0' !== $widget->get_id() || 'doctor' !== get_post_type()) return $content;\n    $doctor_id = (int) get_the_ID();\n    if ($doctor_id <= 0 || 'publish' !== get_post_status($doctor_id)) return $content;\n    return str_replace('data-booking-source=\"doctor\"',\n        'data-booking-source=\"doctor\" data-doctor-id=\"' . $doctor_id . '\"', $content);\n}, 40, 2);\n"
+    }
+  ]
+}
