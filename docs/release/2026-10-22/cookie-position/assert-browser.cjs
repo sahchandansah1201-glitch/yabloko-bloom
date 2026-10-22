@@ -11,4 +11,3 @@ for(const r of rows){
   assert.ok(r.reopened,'settings can reopen consent');
 }
 console.log(`Cookie geometry, persistence, booking layers and necessary-only checks PASS in ${rows.length} viewport cases.`);
-

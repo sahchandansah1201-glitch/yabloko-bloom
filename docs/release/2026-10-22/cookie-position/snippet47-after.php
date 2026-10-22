@@ -106,5 +106,3 @@ YACLINIC_COOKIE_UX
         , 'after');
     }
 });
-
-
