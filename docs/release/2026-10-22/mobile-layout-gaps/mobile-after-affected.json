@@ -1,0 +1,457 @@
+[
+  {
+    "requested": "https://new.yaclinic.ru/services/rozaczeya/",
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 10276,
+    "fontsReady": true,
+    "mainHeight": 8452.390625,
+    "footerTop": 8516.390625,
+    "footerGap": 72,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 1714,
+    "scrollSteps": 16,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Розацея",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1594"
+      },
+      {
+        "type": "loop-item",
+        "id": "1671"
+      },
+      {
+        "type": "loop-item",
+        "id": "1659"
+      },
+      {
+        "type": "loop-item",
+        "id": "2485"
+      },
+      {
+        "type": "loop-item",
+        "id": "2518"
+      },
+      {
+        "type": "loop-item",
+        "id": "2271"
+      },
+      {
+        "type": "loop-item",
+        "id": "2277"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular service_group-template-default single single-service_group postid-2403 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1594 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "service_group",
+    "id": 2403,
+    "geometry": {
+      "resultsPadding": null,
+      "specializationMargin": null,
+      "specializationPadding": null,
+      "promoHeight": 0,
+      "galleryCount": 0
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/alisa-allam/",
+    "url": "https://new.yaclinic.ru/doctor/alisa-allam/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 8431,
+    "fontsReady": true,
+    "mainHeight": 6607.59375,
+    "footerTop": 6671.59375,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 466,
+    "scrollSteps": 13,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Аллам Алиса Хусейновна",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-733 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 733,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 5
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/egor-pavlyuk/",
+    "url": "https://new.yaclinic.ru/doctor/egor-pavlyuk/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 6172,
+    "fontsReady": true,
+    "mainHeight": 4348.40625,
+    "footerTop": 4412.40625,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 264,
+    "scrollSteps": 10,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Павлюк Егор Евгеньевич",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-736 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 736,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 2
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/evgenij-pavlyuk/",
+    "url": "https://new.yaclinic.ru/doctor/evgenij-pavlyuk/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 6207,
+    "fontsReady": true,
+    "mainHeight": 4383.578125,
+    "footerTop": 4447.578125,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 253,
+    "scrollSteps": 10,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Павлюк Евгений Михайлович",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-730 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 730,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 0
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/igor-kovalev/",
+    "url": "https://new.yaclinic.ru/doctor/igor-kovalev/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 6379,
+    "fontsReady": true,
+    "mainHeight": 4554.8125,
+    "footerTop": 4618.8125,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 296,
+    "scrollSteps": 10,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Ковалев Игорь Петрович",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-732 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 732,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 2
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/mariya-pavlyuk/",
+    "url": "https://new.yaclinic.ru/doctor/mariya-pavlyuk/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 10177,
+    "fontsReady": true,
+    "mainHeight": 8353.515625,
+    "footerTop": 8417.515625,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 498,
+    "scrollSteps": 16,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Павлюк Мария Олеговна",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-729 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 729,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 1
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/nargiza-medvedkova/",
+    "url": "https://new.yaclinic.ru/doctor/nargiza-medvedkova/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 5978,
+    "fontsReady": true,
+    "mainHeight": 4153.796875,
+    "footerTop": 4217.796875,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 271,
+    "scrollSteps": 10,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Медведкова Наргиза Ахматиллаевна",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-731 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 731,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 0
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/narine-akopyan/",
+    "url": "https://new.yaclinic.ru/doctor/narine-akopyan/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 7534,
+    "fontsReady": true,
+    "mainHeight": 5710.578125,
+    "footerTop": 5774.578125,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 312,
+    "scrollSteps": 12,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Акопян Нарине Романовна",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-734 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 734,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 0
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/svetlana-rajkova/",
+    "url": "https://new.yaclinic.ru/doctor/svetlana-rajkova/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 7081,
+    "fontsReady": true,
+    "mainHeight": 5257.40625,
+    "footerTop": 5321.40625,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 406,
+    "scrollSteps": 11,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Райкова Светлана Александровна",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-735 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 735,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 7
+    }
+  },
+  {
+    "requested": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 6910,
+    "fontsReady": true,
+    "mainHeight": 5086,
+    "footerTop": 5150,
+    "footerGap": 101,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 312,
+    "scrollSteps": 11,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Грачева Виктория Сергеевна",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "single-post",
+        "id": "1077"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular doctor-template-default single single-doctor postid-738 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page-1077 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode",
+    "type": "doctor",
+    "id": 738,
+    "geometry": {
+      "resultsPadding": "24px",
+      "specializationMargin": "32px",
+      "specializationPadding": "24px",
+      "galleryCount": 3
+    }
+  }
+]

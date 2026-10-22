@@ -1,0 +1,14 @@
+{
+  "checked": 539,
+  "total": 539,
+  "method": "HEAD",
+  "redirectMode": "manual",
+  "responseGroups": [
+    {
+      "status": 301,
+      "location": "https://new.yaclinic.ru/price/",
+      "count": 539
+    }
+  ],
+  "errors": []
+}

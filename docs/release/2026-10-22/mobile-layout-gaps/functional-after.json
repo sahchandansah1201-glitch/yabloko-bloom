@@ -1,0 +1,40 @@
+[
+  {
+    "width": 390,
+    "states": [
+      "Работа 1 из 3",
+      "Работа 2 из 3",
+      "Работа 3 из 3"
+    ],
+    "video": {
+      "src": "https://new.yaclinic.ru/wp-content/uploads/2026/10/viktoriya-gracheva-work-video.mp4",
+      "time": 0.112007,
+      "paused": false,
+      "width": 600,
+      "height": 600
+    },
+    "viewerClosed": true,
+    "bookingLoaded": true,
+    "bookingClosed": true,
+    "bookingSubmitted": false
+  },
+  {
+    "width": 1440,
+    "states": [
+      "Работа 1 из 3",
+      "Работа 2 из 3",
+      "Работа 3 из 3"
+    ],
+    "video": {
+      "src": "https://new.yaclinic.ru/wp-content/uploads/2026/10/viktoriya-gracheva-work-video.mp4",
+      "time": 0.106077,
+      "paused": false,
+      "width": 600,
+      "height": 600
+    },
+    "viewerClosed": true,
+    "bookingLoaded": true,
+    "bookingClosed": true,
+    "bookingSubmitted": false
+  }
+]

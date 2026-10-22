@@ -1,0 +1,117 @@
+[
+  {
+    "width": 360,
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "status": 200,
+    "footer": true,
+    "promoHeight": 0,
+    "resultsPadding": null,
+    "specializationMargin": null,
+    "specializationPadding": null,
+    "overflow": false,
+    "script": true
+  },
+  {
+    "width": 360,
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "status": 200,
+    "footer": true,
+    "resultsPadding": "24px",
+    "specializationMargin": "32px",
+    "specializationPadding": "24px",
+    "overflow": false,
+    "script": false
+  },
+  {
+    "width": 414,
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "status": 200,
+    "footer": true,
+    "promoHeight": 0,
+    "resultsPadding": null,
+    "specializationMargin": null,
+    "specializationPadding": null,
+    "overflow": false,
+    "script": true
+  },
+  {
+    "width": 414,
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "status": 200,
+    "footer": true,
+    "resultsPadding": "24px",
+    "specializationMargin": "32px",
+    "specializationPadding": "24px",
+    "overflow": false,
+    "script": false
+  },
+  {
+    "width": 767,
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "status": 200,
+    "footer": true,
+    "promoHeight": 0,
+    "resultsPadding": null,
+    "specializationMargin": null,
+    "specializationPadding": null,
+    "overflow": false,
+    "script": true
+  },
+  {
+    "width": 767,
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "status": 200,
+    "footer": true,
+    "resultsPadding": "24px",
+    "specializationMargin": "32px",
+    "specializationPadding": "24px",
+    "overflow": false,
+    "script": false
+  },
+  {
+    "width": 768,
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "status": 200,
+    "footer": true,
+    "promoHeight": 480,
+    "resultsPadding": null,
+    "specializationMargin": null,
+    "specializationPadding": null,
+    "overflow": false,
+    "script": true
+  },
+  {
+    "width": 768,
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "status": 200,
+    "footer": true,
+    "resultsPadding": "100px",
+    "specializationMargin": "80px",
+    "specializationPadding": "80px",
+    "overflow": false,
+    "script": false
+  },
+  {
+    "width": 1440,
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "status": 200,
+    "footer": true,
+    "promoHeight": 556,
+    "resultsPadding": null,
+    "specializationMargin": null,
+    "specializationPadding": null,
+    "overflow": false,
+    "script": true
+  },
+  {
+    "width": 1440,
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "status": 200,
+    "footer": true,
+    "resultsPadding": "80px",
+    "specializationMargin": "80px",
+    "specializationPadding": "80px",
+    "overflow": false,
+    "script": false
+  }
+]

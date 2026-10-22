@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://new.yaclinic.ru/services/biorevitalizacziya/",
+    "type": "service_group",
+    "id": 1789,
+    "title": "Биоревитализация",
+    "status": 200,
+    "height": 322.1875,
+    "background": "url(\"https://new.yaclinic.ru/wp-content/uploads/2026/10/biorevitalizacziya-hero-poster.jpg\")",
+    "video": [
+      "https://new.yaclinic.ru/wp-content/uploads/2026/10/biorevitalizacziya-hero-web-v3.mp4"
+    ],
+    "emptyClass": false,
+    "footer": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/chistka-licza/",
+    "type": "service_group",
+    "id": 2385,
+    "title": "Чистка лица",
+    "status": 200,
+    "height": 322.1875,
+    "background": "url(\"https://new.yaclinic.ru/wp-content/uploads/2026/10/cleansing-promo-poster.webp\")",
+    "video": [
+      "https://new.yaclinic.ru/wp-content/uploads/2026/10/cleansing-promo-web.mp4"
+    ],
+    "emptyClass": false,
+    "footer": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/dietolog/",
+    "type": "service_group",
+    "id": 2417,
+    "title": "Диетолог",
+    "status": 200,
+    "height": 322.1875,
+    "background": "url(\"https://new.yaclinic.ru/wp-content/uploads/2026/06/dietolog-consultation.webp\")",
+    "video": [
+      ""
+    ],
+    "emptyClass": false,
+    "footer": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/fotoomolozhenie/",
+    "type": "service_group",
+    "id": 2389,
+    "title": "Фотоомоложение",
+    "status": 200,
+    "height": 322.1875,
+    "background": "url(\"https://new.yaclinic.ru/wp-content/uploads/2026/06/2022-10-30-22.45.50-2-1-1.webp\")",
+    "video": [
+      "https://new.yaclinic.ru/wp-content/uploads/2026/10/photojuvenation-promo-web-v2.mp4"
+    ],
+    "emptyClass": false,
+    "footer": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/smas-lifting/",
+    "type": "service_group",
+    "id": 2392,
+    "title": "Смас-лифтинг",
+    "status": 200,
+    "height": 322.1875,
+    "background": "url(\"https://new.yaclinic.ru/wp-content/uploads/2026/10/smas-promo-poster.webp\")",
+    "video": [
+      "https://new.yaclinic.ru/wp-content/uploads/2026/10/smas-promo-web.mp4"
+    ],
+    "emptyClass": false,
+    "footer": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/termolifting/",
+    "type": "service_group",
+    "id": 2396,
+    "title": "Термолифтинг",
+    "status": 200,
+    "height": 322.1875,
+    "background": "url(\"https://new.yaclinic.ru/wp-content/uploads/2026/06/2022-10-30-22.45.50-2-1-1.webp\")",
+    "video": [
+      "https://new.yaclinic.ru/wp-content/uploads/2026/10/termolifting-hero-web-v2.mp4"
+    ],
+    "emptyClass": false,
+    "footer": true,
+    "overflow": false
+  }
+]

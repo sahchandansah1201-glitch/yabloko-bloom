@@ -1,0 +1,59 @@
+[
+  {
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "width": 390,
+    "before": {
+      "columnHeight": 322.1875,
+      "spacing": null
+    },
+    "after": {
+      "columnHeight": 0,
+      "spacing": null
+    },
+    "contentEqual": false,
+    "mediaEqual": true,
+    "overflow": false,
+    "note": "Only empty promo caption/badge becomes hidden; clinical text and media attributes unchanged."
+  },
+  {
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "width": 390,
+    "before": {
+      "spacing": 80
+    },
+    "after": {
+      "spacing": 32
+    },
+    "contentEqual": true,
+    "mediaEqual": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/services/rozaczeya/",
+    "width": 1440,
+    "before": {
+      "columnHeight": 556,
+      "spacing": null
+    },
+    "after": {
+      "columnHeight": 556,
+      "spacing": null
+    },
+    "contentEqual": true,
+    "mediaEqual": true,
+    "overflow": false
+  },
+  {
+    "url": "https://new.yaclinic.ru/doctor/viktoriya-gracheva/",
+    "width": 1440,
+    "before": {
+      "spacing": 80
+    },
+    "after": {
+      "spacing": 80
+    },
+    "contentEqual": true,
+    "mediaEqual": true,
+    "overflow": false
+  }
+]

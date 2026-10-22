@@ -1,0 +1,92 @@
+[
+  {
+    "requested": "https://new.yaclinic.ru/price/",
+    "url": "https://new.yaclinic.ru/price/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 38186,
+    "fontsReady": true,
+    "mainHeight": 36362.578125,
+    "footerTop": 36426.578125,
+    "footerGap": 113,
+    "gaps": [],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 4244,
+    "scrollSteps": 59,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Цены на услуги клиники «Яблоко» в Краснодаре",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "wp-page",
+        "id": "2903"
+      },
+      {
+        "type": "container",
+        "id": "2913"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "wp-singular page-template-default page page-id-2903 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page elementor-page-2903 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode"
+  },
+  {
+    "requested": "https://new.yaclinic.ru/akcii/biorevitalizacziya/",
+    "url": "https://new.yaclinic.ru/",
+    "status": 200,
+    "reviewsReady": true,
+    "width": 390,
+    "height": 16393,
+    "fontsReady": true,
+    "mainHeight": 14491.40625,
+    "footerTop": 14555.40625,
+    "footerGap": 40,
+    "gaps": [
+      {
+        "top": 5609.640625,
+        "bottom": 5879.265625,
+        "size": 269.625,
+        "before": "img.attachment-full.size-full.wp-image-267",
+        "after": "div.elementor-heading-title.elementor-size-default"
+      }
+    ],
+    "wrappers": [],
+    "horizontalOverflow": false,
+    "elementCount": 1555,
+    "scrollSteps": 26,
+    "scrollComplete": true,
+    "brokenImages": [],
+    "heading": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+    "templates": [
+      {
+        "type": "header",
+        "id": "70"
+      },
+      {
+        "type": "wp-page",
+        "id": "6"
+      },
+      {
+        "type": "loop-item",
+        "id": "190"
+      },
+      {
+        "type": "loop-item",
+        "id": "262"
+      },
+      {
+        "type": "footer",
+        "id": "486"
+      }
+    ],
+    "bodyClass": "home wp-singular page-template-default page page-id-6 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-9 elementor-page elementor-page-6 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit uc-wp-menu-mode"
+  }
+]
