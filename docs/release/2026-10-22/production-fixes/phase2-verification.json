@@ -1,0 +1,837 @@
+{
+  "speed": {
+    "pages": [
+      {
+        "path": "/",
+        "mobile": false,
+        "lcp": {
+          "before": 2484,
+          "after": 2432,
+          "reductionPercent": 2.1
+        },
+        "load": {
+          "before": 7281.599999964237,
+          "after": 7140.699999988079,
+          "reductionPercent": 1.9
+        },
+        "ttfb": {
+          "before": 703,
+          "after": 671.6000000238419,
+          "reductionPercent": 4.5
+        },
+        "resourceTransfer": {
+          "before": 1335338,
+          "after": 1135120,
+          "reductionPercent": 15
+        },
+        "requests": {
+          "before": 114,
+          "after": 111,
+          "reductionPercent": 2.6
+        }
+      },
+      {
+        "path": "/services/",
+        "mobile": false,
+        "lcp": {
+          "before": 2392,
+          "after": 2772,
+          "reductionPercent": -15.9
+        },
+        "load": {
+          "before": 6088.400000035763,
+          "after": 6370.5,
+          "reductionPercent": -4.6
+        },
+        "ttfb": {
+          "before": 713.9000000357628,
+          "after": 750.7000000476837,
+          "reductionPercent": -5.2
+        },
+        "resourceTransfer": {
+          "before": 1128550,
+          "after": 988283,
+          "reductionPercent": 12.4
+        },
+        "requests": {
+          "before": 76,
+          "after": 73,
+          "reductionPercent": 3.9
+        }
+      },
+      {
+        "path": "/price/",
+        "mobile": false,
+        "lcp": {
+          "before": 3212,
+          "after": 2504,
+          "reductionPercent": 22
+        },
+        "load": {
+          "before": 6343.600000023842,
+          "after": 5679.600000023842,
+          "reductionPercent": 10.5
+        },
+        "ttfb": {
+          "before": 1551.1000000238419,
+          "after": 759.3000000119209,
+          "reductionPercent": 51
+        },
+        "resourceTransfer": {
+          "before": 696216,
+          "after": 555949,
+          "reductionPercent": 20.1
+        },
+        "requests": {
+          "before": 62,
+          "after": 59,
+          "reductionPercent": 4.8
+        }
+      },
+      {
+        "path": "/services/biorevitalizacziya/",
+        "mobile": false,
+        "lcp": {
+          "before": 2852,
+          "after": 2552,
+          "reductionPercent": 10.5
+        },
+        "load": {
+          "before": 6787.799999952316,
+          "after": 6571.5,
+          "reductionPercent": 3.2
+        },
+        "ttfb": {
+          "before": 697.7999999523163,
+          "after": 689.9000000357628,
+          "reductionPercent": 1.1
+        },
+        "resourceTransfer": {
+          "before": 1294677,
+          "after": 1154410,
+          "reductionPercent": 10.8
+        },
+        "requests": {
+          "before": 103,
+          "after": 100,
+          "reductionPercent": 2.9
+        }
+      },
+      {
+        "path": "/doctor/viktoriya-gracheva/",
+        "mobile": false,
+        "lcp": {
+          "before": 2664,
+          "after": 4556,
+          "reductionPercent": -71
+        },
+        "load": {
+          "before": 5944.899999976158,
+          "after": 7900.400000035763,
+          "reductionPercent": -32.9
+        },
+        "ttfb": {
+          "before": 701.5,
+          "after": 697,
+          "reductionPercent": 0.6
+        },
+        "resourceTransfer": {
+          "before": 890342,
+          "after": 750075,
+          "reductionPercent": 15.8
+        },
+        "requests": {
+          "before": 84,
+          "after": 81,
+          "reductionPercent": 3.6
+        }
+      },
+      {
+        "path": "/",
+        "mobile": true,
+        "lcp": {
+          "before": 3332,
+          "after": 4036,
+          "reductionPercent": -21.1
+        },
+        "load": {
+          "before": 10222.400000035763,
+          "after": 10149.899999976158,
+          "reductionPercent": 0.7
+        },
+        "ttfb": {
+          "before": 705.1000000238419,
+          "after": 677.6000000238419,
+          "reductionPercent": 3.9
+        },
+        "resourceTransfer": {
+          "before": 1011459,
+          "after": 811241,
+          "reductionPercent": 19.8
+        },
+        "requests": {
+          "before": 110,
+          "after": 107,
+          "reductionPercent": 2.7
+        }
+      },
+      {
+        "path": "/services/",
+        "mobile": true,
+        "lcp": {
+          "before": 3176,
+          "after": 3236,
+          "reductionPercent": -1.9
+        },
+        "load": {
+          "before": 8407.800000011921,
+          "after": 8097.199999988079,
+          "reductionPercent": 3.7
+        },
+        "ttfb": {
+          "before": 917.8000000119209,
+          "after": 1002.3000000119209,
+          "reductionPercent": -9.2
+        },
+        "resourceTransfer": {
+          "before": 824720,
+          "after": 684453,
+          "reductionPercent": 17
+        },
+        "requests": {
+          "before": 71,
+          "after": 68,
+          "reductionPercent": 4.2
+        }
+      },
+      {
+        "path": "/price/",
+        "mobile": true,
+        "lcp": {
+          "before": 4980,
+          "after": 2912,
+          "reductionPercent": 41.5
+        },
+        "load": {
+          "before": 11048.700000047684,
+          "after": 6303.899999976158,
+          "reductionPercent": 42.9
+        },
+        "ttfb": {
+          "before": 766.8000000119209,
+          "after": 683.1000000238419,
+          "reductionPercent": 10.9
+        },
+        "resourceTransfer": {
+          "before": 691970,
+          "after": 551703,
+          "reductionPercent": 20.3
+        },
+        "requests": {
+          "before": 62,
+          "after": 59,
+          "reductionPercent": 4.8
+        }
+      },
+      {
+        "path": "/services/biorevitalizacziya/",
+        "mobile": true,
+        "lcp": {
+          "before": 3456,
+          "after": 3268,
+          "reductionPercent": 5.4
+        },
+        "load": {
+          "before": 9438.199999988079,
+          "after": 8824,
+          "reductionPercent": 6.5
+        },
+        "ttfb": {
+          "before": 677.5,
+          "after": 685.1999999880791,
+          "reductionPercent": -1.1
+        },
+        "resourceTransfer": {
+          "before": 1043675,
+          "after": 903408,
+          "reductionPercent": 13.4
+        },
+        "requests": {
+          "before": 97,
+          "after": 94,
+          "reductionPercent": 3.1
+        }
+      },
+      {
+        "path": "/doctor/viktoriya-gracheva/",
+        "mobile": true,
+        "lcp": {
+          "before": 3112,
+          "after": 2928,
+          "reductionPercent": 5.9
+        },
+        "load": {
+          "before": 7964.399999976158,
+          "after": 7172,
+          "reductionPercent": 9.9
+        },
+        "ttfb": {
+          "before": 799.8999999761581,
+          "after": 660.6999999880791,
+          "reductionPercent": 17.4
+        },
+        "resourceTransfer": {
+          "before": 847070,
+          "after": 706803,
+          "reductionPercent": 16.6
+        },
+        "requests": {
+          "before": 86,
+          "after": 83,
+          "reductionPercent": 3.5
+        }
+      }
+    ],
+    "api": {
+      "beforeBytes": 220011,
+      "afterBytes": 23790,
+      "reductionPercent": 89.2,
+      "beforeMs": 1660.39,
+      "afterMs": 1039.29,
+      "dataUnchanged": true
+    },
+    "forms": [
+      {
+        "width": 390,
+        "open_ms": {
+          "before": 1235,
+          "after": 774
+        },
+        "doctor_to_calendar_ms": {
+          "before": 969,
+          "after": 956
+        },
+        "date_to_slots_ms": {
+          "before": 832,
+          "after": 820
+        }
+      },
+      {
+        "width": 1440,
+        "open_ms": {
+          "before": 1892,
+          "after": 920
+        },
+        "doctor_to_calendar_ms": {
+          "before": 1527,
+          "after": 1010
+        },
+        "date_to_slots_ms": {
+          "before": 829,
+          "after": 817
+        }
+      }
+    ],
+    "conditions": "3 repeats; Chromium on Mac; mobile 390 CPU4 1.6Mbps RTT150ms; desktop1440 no throttle; not physical devices or field data"
+  },
+  "bootstrapBefore": [
+    {
+      "run": 1,
+      "status": 200,
+      "encoding": "identity",
+      "wireBytes": 220011,
+      "decodedBytes": 220011,
+      "bodySha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+      "ttfbMs": 1135.81,
+      "totalMs": 1660.39,
+      "services": 346,
+      "doctors": 9,
+      "groups": 41
+    },
+    {
+      "run": 2,
+      "status": 200,
+      "encoding": "identity",
+      "wireBytes": 220011,
+      "decodedBytes": 220011,
+      "bodySha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+      "ttfbMs": 1071.5,
+      "totalMs": 1606.15,
+      "services": 346,
+      "doctors": 9,
+      "groups": 41
+    },
+    {
+      "run": 3,
+      "status": 200,
+      "encoding": "identity",
+      "wireBytes": 220011,
+      "decodedBytes": 220011,
+      "bodySha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+      "ttfbMs": 1121.64,
+      "totalMs": 1728.59,
+      "services": 346,
+      "doctors": 9,
+      "groups": 41
+    }
+  ],
+  "bootstrapAfter": [
+    {
+      "run": 1,
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 23790,
+      "decodedBytes": 220011,
+      "bodySha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+      "ttfbMs": 1143.97,
+      "totalMs": 1144.92,
+      "services": 346,
+      "doctors": 9,
+      "groups": 41
+    },
+    {
+      "run": 2,
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 23790,
+      "decodedBytes": 220011,
+      "bodySha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+      "ttfbMs": 969.62,
+      "totalMs": 976.18,
+      "services": 346,
+      "doctors": 9,
+      "groups": 41
+    },
+    {
+      "run": 3,
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 23790,
+      "decodedBytes": 220011,
+      "bodySha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+      "ttfbMs": 1036.69,
+      "totalMs": 1039.29,
+      "services": 346,
+      "doctors": 9,
+      "groups": 41
+    }
+  ],
+  "formBefore": [
+    {
+      "width": 390,
+      "run": 1,
+      "open_ms": 1299,
+      "group_ms": 122,
+      "service_ms": 117,
+      "doctor_to_calendar_ms": 961,
+      "date_to_slots_ms": 821,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 1228.4000000357628,
+          "bytes": 220011,
+          "ttfb": 515.9000000357628
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 757.8000000119209,
+          "bytes": 111,
+          "ttfb": 757.5
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 656.8000000119209,
+          "bytes": 80,
+          "ttfb": 656.3999999761581
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "open_ms": 1235,
+      "group_ms": 123,
+      "service_ms": 118,
+      "doctor_to_calendar_ms": 1464,
+      "date_to_slots_ms": 1344,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 1175.6000000238419,
+          "bytes": 220011,
+          "ttfb": 647.1000000238419
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 960.7000000476837,
+          "bytes": 111,
+          "ttfb": 960.5
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 919.6999999880791,
+          "bytes": 80,
+          "ttfb": 919.3999999761581
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "open_ms": 1044,
+      "group_ms": 125,
+      "service_ms": 120,
+      "doctor_to_calendar_ms": 969,
+      "date_to_slots_ms": 832,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 977.5,
+          "bytes": 220011,
+          "ttfb": 464.89999997615814
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 667.4000000357628,
+          "bytes": 111,
+          "ttfb": 666.9000000357628
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 590.3999999761581,
+          "bytes": 80,
+          "ttfb": 590
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "open_ms": 1908,
+      "group_ms": 160,
+      "service_ms": 121,
+      "doctor_to_calendar_ms": 1542,
+      "date_to_slots_ms": 829,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 1506.6000000238419,
+          "bytes": 220011,
+          "ttfb": 986.6000000238419
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 869.5999999642372,
+          "bytes": 111,
+          "ttfb": 869.1999999880791
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 650.3999999761581,
+          "bytes": 80,
+          "ttfb": 649.8000000119209
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "open_ms": 1389,
+      "group_ms": 166,
+      "service_ms": 116,
+      "doctor_to_calendar_ms": 1527,
+      "date_to_slots_ms": 816,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 1207.1000000238419,
+          "bytes": 220011,
+          "ttfb": 681.3000000119209
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 1043.800000011921,
+          "bytes": 111,
+          "ttfb": 1043.300000011921
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 597.8000000119209,
+          "bytes": 80,
+          "ttfb": 596.3000000119209
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 1440,
+      "run": 3,
+      "open_ms": 1892,
+      "group_ms": 148,
+      "service_ms": 112,
+      "doctor_to_calendar_ms": 1051,
+      "date_to_slots_ms": 838,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 1328.7999999523163,
+          "bytes": 220011,
+          "ttfb": 609.7999999523163
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 711.7000000476837,
+          "bytes": 111,
+          "ttfb": 711.1000000238419
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 612.4000000357628,
+          "bytes": 80,
+          "ttfb": 612
+        }
+      ],
+      "submitted": false
+    }
+  ],
+  "formAfter": [
+    {
+      "width": 390,
+      "run": 1,
+      "open_ms": 3068,
+      "group_ms": 114,
+      "service_ms": 120,
+      "doctor_to_calendar_ms": 1438,
+      "date_to_slots_ms": 821,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 516.5,
+          "bytes": 23790,
+          "ttfb": 513.9000000357628
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 994.5,
+          "bytes": 76,
+          "ttfb": 993.1000000238419
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 672.1000000238419,
+          "bytes": 76,
+          "ttfb": 671.7000000476837
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "open_ms": 774,
+      "group_ms": 116,
+      "service_ms": 117,
+      "doctor_to_calendar_ms": 952,
+      "date_to_slots_ms": 816,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 692.2000000476837,
+          "bytes": 23790,
+          "ttfb": 691.3000000119209
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 698.4000000357628,
+          "bytes": 76,
+          "ttfb": 698
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 561.1999999880791,
+          "bytes": 76,
+          "ttfb": 561
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "open_ms": 669,
+      "group_ms": 140,
+      "service_ms": 117,
+      "doctor_to_calendar_ms": 956,
+      "date_to_slots_ms": 820,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 592.3000000119209,
+          "bytes": 23790,
+          "ttfb": 591.3000000119209
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 803.5999999642372,
+          "bytes": 76,
+          "ttfb": 803.1999999880791
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 605,
+          "bytes": 76,
+          "ttfb": 604.8000000119209
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "open_ms": 920,
+      "group_ms": 148,
+      "service_ms": 120,
+      "doctor_to_calendar_ms": 1022,
+      "date_to_slots_ms": 817,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 633.5,
+          "bytes": 23790,
+          "ttfb": 633.0999999642372
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 810.7999999523163,
+          "bytes": 76,
+          "ttfb": 810.5
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 594.8000000119209,
+          "bytes": 76,
+          "ttfb": 594.6999999880791
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "open_ms": 912,
+      "group_ms": 144,
+      "service_ms": 122,
+      "doctor_to_calendar_ms": 1000,
+      "date_to_slots_ms": 822,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 586.1000000238419,
+          "bytes": 23790,
+          "ttfb": 585.6999999880791
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 681.5,
+          "bytes": 76,
+          "ttfb": 681.3999999761581
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 614.9000000357628,
+          "bytes": 76,
+          "ttfb": 614.6999999880791
+        }
+      ],
+      "submitted": false
+    },
+    {
+      "width": 1440,
+      "run": 3,
+      "open_ms": 1007,
+      "group_ms": 151,
+      "service_ms": 110,
+      "doctor_to_calendar_ms": 1010,
+      "date_to_slots_ms": 816,
+      "submit_disabled_without_contact_and_consent": true,
+      "resources": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+          "ms": 700.1000000238419,
+          "bytes": 23790,
+          "ttfb": 699.8000000119209
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/dates",
+          "ms": 804.1000000238419,
+          "bytes": 76,
+          "ttfb": 803.8000000119209
+        },
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/availability/slots",
+          "ms": 716.1000000238419,
+          "bytes": 76,
+          "ttfb": 715.9000000357628
+        }
+      ],
+      "submitted": false
+    }
+  ],
+  "synthetic": [
+    {
+      "width": 390,
+      "initialBundles": 0,
+      "writes": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/visit",
+          "synthetic": true
+        }
+      ],
+      "contactHit": {
+        "coveredByCookie": false,
+        "hitIsBooking": true
+      },
+      "oneHeading": true,
+      "noDuplicate": true,
+      "details": true,
+      "closed": true,
+      "errors": [],
+      "realPostSent": false
+    },
+    {
+      "width": 1440,
+      "initialBundles": 0,
+      "writes": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/visit",
+          "synthetic": true
+        }
+      ],
+      "contactHit": {
+        "coveredByCookie": false,
+        "hitIsBooking": true
+      },
+      "oneHeading": true,
+      "noDuplicate": true,
+      "details": true,
+      "closed": true,
+      "errors": [],
+      "realPostSent": false
+    }
+  ]
+}
