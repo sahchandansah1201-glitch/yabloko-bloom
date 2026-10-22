@@ -1,0 +1,1190 @@
+[
+  {
+    "path": "/",
+    "mobile": true,
+    "run": 1,
+    "status": 200,
+    "lcp": 5968,
+    "lcpElement": {
+      "tag": "H1",
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре."
+    },
+    "cls": 0.009617592592592593,
+    "ttfb": 2746.899999976158,
+    "load": 11453.299999952316,
+    "fcp": 5288,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 2777.5,
+        "ms": 1614.0999999642372,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1332.7999999523163
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 2778.2999999523163,
+        "ms": 2452.400000035763,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1352.6000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 2778.7999999523163,
+        "ms": 2152.600000023842,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1549.300000011921
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 2778.7999999523163,
+        "ms": 2369.600000023842,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1437.4000000357628
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-performance-20261021/reviews-widget-common-fonts.js?ver=20261021",
+        "start": 3169.899999976158,
+        "ms": 2616.399999976158,
+        "bytes": 86392,
+        "transfer": 86692,
+        "ttfb": 1397.699999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-7ddd9658a57d7c58.woff2",
+        "start": 6050.299999952316,
+        "ms": 861.5,
+        "bytes": 51636,
+        "transfer": 51936,
+        "ttfb": 136.20000004768372
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-d597da1979fa0117.woff2",
+        "start": 6150.599999964237,
+        "ms": 648.1000000238419,
+        "bytes": 20016,
+        "transfer": 20316,
+        "ttfb": 274
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+        "start": 7777.5,
+        "ms": 1549.199999988079,
+        "bytes": 2004,
+        "transfer": 2304,
+        "ttfb": 1509.5
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+        "start": 7777.899999976158,
+        "ms": 1533.699999988079,
+        "bytes": 1693,
+        "transfer": 1993,
+        "ttfb": 1502.3999999761581
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+        "start": 7777.899999976158,
+        "ms": 1541.5,
+        "bytes": 712,
+        "transfer": 1012,
+        "ttfb": 1519
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+        "start": 7778,
+        "ms": 1517.5999999642372,
+        "bytes": 538,
+        "transfer": 838,
+        "ttfb": 1502.3999999761581
+      }
+    ],
+    "h1": {
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+      "box": {
+        "width": 358,
+        "height": 200
+      },
+      "font": "700 32px / 40px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 1011614,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/doctor/viktoriya-gracheva/",
+    "mobile": true,
+    "run": 1,
+    "status": 200,
+    "lcp": 5252,
+    "lcpElement": {
+      "tag": "IMG",
+      "text": ""
+    },
+    "cls": 0,
+    "ttfb": 2251.099999964237,
+    "load": 8243.199999988079,
+    "fcp": 4720,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 2266.399999976158,
+        "ms": 1786.5,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1375.800000011921
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 2266.599999964237,
+        "ms": 2431.300000011921,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1375.800000011921
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 2267.199999988079,
+        "ms": 1950.699999988079,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1393.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1-654x1024.webp",
+        "start": 2267.199999988079,
+        "ms": 2117,
+        "bytes": 19086,
+        "transfer": 19386,
+        "ttfb": 1592.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 2267.199999988079,
+        "ms": 2319.699999988079,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1429.8999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 5188.199999988079,
+        "ms": 2376.099999964237,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 329.0999999642372
+      }
+    ],
+    "h1": {
+      "text": "Грачева Виктория Сергеевна",
+      "box": {
+        "width": 315,
+        "height": 57.59375
+      },
+      "font": "700 24px / 28.8px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 846387,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/",
+    "mobile": true,
+    "run": 2,
+    "status": 200,
+    "lcp": 4024,
+    "lcpElement": {
+      "tag": "H1",
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре."
+    },
+    "cls": 0.05729157169990503,
+    "ttfb": 692.5,
+    "load": 9407.800000011921,
+    "fcp": 3224,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 707.2000000476837,
+        "ms": 1644.5999999642372,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1353.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 707.9000000357628,
+        "ms": 1914.0999999642372,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1398.699999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 707.9000000357628,
+        "ms": 2318,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1430.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 707.9000000357628,
+        "ms": 2468.599999964237,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1389.3999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-performance-20261021/reviews-widget-common-fonts.js?ver=20261021",
+        "start": 1107.7000000476837,
+        "ms": 2653.2999999523163,
+        "bytes": 86392,
+        "transfer": 86692,
+        "ttfb": 1542.5999999642372
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-7ddd9658a57d7c58.woff2",
+        "start": 4554,
+        "ms": 903.4000000357628,
+        "bytes": 51636,
+        "transfer": 51936,
+        "ttfb": 154.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-d597da1979fa0117.woff2",
+        "start": 4722,
+        "ms": 622.9000000357628,
+        "bytes": 20016,
+        "transfer": 20316,
+        "ttfb": 183
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+        "start": 5831.400000035763,
+        "ms": 1530.0999999642372,
+        "bytes": 2004,
+        "transfer": 2304,
+        "ttfb": 1503.300000011921
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+        "start": 5831.800000011921,
+        "ms": 1499.800000011921,
+        "bytes": 538,
+        "transfer": 838,
+        "ttfb": 1489.9000000357628
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+        "start": 5831.800000011921,
+        "ms": 1507.1000000238419,
+        "bytes": 1693,
+        "transfer": 1993,
+        "ttfb": 1489.6000000238419
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+        "start": 5831.800000011921,
+        "ms": 1515.9000000357628,
+        "bytes": 712,
+        "transfer": 1012,
+        "ttfb": 1492.800000011921
+      }
+    ],
+    "h1": {
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+      "box": {
+        "width": 358,
+        "height": 200
+      },
+      "font": "700 32px / 40px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 1011614,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/doctor/viktoriya-gracheva/",
+    "mobile": true,
+    "run": 2,
+    "status": 200,
+    "lcp": 3704,
+    "lcpElement": {
+      "tag": "IMG",
+      "text": ""
+    },
+    "cls": 0,
+    "ttfb": 728.8000000119209,
+    "load": 6659.900000035763,
+    "fcp": 3144,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 754.4000000357628,
+        "ms": 1737.8999999761581,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1368.5999999642372
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 754.8000000119209,
+        "ms": 1999.5,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1402.3999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1-654x1024.webp",
+        "start": 754.8000000119209,
+        "ms": 2105.600000023842,
+        "bytes": 19086,
+        "transfer": 19386,
+        "ttfb": 1573
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 754.8000000119209,
+        "ms": 2262.600000023842,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1413.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 754.8000000119209,
+        "ms": 2375.5,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1395.3999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 3608.699999988079,
+        "ms": 2348.7000000476837,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 319.4000000357628
+      }
+    ],
+    "h1": {
+      "text": "Грачева Виктория Сергеевна",
+      "box": {
+        "width": 315,
+        "height": 57.59375
+      },
+      "font": "700 24px / 28.8px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 832717,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/",
+    "mobile": true,
+    "run": 3,
+    "status": 200,
+    "lcp": 3776,
+    "lcpElement": {
+      "tag": "H1",
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре."
+    },
+    "cls": 0.009617592592592593,
+    "ttfb": 682.8000000119209,
+    "load": 9256.199999988079,
+    "fcp": 3152,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 698.3000000119209,
+        "ms": 1464.699999988079,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1323.1000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 698.3000000119209,
+        "ms": 2170.899999976158,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1540.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 698.3000000119209,
+        "ms": 2598,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1513.3999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 698.4000000357628,
+        "ms": 2326.899999976158,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1442.5999999642372
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-performance-20261021/reviews-widget-common-fonts.js?ver=20261021",
+        "start": 1100,
+        "ms": 2660.900000035763,
+        "bytes": 86392,
+        "transfer": 86692,
+        "ttfb": 1325.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-7ddd9658a57d7c58.woff2",
+        "start": 3943.5,
+        "ms": 874.4000000357628,
+        "bytes": 51636,
+        "transfer": 51936,
+        "ttfb": 266.30000001192093
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-d597da1979fa0117.woff2",
+        "start": 4035.900000035763,
+        "ms": 475.7999999523163,
+        "bytes": 20016,
+        "transfer": 20316,
+        "ttfb": 139.5999999642372
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+        "start": 5695.800000011921,
+        "ms": 1522.699999988079,
+        "bytes": 2004,
+        "transfer": 2304,
+        "ttfb": 1507.6000000238419
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+        "start": 5696.400000035763,
+        "ms": 1486.199999988079,
+        "bytes": 712,
+        "transfer": 1012,
+        "ttfb": 1483.199999988079
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+        "start": 5696.5,
+        "ms": 1491.5,
+        "bytes": 538,
+        "transfer": 838,
+        "ttfb": 1486.1000000238419
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+        "start": 5696.5,
+        "ms": 1506.4000000357628,
+        "bytes": 1693,
+        "transfer": 1993,
+        "ttfb": 1491.300000011921
+      }
+    ],
+    "h1": {
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+      "box": {
+        "width": 358,
+        "height": 200
+      },
+      "font": "700 32px / 40px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 1011614,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/doctor/viktoriya-gracheva/",
+    "mobile": true,
+    "run": 3,
+    "status": 200,
+    "lcp": 3788,
+    "lcpElement": {
+      "tag": "IMG",
+      "text": ""
+    },
+    "cls": 0,
+    "ttfb": 792,
+    "load": 6795.600000023842,
+    "fcp": 3160,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 813,
+        "ms": 1769.6000000238419,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1355.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 813.1000000238419,
+        "ms": 2363.5,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1365.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 813.1999999880791,
+        "ms": 1965.4000000357628,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1372.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1-654x1024.webp",
+        "start": 813.1999999880791,
+        "ms": 1980.5,
+        "bytes": 19086,
+        "transfer": 19386,
+        "ttfb": 1432.9000000357628
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 813.1999999880791,
+        "ms": 2317.900000035763,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1531.1000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 3690.699999988079,
+        "ms": 2252.2000000476837,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 269.4000000357628
+      }
+    ],
+    "h1": {
+      "text": "Грачева Виктория Сергеевна",
+      "box": {
+        "width": 315,
+        "height": 57.59375
+      },
+      "font": "700 24px / 28.8px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 832717,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/",
+    "mobile": false,
+    "run": 1,
+    "status": 200,
+    "lcp": 2940,
+    "lcpElement": {
+      "tag": "H1",
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре."
+    },
+    "cls": 0,
+    "ttfb": 743.4000000357628,
+    "load": 5738,
+    "fcp": 1964,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 756.1999999880791,
+        "ms": 1179.300000011921,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1179.2000000476837
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 756.3000000119209,
+        "ms": 1465.199999988079,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1207.1000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 756.5,
+        "ms": 1289.5,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1165.6000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 756.5,
+        "ms": 1291.9000000357628,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1166.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-performance-20261021/reviews-widget-common-fonts.js?ver=20261021",
+        "start": 1009.3000000119209,
+        "ms": 1052.800000011921,
+        "bytes": 86392,
+        "transfer": 86692,
+        "ttfb": 1047.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-7ddd9658a57d7c58.woff2",
+        "start": 2865.199999988079,
+        "ms": 132.10000002384186,
+        "bytes": 51636,
+        "transfer": 51936,
+        "ttfb": 129.4000000357628
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-d597da1979fa0117.woff2",
+        "start": 2899,
+        "ms": 187.80000001192093,
+        "bytes": 20016,
+        "transfer": 20316,
+        "ttfb": 187.5
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+        "start": 3020.300000011921,
+        "ms": 1533.699999988079,
+        "bytes": 712,
+        "transfer": 1012,
+        "ttfb": 1514.199999988079
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+        "start": 3020.300000011921,
+        "ms": 1548.800000011921,
+        "bytes": 2004,
+        "transfer": 2304,
+        "ttfb": 1534.1000000238419
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+        "start": 3020.400000035763,
+        "ms": 1533.8999999761581,
+        "bytes": 1693,
+        "transfer": 1993,
+        "ttfb": 1519.5999999642372
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+        "start": 3020.5,
+        "ms": 1511.699999988079,
+        "bytes": 538,
+        "transfer": 838,
+        "ttfb": 1511.1000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 3063.800000011921,
+        "ms": 342,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 204.80000001192093
+      }
+    ],
+    "h1": {
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+      "box": {
+        "width": 1008,
+        "height": 236.25
+      },
+      "font": "700 63px / 78.75px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 1335493,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/doctor/viktoriya-gracheva/",
+    "mobile": false,
+    "run": 1,
+    "status": 200,
+    "lcp": 2184,
+    "lcpElement": {
+      "tag": "IMG",
+      "text": ""
+    },
+    "cls": 0.004789255401234567,
+    "ttfb": 665.5999999642372,
+    "load": 3477.2999999523163,
+    "fcp": 1904,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 677.2999999523163,
+        "ms": 1041.300000011921,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1041.2000000476837
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 677.5,
+        "ms": 1270.8999999761581,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1146.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 677.5,
+        "ms": 1274.7999999523163,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1150.8999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1-654x1024.webp",
+        "start": 677.5,
+        "ms": 1283.2999999523163,
+        "bytes": 19086,
+        "transfer": 19386,
+        "ttfb": 1283.0999999642372
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 677.5,
+        "ms": 1313.0999999642372,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1182.2999999523163
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 2133.699999988079,
+        "ms": 603.5999999642372,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 232.89999997615814
+      }
+    ],
+    "h1": {
+      "text": "Грачева Виктория Сергеевна",
+      "box": {
+        "width": 695,
+        "height": 108
+      },
+      "font": "700 54px / 54px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 875989,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/",
+    "mobile": false,
+    "run": 2,
+    "status": 200,
+    "lcp": 2244,
+    "lcpElement": {
+      "tag": "H1",
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре."
+    },
+    "cls": 0,
+    "ttfb": 688.9000000357628,
+    "load": 5951.300000011921,
+    "fcp": 1936,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 698.5,
+        "ms": 1182.1000000238419,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1182
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 698.6999999880791,
+        "ms": 1195.1000000238419,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1069.4000000357628
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 698.6999999880791,
+        "ms": 1320.5,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1187.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 698.6999999880791,
+        "ms": 1327.5,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1183.1000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-performance-20261021/reviews-widget-common-fonts.js?ver=20261021",
+        "start": 955.1000000238419,
+        "ms": 1647.5,
+        "bytes": 86392,
+        "transfer": 86692,
+        "ttfb": 1053.0999999642372
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-7ddd9658a57d7c58.woff2",
+        "start": 2347.300000011921,
+        "ms": 217.69999998807907,
+        "bytes": 51636,
+        "transfer": 51936,
+        "ttfb": 214.89999997615814
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-d597da1979fa0117.woff2",
+        "start": 2373.900000035763,
+        "ms": 228.79999995231628,
+        "bytes": 20016,
+        "transfer": 20316,
+        "ttfb": 228.39999997615814
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+        "start": 3135.199999988079,
+        "ms": 1523.1000000238419,
+        "bytes": 2004,
+        "transfer": 2304,
+        "ttfb": 1514.800000011921
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+        "start": 3135.199999988079,
+        "ms": 1543.6000000238419,
+        "bytes": 712,
+        "transfer": 1012,
+        "ttfb": 1523.5
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+        "start": 3135.199999988079,
+        "ms": 1543.800000011921,
+        "bytes": 1693,
+        "transfer": 1993,
+        "ttfb": 1533
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+        "start": 3135.199999988079,
+        "ms": 1553.2000000476837,
+        "bytes": 538,
+        "transfer": 838,
+        "ttfb": 1549.2000000476837
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 3183.900000035763,
+        "ms": 1266.8999999761581,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 262.7999999523163
+      }
+    ],
+    "h1": {
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+      "box": {
+        "width": 1008,
+        "height": 236.25
+      },
+      "font": "700 63px / 78.75px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 1335493,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/doctor/viktoriya-gracheva/",
+    "mobile": false,
+    "run": 2,
+    "status": 200,
+    "lcp": 2136,
+    "lcpElement": {
+      "tag": "IMG",
+      "text": ""
+    },
+    "cls": 0,
+    "ttfb": 729.1000000238419,
+    "load": 2706.800000011921,
+    "fcp": 1992,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 740,
+        "ms": 1166.699999988079,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1166.4000000357628
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 740.1000000238419,
+        "ms": 1041.199999988079,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1041
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 740.1000000238419,
+        "ms": 1058.8999999761581,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1056.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 740.1000000238419,
+        "ms": 1299.0999999642372,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1170.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1-654x1024.webp",
+        "start": 740.1999999880791,
+        "ms": 1196.9000000357628,
+        "bytes": 19086,
+        "transfer": 19386,
+        "ttfb": 1196.6000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 2095.400000035763,
+        "ms": 344.69999998807907,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 209.5999999642372
+      }
+    ],
+    "h1": {
+      "text": "Грачева Виктория Сергеевна",
+      "box": {
+        "width": 695,
+        "height": 108
+      },
+      "font": "700 54px / 54px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 875989,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/",
+    "mobile": false,
+    "run": 3,
+    "status": 200,
+    "lcp": 2100,
+    "lcpElement": {
+      "tag": "H1",
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре."
+    },
+    "cls": 0,
+    "ttfb": 660.1999999880791,
+    "load": 5489.599999964237,
+    "fcp": 1884,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 672.6999999880791,
+        "ms": 980.6999999880791,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 980.5
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 672.8999999761581,
+        "ms": 1037,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1036.6000000238419
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 672.8999999761581,
+        "ms": 1161.1000000238419,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1160.699999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 672.8999999761581,
+        "ms": 1245,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1118.300000011921
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-performance-20261021/reviews-widget-common-fonts.js?ver=20261021",
+        "start": 908.3000000119209,
+        "ms": 1065.2999999523163,
+        "bytes": 86392,
+        "transfer": 86692,
+        "ttfb": 933
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-7ddd9658a57d7c58.woff2",
+        "start": 2111.300000011921,
+        "ms": 193.69999998807907,
+        "bytes": 51636,
+        "transfer": 51936,
+        "ttfb": 191.29999995231628
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-d597da1979fa0117.woff2",
+        "start": 2140,
+        "ms": 215.39999997615814,
+        "bytes": 20016,
+        "transfer": 20316,
+        "ttfb": 215.19999998807907
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+        "start": 2756.099999964237,
+        "ms": 1495.6000000238419,
+        "bytes": 712,
+        "transfer": 1012,
+        "ttfb": 1493.800000011921
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+        "start": 2756.099999964237,
+        "ms": 1535.1000000238419,
+        "bytes": 2004,
+        "transfer": 2304,
+        "ttfb": 1503.7000000476837
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+        "start": 2756.199999988079,
+        "ms": 1503.5,
+        "bytes": 538,
+        "transfer": 838,
+        "ttfb": 1497.300000011921
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+        "start": 2756.199999988079,
+        "ms": 1534.800000011921,
+        "bytes": 1693,
+        "transfer": 1993,
+        "ttfb": 1517.3999999761581
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 2805.800000011921,
+        "ms": 400.19999998807907,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 129.39999997615814
+      }
+    ],
+    "h1": {
+      "text": "Клиника косметологии и дерматологии\n «Яблоко»   в Краснодаре.",
+      "box": {
+        "width": 1008,
+        "height": 236.25
+      },
+      "font": "700 63px / 78.75px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 1335493,
+    "errors": [],
+    "bad": []
+  },
+  {
+    "path": "/doctor/viktoriya-gracheva/",
+    "mobile": false,
+    "run": 3,
+    "status": 200,
+    "lcp": 2184,
+    "lcpElement": {
+      "tag": "IMG",
+      "text": ""
+    },
+    "cls": 0,
+    "ttfb": 687.5999999642372,
+    "load": 2665.399999976158,
+    "fcp": 1904,
+    "resources": [
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-aebf2ab4a4ce6810.woff2",
+        "start": 694.5,
+        "ms": 1030.5,
+        "bytes": 18744,
+        "transfer": 19044,
+        "ttfb": 1030.2999999523163
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-c940764593d0fe5d.woff2",
+        "start": 694.5,
+        "ms": 1287,
+        "bytes": 48432,
+        "transfer": 48732,
+        "ttfb": 1160
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-0b00fbd6edcc84cd.woff2",
+        "start": 694.5999999642372,
+        "ms": 1042.9000000357628,
+        "bytes": 21492,
+        "transfer": 21792,
+        "ttfb": 1042.699999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/2026/04/gracheva-victoria-bzf1ejfq-1-654x1024.webp",
+        "start": 694.5999999642372,
+        "ms": 1203.4000000357628,
+        "bytes": 19086,
+        "transfer": 19386,
+        "ttfb": 1203.199999988079
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/font-6438d7b8ea9c7c39.woff2",
+        "start": 694.5999999642372,
+        "ms": 1202.199999988079,
+        "bytes": 35508,
+        "transfer": 35808,
+        "ttfb": 1069.300000011921
+      },
+      {
+        "url": "https://yaclinic.ru/wp-content/plugins/unlimited-elements-for-elementor-premium/assets_libraries/font-awesome6/fa-solid-900.woff2",
+        "start": 2128.399999976158,
+        "ms": 375.89999997615814,
+        "bytes": 156496,
+        "transfer": 156796,
+        "ttfb": 218.39999997615814
+      }
+    ],
+    "h1": {
+      "text": "Грачева Виктория Сергеевна",
+      "box": {
+        "width": 695,
+        "height": 108
+      },
+      "font": "700 54px / 54px Montserrat, sans-serif"
+    },
+    "overflow": false,
+    "transfer": 875989,
+    "errors": [],
+    "bad": []
+  }
+]
