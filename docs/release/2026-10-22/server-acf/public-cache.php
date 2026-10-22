@@ -112,11 +112,13 @@ final class Public_HTML_Cache {
             $tmp=$file.'.'.bin2hex(random_bytes(6)).'.tmp';
             $public_headers=array_values(array_filter(headers_list(),static fn($header)=>preg_match('~^(Link|X-Robots-Tag|Content-Language):~i',$header)));
             $meta=json_encode(['generation'=>$generation,'expires'=>time()+self::TTL,'headers'=>$public_headers]);
-            if (file_put_contents($tmp,$meta."\n".$copy,LOCK_EX)!==false) {
+            // The cache buffer sits inside the legacy URL/legal-link rewrite buffer.
+            $stored_copy=function_exists('yaclinic_p1_rewrite_html') ? \yaclinic_p1_rewrite_html($copy) : $copy;
+            if (file_put_contents($tmp,$meta."\n".$stored_copy,LOCK_EX)!==false) {
                 chmod($tmp,0600);rename($tmp,$file);
             }
             return $html;
-        },4096); // Preserve normal streaming; do not hold PHP headers behind render warnings.
+        },function_exists('yc_p1_early_header_scope') && \yc_p1_early_header_scope() ? 1 : 4096);
     }
 }
 
