@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-22",
+  "scope": "new server production instance before DNS cutover",
+  "dns": {
+    "changed_by_this_task": false,
+    "authoritative_apex_A": "87.236.16.73",
+    "authoritative_www_A": "87.236.16.73"
+  },
+  "booking": {
+    "http_status": 200,
+    "http_posts": 1,
+    "browser_clicks_tested": false,
+    "sqns_visit_readback": true,
+    "selected_visit_in_event": true,
+    "delivery_state": "delivered",
+    "delivery_attempts": 1,
+    "lead_rows": 1,
+    "booking_links": 1,
+    "same_lead": true,
+    "unique_event_id_constraint": true,
+    "recheck_seconds_since_delivery": 194.024794,
+    "profile_changed_fields": [],
+    "raw_contacts_in_event": false,
+    "test_visit_cancelled": true,
+    "slot_free_again": true,
+    "arrival_or_payment_actions_performed": false
+  },
+  "background": {
+    "automatic_wp_cron_disabled": true,
+    "production_delivery_enabled": true,
+    "general_production_cron_disabled": true,
+    "same_nonblocking_lock": true,
+    "production_classic_crontab_references": 0,
+    "old_delivery_uses_separate_stage_root": true,
+    "backup_enabled": true,
+    "backup_schedule_Moscow": "03:45 daily",
+    "backup_control_run_status": "PASS",
+    "backup_control_run_files_verified": 14063
+  },
+  "offsite": {
+    "owner_Mac_separate_from_VPS": true,
+    "main_encrypted_sha256_matches": true,
+    "sidecar_encrypted_sha256_matches": true,
+    "dashboard_encrypted_sha256_matches": true,
+    "files_verified_main": 14060,
+    "files_verified_sidecar": 4,
+    "files_verified_dashboard": 34,
+    "database_tables": 22,
+    "mysqlcheck": true,
+    "content_checksums_match_before_test": true,
+    "restored_config_executed": false,
+    "sqlite_databases_integrity_checked": 3,
+    "key_and_encrypted_archives_mode": "600",
+    "site_snapshot_utc": "2026-10-22T07:29:44.021311+00:00",
+    "dashboard_snapshot_utc": "2026-10-22T00:30:02.665951+00:00",
+    "cross_database_atomic_snapshot": false,
+    "daily_external_copy_automated": false
+  },
+  "checker": {
+    "only_local_availability_shape_fixed": true,
+    "application_code_changed_by_this_task": false,
+    "unit_regressions_passed": 2
+  }
+}

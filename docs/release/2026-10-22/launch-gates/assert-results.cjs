@@ -1,0 +1,27 @@
+// Validate recorded evidence only. Never send another booking or invoke a worker.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const r = JSON.parse(fs.readFileSync(`${__dirname}/verification.json`, 'utf8'));
+assert.equal(r.dns.changed_by_this_task, false);
+assert.equal(r.dns.authoritative_apex_A, r.dns.authoritative_www_A);
+const b = r.booking;
+assert.equal(b.http_status, 200); assert.equal(b.http_posts, 1);
+assert.ok(b.sqns_visit_readback && b.selected_visit_in_event && b.same_lead);
+assert.equal(b.delivery_state, 'delivered');
+assert.equal(b.delivery_attempts, 1); assert.equal(b.lead_rows, 1); assert.equal(b.booking_links, 1);
+assert.ok(b.unique_event_id_constraint && b.recheck_seconds_since_delivery >= 180);
+assert.deepEqual(b.profile_changed_fields, []); assert.equal(b.raw_contacts_in_event, false);
+assert.ok(b.test_visit_cancelled && b.slot_free_again);
+const jobs = r.background;
+assert.ok(jobs.automatic_wp_cron_disabled && jobs.production_delivery_enabled && jobs.general_production_cron_disabled);
+assert.ok(jobs.same_nonblocking_lock && jobs.old_delivery_uses_separate_stage_root && jobs.backup_enabled);
+assert.equal(jobs.production_classic_crontab_references, 0);
+assert.equal(jobs.backup_control_run_status, 'PASS');
+const o = r.offsite;
+assert.ok(o.owner_Mac_separate_from_VPS && o.main_encrypted_sha256_matches && o.sidecar_encrypted_sha256_matches && o.dashboard_encrypted_sha256_matches);
+assert.equal(o.database_tables, 22); assert.ok(o.mysqlcheck && o.content_checksums_match_before_test);
+assert.equal(o.restored_config_executed, false); assert.equal(o.sqlite_databases_integrity_checked, 3);
+assert.equal(o.key_and_encrypted_archives_mode, '600');
+assert.equal(o.cross_database_atomic_snapshot, false); assert.equal(o.daily_external_copy_automated, false);
+assert.equal(r.checker.unit_regressions_passed, 2);
+console.log('Recorded launch-gate evidence PASS; no live operations executed.');
