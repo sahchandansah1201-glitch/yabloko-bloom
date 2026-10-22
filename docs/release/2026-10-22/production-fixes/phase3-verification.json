@@ -1,0 +1,63 @@
+{
+  "storedGalleryRows": 466,
+  "storedGalleryDigest": "d924445c64411a258abc6c51917ed69117fa580af204d86b27a3f78eb3c65a92",
+  "storedGalleryUnchanged": true,
+  "representativeMediaOrderUnchanged": true,
+  "representativePages": [
+    {
+      "path": "/services/biorevitalizacziya/",
+      "items": 6
+    },
+    {
+      "path": "/services/fotoomolozhenie/",
+      "items": 5
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "items": 3
+    },
+    {
+      "path": "/doctor/igor-kovalev/",
+      "items": 2
+    }
+  ],
+  "ui": [
+    {
+      "width": 390,
+      "states": [
+        "Работа 1 из 3",
+        "Работа 2 из 3",
+        "Работа 3 из 3"
+      ],
+      "back": "Работа 2 из 3",
+      "closed": true,
+      "playing": {
+        "currentTime": 0.10457,
+        "paused": false,
+        "readyState": 3
+      }
+    },
+    {
+      "width": 1440,
+      "states": [
+        "Работа 1 из 3",
+        "Работа 2 из 3",
+        "Работа 3 из 3"
+      ],
+      "back": "Работа 2 из 3",
+      "closed": true,
+      "playing": {
+        "currentTime": 0.110236,
+        "paused": false,
+        "readyState": 3
+      }
+    }
+  ],
+  "warnings": {
+    "method": "Read only bytes appended after the final source update; four representative gallery pages plus viewer verification loaded through public HTTPS",
+    "newLogBytes": 0,
+    "knownWarningCounts": {},
+    "unconfiguredPublishedAcfTextTags": 0,
+    "scope": "Observed verification window, not a guarantee about all future requests"
+  }
+}
