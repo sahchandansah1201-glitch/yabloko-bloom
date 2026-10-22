@@ -1,0 +1,205 @@
+{
+  "status": "VERIFIED_SCOPED_CHANGES; SERVER_LATENCY_REMAINS_VARIABLE",
+  "pages": [
+    {
+      "path": "/",
+      "mobile": true,
+      "lcp": {
+        "before": 3380,
+        "after": 3320,
+        "reductionPercent": 1.8
+      },
+      "fcp": {
+        "before": 2740,
+        "after": 2360,
+        "reductionPercent": 13.9
+      },
+      "ttfb": {
+        "before": 801.1999999880791,
+        "after": 966.4000000357628,
+        "reductionPercent": -20.6
+      },
+      "afterFirstByteToLcp": {
+        "before": 2555.699999988079,
+        "after": 1818.300000011921,
+        "reductionPercent": 28.9
+      },
+      "maxFinalCls": 0.012394051024849636
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": true,
+      "lcp": {
+        "before": 3012,
+        "after": 3116,
+        "reductionPercent": -3.5
+      },
+      "fcp": {
+        "before": 2692,
+        "after": 3048,
+        "reductionPercent": -13.2
+      },
+      "ttfb": {
+        "before": 725,
+        "after": 1187.800000011921,
+        "reductionPercent": -63.8
+      },
+      "afterFirstByteToLcp": {
+        "before": 2287,
+        "after": 1927.300000011921,
+        "reductionPercent": 15.7
+      },
+      "portrait": {
+        "startAfterFirstByte": {
+          "before": 171.9000000357628,
+          "after": 31.80000001192093,
+          "reductionPercent": 81.5
+        },
+        "completeAfterFirstByte": {
+          "before": 2198.899999976158,
+          "after": 1350,
+          "reductionPercent": 38.6
+        }
+      },
+      "maxFinalCls": 0.029855324074074076
+    },
+    {
+      "path": "/",
+      "mobile": false,
+      "lcp": {
+        "before": 2424,
+        "after": 1636,
+        "reductionPercent": 32.5
+      },
+      "fcp": {
+        "before": 2424,
+        "after": 1380,
+        "reductionPercent": 43.1
+      },
+      "ttfb": {
+        "before": 787.3999999761581,
+        "after": 914,
+        "reductionPercent": -16.1
+      },
+      "afterFirstByteToLcp": {
+        "before": 1636.6000000238419,
+        "after": 644.6000000238419,
+        "reductionPercent": 60.6
+      },
+      "maxFinalCls": 0.0064380822201324595
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": false,
+      "lcp": {
+        "before": 2940,
+        "after": 1416,
+        "reductionPercent": 51.8
+      },
+      "fcp": {
+        "before": 2836,
+        "after": 1268,
+        "reductionPercent": 55.3
+      },
+      "ttfb": {
+        "before": 777.8999999761581,
+        "after": 805.1999999880791,
+        "reductionPercent": -3.5
+      },
+      "afterFirstByteToLcp": {
+        "before": 2141.599999964237,
+        "after": 578.0999999642372,
+        "reductionPercent": 73
+      },
+      "portrait": {
+        "startAfterFirstByte": {
+          "before": 134.39999997615814,
+          "after": 12.699999988079071,
+          "reductionPercent": 90.6
+        },
+        "completeAfterFirstByte": {
+          "before": 1897.0999999642372,
+          "after": 258.30000001192093,
+          "reductionPercent": 86.4
+        }
+      },
+      "maxFinalCls": 0.00032486678177110124
+    }
+  ],
+  "booking": [
+    {
+      "mobile": true,
+      "firstPane": {
+        "before": 2662,
+        "after": 1366,
+        "reductionPercent": 48.7
+      },
+      "usableGroups": {
+        "before": 2683,
+        "after": 1388,
+        "reductionPercent": 48.3
+      },
+      "finalGroupsRange": [
+        1241,
+        1733
+      ]
+    },
+    {
+      "mobile": false,
+      "firstPane": {
+        "before": 705,
+        "after": 364,
+        "reductionPercent": 48.4
+      },
+      "usableGroups": {
+        "before": 1548,
+        "after": 1186,
+        "reductionPercent": 23.4
+      },
+      "finalGroupsRange": [
+        918,
+        1195
+      ]
+    }
+  ],
+  "checks": {
+    "primaryViewportCases": 8,
+    "layoutCases": 20,
+    "doctorCtaClicks": 18,
+    "priceRowsUnchanged": 218,
+    "syntheticSuccessCases": 2,
+    "recoveryCases": 4,
+    "mixedGalleryCases": 2,
+    "newRealPosts": 0
+  },
+  "readback": {
+    "snippet53ExactReadback": true,
+    "unchangedElementor": [
+      6,
+      190,
+      2485,
+      2913
+    ],
+    "unchangedSnippets": [
+      8,
+      9,
+      47
+    ],
+    "bootstrapSha256": "b870b235bf42baab8af76a632468319b5375e824b7f094fe391ca3ca98a010f1",
+    "bootstrapBytes": 23790,
+    "bootstrapKeys": [
+      "showcaseSections",
+      "serviceGroups",
+      "categories",
+      "services",
+      "doctors"
+    ],
+    "bootstrapCounts": {
+      "showcaseSections": 5,
+      "serviceGroups": 41,
+      "categories": 48,
+      "services": 346,
+      "doctors": 9
+    }
+  }
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "mobile": true,
+    "run": 1,
+    "open_ms": 1366,
+    "groups_ms": 1388,
+    "beforeBundles": [],
+    "resources": [
+      {
+        "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+        "start": 7296.599999964237,
+        "ms": 889.5,
+        "bytes": 23790,
+        "ttfb": 635.4000000357628
+      },
+      {
+        "path": "/wp-content/uploads/yc-critical-20261022/booking-4ac7cf8322e9.js",
+        "start": 7297.199999988079,
+        "ms": 972.6999999880791,
+        "bytes": 137780,
+        "ttfb": 135.30000001192093
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "closed": true
+  },
+  {
+    "mobile": true,
+    "run": 2,
+    "open_ms": 1715,
+    "groups_ms": 1733,
+    "beforeBundles": [],
+    "resources": [
+      {
+        "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+        "start": 8054.799999952316,
+        "ms": 1489.300000011921,
+        "bytes": 23790,
+        "ttfb": 1361.1000000238419
+      },
+      {
+        "path": "/wp-content/uploads/yc-critical-20261022/booking-4ac7cf8322e9.js",
+        "start": 8054.899999976158,
+        "ms": 965.1000000238419,
+        "bytes": 137780,
+        "ttfb": 280.39999997615814
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "closed": true
+  },
+  {
+    "mobile": true,
+    "run": 3,
+    "open_ms": 1223,
+    "groups_ms": 1241,
+    "beforeBundles": [],
+    "resources": [
+      {
+        "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+        "start": 9250.899999976158,
+        "ms": 983.2000000476837,
+        "bytes": 23790,
+        "ttfb": 860
+      },
+      {
+        "path": "/wp-content/uploads/yc-critical-20261022/booking-4ac7cf8322e9.js",
+        "start": 9251.800000011921,
+        "ms": 847.0999999642372,
+        "bytes": 137780,
+        "ttfb": 143.30000001192093
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "closed": true
+  },
+  {
+    "mobile": false,
+    "run": 1,
+    "open_ms": 591,
+    "groups_ms": 918,
+    "beforeBundles": [],
+    "resources": [
+      {
+        "path": "/wp-content/uploads/yc-critical-20261022/booking-4ac7cf8322e9.js",
+        "start": 10561.199999988079,
+        "ms": 508.7000000476837,
+        "bytes": 137780,
+        "ttfb": 130.10000002384186
+      },
+      {
+        "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+        "start": 10561.199999988079,
+        "ms": 845.3000000119209,
+        "bytes": 23790,
+        "ttfb": 844.5
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "closed": true
+  },
+  {
+    "mobile": false,
+    "run": 2,
+    "open_ms": 347,
+    "groups_ms": 1186,
+    "beforeBundles": [],
+    "resources": [
+      {
+        "path": "/wp-content/uploads/yc-critical-20261022/booking-4ac7cf8322e9.js",
+        "start": 3238.5,
+        "ms": 254.69999998807907,
+        "bytes": 137780,
+        "ttfb": 128.89999997615814
+      },
+      {
+        "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+        "start": 3238.5,
+        "ms": 725.3999999761581,
+        "bytes": 23790,
+        "ttfb": 724.6999999880791
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "closed": true
+  },
+  {
+    "mobile": false,
+    "run": 3,
+    "open_ms": 364,
+    "groups_ms": 1195,
+    "beforeBundles": [],
+    "resources": [
+      {
+        "path": "/wp-content/uploads/yc-critical-20261022/booking-4ac7cf8322e9.js",
+        "start": 3112,
+        "ms": 281,
+        "bytes": 137780,
+        "ttfb": 142.70000004768372
+      },
+      {
+        "path": "/wp-json/sqns-integration/v1/booking/bootstrap",
+        "start": 3112,
+        "ms": 677.1000000238419,
+        "bytes": 23790,
+        "ttfb": 676.2000000476837
+      }
+    ],
+    "errors": [],
+    "writes": [],
+    "closed": true
+  }
+]

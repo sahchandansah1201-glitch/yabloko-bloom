@@ -1,0 +1,295 @@
+{
+  "publishedUtc": "2026-10-22T12:34:55.275372+00:00",
+  "contentMetadataUnchanged": true,
+  "checks": {
+    "primaryViewportCases": 8,
+    "layoutCases": 20,
+    "doctorCtaClicks": 18,
+    "priceRowsUnchanged": 218,
+    "syntheticSuccessCases": 2,
+    "recoveryCases": 4,
+    "mixedGalleryCases": 2,
+    "newRealPosts": 0
+  },
+  "layout": [
+    {
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/services/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/doctor/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/price/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/services/biorevitalizacziya/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/services/rozaczeya/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/contacts/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/dokumenty/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/multilink/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/services/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/doctor/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/price/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/services/biorevitalizacziya/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/services/rozaczeya/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/contacts/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/dokumenty/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    },
+    {
+      "path": "/multilink/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImageCount": 0
+    }
+  ],
+  "synthetic": [
+    {
+      "width": 390,
+      "initialBundles": 0,
+      "writes": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/visit",
+          "synthetic": true
+        }
+      ],
+      "contactHit": {
+        "coveredByCookie": false,
+        "hitIsBooking": true
+      },
+      "oneHeading": true,
+      "noDuplicate": true,
+      "details": true,
+      "closed": true,
+      "errors": [],
+      "realPostSent": false
+    },
+    {
+      "width": 1440,
+      "initialBundles": 0,
+      "writes": [
+        {
+          "path": "/wp-json/sqns-integration/v1/booking/visit",
+          "synthetic": true
+        }
+      ],
+      "contactHit": {
+        "coveredByCookie": false,
+        "hitIsBooking": true
+      },
+      "oneHeading": true,
+      "noDuplicate": true,
+      "details": true,
+      "closed": true,
+      "errors": [],
+      "realPostSent": false
+    }
+  ],
+  "recovery": [
+    {
+      "width": 390,
+      "scenario": "bootstrap-fallback",
+      "bootstrapRequests": 2,
+      "bundleRequests": 1,
+      "closed": true,
+      "writes": [],
+      "errors": [],
+      "syntheticFault": true
+    },
+    {
+      "width": 390,
+      "scenario": "script-retry",
+      "bootstrapRequests": 1,
+      "bundleRequests": 2,
+      "closed": true,
+      "writes": [],
+      "errors": [],
+      "syntheticFault": true
+    },
+    {
+      "width": 1440,
+      "scenario": "bootstrap-fallback",
+      "bootstrapRequests": 2,
+      "bundleRequests": 1,
+      "closed": true,
+      "writes": [],
+      "errors": [],
+      "syntheticFault": true
+    },
+    {
+      "width": 1440,
+      "scenario": "script-retry",
+      "bootstrapRequests": 1,
+      "bundleRequests": 2,
+      "closed": true,
+      "writes": [],
+      "errors": [],
+      "syntheticFault": true
+    }
+  ],
+  "gallery": [
+    {
+      "width": 390,
+      "states": [
+        "Работа 1 из 3",
+        "Работа 2 из 3",
+        "Работа 3 из 3"
+      ],
+      "back": "Работа 2 из 3",
+      "closed": true,
+      "playing": {
+        "currentTime": 0.120406,
+        "paused": false
+      }
+    },
+    {
+      "width": 1440,
+      "states": [
+        "Работа 1 из 3",
+        "Работа 2 из 3",
+        "Работа 3 из 3"
+      ],
+      "back": "Работа 2 из 3",
+      "closed": true,
+      "playing": {
+        "currentTime": 0.106621,
+        "paused": false
+      }
+    }
+  ],
+  "limits": [
+    "No physical iOS/Android/Safari",
+    "No new real POST",
+    "Server latency and ACF image warning remain open"
+  ]
+}
