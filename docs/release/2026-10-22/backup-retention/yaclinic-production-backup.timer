@@ -1,0 +1,7 @@
+[Unit]
+Description=Weekly production WordPress backup Sunday 03:45 Moscow
+[Timer]
+OnCalendar=Sun *-*-* 00:45:00 UTC
+Persistent=true
+[Install]
+WantedBy=timers.target
