@@ -1,0 +1,171 @@
+{
+  "target": "https://yaclinic.ru/",
+  "snippet": 47,
+  "source_sha256": "020ef8852da77312dad19d472ac340755e7999748e86d2c7d563603cfa09154b",
+  "previous_sha256": "6f3d5462755d8d2cc1f344a64f8547fac344e94f6caf1177cbfb638591218166",
+  "tracker_unchanged_sha256": "ac39891ab6d1edac1d62adaf990a7ae13d8a80e761782d267daa14e4d8708a38",
+  "backup_saved_outside_webroot": true,
+  "unit_tests": 5,
+  "tracking_regressions": 12,
+  "php_lint": true,
+  "js_syntax": true,
+  "style_only": true,
+  "timer_added": false,
+  "consent_reset": false,
+  "real_booking_submitted": false,
+  "public_viewports": [
+    {
+      "width": 360,
+      "initial": {
+        "gap": 12,
+        "top": 561.40625,
+        "left": 12,
+        "right": 348,
+        "width": 360,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 88,
+        "barVisible": true,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    },
+    {
+      "width": 390,
+      "initial": {
+        "gap": 12,
+        "top": 561.40625,
+        "left": 12,
+        "right": 378,
+        "width": 390,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 88,
+        "barVisible": true,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    },
+    {
+      "width": 768,
+      "initial": {
+        "gap": 16,
+        "top": 622.40625,
+        "left": 16,
+        "right": 496,
+        "width": 768,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 16,
+        "barVisible": false,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    },
+    {
+      "width": 1440,
+      "initial": {
+        "gap": 16,
+        "top": 622.40625,
+        "left": 16,
+        "right": 496,
+        "width": 1440,
+        "z": "10000"
+      },
+      "stable": true,
+      "vendors": 0,
+      "hit": {
+        "coveredByCookie": false,
+        "hitTag": "DIV",
+        "hitId": "sqns-booking-widget-root"
+      },
+      "scrolled": {
+        "gap": 16,
+        "barVisible": false,
+        "barNotCovered": true
+      },
+      "denied": {
+        "bannerHidden": true,
+        "vendors": 0
+      },
+      "reopened": true
+    }
+  ],
+  "stability": {
+    "samples": [
+      {
+        "elapsedMs": 0,
+        "visible": true,
+        "vendors": 0
+      },
+      {
+        "elapsedMs": 1205,
+        "visible": true,
+        "vendors": 0
+      },
+      {
+        "elapsedMs": 5217,
+        "visible": true,
+        "vendors": 0
+      },
+      {
+        "elapsedMs": 15230,
+        "visible": true,
+        "vendors": 0
+      }
+    ],
+    "pages": [
+      {
+        "path": "/services/biorevitalizacziya/",
+        "width": 390,
+        "gap": 88,
+        "inViewport": true,
+        "z": "10000"
+      },
+      {
+        "path": "/doctor/viktoriya-gracheva/",
+        "width": 1440,
+        "gap": 16,
+        "inViewport": true,
+        "z": "10000"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,114 @@
+[
+  {
+    "width": 360,
+    "initial": {
+      "gap": 12,
+      "top": 561.40625,
+      "left": 12,
+      "right": 348,
+      "width": 360,
+      "z": "10000"
+    },
+    "stable": true,
+    "vendors": 0,
+    "hit": {
+      "coveredByCookie": false,
+      "hitTag": "DIV",
+      "hitId": "sqns-booking-widget-root"
+    },
+    "scrolled": {
+      "gap": 88,
+      "barVisible": true,
+      "barNotCovered": true
+    },
+    "denied": {
+      "bannerHidden": true,
+      "vendors": 0
+    },
+    "reopened": true
+  },
+  {
+    "width": 390,
+    "initial": {
+      "gap": 12,
+      "top": 561.40625,
+      "left": 12,
+      "right": 378,
+      "width": 390,
+      "z": "10000"
+    },
+    "stable": true,
+    "vendors": 0,
+    "hit": {
+      "coveredByCookie": false,
+      "hitTag": "DIV",
+      "hitId": "sqns-booking-widget-root"
+    },
+    "scrolled": {
+      "gap": 88,
+      "barVisible": true,
+      "barNotCovered": true
+    },
+    "denied": {
+      "bannerHidden": true,
+      "vendors": 0
+    },
+    "reopened": true
+  },
+  {
+    "width": 768,
+    "initial": {
+      "gap": 16,
+      "top": 622.40625,
+      "left": 16,
+      "right": 496,
+      "width": 768,
+      "z": "10000"
+    },
+    "stable": true,
+    "vendors": 0,
+    "hit": {
+      "coveredByCookie": false,
+      "hitTag": "DIV",
+      "hitId": "sqns-booking-widget-root"
+    },
+    "scrolled": {
+      "gap": 16,
+      "barVisible": false,
+      "barNotCovered": true
+    },
+    "denied": {
+      "bannerHidden": true,
+      "vendors": 0
+    },
+    "reopened": true
+  },
+  {
+    "width": 1440,
+    "initial": {
+      "gap": 16,
+      "top": 622.40625,
+      "left": 16,
+      "right": 496,
+      "width": 1440,
+      "z": "10000"
+    },
+    "stable": true,
+    "vendors": 0,
+    "hit": {
+      "coveredByCookie": false,
+      "hitTag": "DIV",
+      "hitId": "sqns-booking-widget-root"
+    },
+    "scrolled": {
+      "gap": 16,
+      "barVisible": false,
+      "barNotCovered": true
+    },
+    "denied": {
+      "bannerHidden": true,
+      "vendors": 0
+    },
+    "reopened": true
+  }
+]
