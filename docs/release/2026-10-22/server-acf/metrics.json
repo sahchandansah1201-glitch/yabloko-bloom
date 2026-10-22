@@ -1,0 +1,253 @@
+{
+  "status": "VERIFIED_SCOPED_FIXES; NOT_A_LOAD_OR_FIELD_RUM_TEST",
+  "pages": [
+    {
+      "path": "/",
+      "mobile": true,
+      "ttfb": {
+        "before": 739,
+        "after": 813,
+        "reductionPercent": -9.9
+      },
+      "lcp": {
+        "before": 2660,
+        "after": 2588,
+        "reductionPercent": 2.7
+      },
+      "maxCls": 0.002864538372507122,
+      "cache": [
+        "HIT",
+        "MISS",
+        "HIT"
+      ],
+      "ttfbRange": [
+        813,
+        1112,
+        569
+      ],
+      "lcpRange": [
+        2588,
+        4336,
+        2292
+      ]
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": true,
+      "ttfb": {
+        "before": 818,
+        "after": 625,
+        "reductionPercent": 23.6
+      },
+      "lcp": {
+        "before": 2768,
+        "after": 2576,
+        "reductionPercent": 6.9
+      },
+      "maxCls": 0.04780524691358025,
+      "cache": [
+        "MISS",
+        "HIT",
+        "HIT"
+      ],
+      "ttfbRange": [
+        2750,
+        625,
+        599
+      ],
+      "lcpRange": [
+        4828,
+        2576,
+        2552
+      ]
+    },
+    {
+      "path": "/",
+      "mobile": false,
+      "ttfb": {
+        "before": 760,
+        "after": 584,
+        "reductionPercent": 23.2
+      },
+      "lcp": {
+        "before": 1392,
+        "after": 1148,
+        "reductionPercent": 17.5
+      },
+      "maxCls": 0.0064380822201324595,
+      "cache": [
+        "HIT",
+        "HIT",
+        "HIT"
+      ],
+      "ttfbRange": [
+        588,
+        524,
+        584
+      ],
+      "lcpRange": [
+        1280,
+        1148,
+        1128
+      ]
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mobile": false,
+      "ttfb": {
+        "before": 734,
+        "after": 576,
+        "reductionPercent": 21.5
+      },
+      "lcp": {
+        "before": 1400,
+        "after": 1216,
+        "reductionPercent": 13.1
+      },
+      "maxCls": 0.0003313277967999829,
+      "cache": [
+        "HIT",
+        "HIT",
+        "HIT"
+      ],
+      "ttfbRange": [
+        598,
+        576,
+        546
+      ],
+      "lcpRange": [
+        1216,
+        1308,
+        1144
+      ]
+    }
+  ],
+  "booking": [
+    {
+      "mobile": true,
+      "firstPane": {
+        "before": 1577,
+        "after": 1408,
+        "reductionPercent": 10.7
+      },
+      "usableGroups": {
+        "before": 1598,
+        "after": 1429,
+        "reductionPercent": 10.6
+      },
+      "groupsRange": [
+        1429,
+        1558,
+        1280
+      ]
+    },
+    {
+      "mobile": false,
+      "firstPane": {
+        "before": 687,
+        "after": 616,
+        "reductionPercent": 10.3
+      },
+      "usableGroups": {
+        "before": 1236,
+        "after": 675,
+        "reductionPercent": 45.4
+      },
+      "groupsRange": [
+        556,
+        675,
+        801
+      ]
+    }
+  ],
+  "server": [
+    {
+      "path": "/",
+      "mode": "HIT",
+      "nBefore": 5,
+      "nAfter": 5,
+      "ttfb": {
+        "before": 158,
+        "after": 97,
+        "reductionPercent": 38.9
+      },
+      "total": {
+        "before": 163,
+        "after": 102,
+        "reductionPercent": 37.4
+      }
+    },
+    {
+      "path": "/",
+      "mode": "bypass",
+      "nBefore": 6,
+      "nAfter": 6,
+      "ttfb": {
+        "before": 1877,
+        "after": 498,
+        "reductionPercent": 73.5
+      },
+      "total": {
+        "before": 1883,
+        "after": 1803,
+        "reductionPercent": 4.2
+      }
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mode": "HIT",
+      "nBefore": 4,
+      "nAfter": 5,
+      "ttfb": {
+        "before": 180,
+        "after": 95,
+        "reductionPercent": 47.4
+      },
+      "total": {
+        "before": 184,
+        "after": 99,
+        "reductionPercent": 46
+      }
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "mode": "bypass",
+      "nBefore": 6,
+      "nAfter": 6,
+      "ttfb": {
+        "before": 1518,
+        "after": 584,
+        "reductionPercent": 61.5
+      },
+      "total": {
+        "before": 1522,
+        "after": 1512,
+        "reductionPercent": 0.6
+      }
+    }
+  ],
+  "checks": {
+    "viewportCases": 8,
+    "layoutCases": 20,
+    "doctorCtaClicks": 18,
+    "priceRowsUnchanged": 218,
+    "recoveryCases": 4,
+    "mixedGalleryCases": 2,
+    "reviewTabs": 8,
+    "syntheticSuccessCases": 2,
+    "newRealPosts": 0
+  },
+  "bootstrapCounts": {
+    "showcaseSections": 5,
+    "serviceGroups": 41,
+    "categories": 48,
+    "services": 346,
+    "doctors": 9
+  },
+  "health": {
+    "availableMemoryMB": 901,
+    "fpmQueue": "0",
+    "fpmMax8Warnings": 0,
+    "phpWarnings": []
+  }
+}
