@@ -1,0 +1,95 @@
+{
+  "publishedUtc": "2026-10-22T12:10:09.477263+00:00",
+  "contentMetadataUnchanged": true,
+  "previewGeometryPairs": 4,
+  "publicChecks": [
+    {
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "localStyles": [
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/open-sans-212f2fee90b4.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/reviews-fallback-d7d37f58160c.css"
+      ],
+      "portraitPreload": false
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "localStyles": [
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/open-sans-212f2fee90b4.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css"
+      ],
+      "portraitPreload": true
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "status": 200,
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "localStyles": [
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/open-sans-212f2fee90b4.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/reviews-fallback-d7d37f58160c.css"
+      ],
+      "portraitPreload": false
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "width": 768,
+      "status": 200,
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "localStyles": [
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/open-sans-212f2fee90b4.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css"
+      ],
+      "portraitPreload": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "localStyles": [
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/open-sans-212f2fee90b4.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/reviews-fallback-d7d37f58160c.css"
+      ],
+      "portraitPreload": false
+    },
+    {
+      "path": "/doctor/viktoriya-gracheva/",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "localStyles": [
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/open-sans-212f2fee90b4.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css",
+        "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/common-3539fe3948c7.css"
+      ],
+      "portraitPreload": true
+    }
+  ],
+  "speedGate": "Await final comparable after series"
+}

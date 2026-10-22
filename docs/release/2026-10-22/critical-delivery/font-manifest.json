@@ -1,0 +1,224 @@
+{
+  "base": "https://yaclinic.ru/wp-content/uploads/yc-critical-20261022/",
+  "sheets": [
+    {
+      "source": "https://fonts.googleapis.com/css?family=Open+Sans&display=swap",
+      "file": "open-sans-212f2fee90b4.css",
+      "sha256": "212f2fee90b440f6756b544feaa3508e6685ec1dcd5fe4842ee70622ef2e3adf",
+      "bytes": 5957
+    },
+    {
+      "source": "https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CMontserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic",
+      "file": "common-3539fe3948c7.css",
+      "sha256": "3539fe3948c72c960306fabfc7bc79d5bf664a0408fedf7af2d4b8b3b8bdb9e4",
+      "bytes": 79938
+    }
+  ],
+  "files": [
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L0UUMbndwVgHU.woff2",
+      "file": "font-0f92203a358b4662.woff2",
+      "sha256": "0f92203a358b4662692225df10fe0248c46f1739ec2ff6cf0a3179efe7427edd",
+      "bytes": 27388
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L1UUMbndwVgHU.woff2",
+      "file": "font-2625be35a2119d26.woff2",
+      "sha256": "2625be35a2119d2661e5f8545b23f335796601b2a0341569eea1f73cad3c3934",
+      "bytes": 12036
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L2UUMbndwVgHU.woff2",
+      "file": "font-43c8ceb4cbc38530.woff2",
+      "sha256": "43c8ceb4cbc3853077673d90f044b79d6aea27e0fc8f6fde73e581fb4eab8a99",
+      "bytes": 10648
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L3UUMbndwVgHU.woff2",
+      "file": "font-e3f94a6c4b217764.woff2",
+      "sha256": "e3f94a6c4b2177643513bf5e2317b8458183d064e40031fa04c074136be205e8",
+      "bytes": 91836
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L5UUMbndwV.woff2",
+      "file": "font-7ddd9658a57d7c58.woff2",
+      "sha256": "7ddd9658a57d7c5811b4f6aa43625433d72c05ac83c46a231ef3dfd88813c8a1",
+      "bytes": 51636
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L6UUMbndwVgHU.woff2",
+      "file": "font-9f1ed4fb9c23ce2e.woff2",
+      "sha256": "9f1ed4fb9c23ce2edd414e57b3845cd7b4891ae6d66ce954abca02b6796941d4",
+      "bytes": 20612
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L9UUMbndwVgHU.woff2",
+      "file": "font-d597da1979fa0117.woff2",
+      "sha256": "d597da1979fa0117693401dfe465deef70518b035556a2c022d34ed37430a1c7",
+      "bytes": 20016
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2",
+      "file": "font-aebf2ab4a4ce6810.woff2",
+      "sha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+      "bytes": 18744
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+      "file": "font-c940764593d0fe5d.woff2",
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "bytes": 48432
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2",
+      "file": "font-46dd4cdca58c26ae.woff2",
+      "sha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+      "bytes": 19044
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2",
+      "file": "font-a28eb6d3ccb534ae.woff2",
+      "sha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "bytes": 85272
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2",
+      "file": "font-fccca918fea40089.woff2",
+      "sha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "bytes": 25844
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2",
+      "file": "font-a2e2c783ca6f9c20.woff2",
+      "sha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "bytes": 11272
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2",
+      "file": "font-8db00ff46c67b22c.woff2",
+      "sha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "bytes": 10280
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRxC7m0dR9pBOi.woff2",
+      "file": "font-808a01b5d7687964.woff2",
+      "sha256": "808a01b5d7687964a502985d91a0e71e27b083f47818d10d043124e43b69145c",
+      "bytes": 24412
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRxi7m0dR9pBOi.woff2",
+      "file": "font-e092b22aadd0541b.woff2",
+      "sha256": "e092b22aadd0541b776d68417eb98d2ebda13e310ea8d227f6133673a17b124e",
+      "bytes": 11472
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRxy7m0dR9pBOi.woff2",
+      "file": "font-30cf10b2e32e189a.woff2",
+      "sha256": "30cf10b2e32e189a39ee3ae4e241ab281c5224046d673ad7f767758ce62f6eff",
+      "bytes": 72452
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pA.woff2",
+      "file": "font-86589d0b59b31171.woff2",
+      "sha256": "86589d0b59b311712c3cbaac0b94eb054ecda4be7b52d695588548e4754b3165",
+      "bytes": 37120
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRzS7m0dR9pBOi.woff2",
+      "file": "font-f5d7590130e41b69.woff2",
+      "sha256": "f5d7590130e41b690f54f7ef3fce87535ae14a5a79d45fc03f5945d6d04fc45c",
+      "bytes": 22224
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2",
+      "file": "font-0b00fbd6edcc84cd.woff2",
+      "sha256": "0b00fbd6edcc84cd5f77364bbeb06b75ed263c740061eba34511f1e2ac1a82d3",
+      "bytes": 21492
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2",
+      "file": "font-744830a0e77dd14d.woff2",
+      "sha256": "744830a0e77dd14dd543a4230d6e3ce67ca961634074b5d536ebafc66c732301",
+      "bytes": 24072
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2",
+      "file": "font-9e2672d100bc36a3.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "bytes": 10620
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2",
+      "file": "font-920711de9ae96c18.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "bytes": 68224
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+      "file": "font-6438d7b8ea9c7c39.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "bytes": 35508
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVIUwaEQbjA.woff2",
+      "file": "font-ce39fe93a4c5179c.woff2",
+      "sha256": "ce39fe93a4c5179c0d53a4bdc2a378bdd713cdcfd15d812b0e26694d7f6d9867",
+      "bytes": 13452
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVIUwaEQbjB_mQ.woff2",
+      "file": "font-04d66ec20d7106b8.woff2",
+      "sha256": "04d66ec20d7106b87ac3c1ae9a17ad94eef131f0f18c76581765d573b67cbb18",
+      "bytes": 4752
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4jaVIUwaEQbjB_mQ.woff2",
+      "file": "font-3676a55a13c1854c.woff2",
+      "sha256": "3676a55a13c1854c171916db313ba08291c9d0322d92f0556a85ba81ddf38b8a",
+      "bytes": 5812
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVIUwaEQbjB_mQ.woff2",
+      "file": "font-89d85633e0bf91dc.woff2",
+      "sha256": "89d85633e0bf91dc275339eb9ef6037ee84cd2b4c64b16f4afea498c67f20dd8",
+      "bytes": 7180
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4saVIUwaEQbjB_mQ.woff2",
+      "file": "font-6757ba57a822f78b.woff2",
+      "sha256": "6757ba57a822f78b70ab58aeda91a495c2268c50c08e0b00ad4b05f5dfc0f40c",
+      "bytes": 996
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4taVIUwaEQbjB_mQ.woff2",
+      "file": "font-eb1273a7fc6f8aff.woff2",
+      "sha256": "eb1273a7fc6f8aff74db8cbda56e14688c57e3a80f338e786d794b4e7ca88a59",
+      "bytes": 12720
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIUwaEQbjB_mQ.woff2",
+      "file": "font-0905514ba5348ac0.woff2",
+      "sha256": "0905514ba5348ac068c5d3a07e12c0fe8a18e1e73975d645b2fd18a01162b1a8",
+      "bytes": 10796
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4vaVIUwaEQbjB_mQ.woff2",
+      "file": "font-eb0b2c79f81cdce7.woff2",
+      "sha256": "eb0b2c79f81cdce769d9d49e967b34886822040806ebf06ddd617571bd15ca6f",
+      "bytes": 5124
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B5OaVIUwaEQbjB_mQ.woff2",
+      "file": "font-4688fd896eaa4376.woff2",
+      "sha256": "4688fd896eaa437635260af9017e998a41e07ac3b3a51096774637c4ea58e6b4",
+      "bytes": 6804
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B5caVIUwaEQbjB_mQ.woff2",
+      "file": "font-7c185277c70b71a1.woff2",
+      "sha256": "7c185277c70b71a180701785e05f999f6df973ff6f127cbd38ac1b6f2ce2861b",
+      "bytes": 14532
+    }
+  ],
+  "fontBytesUnmodified": true
+}
